@@ -71,7 +71,7 @@
         </div>
         <h1 class="page-title">Buttons</h1>
         <p class="page-description">
-          Beautiful animated buttons with modern effects.
+          Beautiful animated buttons with modern effects from test.html.
         </p>
       </div>
     </section>
@@ -83,357 +83,44 @@
             <nav class="docs-nav">
               <h4>Button Styles</h4>
               <ul>
-                <li><a href="#cyber">Cyber Corner</a></li>
-                <li><a href="#orbit">Orbit Dots</a></li>
-                <li><a href="#glass">Glassmorphism</a></li>
-                <li><a href="#neon">Neon Border</a></li>
-                <li><a href="#social">Social Icons</a></li>
-                <li><a href="#gradient">Gradient Border</a></li>
-                <li><a href="#minimal">Minimal</a></li>
-                <li><a href="#icon">Icon Slide</a></li>
-                <li><a href="#underline">Underline</a></li>
-                <li><a href="#scale">Scale</a></li>
-                <li><a href="#send">Send</a></li>
-                <li><a href="#loading">Loading</a></li>
-                <li><a href="#clip">Clip Path</a></li>
-                <li><a href="#morph">Morph</a></li>
+                <li><a href="#pay">Pay Button</a></li>
+                <li><a href="#send">Send Button</a></li>
+                <li><a href="#line">Line Button</a></li>
+                <li><a href="#skew">Skew Button</a></li>
+                <li><a href="#fold">Fold Button</a></li>
+                <li><a href="#type1">Type1 Button</a></li>
+                <li><a href="#hover">Hover Button</a></li>
+                <li><a href="#star">Star Button</a></li>
+                <li><a href="#tooltip">Tooltip Button</a></li>
+                <li><a href="#jump">Jump Button</a></li>
+                <li><a href="#shake">Shake Button</a></li>
+                <li><a href="#underline">Underline Button</a></li>
+                <li><a href="#glitch">Glitch Button</a></li>
+                <li><a href="#letter">Letter Box</a></li>
+                <li><a href="#layered">Layered Button</a></li>
+                <li><a href="#ui">UI Button</a></li>
+                <li><a href="#btn31">Btn-31</a></li>
+                <li><a href="#cti">CTI Button</a></li>
+                <li><a href="#edit">Edit Button</a></li>
+                <li><a href="#gradient">Gradient Button</a></li>
               </ul>
             </nav>
           </aside>
 
           <main class="docs-content">
-            <section id="cyber" class="docs-section">
-              <h2>Cyber Corner</h2>
-              <p>Button dengan corner accents yang expand saat hover.</p>
-
+            <!-- Button 1 - Pay Button -->
+            <section id="pay" class="docs-section">
+              <h2>Pay Button</h2>
+              <p>Button with unique mix-blend-mode effect.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">
-                  <button class="btn-cyber">LAUNCH</button>
-                  <button class="btn-cyber btn-cyber-pink">EXPLORE</button>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="cyber-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="cyber-html">&lt;button class="btn-cyber"&gt;LAUNCH&lt;/button&gt;
-&lt;button class="btn-cyber btn-cyber-pink"&gt;EXPLORE&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="cyber-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="cyber-css">.btn-cyber {
-  position: relative;
-  padding: 16px 48px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #fff;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.3);
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  overflow: hidden;
-  transition: all 0.3s;
-}
-
-.btn-cyber::before,
-.btn-cyber::after {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border: 2px solid #00d4ff;
-  transition: all 0.3s;
-}
-
-.btn-cyber::before {
-  top: -2px;
-  left: -2px;
-  border-right: none;
-  border-bottom: none;
-}
-
-.btn-cyber::after {
-  bottom: -2px;
-  right: -2px;
-  border-left: none;
-  border-top: none;
-}
-
-.btn-cyber:hover {
-  background: rgba(0, 212, 255, 0.1);
-  border-color: #00d4ff;
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
-}
-
-.btn-cyber:hover::before,
-.btn-cyber:hover::after {
-  width: 20px;
-  height: 20px;
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="orbit" class="docs-section">
-              <h2>Orbit Dots</h2>
-              <p>Button dengan titik-titik yang orbit di border.</p>
-
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="btn-orbit">DISCOVER</button>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="orbit-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="orbit-html">&lt;button class="btn-orbit"&gt;DISCOVER&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="orbit-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="orbit-css">.btn-orbit {
-  position: relative;
-  padding: 16px 48px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 8px;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  overflow: visible;
-}
-
-.btn-orbit::before {
-  content: '';
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #00d4ff;
-  border-radius: 50%;
-  top: -3px;
-  left: 20%;
-  animation: orbit-top 3s linear infinite;
-  box-shadow: 0 0 10px #00d4ff;
-}
-
-.btn-orbit::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #ff0080;
-  border-radius: 50%;
-  bottom: -3px;
-  right: 20%;
-  animation: orbit-bottom 3s linear infinite;
-  box-shadow: 0 0 10px #ff0080;
-}
-
-@keyframes orbit-top {
-  0% { left: 10%; }
-  50% { left: 80%; }
-  100% { left: 10%; }
-}
-
-@keyframes orbit-bottom {
-  0% { right: 10%; }
-  50% { right: 80%; }
-  100% { right: 10%; }
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="glass" class="docs-section">
-              <h2>Glassmorphism</h2>
-              <p>Button dengan efek glass blur modern.</p>
-
-              <div class="preview-box">
-                <div class="preview-area preview-gradient">
-                  <button class="btn-glass">Get Started</button>
-                  <button class="btn-glass btn-glass-gradient">Explore</button>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="glass-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="glass-html">&lt;button class="btn-glass"&gt;Get Started&lt;/button&gt;
-&lt;button class="btn-glass btn-glass-gradient"&gt;Explore&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="glass-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="glass-css">.btn-glass {
-  padding: 16px 40px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.btn-glass:hover {
-  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
-  border-color: rgba(255,255,255,0.4);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="neon" class="docs-section">
-              <h2>Neon Border</h2>
-              <p>Button dengan border neon yang beranimasi.</p>
-
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="btn-neon-border">NEON GLOW</button>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-html">&lt;button class="btn-neon-border"&gt;NEON GLOW&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-css">.btn-neon-border {
-  position: relative;
-  padding: 16px 40px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #fff;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.btn-neon-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border: 2px solid transparent;
-  border-image: linear-gradient(90deg, #00d4ff, #7928ca, #ff0080) 1;
-  animation: border-glow 2s ease-in-out infinite;
-}
-
-@keyframes border-glow {
-  0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px #00d4ff); }
-  50% { opacity: 0.7; filter: drop-shadow(0 0 15px #ff0080); }
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="social" class="docs-section">
-              <h2>Social Icons</h2>
-              <p>Button untuk social media dengan hover effects.</p>
-
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="gap: 12px">
-                  <button class="btn-social btn-social-github">
-                    <i class="fab fa-github"></i>
-                  </button>
-                  <button class="btn-social btn-social-twitter">
-                    <i class="fab fa-twitter"></i>
-                  </button>
-                  <button class="btn-social btn-social-discord">
-                    <i class="fab fa-discord"></i>
-                  </button>
-                  <button class="btn-social btn-social-youtube">
-                    <i class="fab fa-youtube"></i>
+                  <button class="Btn">
+                    Pay
+                    <svg class="svgIcon" viewBox="0 0 576 512">
+                      <path
+                        d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"
+                      ></path>
+                    </svg>
                   </button>
                 </div>
                 <details class="code-dropdown">
@@ -451,416 +138,88 @@
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
                       <span>HTML</span>
-                      <button class="copy-btn" data-copy="social-html">
+                      <button class="copy-btn" data-copy="pay-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="social-html">&lt;button class="btn-social btn-social-github"&gt;
-  &lt;i class="fab fa-github"&gt;&lt;/i&gt;
-&lt;/button&gt;
-&lt;button class="btn-social btn-social-twitter"&gt;
-  &lt;i class="fab fa-twitter"&gt;&lt;/i&gt;
-&lt;/button&gt;
-&lt;button class="btn-social btn-social-discord"&gt;
-  &lt;i class="fab fa-discord"&gt;&lt;/i&gt;
-&lt;/button&gt;
-&lt;button class="btn-social btn-social-youtube"&gt;
-  &lt;i class="fab fa-youtube"&gt;&lt;/i&gt;
+                    <pre><code id="pay-html">&lt;button class="Btn"&gt;
+  Pay
+  &lt;svg class="svgIcon" viewBox="0 0 576 512"&gt;
+    &lt;path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512z..."&gt;&lt;/path&gt;
+  &lt;/svg&gt;
 &lt;/button&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
                       <span>CSS</span>
-                      <button class="copy-btn" data-copy="social-css">
+                      <button class="copy-btn" data-copy="pay-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="social-css">.btn-social {
-  display: inline-flex;
+                    <pre><code id="pay-css">.Btn {
+  width: 130px;
+  height: 40px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  font-size: 1.2rem;
-  color: #fff;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 12px;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  color: white;
+  font-weight: 600;
+  gap: 8px;
   cursor: pointer;
-  transition: all 0.3s;
-}
-
-.btn-social:hover {
-  transform: scale(1.1) translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.btn-social-github:hover { background: #333; border-color: #333; }
-.btn-social-twitter:hover { background: #1da1f2; border-color: #1da1f2; }
-.btn-social-discord:hover { background: #5865f2; border-color: #5865f2; }
-.btn-social-youtube:hover { background: #ff0000; border-color: #ff0000; }</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="gradient" class="docs-section">
-              <h2>Gradient Border</h2>
-              <p>Button dengan animated gradient border.</p>
-
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="btn-gradient-border">Rainbow Border</button>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-html">&lt;button class="btn-gradient-border"&gt;Rainbow Border&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-css">.btn-gradient-border {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
   position: relative;
-  padding: 16px 40px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #fff;
-  background: #000;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.btn-gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(90deg, #00d4ff, #7928ca, #ff0080, #00d4ff);
-  background-size: 300% 100%;
-  border-radius: 52px;
-  z-index: -1;
-  animation: gradient-move 4s linear infinite;
-}
-
-.btn-gradient-border::after {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  background: #000;
-  border-radius: 48px;
-  z-index: -1;
-}
-
-@keyframes gradient-move {
-  0% { background-position: 0% 0; }
-  100% { background-position: 300% 0; }
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="minimal" class="docs-section">
-              <h2>Minimal</h2>
-              <p>Clean minimal button dengan smooth transition.</p>
-
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="btn-minimal">Outline</button>
-                  <button class="btn-minimal btn-minimal-fill">Filled</button>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="minimal-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="minimal-html">&lt;button class="btn-minimal"&gt;Outline&lt;/button&gt;
-&lt;button class="btn-minimal btn-minimal-fill"&gt;Filled&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="minimal-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="minimal-css">.btn-minimal {
-  padding: 14px 32px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #fff;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.btn-minimal:hover {
-  background: #fff;
-  color: #000;
-  border-color: #fff;
-}
-
-.btn-minimal-fill {
-  background: #fff;
-  color: #000;
-}
-
-.btn-minimal-fill:hover {
-  background: transparent;
-  color: #fff;
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="icon" class="docs-section">
-              <h2>Icon Slide</h2>
-              <p>Button dengan icon yang bergerak saat hover.</p>
-
-              <div class="preview-box">
-                <div class="preview-area">
-                  <button class="btn-icon-slide">
-                    Get Started <i class="fas fa-arrow-right"></i>
-                  </button>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="icon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="icon-html">&lt;button class="btn-icon-slide"&gt;
-  Get Started &lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="icon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="icon-css">.btn-icon-slide {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
   overflow: hidden;
-  transition: all 0.3s;
+  transition-duration: 0.3s;
 }
 
-.btn-icon-slide i {
-  transition: transform 0.3s;
-}
-
-.btn-icon-slide:hover {
-  padding-right: 35px;
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-}
-
-.btn-icon-slide:hover i {
-  transform: translateX(5px);
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="underline" class="docs-section">
-              <h2>Underline</h2>
-              <p>Text button dengan animated underline.</p>
-
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="btn-underline">Learn More</button>
-                  <button class="btn-underline">View Details</button>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="underline-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="underline-html">&lt;button class="btn-underline"&gt;Learn More&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="underline-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="underline-css">.btn-underline {
-  position: relative;
-  padding: 10px 0;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #fff;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-underline::after {
-  content: '';
+.Btn::before {
+  width: 130px;
+  height: 130px;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #00d4ff, #7928ca);
-  transition: width 0.3s;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: 0.3s;
+  mix-blend-mode: difference;
 }
 
-.btn-underline:hover::after {
-  width: 100%;
+.Btn:hover::before {
+  transform: translate(100%, -50%);
+  border-radius: 0;
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <section id="scale" class="docs-section">
-              <h2>Scale</h2>
-              <p>Button dengan smooth scale animation.</p>
-
-              <div class="preview-box">
-                <div class="preview-area">
-                  <button class="btn-scale">Click Me</button>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="scale-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="scale-html">&lt;button class="btn-scale"&gt;Click Me&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="scale-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="scale-css">.btn-scale {
-  padding: 16px 40px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #000;
-  background: #fff;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.btn-scale:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 40px rgba(255,255,255,0.2);
-}
-
-.btn-scale:active {
-  transform: scale(0.95);
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
+            <!-- Button 2 - Send Button -->
             <section id="send" class="docs-section">
-              <h2>Send</h2>
-              <p>Button dengan icon yang bergerak saat hover.</p>
-
+              <h2>Send Button</h2>
+              <p>Button with flying send icon animation.</p>
               <div class="preview-box">
                 <div class="preview-area">
-                  <button class="btn-send">
-                    Send <i class="fas fa-paper-plane"></i>
+                  <button class="send-btn">
+                    <div class="svg-wrapper-1">
+                      <div class="svg-wrapper">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          height="24"
+                        >
+                          <path fill="none" d="M0 0h24v24H0z"></path>
+                          <path
+                            fill="currentColor"
+                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <span>Send</span>
                   </button>
                 </div>
                 <details class="code-dropdown">
@@ -882,8 +241,13 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="send-html">&lt;button class="btn-send"&gt;
-  Send &lt;i class="fas fa-paper-plane"&gt;&lt;/i&gt;
+                    <pre><code id="send-html">&lt;button class="send-btn"&gt;
+  &lt;div class="svg-wrapper-1"&gt;
+    &lt;div class="svg-wrapper"&gt;
+      &lt;svg viewBox="0 0 24 24"&gt;...&lt;/svg&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;span&gt;Send&lt;/span&gt;
 &lt;/button&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
@@ -893,44 +257,38 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="send-css">.btn-send {
-  display: inline-flex;
+                    <pre><code id="send-css">.send-btn {
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, #10b981, #059669);
   border: none;
-  border-radius: 12px;
+  border-radius: 16px;
+  overflow: hidden;
   cursor: pointer;
-  transition: all 0.3s;
 }
 
-.btn-send i {
-  transition: transform 0.3s;
+.send-btn:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
 }
 
-.btn-send:hover {
-  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
-}
-
-.btn-send:hover i {
-  transform: translateX(3px) translateY(-3px);
+.send-btn:hover span {
+  transform: translateX(5em);
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <section id="loading" class="docs-section">
-              <h2>Loading</h2>
-              <p>Button dengan animated loading shine.</p>
-
+            <!-- Button 3 - Line Button -->
+            <section id="line" class="docs-section">
+              <h2>Line Button</h2>
+              <p>Button with line that appears on hover.</p>
               <div class="preview-box">
-                <div class="preview-area">
-                  <button class="btn-loading">Loading...</button>
+                <div class="preview-area preview-dark">
+                  <button class="line-btn">Button</button>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -947,59 +305,117 @@
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
                       <span>HTML</span>
-                      <button class="copy-btn" data-copy="loading-html">
+                      <button class="copy-btn" data-copy="line-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="loading-html">&lt;button class="btn-loading"&gt;Loading...&lt;/button&gt;</code></pre>
+                    <pre><code id="line-html">&lt;button class="line-btn"&gt;Button&lt;/button&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
                       <span>CSS</span>
-                      <button class="copy-btn" data-copy="loading-css">
+                      <button class="copy-btn" data-copy="line-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="loading-css">.btn-loading {
-  position: relative;
-  padding: 14px 40px;
-  font-size: 0.9rem;
-  font-weight: 600;
+                    <pre><code id="line-css">.line-btn {
   color: #fff;
-  background: #3b82f6;
-  border: none;
-  border-radius: 12px;
   cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 0;
+  padding: 1rem;
+}
+
+.line-btn:before {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  width: 0;
+}
+
+.line-btn:hover:before {
+  width: 3rem;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 4 - Skew Button -->
+            <section id="skew" class="docs-section">
+              <h2>Skew Button</h2>
+              <p>Button with attractive skew effect.</p>
+              <div class="preview-box">
+                <div class="preview-area">
+                  <button class="skew-btn">Button</button>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="skew-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="skew-html">&lt;button class="skew-btn"&gt;Button&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="skew-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="skew-css">.skew-btn {
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
   overflow: hidden;
 }
 
-.btn-loading::after {
-  content: '';
+.skew-btn:after {
+  content: "";
+  background: white;
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-  animation: loading-shine 1.5s infinite;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
 }
 
-@keyframes loading-shine {
-  0% { left: -100%; }
-  100% { left: 100%; }
+.skew-btn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <section id="clip" class="docs-section">
-              <h2>Clip Path</h2>
-              <p>Button dengan efek clip path saat hover.</p>
-
+            <!-- Button 5 - Fold Button -->
+            <section id="fold" class="docs-section">
+              <h2>Fold Button</h2>
+              <p>Button with fold corner effect.</p>
               <div class="preview-box">
                 <div class="preview-area">
-                  <button class="btn-clip">Clip Effect</button>
+                  <button class="fold-btn"><b>Fold me!</b></button>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -1016,48 +432,55 @@
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
                       <span>HTML</span>
-                      <button class="copy-btn" data-copy="clip-html">
+                      <button class="copy-btn" data-copy="fold-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="clip-html">&lt;button class="btn-clip"&gt;Clip Effect&lt;/button&gt;</code></pre>
+                    <pre><code id="fold-html">&lt;button class="fold-btn"&gt;&lt;b&gt;Fold me!&lt;/b&gt;&lt;/button&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
                       <span>CSS</span>
-                      <button class="copy-btn" data-copy="clip-css">
+                      <button class="copy-btn" data-copy="fold-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="clip-css">.btn-clip {
+                    <pre><code id="fold-css">.fold-btn {
   position: relative;
-  padding: 16px 40px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, #ff0080, #7928ca);
+  padding: 0.7em 1.4em;
+  background-color: #bf0426;
   border: none;
+  border-radius: 0.5em;
+  color: #dedede;
   cursor: pointer;
-  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
-  transition: all 0.3s;
 }
 
-.btn-clip:hover {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
-  box-shadow: 0 10px 30px rgba(255, 0, 128, 0.4);
+.fold-btn::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition: 0.3s;
+}
+
+.fold-btn:hover::before {
+  width: 1.6em;
+  height: 1.6em;
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <section id="morph" class="docs-section">
-              <h2>Morph</h2>
-              <p>Button yang berubah shape saat hover.</p>
-
+            <!-- Button 6 - Type1 -->
+            <section id="type1" class="docs-section">
+              <h2>Type1 Button</h2>
+              <p>Button with expand from center effect.</p>
               <div class="preview-box">
                 <div class="preview-area">
-                  <button class="btn-morph">Morph Shape</button>
+                  <button class="type1">
+                    <span class="btn-txt">Hello</span>
+                  </button>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -1074,35 +497,1007 @@
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
                       <span>HTML</span>
-                      <button class="copy-btn" data-copy="morph-html">
+                      <button class="copy-btn" data-copy="type1-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="morph-html">&lt;button class="btn-morph"&gt;Morph Shape&lt;/button&gt;</code></pre>
+                    <pre><code id="type1-html">&lt;button class="type1"&gt;
+  &lt;span class="btn-txt"&gt;Hello&lt;/span&gt;
+&lt;/button&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
                       <span>CSS</span>
-                      <button class="copy-btn" data-copy="morph-css">
+                      <button class="copy-btn" data-copy="type1-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="morph-css">.btn-morph {
-  padding: 16px 40px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  border: none;
-  border-radius: 12px;
+                    <pre><code id="type1-css">.type1 {
+  height: 50px;
+  width: 200px;
+  background-color: transparent;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: 2px solid #252525;
+  overflow: hidden;
+  border-radius: 30px;
 }
 
-.btn-morph:hover {
-  border-radius: 50px;
-  transform: scale(1.05);
-  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+.type1:hover {
+  box-shadow: 1px 1px 200px #252525;
+  color: #fff;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 7 - Hover Button -->
+            <section id="hover" class="docs-section">
+              <h2>Hover Button</h2>
+              <p>Button with smooth text transition.</p>
+              <div class="preview-box">
+                <div class="preview-area">
+                  <button class="hover-btn">
+                    <span class="text">Hover me</span>
+                    <span>Thanks!</span>
+                  </button>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="hover-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="hover-html">&lt;button class="hover-btn"&gt;
+  &lt;span class="text"&gt;Hover me&lt;/span&gt;
+  &lt;span&gt;Thanks!&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="hover-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="hover-css">.hover-btn {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  padding: 18px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.hover-btn:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  transform: skewY(9.3deg) scaleY(0);
+  transition: transform 600ms;
+}
+
+.hover-btn:hover:after {
+  transform: skewY(9.3deg) scaleY(2);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 8 - Star Button -->
+            <section id="star" class="docs-section">
+              <h2>Star Button</h2>
+              <p>Button with spreading star animation.</p>
+              <div class="preview-box">
+                <div class="preview-area">
+                  <button class="star-btn">
+                    Button
+                    <div class="star-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xml:space="preserve"
+                        version="1.1"
+                        style="
+                          shape-rendering: geometricPrecision;
+                          text-rendering: geometricPrecision;
+                          image-rendering: optimizeQuality;
+                          fill-rule: evenodd;
+                          clip-rule: evenodd;
+                        "
+                        viewBox="0 0 784.11 815.53"
+                      >
+                        <g>
+                          <path
+                            class="fil0"
+                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="star-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 784.11 815.53"
+                        style="shape-rendering: geometricPrecision"
+                      >
+                        <g>
+                          <path
+                            class="fil0"
+                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="star-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 784.11 815.53"
+                        style="shape-rendering: geometricPrecision"
+                      >
+                        <g>
+                          <path
+                            class="fil0"
+                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="star-4">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 784.11 815.53"
+                        style="shape-rendering: geometricPrecision"
+                      >
+                        <g>
+                          <path
+                            class="fil0"
+                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="star-5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 784.11 815.53"
+                        style="shape-rendering: geometricPrecision"
+                      >
+                        <g>
+                          <path
+                            class="fil0"
+                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="star-6">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 784.11 815.53"
+                        style="shape-rendering: geometricPrecision"
+                      >
+                        <g>
+                          <path
+                            class="fil0"
+                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="star-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="star-html">&lt;button class="star-btn"&gt;
+  Button
+  &lt;div class="star-1"&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/div&gt;
+  &lt;!-- stars 2-6 --&gt;
+&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="star-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="star-css">.star-btn {
+  position: relative;
+  padding: 12px 35px;
+  background: #fec195;
+  border: 3px solid #fec195;
+  cursor: pointer;
+}
+
+.star-btn:hover {
+  background: transparent;
+  box-shadow: 0 0 25px #fec1958c;
+}
+
+.star-btn:hover .star-1 {
+  top: -80%;
+  left: -30%;
+  filter: drop-shadow(0 0 10px #fffdef);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 9 - Tooltip Button -->
+            <section id="tooltip" class="docs-section">
+              <h2>Tooltip Button</h2>
+              <p>Button with tooltip and icon transition.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <div data-tooltip="Price:-$20" class="tooltip-btn">
+                    <div class="button-wrapper">
+                      <div class="tooltip-text">Buy Now</div>
+                      <span class="tooltip-icon">
+                        <svg
+                          viewBox="0 0 16 16"
+                          class="bi bi-cart2"
+                          fill="currentColor"
+                          height="16"
+                          width="16"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="tooltip-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="tooltip-html">&lt;div data-tooltip="Price:-$20" class="tooltip-btn"&gt;
+  &lt;div class="button-wrapper"&gt;
+    &lt;div class="tooltip-text"&gt;Buy Now&lt;/div&gt;
+    &lt;span class="tooltip-icon"&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="tooltip-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="tooltip-css">.tooltip-btn {
+  width: 100px;
+  height: 35px;
+  background: #222;
+  border-radius: 0.45em;
+  cursor: pointer;
+}
+
+.tooltip-btn:hover .tooltip-text {
+  top: -100%;
+}
+
+.tooltip-btn:hover .tooltip-icon {
+  top: 0;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 10 - Jump Button -->
+            <section id="jump" class="docs-section">
+              <h2>Jump Button</h2>
+              <p>Button with jump animation on hover.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <button class="jump-btn">Hover Me!</button>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="jump-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="jump-html">&lt;button class="jump-btn"&gt;Hover Me!&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="jump-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="jump-css">.jump-btn {
+  background-color: #171717;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.jump-btn:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 7px 0 -2px #f85959, 0 15px 0 -4px #39a2db;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 11 - Shake Button -->
+            <section id="shake" class="docs-section">
+              <h2>Shake Button</h2>
+              <p>Button with shake and ripple effect.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <button class="shake-btn">
+                    <span>Hover me</span>
+                  </button>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="shake-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="shake-html">&lt;button class="shake-btn"&gt;
+  &lt;span&gt;Hover me&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="shake-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="shake-css">.shake-btn {
+  padding: 0.8em 1em;
+  background-color: #333;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.shake-btn:hover {
+  animation: sh0 0.5s ease-in-out both;
+}
+
+@keyframes sh0 {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(7deg); }
+  50% { transform: rotate(-7deg); }
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 12 - Underline Button -->
+            <section id="underline" class="docs-section">
+              <h2>Underline Button</h2>
+              <p>Button with double underline animation.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <button class="underline-btn">HOVER ME</button>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="underline-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="underline-html">&lt;button class="underline-btn"&gt;HOVER ME&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="underline-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="underline-css">.underline-btn {
+  color: white;
+  font-size: 25px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.underline-btn::after,
+.underline-btn::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  transition: 0.5s;
+}
+
+.underline-btn:hover::after,
+.underline-btn:hover::before {
+  width: 100%;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 13 - Glitch Button -->
+            <section id="glitch" class="docs-section">
+              <h2>Glitch Button</h2>
+              <p>Button with retro glitch effect.</p>
+              <div class="preview-box">
+                <div class="preview-area">
+                  <a class="btn-glitch-fill">
+                    <span class="text">// Hover me</span>
+                    <span class="text-decoration">_</span
+                    ><span class="decoration">⇒</span>
+                  </a>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="glitch-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="glitch-html">&lt;a class="btn-glitch-fill"&gt;
+  &lt;span class="text"&gt;// Hover me&lt;/span&gt;
+  &lt;span class="decoration"&gt;⇒&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="glitch-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="glitch-css">.btn-glitch-fill:hover {
+  animation-name: glitch;
+  background-color: yellow;
+  color: black;
+}
+
+@keyframes glitch {
+  25% { background-color: red; }
+  35% { background-color: green; }
+  60% { background-color: blue; }
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 14 - Letter Box -->
+            <section id="letter" class="docs-section">
+              <h2>Letter Box</h2>
+              <p>Button with letter flip animation.</p>
+              <div class="preview-box">
+                <div class="preview-area">
+                  <div class="letter-box">
+                    <div class="box">H</div>
+                    <div class="box">O</div>
+                    <div class="box">V</div>
+                    <div class="box">E</div>
+                    <div class="box">R</div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="letter-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="letter-html">&lt;div class="letter-box"&gt;
+  &lt;div class="box"&gt;H&lt;/div&gt;
+  &lt;div class="box"&gt;O&lt;/div&gt;
+  &lt;!-- more boxes --&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="letter-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="letter-css">.letter-box { display: flex; }
+
+.box {
+  width: 35px;
+  height: 40px;
+  background: rgb(58, 165, 253);
+  cursor: pointer;
+}
+
+.letter-box:hover .box:before {
+  transform: translateY(0);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 15 - Layered Button -->
+            <section id="layered" class="docs-section">
+              <h2>Layered Button</h2>
+              <p>Button with 3D layered effect.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <button class="layered-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span>Button</span>
+                  </button>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="layered-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="layered-html">&lt;button class="layered-btn"&gt;
+  &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;Button&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="layered-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="layered-css">.layered-btn {
+  transform: rotate(-25deg) skew(25deg);
+  cursor: pointer;
+}
+
+.layered-btn:hover span {
+  background: #52e19f;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 16 - UI Button -->
+            <section id="ui" class="docs-section">
+              <h2>UI Button</h2>
+              <p>Button with text chitchat animation.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <button class="ui-btn">
+                    <span>Button</span>
+                  </button>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="ui-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="ui-html">&lt;button class="ui-btn"&gt;
+  &lt;span&gt;Button&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="ui-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="ui-css">.ui-btn {
+  background: rgb(41, 41, 41);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.ui-btn:hover span::before {
+  animation: chitchat linear both 1.2s;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 17 - Btn-31 -->
+            <section id="btn31" class="docs-section">
+              <h2>Btn-31</h2>
+              <p>Button with smooth clip-path animation.</p>
+              <div class="preview-box">
+                <div class="preview-area">
+                  <button class="btn-31">
+                    <span class="text-container">
+                      <span class="text">Button</span>
+                    </span>
+                  </button>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="btn31-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="btn31-html">&lt;button class="btn-31"&gt;
+  &lt;span class="text-container"&gt;
+    &lt;span class="text"&gt;Button&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="btn31-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="btn31-css">.btn-31 {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-31:hover .text {
+  animation: move-up-alternate 0.3s ease forwards;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 18 - CTI Button -->
+            <section id="cti" class="docs-section">
+              <h2>CTI Button</h2>
+              <p>Button with typewriter effect.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <button class="cti">
+                    <div class="CTI">Code to Infinity</div>
+                  </button>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="cti-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="cti-html">&lt;button class="cti"&gt;
+  &lt;div class="CTI"&gt;Code to Infinity&lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="cti-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="cti-css">.cti {
+  background-color: #6019bd;
+  padding: 17px 30px;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.cti:hover {
+  background-color: transparent;
+  border: 3px solid #6019bd;
+  box-shadow: 0px 0px 27px 5px #6019bd;
+}
+
+.cti:hover .CTI {
+  animation: letters 1.75s steps(22, end);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 19 - Edit Button -->
+            <section id="edit" class="docs-section">
+              <h2>Edit Button</h2>
+              <p>Icon button with pen animation.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <button class="editBtn">
+                    <svg height="1em" viewBox="0 0 512 512">
+                      <path
+                        d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="edit-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="edit-html">&lt;button class="editBtn"&gt;
+  &lt;svg viewBox="0 0 512 512"&gt;...&lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="edit-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="edit-css">.editBtn {
+  width: 55px;
+  height: 55px;
+  border-radius: 20px;
+  background-color: rgb(93, 93, 116);
+  cursor: pointer;
+}
+
+.editBtn:hover svg {
+  transform: rotate(-15deg) translateX(5px);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button 20 - Gradient Button -->
+            <section id="gradient" class="docs-section">
+              <h2>Gradient Button</h2>
+              <p>Button with sweep gradient effect.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <button class="gradient-btn">
+                    <span>Hover me</span>
+                  </button>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="gradient-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-html">&lt;button class="gradient-btn"&gt;
+  &lt;span&gt;Hover me&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="gradient-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-css">.gradient-btn {
+  position: relative;
+  padding: 15px 30px;
+  background-color: #4a00e0;
+  border: 2px solid;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.gradient-btn:hover span {
+  background: linear-gradient(135deg, #aefb2a 0%, #57ebde 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-btn:hover {
+  letter-spacing: 2px;
+  border-image: linear-gradient(135deg, #aefb2a 0%, #57ebde 100%);
+  border-image-slice: 1;
 }</code></pre>
                   </div>
                 </details>

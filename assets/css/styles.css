@@ -755,6 +755,27 @@ body {
   position: sticky;
   top: 100px;
   height: fit-content;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+/* Scrollbar styling untuk sidebar */
+.docs-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.docs-sidebar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.docs-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.docs-sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .docs-nav h4 {
@@ -790,6 +811,7 @@ body {
 
 .docs-section {
   margin-bottom: 64px;
+  scroll-margin-top: 100px; /* Offset untuk navbar */
 }
 
 .docs-section:last-child {
@@ -1522,5 +1544,30 @@ body {
   }
   .grid-line {
     margin: 0 40px;
+  }
+}
+
+/* View Transitions */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: 300ms ease-out both fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 300ms ease-in both fade-in;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
 }

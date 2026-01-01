@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="description" content="KvoLib Documentation" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="view-transition" content="same-origin" />
     <title>Documentation - KvoLib</title>
+
+    <style>
+      html,
+      body {
+        background: #000;
+        color: #fff;
+        color-scheme: dark;
+      }
+    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,13 +29,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
     <link rel="icon" type="image/png" href="assets/img/icon.png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/buttons.css" />
@@ -34,7 +38,7 @@
     <nav class="navbar">
       <div class="nav-container">
         <a href="/" class="nav-logo">
-          <img src="/assets/img/icon.png" alt="KvoLib" width="24" height="24" />
+          <img src="assets/img/icon.png" alt="KvoLib" width="24" height="24" />
           <span>KvoLib</span>
         </a>
         <div class="search-wrapper">
@@ -252,50 +256,57 @@
                   </div>
                 </div>
               </div>
-
-              <div class="props-table" style="margin-top: 24px">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Class</th>
-                      <th>Effect</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>.input-minimal</code></td>
-                      <td>Clean minimal input</td>
-                    </tr>
-                    <tr>
-                      <td><code>.input-floating</code></td>
-                      <td>Floating label on focus</td>
-                    </tr>
-                    <tr>
-                      <td><code>.input-underline</code></td>
-                      <td>Animated underline</td>
-                    </tr>
-                    <tr>
-                      <td><code>.input-glass</code></td>
-                      <td>Glassmorphism blur</td>
-                    </tr>
-                    <tr>
-                      <td><code>.input-glow</code></td>
-                      <td>Glow on focus</td>
-                    </tr>
-                    <tr>
-                      <td><code>.toggle-switch</code></td>
-                      <td>Toggle switch with glow</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
             </section>
           </main>
         </div>
       </div>
     </section>
 
-    <div data-include="assets/layout/footer.html"></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="footer-logo">
+              <img
+                src="assets/img/icon.png"
+                alt="KvoLib"
+                width="20"
+                height="20"
+              />
+              <span>KvoLib</span>
+            </a>
+            <p>Build beautiful interfaces faster.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="/components.html">Components</a></li>
+              <li><a href="/docs.html">Documentation</a></li>
+              <li><a href="#">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/docs.html">Getting Started</a></li>
+              <li><a href="#">Examples</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 KvoLib. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="assets/js/main.js"></script>
   </body>
