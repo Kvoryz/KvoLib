@@ -1,10 +1,241 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="description" content="KvoLib" />
+    <title>KvoLib</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="assets/img/icon.png" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
-    <h1>Hello World</h1>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-logo">
+          <img src="assets/img/icon.png" alt="KvoLib" width="24" height="24" />
+          <span>KvoLib</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#hero" class="nav-link">Home</a>
+          <a href="#components" class="nav-link">Components</a>
+          <a href="#docs" class="nav-link">Docs</a>
+          <a href="#" class="nav-link">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Introducing KvoLib v1.0
+        </div>
+
+        <h1 class="hero-title">
+          Develop.<br />
+          <span class="text-gradient">Preview.</span><br />
+          Ship.
+        </h1>
+
+        <p class="hero-description">
+          KvoLib provides the best developer experience with flexible, beautiful
+          UI components for building modern web applications.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary btn-xl">
+            Start Building
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#" class="btn btn-ghost btn-xl">
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-glow"></div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-value">50+</span>
+            <span class="stat-label">Components</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Free</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">Weekly</span>
+            <span class="stat-label">Updates</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">&lt;10kb</span>
+            <span class="stat-label">Bundle Size</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="components" class="components-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Components</span>
+          <h2 class="section-title">Everything you need</h2>
+          <p class="section-description">
+            A comprehensive collection of UI components built for modern web
+            development.
+          </p>
+        </div>
+
+        <div class="components-grid">
+          <a href="#" class="component-card">
+            <div class="card-icon">
+              <i class="fas fa-hand-pointer"></i>
+            </div>
+            <h3>Buttons</h3>
+            <p>Multiple variants, sizes, and states for every interaction.</p>
+            <span class="card-arrow">→</span>
+          </a>
+
+          <a href="#" class="component-card">
+            <div class="card-icon">
+              <i class="fas fa-keyboard"></i>
+            </div>
+            <h3>Forms</h3>
+            <p>Inputs, selects, checkboxes, and complete form layouts.</p>
+            <span class="card-arrow">→</span>
+          </a>
+
+          <a href="#" class="component-card">
+            <div class="card-icon">
+              <i class="fas fa-th-large"></i>
+            </div>
+            <h3>Layout</h3>
+            <p>Flexible grid systems and responsive containers.</p>
+            <span class="card-arrow">→</span>
+          </a>
+
+          <a href="#" class="component-card">
+            <div class="card-icon">
+              <i class="fas fa-table"></i>
+            </div>
+            <h3>Data Display</h3>
+            <p>Tables, lists, and data visualization components.</p>
+            <span class="card-arrow">→</span>
+          </a>
+
+          <a href="#" class="component-card">
+            <div class="card-icon">
+              <i class="fas fa-bell"></i>
+            </div>
+            <h3>Feedback</h3>
+            <p>Alerts, toasts, modals, and notification systems.</p>
+            <span class="card-arrow">→</span>
+          </a>
+
+          <a href="#" class="component-card">
+            <div class="card-icon">
+              <i class="fas fa-compass"></i>
+            </div>
+            <h3>Navigation</h3>
+            <p>Navbars, sidebars, breadcrumbs, and menus.</p>
+            <span class="card-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Start building today</h2>
+          <p>Join thousands of developers building with KvoLib.</p>
+          <div class="cta-actions">
+            <a href="#" class="btn btn-white btn-xl">
+              Get Started
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="cta-glow"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="footer-logo">
+              <img
+                src="assets/img/icon.png"
+                alt="KvoLib"
+                width="20"
+                height="20"
+              />
+              <span>KvoLib</span>
+            </a>
+            <p>Build beautiful interfaces faster.</p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#">Components</a></li>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Changelog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Getting Started</a></li>
+              <li><a href="#">Examples</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 KvoLib. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
