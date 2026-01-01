@@ -85,24 +85,24 @@
               <ul>
                 <li><a href="#pay">Pay Button</a></li>
                 <li><a href="#send">Send Button</a></li>
-                <li><a href="#line">Line Button</a></li>
-                <li><a href="#skew">Skew Button</a></li>
-                <li><a href="#fold">Fold Button</a></li>
-                <li><a href="#type1">Type1 Button</a></li>
-                <li><a href="#hover">Hover Button</a></li>
-                <li><a href="#star">Star Button</a></li>
-                <li><a href="#tooltip">Tooltip Button</a></li>
-                <li><a href="#jump">Jump Button</a></li>
-                <li><a href="#shake">Shake Button</a></li>
-                <li><a href="#underline">Underline Button</a></li>
+                <li><a href="#line">Expanding Line</a></li>
+                <li><a href="#skew">Skew Fill</a></li>
+                <li><a href="#fold">Corner Fold</a></li>
+                <li><a href="#type1">3D Cube</a></li>
+                <li><a href="#hover">Text Swap</a></li>
+                <li><a href="#star">Sparkling Star</a></li>
+                <li><a href="#tooltip">Shopping Cart</a></li>
+                <li><a href="#jump">Bounce</a></li>
+                <li><a href="#shake">Arrow Entry</a></li>
+                <li><a href="#underline">Growing Underline</a></li>
                 <li><a href="#glitch">Glitch Button</a></li>
-                <li><a href="#letter">Letter Box</a></li>
-                <li><a href="#layered">Layered Button</a></li>
-                <li><a href="#ui">UI Button</a></li>
-                <li><a href="#btn31">Btn-31</a></li>
-                <li><a href="#cti">CTI Button</a></li>
+                <li><a href="#letter">Flipping Letters</a></li>
+                <li><a href="#layered">3D Layers</a></li>
+                <li><a href="#ui">Chitchat Text</a></li>
+                <li><a href="#btn31">Morphing</a></li>
+                <li><a href="#cti">Typewriter</a></li>
                 <li><a href="#edit">Edit Button</a></li>
-                <li><a href="#gradient">Gradient Button</a></li>
+                <li><a href="#gradient">Border Gradient</a></li>
               </ul>
             </nav>
           </aside>
@@ -282,9 +282,9 @@
               </div>
             </section>
 
-            <!-- Button 3 - Line Button -->
+            <!-- Button 3 - Expanding Line Button -->
             <section id="line" class="docs-section">
-              <h2>Line Button</h2>
+              <h2>Expanding Line Button</h2>
               <p>Button with line that appears on hover.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">
@@ -345,9 +345,9 @@
               </div>
             </section>
 
-            <!-- Button 4 - Skew Button -->
+            <!-- Button 4 - Skew Fill Button -->
             <section id="skew" class="docs-section">
-              <h2>Skew Button</h2>
+              <h2>Skew Fill Button</h2>
               <p>Button with attractive skew effect.</p>
               <div class="preview-box">
                 <div class="preview-area">
@@ -409,9 +409,9 @@
               </div>
             </section>
 
-            <!-- Button 5 - Fold Button -->
+            <!-- Button 5 - Corner Fold Button -->
             <section id="fold" class="docs-section">
-              <h2>Fold Button</h2>
+              <h2>Corner Fold Button</h2>
               <p>Button with fold corner effect.</p>
               <div class="preview-box">
                 <div class="preview-area">
@@ -472,14 +472,23 @@
               </div>
             </section>
 
-            <!-- Button 6 - Type1 -->
+            <!-- Button 6 - 3D Cube Button -->
             <section id="type1" class="docs-section">
-              <h2>Type1 Button</h2>
-              <p>Button with expand from center effect.</p>
+              <h2>3D Cube Button</h2>
+              <p>Button with 3D cube hover effect.</p>
               <div class="preview-box">
                 <div class="preview-area">
-                  <button class="type1">
-                    <span class="btn-txt">Hello</span>
+                  <button class="btn cube cube-hover" type="button">
+                    <div class="bg-top">
+                      <div class="bg-inner"></div>
+                    </div>
+                    <div class="bg-right">
+                      <div class="bg-inner"></div>
+                    </div>
+                    <div class="bg">
+                      <div class="bg-inner"></div>
+                    </div>
+                    <div class="text">Hover Me</div>
                   </button>
                 </div>
                 <details class="code-dropdown">
@@ -501,8 +510,17 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="type1-html">&lt;button class="type1"&gt;
-  &lt;span class="btn-txt"&gt;Hello&lt;/span&gt;
+                    <pre><code id="type1-html">&lt;button class="btn cube cube-hover" type="button"&gt;
+  &lt;div class="bg-top"&gt;
+    &lt;div class="bg-inner"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="bg-right"&gt;
+    &lt;div class="bg-inner"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="bg"&gt;
+    &lt;div class="bg-inner"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="text"&gt;Hover Me&lt;/div&gt;
 &lt;/button&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
@@ -512,33 +530,30 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="type1-css">.type1 {
-  height: 50px;
-  width: 200px;
-  background-color: transparent;
-  cursor: pointer;
-  border: 2px solid #252525;
-  overflow: hidden;
-  border-radius: 30px;
+                    <pre><code id="type1-css">.cube {
+  position: relative;
+  transition: all 0.5s;
 }
 
-.type1:hover {
-  box-shadow: 1px 1px 200px #252525;
-  color: #fff;
+.cube .bg-inner {
+  background: #28282d;
 }
 
-.type1:hover::after {
-  visibility: visible;
-  transform: scale(100) translateX(2px);
+.cube:hover .bg-inner {
+  background: #d4af37;
+}
+
+.cube:hover .text {
+  color: #28282d;
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <!-- Button 7 - Hover Button -->
+            <!-- Button 7 - Text Swap Button -->
             <section id="hover" class="docs-section">
-              <h2>Hover Button</h2>
+              <h2>Text Swap Button</h2>
               <p>Button with smooth text transition.</p>
               <div class="preview-box">
                 <div class="preview-area">
@@ -603,9 +618,9 @@
               </div>
             </section>
 
-            <!-- Button 8 - Star Button -->
+            <!-- Button 8 - Sparkling Star Button -->
             <section id="star" class="docs-section">
-              <h2>Star Button</h2>
+              <h2>Sparkling Star Button</h2>
               <p>Button with spreading star animation.</p>
               <div class="preview-box">
                 <div class="preview-area">
@@ -760,9 +775,9 @@
               </div>
             </section>
 
-            <!-- Button 9 - Tooltip Button -->
+            <!-- Button 9 - Shopping Cart Button -->
             <section id="tooltip" class="docs-section">
-              <h2>Tooltip Button</h2>
+              <h2>Shopping Cart Button</h2>
               <p>Button with tooltip and icon transition.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">
@@ -839,9 +854,9 @@
               </div>
             </section>
 
-            <!-- Button 10 - Jump Button -->
+            <!-- Button 10 - Bounce Button -->
             <section id="jump" class="docs-section">
-              <h2>Jump Button</h2>
+              <h2>Bounce Button</h2>
               <p>Button with jump animation on hover.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">
@@ -893,14 +908,33 @@
               </div>
             </section>
 
-            <!-- Button 11 - Shake Button -->
+            <!-- Button 11 - Arrow Entry Button -->
             <section id="shake" class="docs-section">
-              <h2>Shake Button</h2>
-              <p>Button with shake and ripple effect.</p>
+              <h2>Arrow Entry Button</h2>
+              <p>Button with animated arrows and expanding circle.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">
-                  <button class="shake-btn">
-                    <span>Hover me</span>
+                  <button class="arrow-entry-btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="arr-2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                      ></path>
+                    </svg>
+                    <span class="text">E N T R Y</span>
+                    <span class="circle"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="arr-1"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                      ></path>
+                    </svg>
                   </button>
                 </div>
                 <details class="code-dropdown">
@@ -922,8 +956,15 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="shake-html">&lt;button class="shake-btn"&gt;
-  &lt;span&gt;Hover me&lt;/span&gt;
+                    <pre><code id="shake-html">&lt;button class="arrow-entry-btn"&gt;
+  &lt;svg class="arr-2" viewBox="0 0 24 24"&gt;
+    &lt;path d="M16.1716 10.9999..."&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+  &lt;span class="text"&gt;E N T R Y&lt;/span&gt;
+  &lt;span class="circle"&gt;&lt;/span&gt;
+  &lt;svg class="arr-1" viewBox="0 0 24 24"&gt;
+    &lt;path d="M16.1716 10.9999..."&gt;&lt;/path&gt;
+  &lt;/svg&gt;
 &lt;/button&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
@@ -933,32 +974,33 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="shake-css">.shake-btn {
-  padding: 0.8em 1em;
-  background-color: #333;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  cursor: pointer;
+                    <pre><code id="shake-css">.arrow-entry-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 36px;
+  border: 4px solid transparent;
+  border-radius: 100px;
+  color: #1f387e;
+  box-shadow: 0 0 0 2px #ffffff;
 }
 
-.shake-btn:hover {
-  animation: sh0 0.5s ease-in-out both;
+.arrow-entry-btn:hover {
+  border-radius: 12px;
 }
 
-@keyframes sh0 {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(7deg); }
-  50% { transform: rotate(-7deg); }
+.arrow-entry-btn:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <!-- Button 12 - Underline Button -->
+            <!-- Button 12 - Growing Underline Button -->
             <section id="underline" class="docs-section">
-              <h2>Underline Button</h2>
+              <h2>Growing Underline Button</h2>
               <p>Button with double underline animation.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">
@@ -1079,9 +1121,9 @@
               </div>
             </section>
 
-            <!-- Button 14 - Letter Box -->
+            <!-- Button 14 - Flipping Letters Button -->
             <section id="letter" class="docs-section">
-              <h2>Letter Box</h2>
+              <h2>Flipping Letters Button</h2>
               <p>Button with letter flip animation.</p>
               <div class="preview-box">
                 <div class="preview-area">
@@ -1142,9 +1184,9 @@
               </div>
             </section>
 
-            <!-- Button 15 - Layered Button -->
+            <!-- Button 15 - 3D Layers Button -->
             <section id="layered" class="docs-section">
-              <h2>Layered Button</h2>
+              <h2>3D Layers Button</h2>
               <p>Button with 3D layered effect.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">
@@ -1201,9 +1243,9 @@
               </div>
             </section>
 
-            <!-- Button 16 - UI Button -->
+            <!-- Button 16 - Chitchat Text Button -->
             <section id="ui" class="docs-section">
-              <h2>UI Button</h2>
+              <h2>Chitchat Text Button</h2>
               <p>Button with text chitchat animation.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">
@@ -1256,9 +1298,9 @@
               </div>
             </section>
 
-            <!-- Button 17 - Btn-31 -->
+            <!-- Button 17 - Morphing Button -->
             <section id="btn31" class="docs-section">
-              <h2>Btn-31</h2>
+              <h2>Morphing Button</h2>
               <p>Button with smooth clip-path animation.</p>
               <div class="preview-box">
                 <div class="preview-area">
@@ -1315,9 +1357,9 @@
               </div>
             </section>
 
-            <!-- Button 18 - CTI Button -->
+            <!-- Button 18 - Typewriter Button -->
             <section id="cti" class="docs-section">
-              <h2>CTI Button</h2>
+              <h2>Typewriter Button</h2>
               <p>Button with typewriter effect.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">
@@ -1436,9 +1478,9 @@
               </div>
             </section>
 
-            <!-- Button 20 - Gradient Button -->
+            <!-- Button 20 - Border Gradient Button -->
             <section id="gradient" class="docs-section">
-              <h2>Gradient Button</h2>
+              <h2>Border Gradient Button</h2>
               <p>Button with sweep gradient effect.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">

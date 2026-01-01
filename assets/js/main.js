@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initCopyButtons();
   initRippleEffect();
   initKeyboardShortcuts();
-  initTypewriter();
 });
 
 function initTypewriter() {
