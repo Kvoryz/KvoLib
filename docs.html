@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="KvoLib Documentation" />
+    <title>Documentation - KvoLib</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      html,
+      body {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="assets/img/icon.png" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/buttons.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/img/icon.png" alt="KvoLib" width="24" height="24" />
+          <span>KvoLib</span>
+        </a>
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="global-search"
+            placeholder="Search components..."
+          />
+          <span class="search-kbd">⌘K</span>
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/components.html" class="nav-link">Components</a>
+          <a href="/docs.html" class="nav-link">Docs</a>
+          <a
+            href="https://github.com/Kvoryz/KvoLib"
+            target="_blank"
+            class="nav-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <span class="section-badge">Docs</span>
+        <h1 class="page-title">Documentation</h1>
+        <p class="page-description">
+          Everything you need to get started with KvoLib.
+        </p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Getting Started</h4>
+              <ul>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#usage">Usage</a></li>
+              </ul>
+              <h4>Components</h4>
+              <ul>
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#forms">Forms</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="installation" class="docs-section">
+              <h2>Installation</h2>
+              <p>Get started by including KvoLib CSS in your project.</p>
+
+              <div class="preview-box">
+                <div class="code-block" style="border-top: none">
+                  <div class="code-header">
+                    <span>CDN</span>
+                    <button class="copy-btn" data-copy="cdn-code">
+                      <i class="fas fa-copy"></i>
+                      Copy
+                    </button>
+                  </div>
+                  <pre><code id="cdn-code">&lt;!-- Buttons CSS --&gt;
+&lt;link rel="stylesheet" href="https://cdn.kvolib.dev/css/buttons.css"&gt;
+
+&lt;!-- Forms CSS --&gt;
+&lt;link rel="stylesheet" href="https://cdn.kvolib.dev/css/forms.css"&gt;</code></pre>
+                </div>
+              </div>
+
+              <div class="preview-box" style="margin-top: 24px">
+                <div class="code-block" style="border-top: none">
+                  <div class="code-header">
+                    <span>Download</span>
+                    <button class="copy-btn" data-copy="download-code">
+                      <i class="fas fa-copy"></i>
+                      Copy
+                    </button>
+                  </div>
+                  <pre><code id="download-code">git clone https://github.com/Kvoryz/KvoLib.git</code></pre>
+                </div>
+              </div>
+            </section>
+
+            <section id="usage" class="docs-section">
+              <h2>Usage</h2>
+              <p>Include the CSS files and use the classes in your HTML.</p>
+
+              <div class="preview-box">
+                <div class="code-block" style="border-top: none">
+                  <div class="code-header">
+                    <span>HTML</span>
+                    <button class="copy-btn" data-copy="usage-code">
+                      <i class="fas fa-copy"></i>
+                      Copy
+                    </button>
+                  </div>
+                  <pre><code id="usage-code">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My App&lt;/title&gt;
+  &lt;link rel="stylesheet" href="path/to/buttons.css"&gt;
+  &lt;link rel="stylesheet" href="path/to/forms.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;button class="btn-glow"&gt;Glow Button&lt;/button&gt;
+  
+  &lt;div class="input-floating-group"&gt;
+    &lt;input type="text" class="input-floating" placeholder=" "&gt;
+    &lt;label&gt;Your Name&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+              </div>
+            </section>
+
+            <section id="buttons" class="docs-section">
+              <h2>Buttons</h2>
+              <p>
+                Available button styles with animations.
+                <a href="components/buttons.html" style="color: #00d4ff"
+                  >View all →</a
+                >
+              </p>
+
+              <div class="preview-box">
+                <div class="preview-area">
+                  <button class="btn-glow">Glow</button>
+                  <button class="btn-gradient">Gradient</button>
+                  <button class="btn-pulse">Pulse</button>
+                  <button class="btn-shake">Shake</button>
+                </div>
+              </div>
+
+              <div class="props-table" style="margin-top: 24px">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Effect</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>.btn-glow</code></td>
+                      <td>Shadow glow on hover</td>
+                    </tr>
+                    <tr>
+                      <td><code>.btn-gradient</code></td>
+                      <td>Animated gradient shift</td>
+                    </tr>
+                    <tr>
+                      <td><code>.btn-neon</code></td>
+                      <td>Neon border glow</td>
+                    </tr>
+                    <tr>
+                      <td><code>.btn-slide</code></td>
+                      <td>Slide fill effect</td>
+                    </tr>
+                    <tr>
+                      <td><code>.btn-pulse</code></td>
+                      <td>Pulsing animation</td>
+                    </tr>
+                    <tr>
+                      <td><code>.btn-magnetic</code></td>
+                      <td>Follows cursor (requires JS)</td>
+                    </tr>
+                    <tr>
+                      <td><code>.btn-border-anim</code></td>
+                      <td>Rainbow border animation</td>
+                    </tr>
+                    <tr>
+                      <td><code>.btn-shake</code></td>
+                      <td>Shake on hover</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section id="forms" class="docs-section">
+              <h2>Forms</h2>
+              <p>
+                Available form input styles.
+                <a href="components/forms.html" style="color: #00d4ff"
+                  >View all →</a
+                >
+              </p>
+
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <div class="input-minimal-group">
+                    <input
+                      type="text"
+                      class="input-minimal"
+                      placeholder="Minimal input"
+                    />
+                  </div>
+                  <div class="input-glow-group">
+                    <input
+                      type="text"
+                      class="input-glow"
+                      placeholder="Glow on focus"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="props-table" style="margin-top: 24px">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Effect</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>.input-minimal</code></td>
+                      <td>Clean minimal input</td>
+                    </tr>
+                    <tr>
+                      <td><code>.input-floating</code></td>
+                      <td>Floating label on focus</td>
+                    </tr>
+                    <tr>
+                      <td><code>.input-underline</code></td>
+                      <td>Animated underline</td>
+                    </tr>
+                    <tr>
+                      <td><code>.input-glass</code></td>
+                      <td>Glassmorphism blur</td>
+                    </tr>
+                    <tr>
+                      <td><code>.input-glow</code></td>
+                      <td>Glow on focus</td>
+                    </tr>
+                    <tr>
+                      <td><code>.toggle-switch</code></td>
+                      <td>Toggle switch with glow</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

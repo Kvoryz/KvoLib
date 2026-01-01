@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="KvoLib Form Components" />
+    <title>Forms - KvoLib</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      html,
+      body {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/forms.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/img/icon.png" alt="KvoLib" width="24" height="24" />
+          <span>KvoLib</span>
+        </a>
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="global-search"
+            placeholder="Search components..."
+          />
+          <span class="search-kbd">⌘K</span>
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/components.html" class="nav-link">Components</a>
+          <a href="/docs.html" class="nav-link">Docs</a>
+          <a
+            href="https://github.com/Kvoryz/KvoLib"
+            target="_blank"
+            class="nav-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Forms</span>
+        </div>
+        <h1 class="page-title">Forms</h1>
+        <p class="page-description">
+          Beautiful form components with modern effects.
+        </p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Form Styles</h4>
+              <ul>
+                <li><a href="#cyber">Cyber Corner</a></li>
+                <li><a href="#glass">Glassmorphism</a></li>
+                <li><a href="#float">Floating Label</a></li>
+                <li><a href="#underline">Underline</a></li>
+                <li><a href="#glow">Glow Focus</a></li>
+                <li><a href="#gradient">Gradient Border</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#select">Select</a></li>
+                <li><a href="#textarea">Textarea</a></li>
+                <li><a href="#toggle">Toggle Switch</a></li>
+                <li><a href="#checkbox">Checkbox</a></li>
+                <li><a href="#radio">Radio</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="cyber" class="docs-section">
+              <h2>Cyber Corner</h2>
+              <p>Input dengan corner accents yang expand saat focus.</p>
+
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="input-cyber-group">
+                    <input
+                      type="text"
+                      class="input-cyber"
+                      placeholder="Username"
+                    />
+                  </div>
+                  <div class="input-cyber-group">
+                    <input
+                      type="password"
+                      class="input-cyber"
+                      placeholder="Password"
+                    />
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="cyber-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="cyber-html">&lt;div class="input-cyber-group"&gt;
+  &lt;input type="text" class="input-cyber" placeholder="Username" /&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="cyber-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="cyber-css">.input-cyber-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-cyber-group::before,
+.input-cyber-group::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #00d4ff;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.input-cyber-group::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.input-cyber-group::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+
+.input-cyber-group:focus-within::before,
+.input-cyber-group:focus-within::after {
+  width: 16px;
+  height: 16px;
+}
+
+.input-cyber {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.3s;
+}
+
+.input-cyber:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="glass" class="docs-section">
+              <h2>Glassmorphism</h2>
+              <p>Input dengan efek glass blur modern.</p>
+
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-gradient"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="input-glass-group">
+                    <i class="fas fa-user input-glass-icon"></i>
+                    <input
+                      type="text"
+                      class="input-glass has-icon"
+                      placeholder="Username"
+                    />
+                  </div>
+                  <div class="input-glass-group">
+                    <i class="fas fa-lock input-glass-icon"></i>
+                    <input
+                      type="password"
+                      class="input-glass has-icon"
+                      placeholder="Password"
+                    />
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="glass-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="glass-html">&lt;div class="input-glass-group"&gt;
+  &lt;i class="fas fa-user input-glass-icon"&gt;&lt;/i&gt;
+  &lt;input type="text" class="input-glass has-icon" placeholder="Username" /&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="glass-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="glass-css">.input-glass {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.input-glass:focus {
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.input-glass-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.4);
+  transition: color 0.3s;
+}
+
+.input-glass-group:focus-within .input-glass-icon {
+  color: #00d4ff;
+}
+
+.input-glass.has-icon {
+  padding-left: 48px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="float" class="docs-section">
+              <h2>Floating Label</h2>
+              <p>Input dengan label yang naik saat focus.</p>
+
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="input-float-group">
+                    <input
+                      type="text"
+                      class="input-float"
+                      id="name"
+                      placeholder=" "
+                    />
+                    <label for="name">Full Name</label>
+                  </div>
+                  <div class="input-float-group">
+                    <input
+                      type="email"
+                      class="input-float"
+                      id="email"
+                      placeholder=" "
+                    />
+                    <label for="email">Email Address</label>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="float-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="float-html">&lt;div class="input-float-group"&gt;
+  &lt;input type="text" class="input-float" id="name" placeholder=" " /&gt;
+  &lt;label for="name"&gt;Full Name&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="float-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="float-css">.input-float-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-float-group label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.4);
+  font-size: 0.9rem;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.input-float {
+  width: 100%;
+  padding: 24px 16px 8px;
+  font-size: 0.9rem;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.input-float:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.input-float:focus + label,
+.input-float:not(:placeholder-shown) + label {
+  top: 12px;
+  font-size: 0.7rem;
+  color: #667eea;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="underline" class="docs-section">
+              <h2>Underline</h2>
+              <p>Input dengan animated underline gradient.</p>
+
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="input-underline-group">
+                    <input
+                      type="text"
+                      class="input-underline"
+                      placeholder="Username"
+                    />
+                    <span class="underline"></span>
+                  </div>
+                  <div class="input-underline-group">
+                    <input
+                      type="password"
+                      class="input-underline"
+                      placeholder="Password"
+                    />
+                    <span class="underline"></span>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="underline-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="underline-html">&lt;div class="input-underline-group"&gt;
+  &lt;input type="text" class="input-underline" placeholder="Username" /&gt;
+  &lt;span class="underline"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="underline-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="underline-css">.input-underline-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-underline {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 0.9rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  transition: all 0.3s;
+}
+
+.input-underline:focus {
+  outline: none;
+}
+
+.input-underline-group .underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00d4ff, #7928ca);
+  transition: all 0.3s;
+}
+
+.input-underline:focus ~ .underline {
+  left: 0;
+  width: 100%;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="glow" class="docs-section">
+              <h2>Glow Focus</h2>
+              <p>Input dengan efek glow saat focus.</p>
+
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="input-glow-group">
+                    <input
+                      type="text"
+                      class="input-glow"
+                      placeholder="Cyan glow"
+                    />
+                  </div>
+                  <div class="input-glow-group">
+                    <input
+                      type="text"
+                      class="input-glow input-glow-purple"
+                      placeholder="Purple glow"
+                    />
+                  </div>
+                  <div class="input-glow-group">
+                    <input
+                      type="text"
+                      class="input-glow input-glow-pink"
+                      placeholder="Pink glow"
+                    />
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="glow-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="glow-html">&lt;input type="text" class="input-glow" placeholder="Cyan glow" /&gt;
+&lt;input type="text" class="input-glow input-glow-purple" placeholder="Purple glow" /&gt;
+&lt;input type="text" class="input-glow input-glow-pink" placeholder="Pink glow" /&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="glow-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="glow-css">.input-glow {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.input-glow:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3),
+              0 0 40px rgba(0, 212, 255, 0.1);
+}
+
+.input-glow-purple:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3),
+              0 0 40px rgba(168, 85, 247, 0.1);
+}
+
+.input-glow-pink:focus {
+  border-color: #ec4899;
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.3),
+              0 0 40px rgba(236, 72, 153, 0.1);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="gradient" class="docs-section">
+              <h2>Gradient Border</h2>
+              <p>Input dengan animated gradient border.</p>
+
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="input-gradient-border-group">
+                    <input
+                      type="text"
+                      class="input-gradient-border"
+                      placeholder="Gradient border"
+                    />
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="gradient-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-html">&lt;div class="input-gradient-border-group"&gt;
+  &lt;input type="text" class="input-gradient-border" placeholder="Gradient border" /&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="gradient-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-css">.input-gradient-border-group {
+  position: relative;
+  width: 100%;
+  padding: 2px;
+  background: linear-gradient(90deg, #00d4ff, #7928ca, #ff0080);
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.input-gradient-border-group:focus-within {
+  box-shadow: 0 0 20px rgba(121, 40, 202, 0.4);
+}
+
+.input-gradient-border {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: #fff;
+  background: #000;
+  border: none;
+  border-radius: 8px;
+}
+
+.input-gradient-border:focus {
+  outline: none;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="search" class="docs-section">
+              <h2>Search</h2>
+              <p>Search input dengan icon.</p>
+
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="input-search-group">
+                    <i class="fas fa-search"></i>
+                    <input
+                      type="text"
+                      class="input-search"
+                      placeholder="Search..."
+                    />
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="search-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="search-html">&lt;div class="input-search-group"&gt;
+  &lt;i class="fas fa-search"&gt;&lt;/i&gt;
+  &lt;input type="text" class="input-search" placeholder="Search..." /&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="search-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="search-css">.input-search-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-search-group i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.4);
+}
+
+.input-search-group:focus-within i {
+  color: #fff;
+}
+
+.input-search {
+  width: 100%;
+  padding: 14px 20px 14px 48px;
+  font-size: 0.9rem;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.input-search:focus {
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.3);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="select" class="docs-section">
+              <h2>Select</h2>
+              <p>Custom select dropdown.</p>
+
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="select-glass-group">
+                    <select class="select-glass">
+                      <option value="">Select option...</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="select-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="select-html">&lt;div class="select-glass-group"&gt;
+  &lt;select class="select-glass"&gt;
+    &lt;option value=""&gt;Select option...&lt;/option&gt;
+    &lt;option value="1"&gt;Option 1&lt;/option&gt;
+    &lt;option value="2"&gt;Option 2&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="select-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="select-css">.select-glass-group {
+  position: relative;
+  width: 100%;
+}
+
+.select-glass-group::after {
+  content: '\f107';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.4);
+  pointer-events: none;
+  transition: transform 0.3s;
+}
+
+.select-glass-group:focus-within::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select-glass {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.3s;
+}
+
+.select-glass:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="textarea" class="docs-section">
+              <h2>Textarea</h2>
+              <p>Multi-line text input.</p>
+
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <textarea
+                    class="textarea-glass"
+                    placeholder="Write your message..."
+                  ></textarea>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="textarea-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="textarea-html">&lt;textarea class="textarea-glass" placeholder="Write your message..."&gt;&lt;/textarea&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="textarea-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="textarea-css">.textarea-glass {
+  width: 100%;
+  min-height: 120px;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  resize: vertical;
+  transition: all 0.3s;
+}
+
+.textarea-glass:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="toggle" class="docs-section">
+              <h2>Toggle Switch</h2>
+              <p>Toggle switch dengan glow effect.</p>
+
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="gap: 24px">
+                  <label class="toggle-switch">
+                    <input type="checkbox" checked />
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <label class="toggle-switch toggle-switch-purple">
+                    <input type="checkbox" />
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <label class="toggle-switch toggle-switch-green">
+                    <input type="checkbox" checked />
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="toggle-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="toggle-html">&lt;label class="toggle-switch"&gt;
+  &lt;input type="checkbox" checked /&gt;
+  &lt;span class="toggle-slider"&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="toggle-switch toggle-switch-purple"&gt;
+  &lt;input type="checkbox" /&gt;
+  &lt;span class="toggle-slider"&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="toggle-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="toggle-css">.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  transition: all 0.3s;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 3px;
+  bottom: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+  transform: translateX(28px);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="checkbox" class="docs-section">
+              <h2>Checkbox</h2>
+              <p>Custom checkbox dengan glow effect.</p>
+
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 16px;
+                  "
+                >
+                  <label class="checkbox-cyber">
+                    <input type="checkbox" checked />
+                    <span class="checkmark"><i class="fas fa-check"></i></span>
+                    Remember me
+                  </label>
+                  <label class="checkbox-cyber">
+                    <input type="checkbox" />
+                    <span class="checkmark"><i class="fas fa-check"></i></span>
+                    Accept terms
+                  </label>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="checkbox-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="checkbox-html">&lt;label class="checkbox-cyber"&gt;
+  &lt;input type="checkbox" checked /&gt;
+  &lt;span class="checkmark"&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;/span&gt;
+  Remember me
+&lt;/label&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="checkbox-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="checkbox-css">.checkbox-cyber {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+}
+
+.checkbox-cyber input {
+  display: none;
+}
+
+.checkbox-cyber .checkmark {
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.checkbox-cyber .checkmark i {
+  color: #000;
+  font-size: 0.7rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s;
+}
+
+.checkbox-cyber input:checked + .checkmark {
+  background: #00d4ff;
+  border-color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+}
+
+.checkbox-cyber input:checked + .checkmark i {
+  opacity: 1;
+  transform: scale(1);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="radio" class="docs-section">
+              <h2>Radio</h2>
+              <p>Custom radio button dengan glow effect.</p>
+
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 16px;
+                  "
+                >
+                  <label class="radio-cyber">
+                    <input type="radio" name="radio-demo" checked />
+                    <span class="radiomark"></span>
+                    Option 1
+                  </label>
+                  <label class="radio-cyber">
+                    <input type="radio" name="radio-demo" />
+                    <span class="radiomark"></span>
+                    Option 2
+                  </label>
+                  <label class="radio-cyber">
+                    <input type="radio" name="radio-demo" />
+                    <span class="radiomark"></span>
+                    Option 3
+                  </label>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i>
+                    View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="radio-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="radio-html">&lt;label class="radio-cyber"&gt;
+  &lt;input type="radio" name="group" checked /&gt;
+  &lt;span class="radiomark"&gt;&lt;/span&gt;
+  Option 1
+&lt;/label&gt;
+&lt;label class="radio-cyber"&gt;
+  &lt;input type="radio" name="group" /&gt;
+  &lt;span class="radiomark"&gt;&lt;/span&gt;
+  Option 2
+&lt;/label&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="radio-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="radio-css">.radio-cyber {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+}
+
+.radio-cyber input {
+  display: none;
+}
+
+.radio-cyber .radiomark {
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.radio-cyber .radiomark::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #00d4ff;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s;
+}
+
+.radio-cyber input:checked + .radiomark {
+  border-color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+}
+
+.radio-cyber input:checked + .radiomark::after {
+  opacity: 1;
+  transform: scale(1);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="footer-logo">
+              <img
+                src="/assets/img/icon.png"
+                alt="KvoLib"
+                width="20"
+                height="20"
+              />
+              <span>KvoLib</span>
+            </a>
+            <p>Build beautiful interfaces faster.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="/components.html">Components</a></li>
+              <li><a href="/docs.html">Documentation</a></li>
+              <li><a href="#">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/docs.html">Getting Started</a></li>
+              <li><a href="#">Examples</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 KvoLib. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/forms.js"></script>
+  </body>
+</html>

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta name="description" content="KvoLib Components" />
     <title>Components - KvoLib</title>
 
@@ -17,11 +18,48 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
+    <style>
+      html,
+      body {
+        background: #000;
+        color: #fff;
+      }
+    </style>
     <link rel="icon" type="image/png" href="assets/img/icon.png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
-    <div data-include="assets/layout/navbar.html"></div>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/img/icon.png" alt="KvoLib" width="24" height="24" />
+          <span>KvoLib</span>
+        </a>
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="global-search"
+            placeholder="Search components..."
+          />
+          <span class="search-kbd">⌘K</span>
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/components.html" class="nav-link">Components</a>
+          <a href="/docs.html" class="nav-link">Docs</a>
+          <a
+            href="https://github.com/Kvoryz/KvoLib"
+            target="_blank"
+            class="nav-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
 
     <section class="page-header">
       <div class="container">
@@ -41,7 +79,7 @@
             Inputs
           </h2>
           <div class="components-grid">
-            <a href="#" class="component-card">
+            <a href="components/buttons.html" class="component-card">
               <div class="card-icon">
                 <i class="fas fa-hand-pointer"></i>
               </div>
@@ -50,12 +88,12 @@
               <span class="card-arrow">→</span>
             </a>
 
-            <a href="#" class="component-card">
+            <a href="components/forms.html" class="component-card">
               <div class="card-icon">
                 <i class="fas fa-keyboard"></i>
               </div>
-              <h3>Input</h3>
-              <p>Text inputs with labels, placeholders, and validation.</p>
+              <h3>Forms</h3>
+              <p>Inputs, checkboxes, toggles, and more.</p>
               <span class="card-arrow">→</span>
             </a>
 
