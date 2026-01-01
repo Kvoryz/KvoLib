@@ -596,6 +596,62 @@ body {
   color: var(--gray-600);
 }
 
+.page-header {
+  padding: 140px 0 60px;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--gray-950) 0%, var(--black) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.page-description {
+  font-size: 1.1rem;
+  color: var(--gray-400);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.components-page {
+  padding: 80px 0;
+}
+
+.category-section {
+  margin-bottom: 80px;
+}
+
+.category-section:last-child {
+  margin-bottom: 0;
+}
+
+.category-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+}
+
+.category-title i {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: var(--gray-400);
+}
+
 @media (max-width: 1024px) {
   .components-grid {
     grid-template-columns: repeat(2, 1fr);
