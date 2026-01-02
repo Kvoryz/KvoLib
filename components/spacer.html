@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Spacer Components" />
     <title>Spacer - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,13 +24,14 @@
       }
     </style>
     <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/spacer.css" />
   </head>
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#layout">Components</a>
@@ -55,7 +57,7 @@
           </aside>
 
           <main class="docs-content">
-            <section id="vertical" class="docs-section">
+            <section id="vertical" class="docs-section" data-aos="fade-up">
               <h2>Vertical Spacers</h2>
               <p>Spacing utilities for vertical layouts.</p>
               <div class="preview-box">
@@ -121,7 +123,7 @@
               </div>
             </section>
 
-            <section id="horizontal" class="docs-section">
+            <section id="horizontal" class="docs-section" data-aos="fade-up">
               <h2>Horizontal Spacers</h2>
               <p>Spacing utilities for horizontal layouts.</p>
               <div class="preview-box">
@@ -178,13 +180,12 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

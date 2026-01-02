@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Form Components" />
     <title>Forms - KvoLib</title>
 
@@ -26,13 +27,14 @@
       }
     </style>
     <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/forms.css" />
   </head>
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#inputs">Components</a>
@@ -70,7 +72,7 @@
           </aside>
 
           <main class="docs-content">
-            <section id="cyber" class="docs-section">
+            <section id="cyber" class="docs-section" data-aos="fade-up">
               <h2>Cyber Corner</h2>
               <p>Input dengan corner accents yang expand saat focus.</p>
 
@@ -180,7 +182,7 @@
               </div>
             </section>
 
-            <section id="glass" class="docs-section">
+            <section id="glass" class="docs-section" data-aos="fade-up">
               <h2>Glassmorphism</h2>
               <p>Input dengan efek glass blur modern.</p>
 
@@ -277,7 +279,7 @@
               </div>
             </section>
 
-            <section id="float" class="docs-section">
+            <section id="float" class="docs-section" data-aos="fade-up">
               <h2>Floating Label</h2>
               <p>Input dengan label yang naik saat focus.</p>
 
@@ -380,7 +382,7 @@
               </div>
             </section>
 
-            <section id="underline" class="docs-section">
+            <section id="underline" class="docs-section" data-aos="fade-up">
               <h2>Underline</h2>
               <p>Input dengan animated underline gradient.</p>
 
@@ -476,7 +478,7 @@
               </div>
             </section>
 
-            <section id="glow" class="docs-section">
+            <section id="glow" class="docs-section" data-aos="fade-up">
               <h2>Glow Focus</h2>
               <p>Input dengan efek glow saat focus.</p>
 
@@ -571,7 +573,7 @@
               </div>
             </section>
 
-            <section id="gradient" class="docs-section">
+            <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Border</h2>
               <p>Input dengan animated gradient border.</p>
 
@@ -649,7 +651,7 @@
               </div>
             </section>
 
-            <section id="search" class="docs-section">
+            <section id="search" class="docs-section" data-aos="fade-up">
               <h2>Search</h2>
               <p>Search input dengan icon.</p>
 
@@ -736,7 +738,7 @@
               </div>
             </section>
 
-            <section id="select" class="docs-section">
+            <section id="select" class="docs-section" data-aos="fade-up">
               <h2>Select</h2>
               <p>Custom select dropdown.</p>
 
@@ -833,7 +835,7 @@
               </div>
             </section>
 
-            <section id="textarea" class="docs-section">
+            <section id="textarea" class="docs-section" data-aos="fade-up">
               <h2>Textarea</h2>
               <p>Multi-line text input.</p>
 
@@ -898,7 +900,7 @@
               </div>
             </section>
 
-            <section id="toggle" class="docs-section">
+            <section id="toggle" class="docs-section" data-aos="fade-up">
               <h2>Toggle Switch</h2>
               <p>Toggle switch dengan glow effect.</p>
 
@@ -1001,7 +1003,7 @@
               </div>
             </section>
 
-            <section id="checkbox" class="docs-section">
+            <section id="checkbox" class="docs-section" data-aos="fade-up">
               <h2>Checkbox</h2>
               <p>Custom checkbox dengan glow effect.</p>
 
@@ -1104,7 +1106,7 @@
               </div>
             </section>
 
-            <section id="radio" class="docs-section">
+            <section id="radio" class="docs-section" data-aos="fade-up">
               <h2>Radio</h2>
               <p>Custom radio button dengan glow effect.</p>
 
@@ -1218,13 +1220,12 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Divider Components" />
     <title>Divider - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,13 +24,14 @@
       }
     </style>
     <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/divider.css" />
   </head>
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#layout">Components</a>
@@ -59,7 +61,7 @@
           </aside>
 
           <main class="docs-content">
-            <section id="solid" class="docs-section">
+            <section id="solid" class="docs-section" data-aos="fade-up">
               <h2>Solid Divider</h2>
               <p>Simple solid line divider.</p>
               <div class="preview-box">
@@ -106,7 +108,7 @@
               </div>
             </section>
 
-            <section id="dashed" class="docs-section">
+            <section id="dashed" class="docs-section" data-aos="fade-up">
               <h2>Dashed Divider</h2>
               <p>Divider with dashed border.</p>
               <div class="preview-box">
@@ -151,7 +153,7 @@
               </div>
             </section>
 
-            <section id="gradient" class="docs-section">
+            <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Divider</h2>
               <p>Divider with gradient effect.</p>
               <div class="preview-box">
@@ -197,7 +199,7 @@
               </div>
             </section>
 
-            <section id="glow" class="docs-section">
+            <section id="glow" class="docs-section" data-aos="fade-up">
               <h2>Glow Divider</h2>
               <p>Divider with neon glow effect.</p>
               <div class="preview-box">
@@ -244,7 +246,7 @@
               </div>
             </section>
 
-            <section id="text" class="docs-section">
+            <section id="text" class="docs-section" data-aos="fade-up">
               <h2>Divider with Text</h2>
               <p>Divider with centered text label.</p>
               <div class="preview-box">
@@ -297,7 +299,7 @@
               </div>
             </section>
 
-            <section id="vertical" class="docs-section">
+            <section id="vertical" class="docs-section" data-aos="fade-up">
               <h2>Vertical Divider</h2>
               <p>Vertical divider for inline content.</p>
               <div class="preview-box">
@@ -343,13 +345,12 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

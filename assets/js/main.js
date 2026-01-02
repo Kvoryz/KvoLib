@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (typeof AOS !== "undefined") {
     AOS.init({
-      duration: 800,
+      duration: 600,
       easing: "ease-out",
       once: true,
       offset: 100,

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Card Components" />
     <title>Card - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,13 +24,14 @@
       }
     </style>
     <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/card.css" />
   </head>
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#layout">Components</a>
@@ -59,7 +61,7 @@
           </aside>
 
           <main class="docs-content">
-            <section id="basic" class="docs-section">
+            <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Card</h2>
               <p>Simple card with subtle hover effect.</p>
               <div class="preview-box">
@@ -122,7 +124,7 @@
               </div>
             </section>
 
-            <section id="glass" class="docs-section">
+            <section id="glass" class="docs-section" data-aos="fade-up">
               <h2>Glass Card</h2>
               <p>Glassmorphism card with blur effect.</p>
               <div class="preview-box">
@@ -182,7 +184,7 @@
               </div>
             </section>
 
-            <section id="gradient" class="docs-section">
+            <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Card</h2>
               <p>Card with gradient background.</p>
               <div class="preview-box">
@@ -240,7 +242,7 @@
               </div>
             </section>
 
-            <section id="neon" class="docs-section">
+            <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Card</h2>
               <p>Card with neon glow effect.</p>
               <div class="preview-box">
@@ -299,7 +301,7 @@
               </div>
             </section>
 
-            <section id="3d" class="docs-section">
+            <section id="3d" class="docs-section" data-aos="fade-up">
               <h2>3D Card</h2>
               <p>Card with 3D neumorphic effect.</p>
               <div class="preview-box">
@@ -357,7 +359,7 @@
               </div>
             </section>
 
-            <section id="hoverable" class="docs-section">
+            <section id="hoverable" class="docs-section" data-aos="fade-up">
               <h2>Hoverable Card</h2>
               <p>Card with smooth hover animation.</p>
               <div class="preview-box">
@@ -414,13 +416,12 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

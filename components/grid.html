@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Grid Components" />
     <title>Grid - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,13 +24,14 @@
       }
     </style>
     <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/grid.css" />
   </head>
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#layout">Components</a>
@@ -60,7 +62,7 @@
           </aside>
 
           <main class="docs-content">
-            <section id="two-column" class="docs-section">
+            <section id="two-column" class="docs-section" data-aos="fade-up">
               <h2>Two Column Grid</h2>
               <p>Responsive 2-column grid layout.</p>
               <div class="preview-box">
@@ -124,7 +126,7 @@
               </div>
             </section>
 
-            <section id="three-column" class="docs-section">
+            <section id="three-column" class="docs-section" data-aos="fade-up">
               <h2>Three Column Grid</h2>
               <p>Responsive 3-column grid layout.</p>
               <div class="preview-box">
@@ -197,7 +199,7 @@
               </div>
             </section>
 
-            <section id="four-column" class="docs-section">
+            <section id="four-column" class="docs-section" data-aos="fade-up">
               <h2>Four Column Grid</h2>
               <p>Responsive 4-column grid layout.</p>
               <div class="preview-box">
@@ -251,7 +253,7 @@
               </div>
             </section>
 
-            <section id="auto-fit" class="docs-section">
+            <section id="auto-fit" class="docs-section" data-aos="fade-up">
               <h2>Auto Fit Grid</h2>
               <p>
                 Grid that automatically fits items based on available space.
@@ -313,7 +315,7 @@
               </div>
             </section>
 
-            <section id="masonry" class="docs-section">
+            <section id="masonry" class="docs-section" data-aos="fade-up">
               <h2>Masonry Grid</h2>
               <p>Pinterest-style masonry layout.</p>
               <div class="preview-box">
@@ -377,13 +379,12 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

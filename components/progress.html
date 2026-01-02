@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Progress Components" />
     <title>Progress - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +31,7 @@
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#feedback">Components</a>
@@ -63,7 +64,7 @@
 
           <main class="docs-content">
             <!-- Basic Progress -->
-            <section id="basic" class="docs-section">
+            <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Progress</h2>
               <p>Standard gradient progress bar.</p>
               <div class="preview-box">
@@ -121,7 +122,7 @@
             </section>
 
             <!-- Sizes -->
-            <section id="sizes" class="docs-section">
+            <section id="sizes" class="docs-section" data-aos="fade-up">
               <h2>Progress Sizes</h2>
               <p>Different bar heights.</p>
               <div class="preview-box">
@@ -178,7 +179,7 @@
             </section>
 
             <!-- Colors -->
-            <section id="colors" class="docs-section">
+            <section id="colors" class="docs-section" data-aos="fade-up">
               <h2>Progress Colors</h2>
               <p>Different color variants.</p>
               <div class="preview-box">
@@ -253,7 +254,7 @@
             </section>
 
             <!-- Striped -->
-            <section id="striped" class="docs-section">
+            <section id="striped" class="docs-section" data-aos="fade-up">
               <h2>Striped Progress</h2>
               <p>Static striped pattern.</p>
               <div class="preview-box">
@@ -310,7 +311,7 @@
             </section>
 
             <!-- Animated -->
-            <section id="animated" class="docs-section">
+            <section id="animated" class="docs-section" data-aos="fade-up">
               <h2>Animated Stripes</h2>
               <p>Moving stripe animation.</p>
               <div class="preview-box">
@@ -372,7 +373,7 @@
             </section>
 
             <!-- Indeterminate -->
-            <section id="indeterminate" class="docs-section">
+            <section id="indeterminate" class="docs-section" data-aos="fade-up">
               <h2>Indeterminate</h2>
               <p>Loading state with no known progress.</p>
               <div class="preview-box">
@@ -425,7 +426,7 @@
             </section>
 
             <!-- Neon -->
-            <section id="neon" class="docs-section">
+            <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Progress</h2>
               <p>Glowing neon effect.</p>
               <div class="preview-box">
@@ -478,7 +479,7 @@
             </section>
 
             <!-- Circular -->
-            <section id="circular" class="docs-section">
+            <section id="circular" class="docs-section" data-aos="fade-up">
               <h2>Circular Progress</h2>
               <p>Round progress indicator.</p>
               <div class="preview-box">
@@ -573,7 +574,6 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
@@ -581,6 +581,6 @@
     <div data-include="assets/layout/footer.html"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
   </body>
 </html>

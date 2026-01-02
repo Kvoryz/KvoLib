@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Checkbox Components" />
     <title>Checkboxes - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,13 +24,14 @@
       }
     </style>
     <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/checkbox.css" />
   </head>
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#inputs">Components</a>
@@ -64,7 +66,7 @@
 
           <main class="docs-content">
             <!-- Checkbox 1 - Modern -->
-            <section id="modern" class="docs-section">
+            <section id="modern" class="docs-section" data-aos="fade-up">
               <h2>Modern Checkbox</h2>
               <p>Smooth checkbox with scale animation.</p>
               <div class="preview-box">
@@ -122,7 +124,7 @@
             </section>
 
             <!-- Checkbox 2 - Minimal -->
-            <section id="minimal" class="docs-section">
+            <section id="minimal" class="docs-section" data-aos="fade-up">
               <h2>Minimal Checkbox</h2>
               <p>Clean and simple checkbox design.</p>
               <div class="preview-box">
@@ -179,7 +181,7 @@
             </section>
 
             <!-- Checkbox 3 - Gradient -->
-            <section id="gradient" class="docs-section">
+            <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Checkbox</h2>
               <p>Checkbox with beautiful gradient fill.</p>
               <div class="preview-box">
@@ -241,7 +243,7 @@
             </section>
 
             <!-- Checkbox 4 - Neon -->
-            <section id="neon" class="docs-section">
+            <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Checkbox</h2>
               <p>Glowing neon effect checkbox.</p>
               <div class="preview-box">
@@ -298,7 +300,7 @@
             </section>
 
             <!-- Checkbox 5 - Bouncy -->
-            <section id="bouncy" class="docs-section">
+            <section id="bouncy" class="docs-section" data-aos="fade-up">
               <h2>Bouncy Checkbox</h2>
               <p>Fun checkbox with bouncy animation.</p>
               <div class="preview-box">
@@ -354,7 +356,7 @@
             </section>
 
             <!-- Checkbox 6 - Toggle Style -->
-            <section id="toggle" class="docs-section">
+            <section id="toggle" class="docs-section" data-aos="fade-up">
               <h2>Toggle Style Checkbox</h2>
               <p>Toggle switch style checkbox.</p>
               <div class="preview-box">
@@ -414,7 +416,7 @@
             </section>
 
             <!-- Checkbox 7 - Glow -->
-            <section id="glow" class="docs-section">
+            <section id="glow" class="docs-section" data-aos="fade-up">
               <h2>Glow Checkbox</h2>
               <p>Checkbox with glowing effect when checked.</p>
               <div class="preview-box">
@@ -471,7 +473,7 @@
             </section>
 
             <!-- Checkbox 8 - 3D Effect -->
-            <section id="3d" class="docs-section">
+            <section id="3d" class="docs-section" data-aos="fade-up">
               <h2>3D Effect Checkbox</h2>
               <p>Neumorphic 3D style checkbox.</p>
               <div class="preview-box">
@@ -532,13 +534,12 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

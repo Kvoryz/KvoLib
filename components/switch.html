@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Switch Components" />
     <title>Switches - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,13 +24,14 @@
       }
     </style>
     <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/switch.css" />
   </head>
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#inputs">Components</a>
@@ -61,7 +63,7 @@
           </aside>
 
           <main class="docs-content">
-            <section id="ios" class="docs-section">
+            <section id="ios" class="docs-section" data-aos="fade-up">
               <h2>iOS Style Switch</h2>
               <p>Classic iOS-inspired toggle switch.</p>
               <div class="preview-box">
@@ -117,7 +119,7 @@
               </div>
             </section>
 
-            <section id="material" class="docs-section">
+            <section id="material" class="docs-section" data-aos="fade-up">
               <h2>Material Switch</h2>
               <p>Material design toggle switch.</p>
               <div class="preview-box">
@@ -174,7 +176,7 @@
               </div>
             </section>
 
-            <section id="neon" class="docs-section">
+            <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Switch</h2>
               <p>Glowing neon toggle switch.</p>
               <div class="preview-box">
@@ -227,7 +229,7 @@
               </div>
             </section>
 
-            <section id="gradient" class="docs-section">
+            <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Switch</h2>
               <p>Switch with gradient colors.</p>
               <div class="preview-box">
@@ -279,7 +281,7 @@
               </div>
             </section>
 
-            <section id="minimal" class="docs-section">
+            <section id="minimal" class="docs-section" data-aos="fade-up">
               <h2>Minimal Switch</h2>
               <p>Clean and minimal toggle switch.</p>
               <div class="preview-box">
@@ -335,7 +337,7 @@
               </div>
             </section>
 
-            <section id="square" class="docs-section">
+            <section id="square" class="docs-section" data-aos="fade-up">
               <h2>Square Switch</h2>
               <p>Square-shaped toggle switch.</p>
               <div class="preview-box">
@@ -390,13 +392,12 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

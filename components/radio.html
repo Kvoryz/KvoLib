@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Radio Components" />
     <title>Radio Buttons - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,13 +24,14 @@
       }
     </style>
     <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/radio.css" />
   </head>
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#inputs">Components</a>
@@ -61,7 +63,7 @@
 
           <main class="docs-content">
             <!-- Radio 1 - Modern -->
-            <section id="modern" class="docs-section">
+            <section id="modern" class="docs-section" data-aos="fade-up">
               <h2>Modern Radio</h2>
               <p>Clean radio button with smooth animation.</p>
               <div class="preview-box">
@@ -123,7 +125,7 @@
             </section>
 
             <!-- Radio 2 - Minimal -->
-            <section id="minimal" class="docs-section">
+            <section id="minimal" class="docs-section" data-aos="fade-up">
               <h2>Minimal Radio</h2>
               <p>Simple and clean radio button design.</p>
               <div class="preview-box">
@@ -185,7 +187,7 @@
             </section>
 
             <!-- Radio 3 - Neon -->
-            <section id="neon" class="docs-section">
+            <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Radio</h2>
               <p>Glowing neon effect radio button.</p>
               <div class="preview-box">
@@ -247,7 +249,7 @@
             </section>
 
             <!-- Radio 4 - Gradient -->
-            <section id="gradient" class="docs-section">
+            <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Radio</h2>
               <p>Radio button with beautiful gradient fill.</p>
               <div class="preview-box">
@@ -308,7 +310,7 @@
             </section>
 
             <!-- Radio 5 - Ripple -->
-            <section id="ripple" class="docs-section">
+            <section id="ripple" class="docs-section" data-aos="fade-up">
               <h2>Ripple Radio</h2>
               <p>Radio with ripple effect animation.</p>
               <div class="preview-box">
@@ -368,13 +370,12 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

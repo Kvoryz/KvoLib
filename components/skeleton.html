@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Skeleton Components" />
     <title>Skeleton - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +31,7 @@
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#feedback">Components</a>
@@ -63,7 +64,7 @@
 
           <main class="docs-content">
             <!-- Text Skeleton -->
-            <section id="text" class="docs-section">
+            <section id="text" class="docs-section" data-aos="fade-up">
               <h2>Text Skeleton</h2>
               <p>Placeholder for text content.</p>
               <div class="preview-box">
@@ -137,7 +138,7 @@
             </section>
 
             <!-- Avatar Skeleton -->
-            <section id="avatar" class="docs-section">
+            <section id="avatar" class="docs-section" data-aos="fade-up">
               <h2>Avatar Skeleton</h2>
               <p>Circular placeholder for avatars.</p>
               <div class="preview-box">
@@ -196,7 +197,7 @@
             </section>
 
             <!-- Image Skeleton -->
-            <section id="image" class="docs-section">
+            <section id="image" class="docs-section" data-aos="fade-up">
               <h2>Image Skeleton</h2>
               <p>Placeholder for images.</p>
               <div class="preview-box">
@@ -244,7 +245,7 @@
             </section>
 
             <!-- Button Skeleton -->
-            <section id="button" class="docs-section">
+            <section id="button" class="docs-section" data-aos="fade-up">
               <h2>Button Skeleton</h2>
               <p>Placeholder for buttons.</p>
               <div class="preview-box">
@@ -296,7 +297,7 @@
             </section>
 
             <!-- Card Skeleton -->
-            <section id="card" class="docs-section">
+            <section id="card" class="docs-section" data-aos="fade-up">
               <h2>Card Skeleton</h2>
               <p>Full card placeholder.</p>
               <div class="preview-box">
@@ -358,7 +359,7 @@
             </section>
 
             <!-- Profile Skeleton -->
-            <section id="profile" class="docs-section">
+            <section id="profile" class="docs-section" data-aos="fade-up">
               <h2>Profile Skeleton</h2>
               <p>User profile placeholder.</p>
               <div class="preview-box">
@@ -427,7 +428,7 @@
             </section>
 
             <!-- List Item Skeleton -->
-            <section id="list" class="docs-section">
+            <section id="list" class="docs-section" data-aos="fade-up">
               <h2>List Item Skeleton</h2>
               <p>List item placeholders.</p>
               <div class="preview-box">
@@ -512,7 +513,7 @@
             </section>
 
             <!-- Paragraph Skeleton -->
-            <section id="paragraph" class="docs-section">
+            <section id="paragraph" class="docs-section" data-aos="fade-up">
               <h2>Paragraph Skeleton</h2>
               <p>Multi-line text placeholder.</p>
               <div class="preview-box">
@@ -577,7 +578,6 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
@@ -585,6 +585,6 @@
     <div data-include="assets/layout/footer.html"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
   </body>
 </html>

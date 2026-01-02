@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Sidebar Components" />
     <title>Sidebar - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +31,7 @@
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#navigation">Components</a>
@@ -59,7 +60,7 @@
 
           <main class="docs-content">
             <!-- Basic Sidebar -->
-            <section id="basic" class="docs-section">
+            <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Sidebar</h2>
               <p>Standard sidebar navigation.</p>
               <div class="preview-box">
@@ -171,7 +172,7 @@
             </section>
 
             <!-- Glass Sidebar -->
-            <section id="glass" class="docs-section">
+            <section id="glass" class="docs-section" data-aos="fade-up">
               <h2>Glass Sidebar</h2>
               <p>Glassmorphism style sidebar.</p>
               <div class="preview-box">
@@ -242,7 +243,7 @@
             </section>
 
             <!-- Compact Sidebar -->
-            <section id="compact" class="docs-section">
+            <section id="compact" class="docs-section" data-aos="fade-up">
               <h2>Compact Sidebar</h2>
               <p>Icon-only compact sidebar.</p>
               <div class="preview-box">
@@ -326,7 +327,7 @@
             </section>
 
             <!-- Sidebar with User -->
-            <section id="user" class="docs-section">
+            <section id="user" class="docs-section" data-aos="fade-up">
               <h2>Sidebar with User</h2>
               <p>Sidebar with user profile footer.</p>
               <div class="preview-box">
@@ -426,7 +427,6 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
@@ -434,6 +434,6 @@
     <div data-include="assets/layout/footer.html"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
   </body>
 </html>

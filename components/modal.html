@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Modal Components" />
     <title>Modal - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +31,7 @@
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#feedback">Components</a>
@@ -60,7 +61,7 @@
 
           <main class="docs-content">
             <!-- Basic Modal -->
-            <section id="basic" class="docs-section">
+            <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Modal</h2>
               <p>Standard modal dialog.</p>
               <div class="preview-box">
@@ -168,7 +169,7 @@
             </section>
 
             <!-- Glass Modal -->
-            <section id="glass" class="docs-section">
+            <section id="glass" class="docs-section" data-aos="fade-up">
               <h2>Glass Modal</h2>
               <p>Glassmorphism style modal.</p>
               <div class="preview-box">
@@ -234,7 +235,7 @@
             </section>
 
             <!-- Gradient Modal -->
-            <section id="gradient" class="docs-section">
+            <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Border Modal</h2>
               <p>Modal with animated gradient border.</p>
               <div class="preview-box">
@@ -313,7 +314,7 @@
             </section>
 
             <!-- Neon Modal -->
-            <section id="neon" class="docs-section">
+            <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Modal</h2>
               <p>Glowing neon style modal.</p>
               <div class="preview-box">
@@ -391,7 +392,7 @@
             </section>
 
             <!-- Sizes -->
-            <section id="sizes" class="docs-section">
+            <section id="sizes" class="docs-section" data-aos="fade-up">
               <h2>Modal Sizes</h2>
               <p>Different modal size options.</p>
               <div class="preview-box">
@@ -482,7 +483,6 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
@@ -490,6 +490,6 @@
     <div data-include="assets/layout/footer.html"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
   </body>
 </html>

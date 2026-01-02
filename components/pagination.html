@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Pagination Components" />
     <title>Pagination - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +31,7 @@
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#navigation">Components</a>
@@ -61,7 +62,7 @@
 
           <main class="docs-content">
             <!-- Basic Pagination -->
-            <section id="basic" class="docs-section">
+            <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Pagination</h2>
               <p>Standard pagination navigation.</p>
               <div class="preview-box">
@@ -149,7 +150,7 @@
             </section>
 
             <!-- Pills Pagination -->
-            <section id="pills" class="docs-section">
+            <section id="pills" class="docs-section" data-aos="fade-up">
               <h2>Pills Pagination</h2>
               <p>Rounded pill-style pagination.</p>
               <div class="preview-box">
@@ -207,7 +208,7 @@
             </section>
 
             <!-- Bordered Pagination -->
-            <section id="bordered" class="docs-section">
+            <section id="bordered" class="docs-section" data-aos="fade-up">
               <h2>Bordered Pagination</h2>
               <p>Pagination with container border.</p>
               <div class="preview-box">
@@ -268,7 +269,7 @@
             </section>
 
             <!-- Simple Pagination -->
-            <section id="simple" class="docs-section">
+            <section id="simple" class="docs-section" data-aos="fade-up">
               <h2>Simple Pagination</h2>
               <p>Minimal pagination with prev/next.</p>
               <div class="preview-box">
@@ -334,7 +335,7 @@
             </section>
 
             <!-- Neon Pagination -->
-            <section id="neon" class="docs-section">
+            <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Pagination</h2>
               <p>Glowing neon style pagination.</p>
               <div class="preview-box">
@@ -390,7 +391,7 @@
             </section>
 
             <!-- Sizes -->
-            <section id="sizes" class="docs-section">
+            <section id="sizes" class="docs-section" data-aos="fade-up">
               <h2>Pagination Sizes</h2>
               <p>Different size variants.</p>
               <div class="preview-box">
@@ -462,7 +463,6 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
@@ -470,6 +470,6 @@
     <div data-include="assets/layout/footer.html"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
   </body>
 </html>

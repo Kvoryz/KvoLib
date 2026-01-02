@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Tabs Components" />
     <title>Tabs - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +31,7 @@
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#navigation">Components</a>
@@ -60,7 +61,7 @@
 
           <main class="docs-content">
             <!-- Basic Tabs -->
-            <section id="basic" class="docs-section">
+            <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Tabs</h2>
               <p>Standard tab navigation with underline.</p>
               <div class="preview-box">
@@ -138,7 +139,7 @@
             </section>
 
             <!-- Pills Tabs -->
-            <section id="pills" class="docs-section">
+            <section id="pills" class="docs-section" data-aos="fade-up">
               <h2>Pills Tabs</h2>
               <p>Tab navigation with pill style.</p>
               <div class="preview-box">
@@ -202,7 +203,7 @@
             </section>
 
             <!-- Boxed Tabs -->
-            <section id="boxed" class="docs-section">
+            <section id="boxed" class="docs-section" data-aos="fade-up">
               <h2>Boxed Tabs</h2>
               <p>Tab navigation with box container.</p>
               <div class="preview-box">
@@ -260,7 +261,7 @@
             </section>
 
             <!-- Tabs with Icons -->
-            <section id="icons" class="docs-section">
+            <section id="icons" class="docs-section" data-aos="fade-up">
               <h2>Tabs with Icons</h2>
               <p>Tab navigation with icons.</p>
               <div class="preview-box">
@@ -321,7 +322,7 @@
             </section>
 
             <!-- Neon Tabs -->
-            <section id="neon" class="docs-section">
+            <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Tabs</h2>
               <p>Glowing neon style tabs.</p>
               <div class="preview-box">
@@ -371,7 +372,6 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
@@ -379,6 +379,6 @@
     <div data-include="assets/layout/footer.html"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
   </body>
 </html>

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Link Components" />
     <title>Link - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +31,7 @@
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#navigation">Components</a>
@@ -65,7 +66,7 @@
 
           <main class="docs-content">
             <!-- Basic Link -->
-            <section id="basic" class="docs-section">
+            <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Link</h2>
               <p>Standard link with hover color change.</p>
               <div class="preview-box">
@@ -116,7 +117,7 @@
             </section>
 
             <!-- Animated Link -->
-            <section id="animated" class="docs-section">
+            <section id="animated" class="docs-section" data-aos="fade-up">
               <h2>Animated Underline</h2>
               <p>Link with sliding underline animation.</p>
               <div class="preview-box">
@@ -178,7 +179,7 @@
             </section>
 
             <!-- Gradient Link -->
-            <section id="gradient" class="docs-section">
+            <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Link</h2>
               <p>Link with gradient text color.</p>
               <div class="preview-box">
@@ -228,7 +229,7 @@
             </section>
 
             <!-- Arrow Link -->
-            <section id="arrow" class="docs-section">
+            <section id="arrow" class="docs-section" data-aos="fade-up">
               <h2>Link with Arrow</h2>
               <p>Link with animated arrow icon.</p>
               <div class="preview-box">
@@ -287,7 +288,7 @@
             </section>
 
             <!-- Icon Link -->
-            <section id="icon" class="docs-section">
+            <section id="icon" class="docs-section" data-aos="fade-up">
               <h2>Link with Icon</h2>
               <p>Link with leading icon.</p>
               <div class="preview-box">
@@ -355,7 +356,7 @@
             </section>
 
             <!-- External Link -->
-            <section id="external" class="docs-section">
+            <section id="external" class="docs-section" data-aos="fade-up">
               <h2>External Link</h2>
               <p>Link with external icon indicator.</p>
               <div class="preview-box">
@@ -410,7 +411,7 @@
             </section>
 
             <!-- Neon Link -->
-            <section id="neon" class="docs-section">
+            <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Link</h2>
               <p>Glowing neon style link.</p>
               <div class="preview-box">
@@ -460,7 +461,7 @@
             </section>
 
             <!-- Subtle Link -->
-            <section id="subtle" class="docs-section">
+            <section id="subtle" class="docs-section" data-aos="fade-up">
               <h2>Subtle Link</h2>
               <p>Subtle link with dotted underline.</p>
               <div class="preview-box">
@@ -513,7 +514,7 @@
             </section>
 
             <!-- Button Style Link -->
-            <section id="button" class="docs-section">
+            <section id="button" class="docs-section" data-aos="fade-up">
               <h2>Button Style Link</h2>
               <p>Link styled like a button.</p>
               <div class="preview-box">
@@ -566,7 +567,7 @@
             </section>
 
             <!-- Nav Style Link -->
-            <section id="nav" class="docs-section">
+            <section id="nav" class="docs-section" data-aos="fade-up">
               <h2>Nav Style Link</h2>
               <p>Navigation link with scaling underline.</p>
               <div class="preview-box">
@@ -634,7 +635,6 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
@@ -642,6 +642,6 @@
     <div data-include="assets/layout/footer.html"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
   </body>
 </html>

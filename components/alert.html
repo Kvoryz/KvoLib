@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Alert Components" />
     <title>Alert - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +31,7 @@
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#feedback">Components</a>
@@ -62,7 +63,7 @@
 
           <main class="docs-content">
             <!-- Info Alert -->
-            <section id="info" class="docs-section">
+            <section id="info" class="docs-section" data-aos="fade-up">
               <h2>Info Alert</h2>
               <p>Informational alert for general messages.</p>
               <div class="preview-box">
@@ -140,7 +141,7 @@
             </section>
 
             <!-- Success Alert -->
-            <section id="success" class="docs-section">
+            <section id="success" class="docs-section" data-aos="fade-up">
               <h2>Success Alert</h2>
               <p>Success alert for positive feedback.</p>
               <div class="preview-box">
@@ -203,7 +204,7 @@
             </section>
 
             <!-- Warning Alert -->
-            <section id="warning" class="docs-section">
+            <section id="warning" class="docs-section" data-aos="fade-up">
               <h2>Warning Alert</h2>
               <p>Warning alert for cautionary messages.</p>
               <div class="preview-box">
@@ -266,7 +267,7 @@
             </section>
 
             <!-- Error Alert -->
-            <section id="error" class="docs-section">
+            <section id="error" class="docs-section" data-aos="fade-up">
               <h2>Error Alert</h2>
               <p>Error alert for critical issues.</p>
               <div class="preview-box">
@@ -329,7 +330,7 @@
             </section>
 
             <!-- Glass Alert -->
-            <section id="glass" class="docs-section">
+            <section id="glass" class="docs-section" data-aos="fade-up">
               <h2>Glass Alert</h2>
               <p>Glassmorphism style alert.</p>
               <div class="preview-box">
@@ -391,7 +392,7 @@
             </section>
 
             <!-- Solid Alerts -->
-            <section id="solid" class="docs-section">
+            <section id="solid" class="docs-section" data-aos="fade-up">
               <h2>Solid Alerts</h2>
               <p>Solid background color alerts.</p>
               <div class="preview-box">
@@ -497,7 +498,7 @@
             </section>
 
             <!-- Neon Alert -->
-            <section id="neon" class="docs-section">
+            <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Alert</h2>
               <p>Glowing neon style alert.</p>
               <div class="preview-box">
@@ -555,7 +556,6 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
@@ -563,6 +563,6 @@
     <div data-include="assets/layout/footer.html"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
   </body>
 </html>

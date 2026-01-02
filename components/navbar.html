@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Navbar Components" />
     <title>Navbar - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +31,7 @@
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#navigation">Components</a>
@@ -60,7 +61,7 @@
 
           <main class="docs-content">
             <!-- Basic Navbar -->
-            <section id="basic" class="docs-section">
+            <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Navbar</h2>
               <p>Standard navigation bar.</p>
               <div class="preview-box">
@@ -163,7 +164,7 @@
             </section>
 
             <!-- Glass Navbar -->
-            <section id="glass" class="docs-section">
+            <section id="glass" class="docs-section" data-aos="fade-up">
               <h2>Glass Navbar</h2>
               <p>Glassmorphism style navbar.</p>
               <div class="preview-box">
@@ -218,7 +219,7 @@
             </section>
 
             <!-- Gradient Navbar -->
-            <section id="gradient" class="docs-section">
+            <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Navbar</h2>
               <p>Gradient background navbar.</p>
               <div class="preview-box">
@@ -287,7 +288,7 @@
             </section>
 
             <!-- Navbar with Search -->
-            <section id="search" class="docs-section">
+            <section id="search" class="docs-section" data-aos="fade-up">
               <h2>Navbar with Search</h2>
               <p>Navbar with integrated search bar.</p>
               <div class="preview-box">
@@ -360,7 +361,7 @@
             </section>
 
             <!-- Centered Navbar -->
-            <section id="centered" class="docs-section">
+            <section id="centered" class="docs-section" data-aos="fade-up">
               <h2>Centered Navbar</h2>
               <p>Navbar with centered menu links.</p>
               <div class="preview-box">
@@ -416,7 +417,6 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
@@ -424,6 +424,6 @@
     <div data-include="assets/layout/footer.html"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
   </body>
 </html>

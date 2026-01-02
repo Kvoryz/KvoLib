@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Breadcrumb Components" />
     <title>Breadcrumb - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +31,7 @@
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#navigation">Components</a>
@@ -62,7 +63,7 @@
 
           <main class="docs-content">
             <!-- Basic Breadcrumb -->
-            <section id="basic" class="docs-section">
+            <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Breadcrumb</h2>
               <p>Standard breadcrumb navigation.</p>
               <div class="preview-box">
@@ -132,7 +133,7 @@
             </section>
 
             <!-- With Icons -->
-            <section id="icons" class="docs-section">
+            <section id="icons" class="docs-section" data-aos="fade-up">
               <h2>Breadcrumb with Icons</h2>
               <p>Breadcrumb with icon labels.</p>
               <div class="preview-box">
@@ -202,7 +203,7 @@
             </section>
 
             <!-- Pills Breadcrumb -->
-            <section id="pills" class="docs-section">
+            <section id="pills" class="docs-section" data-aos="fade-up">
               <h2>Pills Breadcrumb</h2>
               <p>Breadcrumb with pill-style items.</p>
               <div class="preview-box">
@@ -255,7 +256,7 @@
             </section>
 
             <!-- Boxed Breadcrumb -->
-            <section id="boxed" class="docs-section">
+            <section id="boxed" class="docs-section" data-aos="fade-up">
               <h2>Boxed Breadcrumb</h2>
               <p>Breadcrumb with container box.</p>
               <div class="preview-box">
@@ -307,7 +308,7 @@
             </section>
 
             <!-- Neon Breadcrumb -->
-            <section id="neon" class="docs-section">
+            <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Breadcrumb</h2>
               <p>Glowing neon style breadcrumb.</p>
               <div class="preview-box">
@@ -363,7 +364,6 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
@@ -371,6 +371,6 @@
     <div data-include="assets/layout/footer.html"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
   </body>
 </html>

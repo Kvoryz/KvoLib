@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Toast Components" />
     <title>Toast - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +31,7 @@
   <body>
         <script src="/assets/js/navbar-loader.js"></script>
 
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
       <div class="container">
         <div class="breadcrumb">
           <a href="/components.html#feedback">Components</a>
@@ -63,7 +64,7 @@
 
           <main class="docs-content">
             <!-- Info Toast -->
-            <section id="info" class="docs-section">
+            <section id="info" class="docs-section" data-aos="fade-up">
               <h2>Info Toast</h2>
               <p>Informational toast notification.</p>
               <div class="preview-box">
@@ -144,7 +145,7 @@
             </section>
 
             <!-- Success Toast -->
-            <section id="success" class="docs-section">
+            <section id="success" class="docs-section" data-aos="fade-up">
               <h2>Success Toast</h2>
               <p>Success toast notification.</p>
               <div class="preview-box">
@@ -199,7 +200,7 @@
             </section>
 
             <!-- Warning Toast -->
-            <section id="warning" class="docs-section">
+            <section id="warning" class="docs-section" data-aos="fade-up">
               <h2>Warning Toast</h2>
               <p>Warning toast notification.</p>
               <div class="preview-box">
@@ -254,7 +255,7 @@
             </section>
 
             <!-- Error Toast -->
-            <section id="error" class="docs-section">
+            <section id="error" class="docs-section" data-aos="fade-up">
               <h2>Error Toast</h2>
               <p>Error toast notification.</p>
               <div class="preview-box">
@@ -309,7 +310,7 @@
             </section>
 
             <!-- Glass Toast -->
-            <section id="glass" class="docs-section">
+            <section id="glass" class="docs-section" data-aos="fade-up">
               <h2>Glass Toast</h2>
               <p>Glassmorphism style toast.</p>
               <div class="preview-box">
@@ -366,7 +367,7 @@
             </section>
 
             <!-- Dark Toast -->
-            <section id="dark" class="docs-section">
+            <section id="dark" class="docs-section" data-aos="fade-up">
               <h2>Dark Toast</h2>
               <p>Dark theme toast.</p>
               <div class="preview-box">
@@ -420,7 +421,7 @@
             </section>
 
             <!-- Gradient Toast -->
-            <section id="gradient" class="docs-section">
+            <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Toast</h2>
               <p>Gradient background toast.</p>
               <div class="preview-box">
@@ -473,7 +474,7 @@
             </section>
 
             <!-- Neon Toast -->
-            <section id="neon" class="docs-section">
+            <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Toast</h2>
               <p>Glowing neon style toast.</p>
               <div class="preview-box">
@@ -526,7 +527,6 @@
                 </details>
               </div>
             </section>
-          </main>
         </div>
       </div>
     </section>
@@ -534,6 +534,6 @@
     <div data-include="assets/layout/footer.html"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
   </body>
 </html>
