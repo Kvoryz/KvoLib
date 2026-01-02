@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Switch Components" />
     <title>Switches - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/switch.css" />
   </head>
   <body>
@@ -66,9 +47,9 @@
             <section id="ios" class="docs-section" data-aos="fade-up">
               <h2>iOS Style Switch</h2>
               <p>Classic iOS-inspired toggle switch.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="switch-ios">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="switch-ios">
                     <input type="checkbox" />
                     <span class="slider"></span>
                   </label>
@@ -77,54 +58,30 @@
                     <span class="slider"></span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="ios-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="ios-html">&lt;label class="switch-ios"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="ios-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="ios-css">.switch-ios input:checked + .slider {
+                <script type="text/html" slot="html">
+<label class="switch-ios">
+  <input type="checkbox" />
+  <span class="slider"></span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.switch-ios input:checked + .slider {
   background-color: #34c759;
 }
 
 .switch-ios input:checked + .slider::before {
   transform: translateX(22px);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
             <section id="material" class="docs-section" data-aos="fade-up">
               <h2>Material Switch</h2>
               <p>Material design toggle switch.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="switch-material">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="switch-material">
                     <input type="checkbox" />
                     <span class="slider"></span>
                   </label>
@@ -133,55 +90,31 @@
                     <span class="slider"></span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="material-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="material-html">&lt;label class="switch-material"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="material-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="material-css">.switch-material input:checked + .slider {
+                <script type="text/html" slot="html">
+<label class="switch-material">
+  <input type="checkbox" />
+  <span class="slider"></span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.switch-material input:checked + .slider {
   background-color: rgba(102, 126, 234, 0.5);
 }
 
 .switch-material input:checked + .slider::before {
   background-color: #667eea;
   transform: translateX(20px);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
             <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Switch</h2>
               <p>Glowing neon toggle switch.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="switch-neon">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="switch-neon">
                     <input type="checkbox" />
                     <span class="slider"></span>
                   </label>
@@ -190,51 +123,27 @@
                     <span class="slider"></span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-html">&lt;label class="switch-neon"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-css">.switch-neon input:checked + .slider {
+                <script type="text/html" slot="html">
+<label class="switch-neon">
+  <input type="checkbox" />
+  <span class="slider"></span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.switch-neon input:checked + .slider {
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.5),
               0 0 40px rgba(0, 212, 255, 0.2);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
             <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Switch</h2>
               <p>Switch with gradient colors.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="switch-gradient">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="switch-gradient">
                     <input type="checkbox" />
                     <span class="slider"></span>
                   </label>
@@ -243,50 +152,26 @@
                     <span class="slider"></span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-html">&lt;label class="switch-gradient"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-css">.switch-gradient input:checked + .slider {
+                <script type="text/html" slot="html">
+<label class="switch-gradient">
+  <input type="checkbox" />
+  <span class="slider"></span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.switch-gradient input:checked + .slider {
   background: linear-gradient(90deg, #667eea, #764ba2);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
             <section id="minimal" class="docs-section" data-aos="fade-up">
               <h2>Minimal Switch</h2>
               <p>Clean and minimal toggle switch.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="switch-minimal">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="switch-minimal">
                     <input type="checkbox" />
                     <span class="slider"></span>
                   </label>
@@ -295,54 +180,30 @@
                     <span class="slider"></span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="minimal-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="minimal-html">&lt;label class="switch-minimal"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="minimal-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="minimal-css">.switch-minimal input:checked + .slider {
+                <script type="text/html" slot="html">
+<label class="switch-minimal">
+  <input type="checkbox" />
+  <span class="slider"></span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.switch-minimal input:checked + .slider {
   border-color: #fff;
 }
 
 .switch-minimal input:checked + .slider::before {
   background-color: #fff;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
             <section id="square" class="docs-section" data-aos="fade-up">
               <h2>Square Switch</h2>
               <p>Square-shaped toggle switch.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="switch-square">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="switch-square">
                     <input type="checkbox" />
                     <span class="slider"></span>
                   </label>
@@ -351,45 +212,21 @@
                     <span class="slider"></span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="square-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="square-html">&lt;label class="switch-square"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="square-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="square-css">.switch-square input:checked + .slider {
+                <script type="text/html" slot="html">
+<label class="switch-square">
+  <input type="checkbox" />
+  <span class="slider"></span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.switch-square input:checked + .slider {
   background-color: #f43f5e;
 }
 
 .switch-square input:checked + .slider::before {
   transform: translateX(24px);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
         </div>
@@ -397,7 +234,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Grid Components" />
     <title>Grid - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/grid.css" />
   </head>
   <body>
@@ -104,10 +85,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="two-col-html">&lt;div class="grid-two-col"&gt;
+                    <pre>&lt;div class="grid-two-col"&gt;
   &lt;div class="grid-item"&gt;Item 1&lt;/div&gt;
   &lt;div class="grid-item"&gt;Item 2&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -116,11 +97,11 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="two-col-css">.grid-two-col {
+                    <pre>.grid-two-col {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -176,11 +157,11 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="three-col-html">&lt;div class="grid-three-col"&gt;
+                    <pre>&lt;div class="grid-three-col"&gt;
   &lt;div class="grid-item"&gt;Item 1&lt;/div&gt;
   &lt;div class="grid-item"&gt;Item 2&lt;/div&gt;
   &lt;div class="grid-item"&gt;Item 3&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -189,11 +170,11 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="three-col-css">.grid-three-col {
+                    <pre>.grid-three-col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -229,12 +210,12 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="four-col-html">&lt;div class="grid-four-col"&gt;
+                    <pre>&lt;div class="grid-four-col"&gt;
   &lt;div class="grid-item"&gt;1&lt;/div&gt;
   &lt;div class="grid-item"&gt;2&lt;/div&gt;
   &lt;div class="grid-item"&gt;3&lt;/div&gt;
   &lt;div class="grid-item"&gt;4&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -243,11 +224,11 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="four-col-css">.grid-four-col {
+                    <pre>.grid-four-col {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -293,10 +274,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="auto-fit-html">&lt;div class="grid-auto-fit"&gt;
+                    <pre>&lt;div class="grid-auto-fit"&gt;
   &lt;div class="grid-item"&gt;Auto 1&lt;/div&gt;
   &lt;div class="grid-item"&gt;Auto 2&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -305,11 +286,11 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="auto-fit-css">.grid-auto-fit {
+                    <pre>.grid-auto-fit {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 24px;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -354,10 +335,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="masonry-html">&lt;div class="grid-masonry"&gt;
+                    <pre>&lt;div class="grid-masonry"&gt;
   &lt;div class="grid-item"&gt;Item 1&lt;/div&gt;
   &lt;div class="grid-item"&gt;Item 2&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -366,7 +347,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="masonry-css">.grid-masonry {
+                    <pre>.grid-masonry {
   column-count: 3;
   column-gap: 24px;
 }
@@ -374,7 +355,7 @@
 .grid-masonry > * {
   break-inside: avoid;
   margin-bottom: 24px;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -384,7 +365,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

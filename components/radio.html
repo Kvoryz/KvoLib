@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Radio Components" />
     <title>Radio Buttons - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/radio.css" />
   </head>
   <body>
@@ -66,9 +47,9 @@
             <section id="modern" class="docs-section" data-aos="fade-up">
               <h2>Modern Radio</h2>
               <p>Clean radio button with smooth animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="radio-modern">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="radio-modern">
                     <input type="radio" name="modern" />
                     <span class="radiomark"></span>
                     <span class="label-text">Option 1</span>
@@ -84,43 +65,19 @@
                     <span class="label-text">Option 3</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="modern-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="modern-html">&lt;label class="radio-modern"&gt;
-  &lt;input type="radio" name="group" /&gt;
-  &lt;span class="radiomark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;Option 1&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="modern-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="modern-css">.radio-modern input:checked ~ .radiomark {
+                <script type="text/html" slot="html">
+<label class="radio-modern">
+  <input type="radio" name="group" />
+  <span class="radiomark"></span>
+  <span class="label-text">Option 1</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.radio-modern input:checked ~ .radiomark {
   background: #667eea;
   border-color: #667eea;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -128,9 +85,9 @@
             <section id="minimal" class="docs-section" data-aos="fade-up">
               <h2>Minimal Radio</h2>
               <p>Simple and clean radio button design.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="radio-minimal">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="radio-minimal">
                     <input type="radio" name="minimal" />
                     <span class="radiomark"></span>
                     <span class="label-text">Small</span>
@@ -146,43 +103,19 @@
                     <span class="label-text">Large</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="minimal-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="minimal-html">&lt;label class="radio-minimal"&gt;
-  &lt;input type="radio" name="size" /&gt;
-  &lt;span class="radiomark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;Small&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="minimal-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="minimal-css">.radio-minimal input:checked ~ .radiomark {
+                <script type="text/html" slot="html">
+<label class="radio-minimal">
+  <input type="radio" name="size" />
+  <span class="radiomark"></span>
+  <span class="label-text">Small</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.radio-minimal input:checked ~ .radiomark {
   background: #fff;
   border-color: #fff;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -190,9 +123,9 @@
             <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Radio</h2>
               <p>Glowing neon effect radio button.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="radio-neon">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="radio-neon">
                     <input type="radio" name="neon" />
                     <span class="radiomark"></span>
                     <span class="label-text">Light theme</span>
@@ -208,43 +141,19 @@
                     <span class="label-text">Auto theme</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-html">&lt;label class="radio-neon"&gt;
-  &lt;input type="radio" name="theme" /&gt;
-  &lt;span class="radiomark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;Dark theme&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-css">.radio-neon input:checked ~ .radiomark {
+                <script type="text/html" slot="html">
+<label class="radio-neon">
+  <input type="radio" name="theme" />
+  <span class="radiomark"></span>
+  <span class="label-text">Dark theme</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.radio-neon input:checked ~ .radiomark {
   box-shadow: 0 0 15px rgba(0, 212, 255, 0.6),
               0 0 30px rgba(0, 212, 255, 0.3);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -252,9 +161,9 @@
             <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Radio</h2>
               <p>Radio button with beautiful gradient fill.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="radio-gradient">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="radio-gradient">
                     <input type="radio" name="gradient" />
                     <span class="radiomark"></span>
                     <span class="label-text">Monthly</span>
@@ -265,47 +174,23 @@
                     <span class="label-text">Yearly</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-html">&lt;label class="radio-gradient"&gt;
-  &lt;input type="radio" name="plan" /&gt;
-  &lt;span class="radiomark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;Monthly&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-css">.radio-gradient .radiomark::before {
+                <script type="text/html" slot="html">
+<label class="radio-gradient">
+  <input type="radio" name="plan" />
+  <span class="radiomark"></span>
+  <span class="label-text">Monthly</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.radio-gradient .radiomark::before {
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   opacity: 0;
 }
 
 .radio-gradient input:checked ~ .radiomark::before {
   opacity: 1;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -313,9 +198,9 @@
             <section id="ripple" class="docs-section" data-aos="fade-up">
               <h2>Ripple Radio</h2>
               <p>Radio with ripple effect animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="radio-ripple">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="radio-ripple">
                     <input type="radio" name="ripple" />
                     <span class="radiomark"></span>
                     <span class="label-text">Low priority</span>
@@ -331,43 +216,19 @@
                     <span class="label-text">High priority</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="ripple-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="ripple-html">&lt;label class="radio-ripple"&gt;
-  &lt;input type="radio" name="priority" /&gt;
-  &lt;span class="radiomark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;High priority&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="ripple-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="ripple-css">.radio-ripple input:checked ~ .radiomark::before {
+                <script type="text/html" slot="html">
+<label class="radio-ripple">
+  <input type="radio" name="priority" />
+  <span class="radiomark"></span>
+  <span class="label-text">High priority</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.radio-ripple input:checked ~ .radiomark::before {
   transform: translate(-50%, -50%) scale(1.5);
   opacity: 0;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
         </div>
@@ -375,7 +236,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

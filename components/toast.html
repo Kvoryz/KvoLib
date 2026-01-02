@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Toast Components" />
     <title>Toast - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/toast.css" />
   </head>
   <body>
@@ -67,9 +48,9 @@
             <section id="info" class="docs-section" data-aos="fade-up">
               <h2>Info Toast</h2>
               <p>Informational toast notification.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div
+              <div class="component-viewer">
+                <div slot="preview">
+<div
                     class="toast toast-info"
                     style="position: relative; animation: none"
                   >
@@ -85,41 +66,18 @@
                     </button>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="info-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="info-html">&lt;div class="toast toast-info"&gt;
-  &lt;div class="toast-icon"&gt;&lt;i class="fas fa-info-circle"&gt;&lt;/i&gt;&lt;/div&gt;
-  &lt;div class="toast-content"&gt;
-    &lt;div class="toast-title"&gt;Info&lt;/div&gt;
-    &lt;div class="toast-message"&gt;Message here.&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;button class="toast-close"&gt;&lt;i class="fas fa-times"&gt;&lt;/i&gt;&lt;/button&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="info-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="info-css">.toast {
+                <script type="text/html" slot="html">
+<div class="toast toast-info">
+  <div class="toast-icon"><i class="fas fa-info-circle"></i></div>
+  <div class="toast-content">
+    <div class="toast-title">Info</div>
+    <div class="toast-message">Message here.</div>
+  </div>
+  <button class="toast-close"><i class="fas fa-times"></i></button>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.toast {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -138,9 +96,8 @@
 @keyframes toastSlideIn {
   from { opacity: 0; transform: translateX(100%); }
   to { opacity: 1; transform: translateX(0); }
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -148,9 +105,9 @@
             <section id="success" class="docs-section" data-aos="fade-up">
               <h2>Success Toast</h2>
               <p>Success toast notification.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div
+              <div class="component-viewer">
+                <div slot="preview">
+<div
                     class="toast toast-success"
                     style="position: relative; animation: none"
                   >
@@ -163,39 +120,15 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="success-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="success-html">&lt;div class="toast toast-success"&gt;...&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="success-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="success-css">.toast-success {
+                <script type="text/html" slot="html">
+<div class="toast toast-success">...</div>
+                </script>
+                <script type="text/css" slot="css">
+.toast-success {
   background: #22c55e;
   color: #fff;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -203,9 +136,9 @@
             <section id="warning" class="docs-section" data-aos="fade-up">
               <h2>Warning Toast</h2>
               <p>Warning toast notification.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div
+              <div class="component-viewer">
+                <div slot="preview">
+<div
                     class="toast toast-warning"
                     style="position: relative; animation: none"
                   >
@@ -218,39 +151,15 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="warning-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="warning-html">&lt;div class="toast toast-warning"&gt;...&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="warning-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="warning-css">.toast-warning {
+                <script type="text/html" slot="html">
+<div class="toast toast-warning">...</div>
+                </script>
+                <script type="text/css" slot="css">
+.toast-warning {
   background: #f59e0b;
   color: #fff;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -258,9 +167,9 @@
             <section id="error" class="docs-section" data-aos="fade-up">
               <h2>Error Toast</h2>
               <p>Error toast notification.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div
+              <div class="component-viewer">
+                <div slot="preview">
+<div
                     class="toast toast-error"
                     style="position: relative; animation: none"
                   >
@@ -273,39 +182,15 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="error-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="error-html">&lt;div class="toast toast-error"&gt;...&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="error-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="error-css">.toast-error {
+                <script type="text/html" slot="html">
+<div class="toast toast-error">...</div>
+                </script>
+                <script type="text/css" slot="css">
+.toast-error {
   background: #ef4444;
   color: #fff;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -313,9 +198,9 @@
             <section id="glass" class="docs-section" data-aos="fade-up">
               <h2>Glass Toast</h2>
               <p>Glassmorphism style toast.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div
+              <div class="component-viewer">
+                <div slot="preview">
+<div
                     class="toast toast-glass"
                     style="position: relative; animation: none"
                   >
@@ -328,41 +213,17 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="glass-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="glass-html">&lt;div class="toast toast-glass"&gt;...&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="glass-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="glass-css">.toast-glass {
+                <script type="text/html" slot="html">
+<div class="toast toast-glass">...</div>
+                </script>
+                <script type="text/css" slot="css">
+.toast-glass {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -370,9 +231,9 @@
             <section id="dark" class="docs-section" data-aos="fade-up">
               <h2>Dark Toast</h2>
               <p>Dark theme toast.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div
+              <div class="component-viewer">
+                <div slot="preview">
+<div
                     class="toast toast-dark"
                     style="position: relative; animation: none"
                   >
@@ -383,40 +244,16 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="dark-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="dark-html">&lt;div class="toast toast-dark"&gt;...&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="dark-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="dark-css">.toast-dark {
+                <script type="text/html" slot="html">
+<div class="toast toast-dark">...</div>
+                </script>
+                <script type="text/css" slot="css">
+.toast-dark {
   background: rgba(30, 30, 30, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -424,9 +261,9 @@
             <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Toast</h2>
               <p>Gradient background toast.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div
+              <div class="component-viewer">
+                <div slot="preview">
+<div
                     class="toast toast-gradient"
                     style="position: relative; animation: none"
                   >
@@ -437,39 +274,15 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-html">&lt;div class="toast toast-gradient"&gt;...&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-css">.toast-gradient {
+                <script type="text/html" slot="html">
+<div class="toast toast-gradient">...</div>
+                </script>
+                <script type="text/css" slot="css">
+.toast-gradient {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -477,9 +290,9 @@
             <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Toast</h2>
               <p>Glowing neon style toast.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div
+              <div class="component-viewer">
+                <div slot="preview">
+<div
                     class="toast toast-neon"
                     style="position: relative; animation: none"
                   >
@@ -490,41 +303,17 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-html">&lt;div class="toast toast-neon"&gt;...&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-css">.toast-neon {
+                <script type="text/html" slot="html">
+<div class="toast toast-neon">...</div>
+                </script>
+                <script type="text/css" slot="css">
+.toast-neon {
   background: rgba(0, 0, 0, 0.9);
   border: 1px solid #00d4ff;
   color: #00d4ff;
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
         </div>
@@ -532,8 +321,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

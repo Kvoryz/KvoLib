@@ -8,27 +8,7 @@
     <meta name="description" content="KvoLib Form Components" />
     <title>Forms - KvoLib</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/forms.css" />
   </head>
   <body>
@@ -115,9 +95,9 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="cyber-html">&lt;div class="input-cyber-group"&gt;
+                    <pre>&lt;div class="input-cyber-group"&gt;
   &lt;input type="text" class="input-cyber" placeholder="Username" /&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -126,7 +106,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="cyber-css">.input-cyber-group {
+                    <pre>.input-cyber-group {
   position: relative;
   width: 100%;
 }
@@ -176,7 +156,7 @@
   outline: none;
   border-color: #00d4ff;
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -227,10 +207,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glass-html">&lt;div class="input-glass-group"&gt;
+                    <pre>&lt;div class="input-glass-group"&gt;
   &lt;i class="fas fa-user input-glass-icon"&gt;&lt;/i&gt;
   &lt;input type="text" class="input-glass has-icon" placeholder="Username" /&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -239,7 +219,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glass-css">.input-glass {
+                    <pre>.input-glass {
   width: 100%;
   padding: 16px 20px;
   font-size: 0.9rem;
@@ -273,7 +253,7 @@
 
 .input-glass.has-icon {
   padding-left: 48px;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -326,10 +306,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="float-html">&lt;div class="input-float-group"&gt;
+                    <pre>&lt;div class="input-float-group"&gt;
   &lt;input type="text" class="input-float" id="name" placeholder=" " /&gt;
   &lt;label for="name"&gt;Full Name&lt;/label&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -338,7 +318,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="float-css">.input-float-group {
+                    <pre>.input-float-group {
   position: relative;
   width: 100%;
 }
@@ -376,7 +356,7 @@
   top: 12px;
   font-size: 0.7rem;
   color: #667eea;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -427,10 +407,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="underline-html">&lt;div class="input-underline-group"&gt;
+                    <pre>&lt;div class="input-underline-group"&gt;
   &lt;input type="text" class="input-underline" placeholder="Username" /&gt;
   &lt;span class="underline"&gt;&lt;/span&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -439,7 +419,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="underline-css">.input-underline-group {
+                    <pre>.input-underline-group {
   position: relative;
   width: 100%;
 }
@@ -472,7 +452,7 @@
 .input-underline:focus ~ .underline {
   left: 0;
   width: 100%;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -528,9 +508,9 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glow-html">&lt;input type="text" class="input-glow" placeholder="Cyan glow" /&gt;
+                    <pre>&lt;input type="text" class="input-glow" placeholder="Cyan glow" /&gt;
 &lt;input type="text" class="input-glow input-glow-purple" placeholder="Purple glow" /&gt;
-&lt;input type="text" class="input-glow input-glow-pink" placeholder="Pink glow" /&gt;</code></pre>
+&lt;input type="text" class="input-glow input-glow-pink" placeholder="Pink glow" /&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -539,7 +519,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glow-css">.input-glow {
+                    <pre>.input-glow {
   width: 100%;
   padding: 16px 20px;
   font-size: 0.9rem;
@@ -567,7 +547,7 @@
   border-color: #ec4899;
   box-shadow: 0 0 20px rgba(236, 72, 153, 0.3),
               0 0 40px rgba(236, 72, 153, 0.1);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -609,9 +589,9 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="gradient-html">&lt;div class="input-gradient-border-group"&gt;
+                    <pre>&lt;div class="input-gradient-border-group"&gt;
   &lt;input type="text" class="input-gradient-border" placeholder="Gradient border" /&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -620,7 +600,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="gradient-css">.input-gradient-border-group {
+                    <pre>.input-gradient-border-group {
   position: relative;
   width: 100%;
   padding: 2px;
@@ -645,7 +625,7 @@
 
 .input-gradient-border:focus {
   outline: none;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -688,10 +668,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="search-html">&lt;div class="input-search-group"&gt;
+                    <pre>&lt;div class="input-search-group"&gt;
   &lt;i class="fas fa-search"&gt;&lt;/i&gt;
   &lt;input type="text" class="input-search" placeholder="Search..." /&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -700,7 +680,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="search-css">.input-search-group {
+                    <pre>.input-search-group {
   position: relative;
   width: 100%;
 }
@@ -732,7 +712,7 @@
   outline: none;
   background: rgba(255,255,255,0.1);
   border-color: rgba(255,255,255,0.3);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -775,13 +755,13 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="select-html">&lt;div class="select-glass-group"&gt;
+                    <pre>&lt;div class="select-glass-group"&gt;
   &lt;select class="select-glass"&gt;
     &lt;option value=""&gt;Select option...&lt;/option&gt;
     &lt;option value="1"&gt;Option 1&lt;/option&gt;
     &lt;option value="2"&gt;Option 2&lt;/option&gt;
   &lt;/select&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -790,7 +770,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="select-css">.select-glass-group {
+                    <pre>.select-glass-group {
   position: relative;
   width: 100%;
 }
@@ -829,7 +809,7 @@
   outline: none;
   border-color: rgba(255,255,255,0.3);
   box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -868,7 +848,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="textarea-html">&lt;textarea class="textarea-glass" placeholder="Write your message..."&gt;&lt;/textarea&gt;</code></pre>
+                    <pre>&lt;textarea class="textarea-glass" placeholder="Write your message..."&gt;&lt;/textarea&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -877,7 +857,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="textarea-css">.textarea-glass {
+                    <pre>.textarea-glass {
   width: 100%;
   min-height: 120px;
   padding: 16px 20px;
@@ -894,7 +874,7 @@
   outline: none;
   border-color: rgba(255,255,255,0.3);
   box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -938,7 +918,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="toggle-html">&lt;label class="toggle-switch"&gt;
+                    <pre>&lt;label class="toggle-switch"&gt;
   &lt;input type="checkbox" checked /&gt;
   &lt;span class="toggle-slider"&gt;&lt;/span&gt;
 &lt;/label&gt;
@@ -946,7 +926,7 @@
 &lt;label class="toggle-switch toggle-switch-purple"&gt;
   &lt;input type="checkbox" /&gt;
   &lt;span class="toggle-slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
+&lt;/label&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -955,7 +935,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="toggle-css">.toggle-switch {
+                    <pre>.toggle-switch {
   position: relative;
   display: inline-block;
   width: 56px;
@@ -997,7 +977,7 @@
 
 .toggle-switch input:checked + .toggle-slider::before {
   transform: translateX(28px);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -1046,11 +1026,11 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="checkbox-html">&lt;label class="checkbox-cyber"&gt;
+                    <pre>&lt;label class="checkbox-cyber"&gt;
   &lt;input type="checkbox" checked /&gt;
   &lt;span class="checkmark"&gt;&lt;i class="fas fa-check"&gt;&lt;/i&gt;&lt;/span&gt;
   Remember me
-&lt;/label&gt;</code></pre>
+&lt;/label&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -1059,7 +1039,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="checkbox-css">.checkbox-cyber {
+                    <pre>.checkbox-cyber {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1100,7 +1080,7 @@
 .checkbox-cyber input:checked + .checkmark i {
   opacity: 1;
   transform: scale(1);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -1154,7 +1134,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="radio-html">&lt;label class="radio-cyber"&gt;
+                    <pre>&lt;label class="radio-cyber"&gt;
   &lt;input type="radio" name="group" checked /&gt;
   &lt;span class="radiomark"&gt;&lt;/span&gt;
   Option 1
@@ -1163,7 +1143,7 @@
   &lt;input type="radio" name="group" /&gt;
   &lt;span class="radiomark"&gt;&lt;/span&gt;
   Option 2
-&lt;/label&gt;</code></pre>
+&lt;/label&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -1172,7 +1152,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="radio-css">.radio-cyber {
+                    <pre>.radio-cyber {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1215,7 +1195,7 @@
 .radio-cyber input:checked + .radiomark::after {
   opacity: 1;
   transform: scale(1);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -1225,7 +1205,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

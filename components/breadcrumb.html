@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Breadcrumb Components" />
     <title>Breadcrumb - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/breadcrumb.css" />
   </head>
   <body>
@@ -66,9 +47,9 @@
             <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Breadcrumb</h2>
               <p>Standard breadcrumb navigation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <nav class="kvo-breadcrumb">
+              <div class="component-viewer">
+                <div slot="preview">
+<nav class="kvo-breadcrumb">
                     <a href="#" class="kvo-breadcrumb-item">Home</a>
                     <span class="kvo-breadcrumb-separator"
                       ><i class="fas fa-chevron-right"></i
@@ -80,40 +61,17 @@
                     <span class="kvo-breadcrumb-item active">Category</span>
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="basic-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="basic-html">&lt;nav class="kvo-breadcrumb"&gt;
-  &lt;a href="#" class="kvo-breadcrumb-item"&gt;Home&lt;/a&gt;
-  &lt;span class="kvo-breadcrumb-separator"&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
-  &lt;a href="#" class="kvo-breadcrumb-item"&gt;Products&lt;/a&gt;
-  &lt;span class="kvo-breadcrumb-separator"&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
-  &lt;span class="kvo-breadcrumb-item active"&gt;Category&lt;/span&gt;
-&lt;/nav&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="basic-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="basic-css">.kvo-breadcrumb {
+                <script type="text/html" slot="html">
+<nav class="kvo-breadcrumb">
+  <a href="#" class="kvo-breadcrumb-item">Home</a>
+  <span class="kvo-breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+  <a href="#" class="kvo-breadcrumb-item">Products</a>
+  <span class="kvo-breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+  <span class="kvo-breadcrumb-item active">Category</span>
+</nav>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-breadcrumb {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -126,9 +84,8 @@
 }
 
 .kvo-breadcrumb-item:hover { color: #fff; }
-.kvo-breadcrumb-item.active { color: #fff; }</code></pre>
-                  </div>
-                </details>
+.kvo-breadcrumb-item.active { color: #fff; }
+                </script>
               </div>
             </section>
 
@@ -136,9 +93,9 @@
             <section id="icons" class="docs-section" data-aos="fade-up">
               <h2>Breadcrumb with Icons</h2>
               <p>Breadcrumb with icon labels.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <nav class="kvo-breadcrumb kvo-breadcrumb-icons">
+              <div class="component-viewer">
+                <div slot="preview">
+<nav class="kvo-breadcrumb kvo-breadcrumb-icons">
                     <a href="#" class="kvo-breadcrumb-item"
                       ><i class="fas fa-home"></i> Home</a
                     >
@@ -156,39 +113,16 @@
                     >
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="icons-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="icons-html">&lt;nav class="kvo-breadcrumb kvo-breadcrumb-icons"&gt;
-  &lt;a href="#" class="kvo-breadcrumb-item"&gt;
-    &lt;i class="fas fa-home"&gt;&lt;/i&gt; Home
-  &lt;/a&gt;
+                <script type="text/html" slot="html">
+<nav class="kvo-breadcrumb kvo-breadcrumb-icons">
+  <a href="#" class="kvo-breadcrumb-item">
+    <i class="fas fa-home"></i> Home
+  </a>
   ...
-&lt;/nav&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="icons-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="icons-css">.kvo-breadcrumb-icons .kvo-breadcrumb-item {
+</nav>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-breadcrumb-icons .kvo-breadcrumb-item {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -196,9 +130,8 @@
 
 .kvo-breadcrumb-icons .kvo-breadcrumb-item i {
   font-size: 0.8rem;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -206,42 +139,19 @@
             <section id="pills" class="docs-section" data-aos="fade-up">
               <h2>Pills Breadcrumb</h2>
               <p>Breadcrumb with pill-style items.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <nav class="kvo-breadcrumb kvo-breadcrumb-pills">
+              <div class="component-viewer">
+                <div slot="preview">
+<nav class="kvo-breadcrumb kvo-breadcrumb-pills">
                     <a href="#" class="kvo-breadcrumb-item">Home</a>
                     <a href="#" class="kvo-breadcrumb-item">Products</a>
                     <span class="kvo-breadcrumb-item active">Current</span>
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="pills-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="pills-html">&lt;nav class="kvo-breadcrumb kvo-breadcrumb-pills"&gt;...&lt;/nav&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="pills-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="pills-css">.kvo-breadcrumb-pills .kvo-breadcrumb-item {
+                <script type="text/html" slot="html">
+<nav class="kvo-breadcrumb kvo-breadcrumb-pills">...</nav>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-breadcrumb-pills .kvo-breadcrumb-item {
   padding: 6px 12px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
@@ -249,9 +159,8 @@
 
 .kvo-breadcrumb-pills .kvo-breadcrumb-item.active {
   background: linear-gradient(135deg, #667eea, #764ba2);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -259,9 +168,9 @@
             <section id="boxed" class="docs-section" data-aos="fade-up">
               <h2>Boxed Breadcrumb</h2>
               <p>Breadcrumb with container box.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <nav class="kvo-breadcrumb kvo-breadcrumb-boxed">
+              <div class="component-viewer">
+                <div slot="preview">
+<nav class="kvo-breadcrumb kvo-breadcrumb-boxed">
                     <a href="#" class="kvo-breadcrumb-item">Home</a>
                     <span class="kvo-breadcrumb-separator">/</span>
                     <a href="#" class="kvo-breadcrumb-item">Category</a>
@@ -269,41 +178,17 @@
                     <span class="kvo-breadcrumb-item active">Page</span>
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="boxed-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="boxed-html">&lt;nav class="kvo-breadcrumb kvo-breadcrumb-boxed"&gt;...&lt;/nav&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="boxed-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="boxed-css">.kvo-breadcrumb-boxed {
+                <script type="text/html" slot="html">
+<nav class="kvo-breadcrumb kvo-breadcrumb-boxed">...</nav>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-breadcrumb-boxed {
   padding: 12px 16px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -311,9 +196,9 @@
             <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Breadcrumb</h2>
               <p>Glowing neon style breadcrumb.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <nav class="kvo-breadcrumb kvo-breadcrumb-neon">
+              <div class="component-viewer">
+                <div slot="preview">
+<nav class="kvo-breadcrumb kvo-breadcrumb-neon">
                     <a href="#" class="kvo-breadcrumb-item">Home</a>
                     <span class="kvo-breadcrumb-separator"
                       ><i class="fas fa-chevron-right"></i
@@ -325,43 +210,19 @@
                     <span class="kvo-breadcrumb-item active">Current</span>
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-html">&lt;nav class="kvo-breadcrumb kvo-breadcrumb-neon"&gt;...&lt;/nav&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-css">.kvo-breadcrumb-neon .kvo-breadcrumb-item.active {
+                <script type="text/html" slot="html">
+<nav class="kvo-breadcrumb kvo-breadcrumb-neon">...</nav>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-breadcrumb-neon .kvo-breadcrumb-item.active {
   color: #00d4ff;
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .kvo-breadcrumb-neon .kvo-breadcrumb-separator {
   color: #00d4ff;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
         </div>
@@ -369,8 +230,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

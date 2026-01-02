@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Tabs Components" />
     <title>Tabs - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/tabs.css" />
   </head>
   <body>
@@ -91,12 +72,12 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="basic-html">&lt;div class="kvo-tabs"&gt;
+                    <pre>&lt;div class="kvo-tabs"&gt;
   &lt;button class="kvo-tab active"&gt;Overview&lt;/button&gt;
   &lt;button class="kvo-tab"&gt;Features&lt;/button&gt;
   &lt;button class="kvo-tab"&gt;Pricing&lt;/button&gt;
   &lt;button class="kvo-tab"&gt;FAQ&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -105,7 +86,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="basic-css">.kvo-tabs {
+                    <pre>.kvo-tabs {
   display: flex;
   gap: 4px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -132,7 +113,7 @@
   right: 0;
   height: 2px;
   background: linear-gradient(90deg, #667eea, #764ba2);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -168,7 +149,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="pills-html">&lt;div class="kvo-tabs kvo-tabs-pills"&gt;...&lt;/div&gt;</code></pre>
+                    <pre>&lt;div class="kvo-tabs kvo-tabs-pills"&gt;...&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -177,7 +158,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="pills-css">.kvo-tabs-pills {
+                    <pre>.kvo-tabs-pills {
   border-bottom: none;
   gap: 8px;
 }
@@ -196,7 +177,7 @@
 
 .kvo-tabs-pills .kvo-tab.active::after {
   display: none;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -232,7 +213,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="boxed-html">&lt;div class="kvo-tabs kvo-tabs-boxed"&gt;...&lt;/div&gt;</code></pre>
+                    <pre>&lt;div class="kvo-tabs kvo-tabs-boxed"&gt;...&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -241,7 +222,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="boxed-css">.kvo-tabs-boxed {
+                    <pre>.kvo-tabs-boxed {
   background: rgba(255, 255, 255, 0.03);
   padding: 4px;
   border-radius: 10px;
@@ -254,7 +235,7 @@
 
 .kvo-tabs-boxed .kvo-tab.active {
   background: rgba(255, 255, 255, 0.1);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -296,9 +277,9 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="icons-html">&lt;button class="kvo-tab kvo-tab-icon"&gt;
+                    <pre>&lt;button class="kvo-tab kvo-tab-icon"&gt;
   &lt;i class="fas fa-home"&gt;&lt;/i&gt; Home
-&lt;/button&gt;</code></pre>
+&lt;/button&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -307,7 +288,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="icons-css">.kvo-tab-icon {
+                    <pre>.kvo-tab-icon {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -315,7 +296,7 @@
 
 .kvo-tab-icon i {
   font-size: 0.875rem;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -351,7 +332,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="neon-html">&lt;div class="kvo-tabs kvo-tabs-neon"&gt;...&lt;/div&gt;</code></pre>
+                    <pre>&lt;div class="kvo-tabs kvo-tabs-neon"&gt;...&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -360,14 +341,14 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="neon-css">.kvo-tabs-neon .kvo-tab.active {
+                    <pre>.kvo-tabs-neon .kvo-tab.active {
   color: #00d4ff;
 }
 
 .kvo-tabs-neon .kvo-tab.active::after {
   background: #00d4ff;
   box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -377,8 +358,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Navbar Components" />
     <title>Navbar - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/navbar.css" />
   </head>
   <body>
@@ -110,7 +91,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="basic-html">&lt;nav class="kvo-navbar"&gt;
+                    <pre>&lt;nav class="kvo-navbar"&gt;
   &lt;a href="#" class="kvo-navbar-brand"&gt;Brand&lt;/a&gt;
   &lt;div class="kvo-navbar-menu"&gt;
     &lt;a href="#" class="kvo-navbar-link active"&gt;Home&lt;/a&gt;
@@ -120,7 +101,7 @@
   &lt;div class="kvo-navbar-actions"&gt;
     &lt;button&gt;Sign In&lt;/button&gt;
   &lt;/div&gt;
-&lt;/nav&gt;</code></pre>
+&lt;/nav&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -129,7 +110,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="basic-css">.kvo-navbar {
+                    <pre>.kvo-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -157,7 +138,7 @@
 .kvo-navbar-link:hover,
 .kvo-navbar-link.active {
   color: #fff;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -199,7 +180,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glass-html">&lt;nav class="kvo-navbar kvo-navbar-glass"&gt;...&lt;/nav&gt;</code></pre>
+                    <pre>&lt;nav class="kvo-navbar kvo-navbar-glass"&gt;...&lt;/nav&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -208,11 +189,11 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glass-css">.kvo-navbar-glass {
+                    <pre>.kvo-navbar-glass {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -269,7 +250,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="gradient-html">&lt;nav class="kvo-navbar kvo-navbar-gradient"&gt;...&lt;/nav&gt;</code></pre>
+                    <pre>&lt;nav class="kvo-navbar kvo-navbar-gradient"&gt;...&lt;/nav&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -278,10 +259,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="gradient-css">.kvo-navbar-gradient {
+                    <pre>.kvo-navbar-gradient {
   background: linear-gradient(90deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
   border-bottom: none;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -326,10 +307,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="search-html">&lt;div class="kvo-navbar-search"&gt;
+                    <pre>&lt;div class="kvo-navbar-search"&gt;
   &lt;i class="fas fa-search"&gt;&lt;/i&gt;
   &lt;input type="text" placeholder="Search..." /&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -338,7 +319,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="search-css">.kvo-navbar-search {
+                    <pre>.kvo-navbar-search {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -354,7 +335,7 @@
   outline: none;
   color: #fff;
   width: 200px;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -400,7 +381,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="centered-html">&lt;nav class="kvo-navbar kvo-navbar-centered"&gt;...&lt;/nav&gt;</code></pre>
+                    <pre>&lt;nav class="kvo-navbar kvo-navbar-centered"&gt;...&lt;/nav&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -409,10 +390,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="centered-css">.kvo-navbar-centered {
+                    <pre>.kvo-navbar-centered {
   justify-content: center;
   gap: 40px;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -422,8 +403,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

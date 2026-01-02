@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Pagination Components" />
     <title>Pagination - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/pagination.css" />
   </head>
   <body>
@@ -65,9 +46,9 @@
             <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Pagination</h2>
               <p>Standard pagination navigation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <nav class="kvo-pagination">
+              <div class="component-viewer">
+                <div slot="preview">
+<nav class="kvo-pagination">
                     <a href="#" class="kvo-page"
                       ><i class="fas fa-chevron-left"></i
                     ></a>
@@ -81,42 +62,19 @@
                     ></a>
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="basic-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="basic-html">&lt;nav class="kvo-pagination"&gt;
-  &lt;a href="#" class="kvo-page"&gt;&lt;i class="fas fa-chevron-left"&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;a href="#" class="kvo-page"&gt;1&lt;/a&gt;
-  &lt;a href="#" class="kvo-page active"&gt;2&lt;/a&gt;
-  &lt;a href="#" class="kvo-page"&gt;3&lt;/a&gt;
-  &lt;span class="kvo-page-ellipsis"&gt;...&lt;/span&gt;
-  &lt;a href="#" class="kvo-page"&gt;10&lt;/a&gt;
-  &lt;a href="#" class="kvo-page"&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;/nav&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="basic-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="basic-css">.kvo-pagination {
+                <script type="text/html" slot="html">
+<nav class="kvo-pagination">
+  <a href="#" class="kvo-page"><i class="fas fa-chevron-left"></i></a>
+  <a href="#" class="kvo-page">1</a>
+  <a href="#" class="kvo-page active">2</a>
+  <a href="#" class="kvo-page">3</a>
+  <span class="kvo-page-ellipsis">...</span>
+  <a href="#" class="kvo-page">10</a>
+  <a href="#" class="kvo-page"><i class="fas fa-chevron-right"></i></a>
+</nav>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-pagination {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -143,9 +101,8 @@
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: #fff;
   border-color: transparent;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -153,9 +110,9 @@
             <section id="pills" class="docs-section" data-aos="fade-up">
               <h2>Pills Pagination</h2>
               <p>Rounded pill-style pagination.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <nav class="kvo-pagination kvo-pagination-pills">
+              <div class="component-viewer">
+                <div slot="preview">
+<nav class="kvo-pagination kvo-pagination-pills">
                     <a href="#" class="kvo-page"
                       ><i class="fas fa-chevron-left"></i
                     ></a>
@@ -167,43 +124,19 @@
                     ></a>
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="pills-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="pills-html">&lt;nav class="kvo-pagination kvo-pagination-pills"&gt;...&lt;/nav&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="pills-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="pills-css">.kvo-pagination-pills .kvo-page {
+                <script type="text/html" slot="html">
+<nav class="kvo-pagination kvo-pagination-pills">...</nav>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-pagination-pills .kvo-page {
   border: none;
   border-radius: 20px;
 }
 
 .kvo-pagination-pills .kvo-page:hover {
   background: rgba(255, 255, 255, 0.1);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -211,9 +144,9 @@
             <section id="bordered" class="docs-section" data-aos="fade-up">
               <h2>Bordered Pagination</h2>
               <p>Pagination with container border.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <nav class="kvo-pagination kvo-pagination-bordered">
+              <div class="component-viewer">
+                <div slot="preview">
+<nav class="kvo-pagination kvo-pagination-bordered">
                     <a href="#" class="kvo-page"
                       ><i class="fas fa-chevron-left"></i
                     ></a>
@@ -225,34 +158,11 @@
                     ></a>
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="bordered-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="bordered-html">&lt;nav class="kvo-pagination kvo-pagination-bordered"&gt;...&lt;/nav&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="bordered-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="bordered-css">.kvo-pagination-bordered {
+                <script type="text/html" slot="html">
+<nav class="kvo-pagination kvo-pagination-bordered">...</nav>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-pagination-bordered {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 4px;
@@ -262,9 +172,8 @@
 .kvo-pagination-bordered .kvo-page {
   border: none;
   border-radius: 6px;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -272,9 +181,9 @@
             <section id="simple" class="docs-section" data-aos="fade-up">
               <h2>Simple Pagination</h2>
               <p>Minimal pagination with prev/next.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <nav class="kvo-pagination kvo-pagination-simple">
+              <div class="component-viewer">
+                <div slot="preview">
+<nav class="kvo-pagination kvo-pagination-simple">
                     <a href="#" class="kvo-page kvo-page-prev"
                       ><i class="fas fa-chevron-left"></i> Previous</a
                     >
@@ -284,38 +193,15 @@
                     ></a>
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="simple-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="simple-html">&lt;nav class="kvo-pagination kvo-pagination-simple"&gt;
-  &lt;a href="#" class="kvo-page kvo-page-prev"&gt;Previous&lt;/a&gt;
-  &lt;span class="kvo-pagination-current"&gt;Page 2 of 10&lt;/span&gt;
-  &lt;a href="#" class="kvo-page kvo-page-next"&gt;Next&lt;/a&gt;
-&lt;/nav&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="simple-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="simple-css">.kvo-pagination-simple {
+                <script type="text/html" slot="html">
+<nav class="kvo-pagination kvo-pagination-simple">
+  <a href="#" class="kvo-page kvo-page-prev">Previous</a>
+  <span class="kvo-pagination-current">Page 2 of 10</span>
+  <a href="#" class="kvo-page kvo-page-next">Next</a>
+</nav>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-pagination-simple {
   gap: 16px;
 }
 
@@ -328,9 +214,8 @@
 .kvo-pagination-current {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.875rem;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -338,9 +223,9 @@
             <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Pagination</h2>
               <p>Glowing neon style pagination.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <nav class="kvo-pagination kvo-pagination-neon">
+              <div class="component-viewer">
+                <div slot="preview">
+<nav class="kvo-pagination kvo-pagination-neon">
                     <a href="#" class="kvo-page"
                       ><i class="fas fa-chevron-left"></i
                     ></a>
@@ -352,41 +237,17 @@
                     ></a>
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-html">&lt;nav class="kvo-pagination kvo-pagination-neon"&gt;...&lt;/nav&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-css">.kvo-pagination-neon .kvo-page.active {
+                <script type="text/html" slot="html">
+<nav class="kvo-pagination kvo-pagination-neon">...</nav>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-pagination-neon .kvo-page.active {
   background: rgba(0, 212, 255, 0.1);
   border-color: #00d4ff;
   color: #00d4ff;
   box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -438,8 +299,8 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="sizes-html">&lt;nav class="kvo-pagination kvo-pagination-sm"&gt;...&lt;/nav&gt;
-&lt;nav class="kvo-pagination kvo-pagination-lg"&gt;...&lt;/nav&gt;</code></pre>
+                    <pre>&lt;nav class="kvo-pagination kvo-pagination-sm"&gt;...&lt;/nav&gt;
+&lt;nav class="kvo-pagination kvo-pagination-lg"&gt;...&lt;/nav&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -448,7 +309,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="sizes-css">.kvo-pagination-sm .kvo-page {
+                    <pre>.kvo-pagination-sm .kvo-page {
   min-width: 32px;
   height: 32px;
   font-size: 0.75rem;
@@ -458,7 +319,7 @@
   min-width: 48px;
   height: 48px;
   font-size: 1rem;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -468,8 +329,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

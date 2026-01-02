@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Sidebar Components" />
     <title>Sidebar - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/sidebar.css" />
   </head>
   <body>
@@ -124,7 +105,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="basic-html">&lt;aside class="kvo-sidebar"&gt;
+                    <pre>&lt;aside class="kvo-sidebar"&gt;
   &lt;div class="kvo-sidebar-header"&gt;
     &lt;div class="kvo-sidebar-logo"&gt;&lt;/div&gt;
     &lt;span class="kvo-sidebar-title"&gt;Dashboard&lt;/span&gt;
@@ -135,7 +116,7 @@
     &lt;/a&gt;
     &lt;a href="#" class="kvo-sidebar-link"&gt;...&lt;/a&gt;
   &lt;/nav&gt;
-&lt;/aside&gt;</code></pre>
+&lt;/aside&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -144,7 +125,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="basic-css">.kvo-sidebar {
+                    <pre>.kvo-sidebar {
   width: 260px;
   height: 100vh;
   background: #0f0f0f;
@@ -165,7 +146,7 @@
 .kvo-sidebar-link.active {
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: #fff;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -224,7 +205,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glass-html">&lt;aside class="kvo-sidebar kvo-sidebar-glass"&gt;...&lt;/aside&gt;</code></pre>
+                    <pre>&lt;aside class="kvo-sidebar kvo-sidebar-glass"&gt;...&lt;/aside&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -233,10 +214,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glass-css">.kvo-sidebar-glass {
+                    <pre>.kvo-sidebar-glass {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(20px);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -294,11 +275,11 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="compact-html">&lt;aside class="kvo-sidebar kvo-sidebar-compact"&gt;
+                    <pre>&lt;aside class="kvo-sidebar kvo-sidebar-compact"&gt;
   &lt;nav class="kvo-sidebar-nav"&gt;
     &lt;a href="#" class="kvo-sidebar-link"&gt;&lt;i class="fas fa-home"&gt;&lt;/i&gt;&lt;/a&gt;
   &lt;/nav&gt;
-&lt;/aside&gt;</code></pre>
+&lt;/aside&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -307,7 +288,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="compact-css">.kvo-sidebar-compact {
+                    <pre>.kvo-sidebar-compact {
   width: 72px;
   align-items: center;
   padding: 16px 8px;
@@ -320,7 +301,7 @@
 
 .kvo-sidebar-compact .kvo-sidebar-link span {
   display: none;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -386,7 +367,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="user-html">&lt;div class="kvo-sidebar-footer"&gt;
+                    <pre>&lt;div class="kvo-sidebar-footer"&gt;
   &lt;div class="kvo-sidebar-user"&gt;
     &lt;div class="kvo-sidebar-avatar"&gt;&lt;/div&gt;
     &lt;div class="kvo-sidebar-user-info"&gt;
@@ -394,7 +375,7 @@
       &lt;div class="kvo-sidebar-user-email"&gt;john@example.com&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -403,7 +384,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="user-css">.kvo-sidebar-footer {
+                    <pre>.kvo-sidebar-footer {
   margin-top: auto;
   padding-top: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -422,7 +403,7 @@
   height: 36px;
   border-radius: 50%;
   background: linear-gradient(135deg, #667eea, #764ba2);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -432,8 +413,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Progress Components" />
     <title>Progress - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/progress.css" />
   </head>
   <body>
@@ -91,9 +72,9 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="basic-html">&lt;div class="progress"&gt;
+                    <pre>&lt;div class="progress"&gt;
   &lt;div class="progress-bar" style="width: 65%;"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -102,7 +83,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="basic-css">.progress {
+                    <pre>.progress {
   width: 100%;
   height: 8px;
   background: rgba(255, 255, 255, 0.1);
@@ -115,7 +96,7 @@
   background: linear-gradient(90deg, #667eea, #764ba2);
   border-radius: 4px;
   transition: width 0.3s ease;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -158,10 +139,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="sizes-html">&lt;div class="progress progress-sm"&gt;...&lt;/div&gt;
+                    <pre>&lt;div class="progress progress-sm"&gt;...&lt;/div&gt;
 &lt;div class="progress"&gt;...&lt;/div&gt;
 &lt;div class="progress progress-lg"&gt;...&lt;/div&gt;
-&lt;div class="progress progress-xl"&gt;...&lt;/div&gt;</code></pre>
+&lt;div class="progress progress-xl"&gt;...&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -170,9 +151,9 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="sizes-css">.progress-sm { height: 4px; }
+                    <pre>.progress-sm { height: 4px; }
 .progress-lg { height: 12px; }
-.progress-xl { height: 16px; }</code></pre>
+.progress-xl { height: 16px; }</pre>
                   </div>
                 </details>
               </div>
@@ -224,10 +205,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="colors-html">&lt;div class="progress progress-success"&gt;...&lt;/div&gt;
+                    <pre>&lt;div class="progress progress-success"&gt;...&lt;/div&gt;
 &lt;div class="progress progress-warning"&gt;...&lt;/div&gt;
 &lt;div class="progress progress-error"&gt;...&lt;/div&gt;
-&lt;div class="progress progress-info"&gt;...&lt;/div&gt;</code></pre>
+&lt;div class="progress progress-info"&gt;...&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -236,7 +217,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="colors-css">.progress-success .progress-bar {
+                    <pre>.progress-success .progress-bar {
   background: linear-gradient(90deg, #22c55e, #16a34a);
 }
 .progress-warning .progress-bar {
@@ -247,7 +228,7 @@
 }
 .progress-info .progress-bar {
   background: linear-gradient(90deg, #3b82f6, #2563eb);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -281,9 +262,9 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="striped-html">&lt;div class="progress progress-striped"&gt;
+                    <pre>&lt;div class="progress progress-striped"&gt;
   &lt;div class="progress-bar" style="width: 70%;"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -292,7 +273,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="striped-css">.progress-striped .progress-bar {
+                    <pre>.progress-striped .progress-bar {
   background-image: linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.15) 25%,
@@ -304,7 +285,7 @@
     transparent
   );
   background-size: 1rem 1rem;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -338,9 +319,9 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="animated-html">&lt;div class="progress progress-animated"&gt;
+                    <pre>&lt;div class="progress progress-animated"&gt;
   &lt;div class="progress-bar" style="width: 65%;"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -349,7 +330,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="animated-css">.progress-animated .progress-bar {
+                    <pre>.progress-animated .progress-bar {
   background-image: linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.15) 25%,
@@ -366,7 +347,7 @@
 @keyframes progressStripes {
   from { background-position: 1rem 0; }
   to { background-position: 0 0; }
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -400,9 +381,9 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="indeterminate-html">&lt;div class="progress progress-indeterminate"&gt;
+                    <pre>&lt;div class="progress progress-indeterminate"&gt;
   &lt;div class="progress-bar"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -411,7 +392,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="indeterminate-css">.progress-indeterminate .progress-bar {
+                    <pre>.progress-indeterminate .progress-bar {
   width: 30% !important;
   animation: indeterminate 1.5s ease-in-out infinite;
 }
@@ -419,7 +400,7 @@
 @keyframes indeterminate {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(400%); }
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -453,9 +434,9 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="neon-html">&lt;div class="progress progress-neon"&gt;
+                    <pre>&lt;div class="progress progress-neon"&gt;
   &lt;div class="progress-bar" style="width: 60%;"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -464,7 +445,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="neon-css">.progress-neon {
+                    <pre>.progress-neon {
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 212, 255, 0.3);
 }
@@ -472,7 +453,7 @@
 .progress-neon .progress-bar {
   background: #00d4ff;
   box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -482,9 +463,9 @@
             <section id="circular" class="docs-section" data-aos="fade-up">
               <h2>Circular Progress</h2>
               <p>Round progress indicator.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="progress-circular">
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="progress-circular">
                     <svg width="80" height="80">
                       <circle
                         class="progress-bg"
@@ -503,41 +484,18 @@
                     <span class="progress-circular-label">65%</span>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="circular-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="circular-html">&lt;div class="progress-circular"&gt;
-  &lt;svg width="80" height="80"&gt;
-    &lt;circle class="progress-bg" cx="40" cy="40" r="35"&gt;&lt;/circle&gt;
-    &lt;circle class="progress-fill" cx="40" cy="40" r="35" 
-      style="stroke-dashoffset: 77;"&gt;&lt;/circle&gt;
-  &lt;/svg&gt;
-  &lt;span class="progress-circular-label"&gt;65%&lt;/span&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="circular-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="circular-css">.progress-circular {
+                <script type="text/html" slot="html">
+<div class="progress-circular">
+  <svg width="80" height="80">
+    <circle class="progress-bg" cx="40" cy="40" r="35"></circle>
+    <circle class="progress-fill" cx="40" cy="40" r="35" 
+      style="stroke-dashoffset: 77;"></circle>
+  </svg>
+  <span class="progress-circular-label">65%</span>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.progress-circular {
   width: 80px;
   height: 80px;
   position: relative;
@@ -569,9 +527,8 @@
   transform: translate(-50%, -50%);
   font-weight: 600;
   color: #fff;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
         </div>
@@ -579,8 +536,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Checkbox Components" />
     <title>Checkboxes - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/checkbox.css" />
   </head>
   <body>
@@ -69,9 +50,9 @@
             <section id="modern" class="docs-section" data-aos="fade-up">
               <h2>Modern Checkbox</h2>
               <p>Smooth checkbox with scale animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="checkbox-modern">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="checkbox-modern">
                     <input type="checkbox" />
                     <span class="checkmark"></span>
                     <span class="label-text">Accept terms and conditions</span>
@@ -82,44 +63,20 @@
                     <span class="label-text">Subscribe to newsletter</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="modern-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="modern-html">&lt;label class="checkbox-modern"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="checkmark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;Accept terms&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="modern-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="modern-css">.checkbox-modern input:checked ~ .checkmark {
+                <script type="text/html" slot="html">
+<label class="checkbox-modern">
+  <input type="checkbox" />
+  <span class="checkmark"></span>
+  <span class="label-text">Accept terms</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.checkbox-modern input:checked ~ .checkmark {
   background: #667eea;
   border-color: #667eea;
   transform: scale(1.05);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -127,9 +84,9 @@
             <section id="minimal" class="docs-section" data-aos="fade-up">
               <h2>Minimal Checkbox</h2>
               <p>Clean and simple checkbox design.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="checkbox-minimal">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="checkbox-minimal">
                     <input type="checkbox" />
                     <span class="checkmark"></span>
                     <span class="label-text">Remember me</span>
@@ -140,43 +97,19 @@
                     <span class="label-text">Keep me logged in</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="minimal-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="minimal-html">&lt;label class="checkbox-minimal"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="checkmark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;Remember me&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="minimal-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="minimal-css">.checkbox-minimal input:checked ~ .checkmark {
+                <script type="text/html" slot="html">
+<label class="checkbox-minimal">
+  <input type="checkbox" />
+  <span class="checkmark"></span>
+  <span class="label-text">Remember me</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.checkbox-minimal input:checked ~ .checkmark {
   background: #fff;
   border-color: #fff;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -184,9 +117,9 @@
             <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Checkbox</h2>
               <p>Checkbox with beautiful gradient fill.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="checkbox-gradient">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="checkbox-gradient">
                     <input type="checkbox" />
                     <span class="checkmark"></span>
                     <span class="label-text">Enable notifications</span>
@@ -197,38 +130,15 @@
                     <span class="label-text">Auto-save changes</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-html">&lt;label class="checkbox-gradient"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="checkmark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;Enable notifications&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-css">.checkbox-gradient .checkmark::before {
+                <script type="text/html" slot="html">
+<label class="checkbox-gradient">
+  <input type="checkbox" />
+  <span class="checkmark"></span>
+  <span class="label-text">Enable notifications</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.checkbox-gradient .checkmark::before {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   opacity: 0;
   transition: opacity 0.3s;
@@ -236,9 +146,8 @@
 
 .checkbox-gradient input:checked ~ .checkmark::before {
   opacity: 1;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -246,9 +155,9 @@
             <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Checkbox</h2>
               <p>Glowing neon effect checkbox.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="checkbox-neon">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="checkbox-neon">
                     <input type="checkbox" />
                     <span class="checkmark"></span>
                     <span class="label-text">Dark mode</span>
@@ -259,43 +168,19 @@
                     <span class="label-text">High contrast</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-html">&lt;label class="checkbox-neon"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="checkmark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;Dark mode&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-css">.checkbox-neon input:checked ~ .checkmark {
+                <script type="text/html" slot="html">
+<label class="checkbox-neon">
+  <input type="checkbox" />
+  <span class="checkmark"></span>
+  <span class="label-text">Dark mode</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.checkbox-neon input:checked ~ .checkmark {
   box-shadow: 0 0 15px rgba(0, 212, 255, 0.6),
               0 0 30px rgba(0, 212, 255, 0.3);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -303,9 +188,9 @@
             <section id="bouncy" class="docs-section" data-aos="fade-up">
               <h2>Bouncy Checkbox</h2>
               <p>Fun checkbox with bouncy animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="checkbox-bouncy">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="checkbox-bouncy">
                     <input type="checkbox" />
                     <span class="checkmark"></span>
                     <span class="label-text">I agree to the terms</span>
@@ -316,42 +201,18 @@
                     <span class="label-text">Send me updates</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="bouncy-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="bouncy-html">&lt;label class="checkbox-bouncy"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="checkmark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;I agree&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="bouncy-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="bouncy-css">.checkbox-bouncy input:checked ~ .checkmark {
+                <script type="text/html" slot="html">
+<label class="checkbox-bouncy">
+  <input type="checkbox" />
+  <span class="checkmark"></span>
+  <span class="label-text">I agree</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.checkbox-bouncy input:checked ~ .checkmark {
   transform: scale(1.2) rotate(360deg);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -359,9 +220,9 @@
             <section id="toggle" class="docs-section" data-aos="fade-up">
               <h2>Toggle Style Checkbox</h2>
               <p>Toggle switch style checkbox.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="checkbox-toggle">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="checkbox-toggle">
                     <input type="checkbox" />
                     <span class="checkmark"></span>
                     <span class="label-text">Wi-Fi</span>
@@ -372,46 +233,22 @@
                     <span class="label-text">Bluetooth</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="toggle-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="toggle-html">&lt;label class="checkbox-toggle"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="checkmark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;Wi-Fi&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="toggle-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="toggle-css">.checkbox-toggle input:checked ~ .checkmark {
+                <script type="text/html" slot="html">
+<label class="checkbox-toggle">
+  <input type="checkbox" />
+  <span class="checkmark"></span>
+  <span class="label-text">Wi-Fi</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.checkbox-toggle input:checked ~ .checkmark {
   background: #10b981;
 }
 
 .checkbox-toggle input:checked ~ .checkmark::after {
   left: 25px;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -419,9 +256,9 @@
             <section id="glow" class="docs-section" data-aos="fade-up">
               <h2>Glow Checkbox</h2>
               <p>Checkbox with glowing effect when checked.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="checkbox-glow">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="checkbox-glow">
                     <input type="checkbox" />
                     <span class="checkmark"></span>
                     <span class="label-text">Premium features</span>
@@ -432,43 +269,19 @@
                     <span class="label-text">Analytics enabled</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="glow-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="glow-html">&lt;label class="checkbox-glow"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="checkmark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;Premium&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="glow-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="glow-css">.checkbox-glow input:checked ~ .checkmark {
+                <script type="text/html" slot="html">
+<label class="checkbox-glow">
+  <input type="checkbox" />
+  <span class="checkmark"></span>
+  <span class="label-text">Premium</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.checkbox-glow input:checked ~ .checkmark {
   box-shadow: 0 0 20px rgba(168, 85, 247, 0.6),
               0 0 40px rgba(168, 85, 247, 0.3);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -476,9 +289,9 @@
             <section id="3d" class="docs-section" data-aos="fade-up">
               <h2>3D Effect Checkbox</h2>
               <p>Neumorphic 3D style checkbox.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="checkbox-3d">
+              <div class="component-viewer">
+                <div slot="preview">
+<label class="checkbox-3d">
                     <input type="checkbox" />
                     <span class="checkmark"></span>
                     <span class="label-text">3D mode</span>
@@ -489,38 +302,15 @@
                     <span class="label-text">Shadows enabled</span>
                   </label>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="3d-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="3d-html">&lt;label class="checkbox-3d"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="checkmark"&gt;&lt;/span&gt;
-  &lt;span class="label-text"&gt;3D mode&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="3d-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="3d-css">.checkbox-3d .checkmark {
+                <script type="text/html" slot="html">
+<label class="checkbox-3d">
+  <input type="checkbox" />
+  <span class="checkmark"></span>
+  <span class="label-text">3D mode</span>
+</label>
+                </script>
+                <script type="text/css" slot="css">
+.checkbox-3d .checkmark {
   background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
   box-shadow: 5px 5px 10px #0d0d0d,
               -5px -5px 10px #3d3d3d;
@@ -529,9 +319,8 @@
 .checkbox-3d input:checked ~ .checkmark {
   box-shadow: inset 5px 5px 10px #0d0d0d,
               inset -5px -5px 10px #3d3d3d;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
         </div>
@@ -539,7 +328,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

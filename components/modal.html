@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Modal Components" />
     <title>Modal - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/modal.css" />
   </head>
   <body>
@@ -112,7 +93,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="basic-html">&lt;div class="modal-overlay active"&gt;
+                    <pre>&lt;div class="modal-overlay active"&gt;
   &lt;div class="modal"&gt;
     &lt;div class="modal-header"&gt;
       &lt;h3 class="modal-title"&gt;Modal Title&lt;/h3&gt;
@@ -126,7 +107,7 @@
       &lt;button class="modal-btn modal-btn-primary"&gt;Confirm&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -135,7 +116,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="basic-css">.modal-overlay {
+                    <pre>.modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
@@ -162,7 +143,7 @@
   max-height: 90vh;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -215,7 +196,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glass-html">&lt;div class="modal modal-glass"&gt;...&lt;/div&gt;</code></pre>
+                    <pre>&lt;div class="modal modal-glass"&gt;...&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -224,11 +205,11 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glass-css">.modal-glass {
+                    <pre>.modal-glass {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -281,7 +262,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="gradient-html">&lt;div class="modal modal-gradient"&gt;...&lt;/div&gt;</code></pre>
+                    <pre>&lt;div class="modal modal-gradient"&gt;...&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -290,7 +271,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="gradient-css">.modal-gradient {
+                    <pre>.modal-gradient {
   background: #1a1a1a;
   border: 2px solid transparent;
   background-clip: padding-box;
@@ -307,7 +288,7 @@
   background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
   border-radius: 18px;
   z-index: -1;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -364,7 +345,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="neon-html">&lt;div class="modal modal-neon"&gt;...&lt;/div&gt;</code></pre>
+                    <pre>&lt;div class="modal modal-neon"&gt;...&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -373,7 +354,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="neon-css">.modal-neon {
+                    <pre>.modal-neon {
   background: rgba(0, 0, 0, 0.95);
   border: 1px solid #00d4ff;
   box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
@@ -385,7 +366,7 @@
 
 .modal-neon .modal-footer {
   border-top-color: rgba(0, 212, 255, 0.3);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -407,7 +388,7 @@
                         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                       "
                     >
-                      <code>.modal-sm</code> - 400px max-width
+                      <code>.modal-sm - 400px max-width
                     </li>
                     <li
                       style="
@@ -415,7 +396,7 @@
                         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                       "
                     >
-                      <code>.modal</code> - 500px (default)
+                      <code>.modal - 500px (default)
                     </li>
                     <li
                       style="
@@ -423,7 +404,7 @@
                         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                       "
                     >
-                      <code>.modal-lg</code> - 700px max-width
+                      <code>.modal-lg - 700px max-width
                     </li>
                     <li
                       style="
@@ -431,10 +412,10 @@
                         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                       "
                     >
-                      <code>.modal-xl</code> - 900px max-width
+                      <code>.modal-xl - 900px max-width
                     </li>
                     <li style="padding: 8px 0">
-                      <code>.modal-fullscreen</code> - Full screen
+                      <code>.modal-fullscreen - Full screen
                     </li>
                   </ul>
                 </div>
@@ -456,10 +437,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="sizes-html">&lt;div class="modal modal-sm"&gt;...&lt;/div&gt;
+                    <pre>&lt;div class="modal modal-sm"&gt;...&lt;/div&gt;
 &lt;div class="modal modal-lg"&gt;...&lt;/div&gt;
 &lt;div class="modal modal-xl"&gt;...&lt;/div&gt;
-&lt;div class="modal modal-fullscreen"&gt;...&lt;/div&gt;</code></pre>
+&lt;div class="modal modal-fullscreen"&gt;...&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -468,7 +449,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="sizes-css">.modal-sm { max-width: 400px; }
+                    <pre>.modal-sm { max-width: 400px; }
 .modal-lg { max-width: 700px; }
 .modal-xl { max-width: 900px; }
 
@@ -478,7 +459,7 @@
   height: 100%;
   max-height: 100%;
   border-radius: 0;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -488,8 +469,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

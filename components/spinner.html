@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Spinner Components" />
     <title>Spinner - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/spinner.css" />
   </head>
   <body>
@@ -94,9 +75,9 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="default-html">&lt;div class="spinner spinner-sm"&gt;&lt;/div&gt;
+                    <pre>&lt;div class="spinner spinner-sm"&gt;&lt;/div&gt;
 &lt;div class="spinner"&gt;&lt;/div&gt;
-&lt;div class="spinner spinner-lg"&gt;&lt;/div&gt;</code></pre>
+&lt;div class="spinner spinner-lg"&gt;&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -105,7 +86,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="default-css">.spinner {
+                    <pre>.spinner {
   width: 40px;
   height: 40px;
   border: 3px solid rgba(255, 255, 255, 0.1);
@@ -119,7 +100,7 @@
 }
 
 .spinner-sm { width: 24px; height: 24px; border-width: 2px; }
-.spinner-lg { width: 56px; height: 56px; border-width: 4px; }</code></pre>
+.spinner-lg { width: 56px; height: 56px; border-width: 4px; }</pre>
                   </div>
                 </details>
               </div>
@@ -129,42 +110,19 @@
             <section id="dots" class="docs-section" data-aos="fade-up">
               <h2>Dots Spinner</h2>
               <p>Bouncing dots animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="spinner-dots">
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="spinner-dots">
                     <span></span><span></span><span></span>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="dots-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="dots-html">&lt;div class="spinner-dots"&gt;
-  &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="dots-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="dots-css">.spinner-dots {
+                <script type="text/html" slot="html">
+<div class="spinner-dots">
+  <span></span><span></span><span></span>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.spinner-dots {
   display: flex;
   gap: 8px;
 }
@@ -183,9 +141,8 @@
 @keyframes dotBounce {
   from { transform: translateY(0); opacity: 0.4; }
   to { transform: translateY(-10px); opacity: 1; }
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -193,38 +150,15 @@
             <section id="pulse" class="docs-section" data-aos="fade-up">
               <h2>Pulse Spinner</h2>
               <p>Pulsing circle animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="spinner-pulse"></div>
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="spinner-pulse"></div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="pulse-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="pulse-html">&lt;div class="spinner-pulse"&gt;&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="pulse-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="pulse-css">.spinner-pulse {
+                <script type="text/html" slot="html">
+<div class="spinner-pulse"></div>
+                </script>
+                <script type="text/css" slot="css">
+.spinner-pulse {
   width: 40px;
   height: 40px;
   background: #667eea;
@@ -236,9 +170,8 @@
   0% { transform: scale(0.8); opacity: 0.5; }
   50% { transform: scale(1); opacity: 1; }
   100% { transform: scale(0.8); opacity: 0.5; }
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -246,38 +179,15 @@
             <section id="ring" class="docs-section" data-aos="fade-up">
               <h2>Ring Spinner</h2>
               <p>Double border ring.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="spinner-ring"></div>
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="spinner-ring"></div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="ring-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="ring-html">&lt;div class="spinner-ring"&gt;&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="ring-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="ring-css">.spinner-ring {
+                <script type="text/html" slot="html">
+<div class="spinner-ring"></div>
+                </script>
+                <script type="text/css" slot="css">
+.spinner-ring {
   width: 40px;
   height: 40px;
   border: 3px solid transparent;
@@ -285,9 +195,8 @@
   border-bottom-color: #667eea;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -295,47 +204,23 @@
             <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Spinner</h2>
               <p>Smooth gradient animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="spinner-gradient"></div>
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="spinner-gradient"></div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-html">&lt;div class="spinner-gradient"&gt;&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-css">.spinner-gradient {
+                <script type="text/html" slot="html">
+<div class="spinner-gradient"></div>
+                </script>
+                <script type="text/css" slot="css">
+.spinner-gradient {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: conic-gradient(from 0deg, transparent, #667eea);
   mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 4px));
   animation: spin 0.8s linear infinite;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -343,42 +228,19 @@
             <section id="bars" class="docs-section" data-aos="fade-up">
               <h2>Bars Spinner</h2>
               <p>Growing bars animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="spinner-bars">
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="spinner-bars">
                     <span></span><span></span><span></span><span></span>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="bars-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="bars-html">&lt;div class="spinner-bars"&gt;
-  &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="bars-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="bars-css">.spinner-bars {
+                <script type="text/html" slot="html">
+<div class="spinner-bars">
+  <span></span><span></span><span></span><span></span>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.spinner-bars {
   display: flex;
   gap: 4px;
   align-items: center;
@@ -400,9 +262,8 @@
 @keyframes barGrow {
   0%, 100% { transform: scaleY(0.5); opacity: 0.5; }
   50% { transform: scaleY(1); opacity: 1; }
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -410,38 +271,15 @@
             <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Spinner</h2>
               <p>Glowing neon effect.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="spinner-neon"></div>
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="spinner-neon"></div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-html">&lt;div class="spinner-neon"&gt;&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-css">.spinner-neon {
+                <script type="text/html" slot="html">
+<div class="spinner-neon"></div>
+                </script>
+                <script type="text/css" slot="css">
+.spinner-neon {
   width: 40px;
   height: 40px;
   border: 3px solid rgba(0, 212, 255, 0.2);
@@ -449,9 +287,8 @@
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
   box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -459,38 +296,15 @@
             <section id="dual" class="docs-section" data-aos="fade-up">
               <h2>Dual Ring Spinner</h2>
               <p>Counter-rotating rings.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="spinner-dual"></div>
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="spinner-dual"></div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="dual-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="dual-html">&lt;div class="spinner-dual"&gt;&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="dual-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="dual-css">.spinner-dual {
+                <script type="text/html" slot="html">
+<div class="spinner-dual"></div>
+                </script>
+                <script type="text/css" slot="css">
+.spinner-dual {
   width: 40px;
   height: 40px;
   position: relative;
@@ -513,9 +327,8 @@
 .spinner-dual::after {
   border-bottom-color: #764ba2;
   animation: spin 0.8s linear infinite reverse;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
         </div>
@@ -523,8 +336,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

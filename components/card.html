@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Card Components" />
     <title>Card - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/card.css" />
   </head>
   <body>
@@ -64,9 +45,9 @@
             <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Card</h2>
               <p>Simple card with subtle hover effect.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="card-basic" style="max-width: 350px">
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="card-basic" style="max-width: 350px">
                     <div class="card-header">
                       <h3 class="card-title">Card Title</h3>
                       <p class="card-subtitle">Subtitle text</p>
@@ -79,57 +60,33 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="basic-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="basic-html">&lt;div class="card-basic"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h3 class="card-title"&gt;Card Title&lt;/h3&gt;
-  &lt;/div&gt;
-  &lt;div class="card-body"&gt;
-    &lt;p&gt;Content here&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="basic-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="basic-css">.card-basic {
+                <script type="text/html" slot="html">
+<div class="card-basic">
+  <div class="card-header">
+    <h3 class="card-title">Card Title</h3>
+  </div>
+  <div class="card-body">
+    <p>Content here</p>
+  </div>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.card-basic {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 24px;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
             <section id="glass" class="docs-section" data-aos="fade-up">
               <h2>Glass Card</h2>
               <p>Glassmorphism card with blur effect.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-gradient">
-                  <div class="card-glass" style="max-width: 350px">
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="card-glass" style="max-width: 350px">
                     <div class="card-header">
                       <h3 class="card-title">Glass Card</h3>
                       <p class="card-subtitle">With blur effect</p>
@@ -139,57 +96,33 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="glass-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="glass-html">&lt;div class="card-glass"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h3 class="card-title"&gt;Glass Card&lt;/h3&gt;
-  &lt;/div&gt;
-  &lt;div class="card-body"&gt;
-    &lt;p&gt;Content here&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="glass-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="glass-css">.card-glass {
+                <script type="text/html" slot="html">
+<div class="card-glass">
+  <div class="card-header">
+    <h3 class="card-title">Glass Card</h3>
+  </div>
+  <div class="card-body">
+    <p>Content here</p>
+  </div>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.card-glass {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
             <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Card</h2>
               <p>Card with gradient background.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="card-gradient" style="max-width: 350px">
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="card-gradient" style="max-width: 350px">
                     <div class="card-header">
                       <h3 class="card-title">Gradient Card</h3>
                       <p class="card-subtitle">With gradient effect</p>
@@ -199,55 +132,31 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-html">&lt;div class="card-gradient"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h3 class="card-title"&gt;Gradient Card&lt;/h3&gt;
-  &lt;/div&gt;
-  &lt;div class="card-body"&gt;
-    &lt;p&gt;Content here&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-css">.card-gradient {
+                <script type="text/html" slot="html">
+<div class="card-gradient">
+  <div class="card-header">
+    <h3 class="card-title">Gradient Card</h3>
+  </div>
+  <div class="card-body">
+    <p>Content here</p>
+  </div>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.card-gradient {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
   border: 1px solid rgba(102, 126, 234, 0.2);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
             <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Card</h2>
               <p>Card with neon glow effect.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="card-neon" style="max-width: 350px">
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="card-neon" style="max-width: 350px">
                     <div class="card-header">
                       <h3 class="card-title">Neon Card</h3>
                       <p class="card-subtitle">Glowing effect</p>
@@ -257,56 +166,32 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-html">&lt;div class="card-neon"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h3 class="card-title"&gt;Neon Card&lt;/h3&gt;
-  &lt;/div&gt;
-  &lt;div class="card-body"&gt;
-    &lt;p&gt;Content here&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-css">.card-neon {
+                <script type="text/html" slot="html">
+<div class="card-neon">
+  <div class="card-header">
+    <h3 class="card-title">Neon Card</h3>
+  </div>
+  <div class="card-body">
+    <p>Content here</p>
+  </div>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.card-neon {
   background: rgba(0, 212, 255, 0.05);
   border: 2px solid #00d4ff;
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
             <section id="3d" class="docs-section" data-aos="fade-up">
               <h2>3D Card</h2>
               <p>Card with 3D neumorphic effect.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="card-3d" style="max-width: 350px">
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="card-3d" style="max-width: 350px">
                     <div class="card-header">
                       <h3 class="card-title">3D Card</h3>
                       <p class="card-subtitle">Neumorphic style</p>
@@ -316,55 +201,31 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="3d-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="3d-html">&lt;div class="card-3d"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h3 class="card-title"&gt;3D Card&lt;/h3&gt;
-  &lt;/div&gt;
-  &lt;div class="card-body"&gt;
-    &lt;p&gt;Content here&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="3d-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="3d-css">.card-3d {
+                <script type="text/html" slot="html">
+<div class="card-3d">
+  <div class="card-header">
+    <h3 class="card-title">3D Card</h3>
+  </div>
+  <div class="card-body">
+    <p>Content here</p>
+  </div>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.card-3d {
   background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
   box-shadow: 8px 8px 16px #0d0d0d, -8px -8px 16px #3d3d3d;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
             <section id="hoverable" class="docs-section" data-aos="fade-up">
               <h2>Hoverable Card</h2>
               <p>Card with smooth hover animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="card-hoverable" style="max-width: 350px">
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="card-hoverable" style="max-width: 350px">
                     <div class="card-header">
                       <h3 class="card-title">Hoverable Card</h3>
                       <p class="card-subtitle">Smooth animation</p>
@@ -374,46 +235,22 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="hoverable-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="hoverable-html">&lt;div class="card-hoverable"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h3 class="card-title"&gt;Hoverable Card&lt;/h3&gt;
-  &lt;/div&gt;
-  &lt;div class="card-body"&gt;
-    &lt;p&gt;Content here&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="hoverable-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="hoverable-css">.card-hoverable:hover {
+                <script type="text/html" slot="html">
+<div class="card-hoverable">
+  <div class="card-header">
+    <h3 class="card-title">Hoverable Card</h3>
+  </div>
+  <div class="card-body">
+    <p>Content here</p>
+  </div>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.card-hoverable:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
         </div>
@@ -421,7 +258,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

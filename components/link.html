@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Link Components" />
     <title>Link - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/link.css" />
   </head>
   <body>
@@ -69,38 +50,15 @@
             <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Link</h2>
               <p>Standard link with hover color change.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <a href="#" class="kvo-link">Click here to learn more</a>
+              <div class="component-viewer">
+                <div slot="preview">
+<a href="#" class="kvo-link">Click here to learn more</a>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="basic-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="basic-html">&lt;a href="#" class="kvo-link"&gt;Click here&lt;/a&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="basic-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="basic-css">.kvo-link {
+                <script type="text/html" slot="html">
+<a href="#" class="kvo-link">Click here</a>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-link {
   color: #667eea;
   text-decoration: none;
   font-weight: 500;
@@ -110,9 +68,8 @@
 .kvo-link:hover {
   color: #764ba2;
   text-decoration: underline;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -120,40 +77,17 @@
             <section id="animated" class="docs-section" data-aos="fade-up">
               <h2>Animated Underline</h2>
               <p>Link with sliding underline animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <a href="#" class="kvo-link-animated"
+              <div class="component-viewer">
+                <div slot="preview">
+<a href="#" class="kvo-link-animated"
                     >Hover me for underline</a
                   >
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="animated-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="animated-html">&lt;a href="#" class="kvo-link-animated"&gt;Hover me&lt;/a&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="animated-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="animated-css">.kvo-link-animated {
+                <script type="text/html" slot="html">
+<a href="#" class="kvo-link-animated">Hover me</a>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-link-animated {
   color: #667eea;
   text-decoration: none;
   position: relative;
@@ -172,9 +106,8 @@
 
 .kvo-link-animated:hover::after {
   width: 100%;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -182,49 +115,25 @@
             <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Link</h2>
               <p>Link with gradient text color.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <a href="#" class="kvo-link-gradient"
+              <div class="component-viewer">
+                <div slot="preview">
+<a href="#" class="kvo-link-gradient"
                     >Beautiful gradient link</a
                   >
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-html">&lt;a href="#" class="kvo-link-gradient"&gt;Gradient link&lt;/a&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-css">.kvo-link-gradient {
+                <script type="text/html" slot="html">
+<a href="#" class="kvo-link-gradient">Gradient link</a>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-link-gradient {
   background: linear-gradient(90deg, #667eea, #764ba2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-decoration: none;
   font-weight: 600;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -232,42 +141,19 @@
             <section id="arrow" class="docs-section" data-aos="fade-up">
               <h2>Link with Arrow</h2>
               <p>Link with animated arrow icon.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <a href="#" class="kvo-link-arrow"
+              <div class="component-viewer">
+                <div slot="preview">
+<a href="#" class="kvo-link-arrow"
                     >Read more <i class="fas fa-arrow-right"></i
                   ></a>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="arrow-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="arrow-html">&lt;a href="#" class="kvo-link-arrow"&gt;
-  Read more &lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;
-&lt;/a&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="arrow-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="arrow-css">.kvo-link-arrow {
+                <script type="text/html" slot="html">
+<a href="#" class="kvo-link-arrow">
+  Read more <i class="fas fa-arrow-right"></i>
+</a>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-link-arrow {
   color: #667eea;
   text-decoration: none;
   display: inline-flex;
@@ -281,9 +167,8 @@
 
 .kvo-link-arrow:hover i {
   transform: translateX(4px);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -324,9 +209,9 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="icon-html">&lt;a href="#" class="kvo-link-icon"&gt;
+                    <pre>&lt;a href="#" class="kvo-link-icon"&gt;
   &lt;i class="fas fa-home"&gt;&lt;/i&gt; Home
-&lt;/a&gt;</code></pre>
+&lt;/a&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -335,7 +220,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="icon-css">.kvo-link-icon {
+                    <pre>.kvo-link-icon {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   display: inline-flex;
@@ -349,7 +234,7 @@
 
 .kvo-link-icon:hover {
   color: #fff;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -359,38 +244,15 @@
             <section id="external" class="docs-section" data-aos="fade-up">
               <h2>External Link</h2>
               <p>Link with external icon indicator.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <a href="#" class="kvo-link-external">Visit external site</a>
+              <div class="component-viewer">
+                <div slot="preview">
+<a href="#" class="kvo-link-external">Visit external site</a>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="external-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="external-html">&lt;a href="#" class="kvo-link-external"&gt;Visit site&lt;/a&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="external-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="external-css">.kvo-link-external {
+                <script type="text/html" slot="html">
+<a href="#" class="kvo-link-external">Visit site</a>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-link-external {
   color: #667eea;
   text-decoration: none;
   display: inline-flex;
@@ -404,9 +266,8 @@
   font-weight: 900;
   font-size: 0.7rem;
   opacity: 0.6;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -414,38 +275,15 @@
             <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Link</h2>
               <p>Glowing neon style link.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <a href="#" class="kvo-link-neon">Cyberpunk link style</a>
+              <div class="component-viewer">
+                <div slot="preview">
+<a href="#" class="kvo-link-neon">Cyberpunk link style</a>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-html">&lt;a href="#" class="kvo-link-neon"&gt;Neon link&lt;/a&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-css">.kvo-link-neon {
+                <script type="text/html" slot="html">
+<a href="#" class="kvo-link-neon">Neon link</a>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-link-neon {
   color: #00d4ff;
   text-decoration: none;
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
@@ -454,9 +292,8 @@
 
 .kvo-link-neon:hover {
   text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -464,41 +301,18 @@
             <section id="subtle" class="docs-section" data-aos="fade-up">
               <h2>Subtle Link</h2>
               <p>Subtle link with dotted underline.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <p style="color: rgba(255, 255, 255, 0.7)">
+              <div class="component-viewer">
+                <div slot="preview">
+<p style="color: rgba(255, 255, 255, 0.7)">
                     This is some text with a
                     <a href="#" class="kvo-link-subtle">subtle link</a> inside.
                   </p>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="subtle-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="subtle-html">&lt;a href="#" class="kvo-link-subtle"&gt;subtle link&lt;/a&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="subtle-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="subtle-css">.kvo-link-subtle {
+                <script type="text/html" slot="html">
+<a href="#" class="kvo-link-subtle">subtle link</a>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-link-subtle {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
@@ -507,9 +321,8 @@
 .kvo-link-subtle:hover {
   color: #fff;
   border-bottom-color: #fff;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -517,38 +330,15 @@
             <section id="button" class="docs-section" data-aos="fade-up">
               <h2>Button Style Link</h2>
               <p>Link styled like a button.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <a href="#" class="kvo-link-button">Link as Button</a>
+              <div class="component-viewer">
+                <div slot="preview">
+<a href="#" class="kvo-link-button">Link as Button</a>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="button-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="button-html">&lt;a href="#" class="kvo-link-button"&gt;Link as Button&lt;/a&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="button-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="button-css">.kvo-link-button {
+                <script type="text/html" slot="html">
+<a href="#" class="kvo-link-button">Link as Button</a>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-link-button {
   display: inline-block;
   padding: 8px 16px;
   color: #667eea;
@@ -560,9 +350,8 @@
 .kvo-link-button:hover {
   background: rgba(102, 126, 234, 0.1);
   border-color: #667eea;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -598,8 +387,8 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="nav-html">&lt;a href="#" class="kvo-link-nav active"&gt;Home&lt;/a&gt;
-&lt;a href="#" class="kvo-link-nav"&gt;Products&lt;/a&gt;</code></pre>
+                    <pre>&lt;a href="#" class="kvo-link-nav active"&gt;Home&lt;/a&gt;
+&lt;a href="#" class="kvo-link-nav"&gt;Products&lt;/a&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -608,7 +397,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="nav-css">.kvo-link-nav {
+                    <pre>.kvo-link-nav {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   padding: 8px 0;
@@ -630,7 +419,7 @@
 .kvo-link-nav:hover::after,
 .kvo-link-nav.active::after {
   transform: scaleX(1);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -640,8 +429,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

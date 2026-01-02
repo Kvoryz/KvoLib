@@ -1,5 +1,5 @@
 /* Button 1 - Pay Button */
-.Btn {
+.btn1 {
   width: 130px;
   height: 40px;
   display: flex;
@@ -17,15 +17,15 @@
   transition-duration: 0.3s;
 }
 
-.svgIcon {
+.btn1-icon {
   width: 16px;
 }
 
-.svgIcon path {
+.btn1-icon path {
   fill: white;
 }
 
-.Btn::before {
+.btn1::before {
   width: 130px;
   height: 130px;
   position: absolute;
@@ -38,19 +38,19 @@
   mix-blend-mode: difference;
 }
 
-.Btn:hover::before {
+.btn1:hover::before {
   transition-duration: 0.3s;
   transform: translate(100%, -50%);
   border-radius: 0;
 }
 
-.Btn:active {
+.btn1:active {
   transform: translate(5px, 5px);
   transition-duration: 0.3s;
 }
 
 /* Button 2 - Send Button */
-.send-btn {
+.btn2 {
   font-family: inherit;
   font-size: 20px;
   background: royalblue;
@@ -66,31 +66,31 @@
   cursor: pointer;
 }
 
-.send-btn span {
+.btn2 span {
   display: block;
   margin-left: 0.3em;
   transition: all 0.3s ease-in-out;
 }
 
-.send-btn svg {
+.btn2 svg {
   display: block;
   transform-origin: center center;
   transition: transform 0.3s ease-in-out;
 }
 
-.send-btn:hover .svg-wrapper {
+.btn2:hover .svg-wrapper {
   animation: fly-1 0.6s ease-in-out infinite alternate;
 }
 
-.send-btn:hover svg {
+.btn2:hover svg {
   transform: translateX(1.2em) rotate(45deg) scale(1.1);
 }
 
-.send-btn:hover span {
+.btn2:hover span {
   transform: translateX(5em);
 }
 
-.send-btn:active {
+.btn2:active {
   transform: scale(0.95);
 }
 
@@ -104,7 +104,7 @@
 }
 
 /* Button 3 - Line Button */
-.line-btn {
+.btn3 {
   align-items: center;
   background-color: transparent;
   color: #fff;
@@ -123,7 +123,7 @@
   padding: 1rem;
 }
 
-.line-btn:before {
+.btn3:before {
   background-color: #fff;
   content: "";
   display: inline-block;
@@ -133,13 +133,13 @@
   width: 0;
 }
 
-.line-btn:hover:before {
+.btn3:hover:before {
   background-color: #fff;
   width: 3rem;
 }
 
 /* Button 4 - Skew Button */
-.skew-btn {
+.btn4 {
   padding: 0.5em 1.5em;
   height: 2.3em;
   margin: 0.5em;
@@ -155,11 +155,11 @@
   overflow: hidden;
 }
 
-.skew-btn:hover {
+.btn4:hover {
   color: black;
 }
 
-.skew-btn:after {
+.btn4:after {
   content: "";
   background: white;
   position: absolute;
@@ -172,13 +172,13 @@
   transition: all 0.5s;
 }
 
-.skew-btn:hover:after {
+.btn4:hover:after {
   transform: skewX(-45deg) scale(1, 1);
   transition: all 0.5s;
 }
 
 /* Button 5 - Fold Button */
-.fold-btn {
+.btn5 {
   position: relative;
   font-size: 1.2em;
   padding: 0.7em 1.4em;
@@ -191,7 +191,7 @@
   cursor: pointer;
 }
 
-.fold-btn::before {
+.btn5::before {
   position: absolute;
   content: "";
   height: 0;
@@ -210,18 +210,18 @@
   transition: 0.3s;
 }
 
-.fold-btn:hover::before {
+.btn5:hover::before {
   width: 1.6em;
   height: 1.6em;
 }
 
-.fold-btn:active {
+.btn5:active {
   box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
   transform: translate(0.1em, 0.1em);
 }
 
 /* Button 6 - 3D Cube Button */
-.cube {
+.btn6 {
   position: relative;
   transition: all 0.5s;
   display: block;
@@ -238,7 +238,7 @@
   z-index: 1;
 }
 
-.cube .bg-top {
+.btn6 .bg-top {
   position: absolute;
   height: 10px;
   background: #d4af37;
@@ -250,11 +250,11 @@
   transition: all 0.4s;
 }
 
-.cube .bg-top .bg-inner {
+.btn6 .bg-top .bg-inner {
   bottom: 0;
 }
 
-.cube .bg {
+.btn6 .bg {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -264,7 +264,7 @@
   transition: all 0.4s;
 }
 
-.cube .bg-right {
+.btn6 .bg-right {
   position: absolute;
   background: #d4af37;
   top: -5px;
@@ -276,11 +276,11 @@
   transition: all 0.4s;
 }
 
-.cube .bg-right .bg-inner {
+.btn6 .bg-right .bg-inner {
   left: 0;
 }
 
-.cube .bg-inner {
+.btn6 .bg-inner {
   background: #28282d;
   position: absolute;
   left: 2px;
@@ -289,28 +289,28 @@
   bottom: 2px;
 }
 
-.cube .text {
+.btn6 .text {
   position: relative;
   transition: all 0.4s;
 }
 
-.cube:hover .bg-inner {
+.btn6:hover .bg-inner {
   background: #d4af37;
   transition: all 0.4s;
 }
 
-.cube:hover .text {
+.btn6:hover .text {
   color: #28282d;
   transition: all 0.4s;
 }
 
-.cube:hover .bg-right,
-.cube:hover .bg,
-.cube:hover .bg-top {
+.btn6:hover .bg-right,
+.btn6:hover .bg,
+.btn6:hover .bg-top {
   background: #28282d;
 }
 
-.cube:active {
+.btn6:active {
   z-index: 9999;
   animation: bounce 0.1s linear;
 }
@@ -322,7 +322,7 @@
 }
 
 /* Button 7 - Hover Button */
-.hover-btn {
+.btn7 {
   position: relative;
   overflow: hidden;
   border: 1px solid #18181a;
@@ -339,13 +339,13 @@
   touch-action: manipulation;
 }
 
-.hover-btn span:first-child {
+.btn7 span:first-child {
   position: relative;
   transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
   z-index: 10;
 }
 
-.hover-btn span:last-child {
+.btn7 span:last-child {
   color: white;
   display: block;
   position: absolute;
@@ -360,7 +360,7 @@
   line-height: 13px;
 }
 
-.hover-btn:after {
+.btn7:after {
   content: "";
   position: absolute;
   bottom: -50%;
@@ -374,19 +374,19 @@
   z-index: 50;
 }
 
-.hover-btn:hover:after {
+.btn7:hover:after {
   transform-origin: bottom center;
   transform: skewY(9.3deg) scaleY(2);
 }
 
-.hover-btn:hover span:last-child {
+.btn7:hover span:last-child {
   transform: translateX(-50%) translateY(-50%);
   opacity: 1;
   transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
 }
 
 /* Button 8 - Star Button */
-.star-btn {
+.btn8 {
   position: relative;
   padding: 12px 35px;
   background: #fec195;
@@ -459,48 +459,48 @@
   transition: all 0.8s ease;
 }
 
-.star-btn:hover {
+.btn8:hover {
   background: transparent;
   color: #fec195;
   box-shadow: 0 0 25px #fec1958c;
 }
 
-.star-btn:hover .star-1 {
+.btn8:hover .star-1 {
   top: -80%;
   left: -30%;
   filter: drop-shadow(0 0 10px #fffdef);
   z-index: 2;
 }
 
-.star-btn:hover .star-2 {
+.btn8:hover .star-2 {
   top: -25%;
   left: 10%;
   filter: drop-shadow(0 0 10px #fffdef);
   z-index: 2;
 }
 
-.star-btn:hover .star-3 {
+.btn8:hover .star-3 {
   top: 55%;
   left: 25%;
   filter: drop-shadow(0 0 10px #fffdef);
   z-index: 2;
 }
 
-.star-btn:hover .star-4 {
+.btn8:hover .star-4 {
   top: 30%;
   left: 80%;
   filter: drop-shadow(0 0 10px #fffdef);
   z-index: 2;
 }
 
-.star-btn:hover .star-5 {
+.btn8:hover .star-5 {
   top: 25%;
   left: 115%;
   filter: drop-shadow(0 0 10px #fffdef);
   z-index: 2;
 }
 
-.star-btn:hover .star-6 {
+.btn8:hover .star-6 {
   top: 5%;
   left: 60%;
   filter: drop-shadow(0 0 10px #fffdef);
@@ -512,7 +512,7 @@
 }
 
 /* Button 9 - Tooltip Button */
-.tooltip-btn {
+.btn9 {
   --width: 100px;
   --height: 35px;
   --tooltip-height: 35px;
@@ -532,7 +532,7 @@
   cursor: pointer;
 }
 
-.tooltip-btn::before {
+.btn9::before {
   position: absolute;
   content: attr(data-tooltip);
   width: var(--tooltip-width);
@@ -546,7 +546,7 @@
   left: calc(50% - var(--tooltip-width) / 2);
 }
 
-.tooltip-btn::after {
+.btn9::after {
   position: absolute;
   content: "";
   width: 0;
@@ -557,8 +557,8 @@
   bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
 }
 
-.tooltip-btn::after,
-.tooltip-btn::before {
+.btn9::after,
+.btn9::before {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
@@ -603,34 +603,34 @@
   height: 24px;
 }
 
-.tooltip-btn:hover {
+.btn9:hover {
   background: #222;
 }
 
-.tooltip-btn:hover .tooltip-text {
+.btn9:hover .tooltip-text {
   top: -100%;
 }
 
-.tooltip-btn:hover .tooltip-icon {
+.btn9:hover .tooltip-icon {
   top: 0;
 }
 
-.tooltip-btn:hover:before,
-.tooltip-btn:hover:after {
+.btn9:hover:before,
+.btn9:hover:after {
   opacity: 1;
   visibility: visible;
 }
 
-.tooltip-btn:hover:after {
+.btn9:hover:after {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
 }
 
-.tooltip-btn:hover:before {
+.btn9:hover:before {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
 }
 
 /* Button 10 - Jump Button */
-.jump-btn {
+.btn10 {
   width: 130px;
   height: 40px;
   font-size: 1.1em;
@@ -642,14 +642,14 @@
   transition: all 0.4s;
 }
 
-.jump-btn:hover {
+.btn10:hover {
   border-radius: 5px;
   transform: translateY(-10px);
   box-shadow: 0 7px 0 -2px #f85959, 0 15px 0 -4px #39a2db,
     0 16px 10px -3px #39a2db;
 }
 
-.jump-btn:active {
+.btn10:active {
   transition: all 0.2s;
   transform: translateY(-5px);
   box-shadow: 0 2px 0 -2px #f85959, 0 8px 0 -4px #39a2db,
@@ -657,7 +657,7 @@
 }
 
 /* Button 11 - Arrow Entry Button */
-.arrow-entry-btn {
+.btn11 {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -677,7 +677,7 @@
   max-width: fit-content;
 }
 
-.arrow-entry-btn svg {
+.btn11 svg {
   position: absolute;
   width: 24px;
   fill: #1f387e;
@@ -685,15 +685,15 @@
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.arrow-entry-btn .arr-1 {
+.btn11 .arr-1 {
   right: 16px;
 }
 
-.arrow-entry-btn .arr-2 {
+.btn11 .arr-2 {
   left: -25%;
 }
 
-.arrow-entry-btn .circle {
+.btn11 .circle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -706,48 +706,48 @@
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.arrow-entry-btn .text {
+.btn11 .text {
   position: relative;
   z-index: 1;
   transform: translateX(-12px);
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.arrow-entry-btn:hover {
+.btn11:hover {
   box-shadow: 0 0 0 12px transparent;
   color: #212121;
   border-radius: 12px;
 }
 
-.arrow-entry-btn:hover .arr-1 {
+.btn11:hover .arr-1 {
   right: -25%;
 }
 
-.arrow-entry-btn:hover .arr-2 {
+.btn11:hover .arr-2 {
   left: 16px;
 }
 
-.arrow-entry-btn:hover .text {
+.btn11:hover .text {
   transform: translateX(12px);
 }
 
-.arrow-entry-btn:hover svg {
+.btn11:hover svg {
   fill: #1f387e;
 }
 
-.arrow-entry-btn:active {
+.btn11:active {
   scale: 0.95;
   box-shadow: 0 0 0 4px greenyellow;
 }
 
-.arrow-entry-btn:hover .circle {
+.btn11:hover .circle {
   width: 220px;
   height: 220px;
   opacity: 1;
 }
 
 /* Button 12 - Underline Button */
-.underline-btn {
+.btn12 {
   color: white;
   text-decoration: none;
   font-size: 25px;
@@ -762,12 +762,12 @@
   flex: 0 0 auto;
 }
 
-.underline-btn::before {
+.btn12::before {
   margin-left: auto;
 }
 
-.underline-btn::after,
-.underline-btn::before {
+.btn12::after,
+.btn12::before {
   content: "";
   width: 0%;
   height: 2px;
@@ -776,13 +776,13 @@
   transition: 0.5s;
 }
 
-.underline-btn:hover::after,
-.underline-btn:hover::before {
+.btn12:hover::after,
+.btn12:hover::before {
   width: 100%;
 }
 
 /* Button 13 - Glitch Fill Button */
-.btn-glitch-fill {
+.btn13 {
   display: inline-block;
   font-family: "VT323", monospace;
   border: 1px solid rgb(0, 0, 0);
@@ -798,18 +798,18 @@
   text-align: center;
 }
 
-.btn-glitch-fill .text,
-.btn-glitch-fill .decoration {
+.btn13 .text,
+.btn13 .decoration {
   display: inline-block;
 }
 
-.btn-glitch-fill .decoration {
+.btn13 .decoration {
   display: inline-block;
   float: right;
 }
 
-.btn-glitch-fill:hover,
-.btn-glitch-fill:focus {
+.btn13:hover,
+.btn13:focus {
   animation-name: glitch;
   animation-duration: 0.2s;
   background-color: yellow;
@@ -817,28 +817,28 @@
   border: 1px solid yellow;
 }
 
-.btn-glitch-fill:hover .text-decoration {
+.btn13:hover .text-decoration {
   animation-name: blink;
   animation-duration: 0.1s;
   animation-iteration-count: infinite;
 }
 
-.btn-glitch-fill:hover .decoration {
+.btn13:hover .decoration {
   animation-name: blink;
   animation-duration: 0.1s;
   animation-iteration-count: infinite;
 }
 
-.btn-glitch-fill:active {
+.btn13:active {
   background: none;
   color: yellow;
 }
 
-.btn-glitch-fill:active .text-decoration {
+.btn13:active .text-decoration {
   animation-name: none;
 }
 
-.btn-glitch-fill:active .decoration {
+.btn13:active .decoration {
   animation-name: none;
 }
 
@@ -873,7 +873,7 @@
 }
 
 /* Button 14 - Letter Box */
-.letter-box {
+.btn14 {
   display: flex;
 }
 
@@ -925,12 +925,12 @@
   content: "D";
 }
 
-.letter-box:hover .box:before {
+.btn14:hover .box:before {
   transform: translateY(0);
 }
 
 /* Button 15 - Layered Button */
-.layered-btn {
+.btn15 {
   transform: rotate(-25deg) skew(25deg);
   transform-style: preserve-3d;
   position: relative;
@@ -943,7 +943,7 @@
   cursor: pointer;
 }
 
-.layered-btn:before {
+.btn15:before {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -954,7 +954,7 @@
   transform: skewX(-41deg);
 }
 
-.layered-btn:after {
+.btn15:after {
   content: "";
   position: absolute;
   top: 5px;
@@ -965,7 +965,7 @@
   transform: skewY(-49deg);
 }
 
-.layered-btn span {
+.btn15 span {
   position: absolute;
   top: 0;
   left: 0;
@@ -980,64 +980,64 @@
   justify-content: center;
 }
 
-.layered-btn:hover span {
+.btn15:hover span {
   z-index: 1000;
   transition: 0.3s;
   color: #fff;
 }
 
-.layered-btn:hover span:nth-child(5) {
+.btn15:hover span:nth-child(5) {
   transform: translate(40px, -40px);
   opacity: 1;
 }
 
-.layered-btn:hover span:nth-child(4) {
+.btn15:hover span:nth-child(4) {
   transform: translate(30px, -30px);
   opacity: 0.8;
 }
 
-.layered-btn:hover span:nth-child(3) {
+.btn15:hover span:nth-child(3) {
   transform: translate(20px, -20px);
   opacity: 0.6;
 }
 
-.layered-btn:hover span:nth-child(2) {
+.btn15:hover span:nth-child(2) {
   transform: translate(10px, -10px);
   opacity: 0.4;
 }
 
-.layered-btn:hover span:nth-child(1) {
+.btn15:hover span:nth-child(1) {
   transform: translate(0px, 0px);
   opacity: 0.2;
 }
 
-.layered-btn:active span:nth-child(5) {
+.btn15:active span:nth-child(5) {
   transform: translate(20px, -20px);
   opacity: 1;
 }
 
-.layered-btn:active span:nth-child(4) {
+.btn15:active span:nth-child(4) {
   transform: translate(15px, -15px);
 }
 
-.layered-btn:active span:nth-child(3) {
+.btn15:active span:nth-child(3) {
   transform: translate(10px, -10px);
 }
 
-.layered-btn:active span:nth-child(2) {
+.btn15:active span:nth-child(2) {
   transform: translate(5px, -5px);
 }
 
-.layered-btn:active span:nth-child(1) {
+.btn15:active span:nth-child(1) {
   transform: translate(0px, 0px);
 }
 
-.layered-btn:hover span {
+.btn15:hover span {
   background: #52e19f;
 }
 
 /* Button 16 - UI Button */
-.ui-btn {
+.btn16 {
   --btn-default-bg: rgb(41, 41, 41);
   --btn-padding: 15px 20px;
   --btn-hover-bg: rgb(51, 51, 51);
@@ -1068,7 +1068,7 @@
   flex: 0 0 auto;
 }
 
-.ui-btn span {
+.btn16 span {
   letter-spacing: var(--btn-letter-spacing);
   transition: var(--btn-transition);
   box-sizing: border-box;
@@ -1076,25 +1076,25 @@
   background: inherit;
 }
 
-.ui-btn span::before {
+.btn16 span::before {
   box-sizing: border-box;
   position: absolute;
   content: "";
   background: inherit;
 }
 
-.ui-btn:hover,
-.ui-btn:focus {
+.btn16:hover,
+.btn16:focus {
   background: var(--btn-hover-bg);
 }
 
-.ui-btn:hover span,
-.ui-btn:focus span {
+.btn16:hover span,
+.btn16:focus span {
   color: var(--hover-btn-color);
 }
 
-.ui-btn:hover span::before,
-.ui-btn:focus span::before {
+.btn16:hover span::before,
+.btn16:focus span::before {
   animation: chitchat linear both var(--btn-animation-duration);
 }
 
@@ -1171,17 +1171,17 @@
 }
 
 /* Button 17 - Btn-31 */
-.btn-31,
-.btn-31 *,
-.btn-31 :after,
-.btn-31 :before,
-.btn-31:after,
-.btn-31:before {
+.btn17,
+.btn17 *,
+.btn17 :after,
+.btn17 :before,
+.btn17:after,
+.btn17:before {
   border: 0 solid;
   box-sizing: border-box;
 }
 
-.btn-31 {
+.btn17 {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
   background-color: #000;
@@ -1203,24 +1203,24 @@
   text-transform: uppercase;
 }
 
-.btn-31:disabled {
+.btn17:disabled {
   cursor: default;
 }
 
-.btn-31:-moz-focusring {
+.btn17:-moz-focusring {
   outline: auto;
 }
 
-.btn-31 svg {
+.btn17 svg {
   display: block;
   vertical-align: middle;
 }
 
-.btn-31 [hidden] {
+.btn17 [hidden] {
   display: none;
 }
 
-.btn-31:before {
+.btn17:before {
   --progress: 100%;
   background: #fff;
   -webkit-clip-path: polygon(
@@ -1243,24 +1243,24 @@
   transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
 }
 
-.btn-31:hover:before {
+.btn17:hover:before {
   --progress: 0%;
 }
 
-.btn-31 .text-container {
+.btn17 .text-container {
   display: block;
   overflow: hidden;
   position: relative;
 }
 
-.btn-31 .text {
+.btn17 .text {
   display: block;
   font-weight: 900;
   mix-blend-mode: difference;
   position: relative;
 }
 
-.btn-31:hover .text {
+.btn17:hover .text {
   -webkit-animation: move-up-alternate 0.3s ease forwards;
   animation: move-up-alternate 0.3s ease forwards;
 }
@@ -1296,7 +1296,7 @@
 }
 
 /* Button 18 - CTI */
-.cti {
+.btn18 {
   background-color: #6019bd;
   padding: 17px 30px;
   border: 3px solid transparent;
@@ -1308,7 +1308,7 @@
   flex: 0 0 auto;
 }
 
-.cti:hover {
+.btn18:hover {
   background-color: transparent;
   border: 3px solid #6019bd;
   box-shadow: 0px 0px 27px 5px #6019bd;
@@ -1325,7 +1325,7 @@
   margin: 0 auto;
 }
 
-.cti:hover .CTI {
+.btn18:hover .CTI {
   border-right: 4px solid #6019bd;
   animation: letters 1.75s steps(22, end), cursor 0.4s step-end infinite;
 }
@@ -1349,7 +1349,7 @@
 }
 
 /* Button 19 - Edit Button */
-.editBtn {
+.btn19 {
   width: 55px;
   height: 55px;
   border-radius: 20px;
@@ -1365,7 +1365,7 @@
   transition: all 0.3s;
 }
 
-.editBtn::before {
+.btn19::before {
   content: "";
   width: 200%;
   height: 200%;
@@ -1378,15 +1378,15 @@
   filter: blur(10px);
 }
 
-.editBtn:hover::before {
+.btn19:hover::before {
   transform: scale(1);
 }
 
-.editBtn:hover {
+.btn19:hover {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.336);
 }
 
-.editBtn svg {
+.btn19 svg {
   height: 17px;
   fill: white;
   z-index: 3;
@@ -1394,11 +1394,11 @@
   transform-origin: bottom;
 }
 
-.editBtn:hover svg {
+.btn19:hover svg {
   transform: rotate(-15deg) translateX(5px);
 }
 
-.editBtn::after {
+.btn19::after {
   content: "";
   width: 25px;
   height: 1.5px;
@@ -1413,14 +1413,14 @@
   transition: transform 0.5s ease-out;
 }
 
-.editBtn:hover::after {
+.btn19:hover::after {
   transform: scaleX(1);
   left: 0px;
   transform-origin: right;
 }
 
 /* Button 20 - Gradient Button */
-.gradient-btn {
+.btn20 {
   position: relative;
   padding: 15px 30px;
   font-family: inherit;
@@ -1438,14 +1438,14 @@
   flex: 0 0 auto;
 }
 
-.gradient-btn:hover span {
+.btn20:hover span {
   background: linear-gradient(135deg, #aefb2a 0%, #57ebde 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gradient-btn::before {
+.btn20::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -1458,16 +1458,16 @@
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.gradient-btn:hover {
+.btn20:hover {
   letter-spacing: 2px;
   border-image: linear-gradient(135deg, #aefb2a 0%, #57ebde 100%);
   border-image-slice: 1;
 }
 
-.gradient-btn:hover::before {
+.btn20:hover::before {
   left: 110%;
 }
 
-.gradient-btn:active {
+.btn20:active {
   scale: 0.95;
 }

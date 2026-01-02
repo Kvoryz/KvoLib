@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Stack Components" />
     <title>Stack - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/stack.css" />
   </head>
   <body>
@@ -89,10 +70,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="vertical-html">&lt;div class="stack-vertical"&gt;
+                    <pre>&lt;div class="stack-vertical"&gt;
   &lt;div&gt;Item 1&lt;/div&gt;
   &lt;div&gt;Item 2&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -101,11 +82,11 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="vertical-css">.stack-vertical {
+                    <pre>.stack-vertical {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -114,51 +95,27 @@
             <section id="horizontal" class="docs-section" data-aos="fade-up">
               <h2>Horizontal Stack</h2>
               <p>Stack items horizontally.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="stack-horizontal">
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="stack-horizontal">
                     <div class="stack-item">Item 1</div>
                     <div class="stack-item">Item 2</div>
                     <div class="stack-item">Item 3</div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="horizontal-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="horizontal-html">&lt;div class="stack-horizontal"&gt;
-  &lt;div&gt;Item 1&lt;/div&gt;
-  &lt;div&gt;Item 2&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="horizontal-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="horizontal-css">.stack-horizontal {
+                <script type="text/html" slot="html">
+<div class="stack-horizontal">
+  <div>Item 1</div>
+  <div>Item 2</div>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.stack-horizontal {
   display: flex;
   flex-direction: row;
   gap: 16px;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -191,10 +148,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="v-centered-html">&lt;div class="stack-vertical-centered"&gt;
+                    <pre>&lt;div class="stack-vertical-centered"&gt;
   &lt;div&gt;Item 1&lt;/div&gt;
   &lt;div&gt;Item 2&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -203,12 +160,12 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="v-centered-css">.stack-vertical-centered {
+                    <pre>.stack-vertical-centered {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -217,104 +174,56 @@
             <section id="horizontal-centered" class="docs-section" data-aos="fade-up">
               <h2>Horizontal Centered Stack</h2>
               <p>Horizontally stack items with center alignment.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="stack-horizontal-centered">
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="stack-horizontal-centered">
                     <div class="stack-item">Item 1</div>
                     <div class="stack-item">Item 2</div>
                     <div class="stack-item">Item 3</div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="h-centered-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="h-centered-html">&lt;div class="stack-horizontal-centered"&gt;
-  &lt;div&gt;Item 1&lt;/div&gt;
-  &lt;div&gt;Item 2&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="h-centered-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="h-centered-css">.stack-horizontal-centered {
+                <script type="text/html" slot="html">
+<div class="stack-horizontal-centered">
+  <div>Item 1</div>
+  <div>Item 2</div>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.stack-horizontal-centered {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
             <section id="space-between" class="docs-section" data-aos="fade-up">
               <h2>Space Between Stack</h2>
               <p>Stack with space-between layout.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div class="stack-space-between">
+              <div class="component-viewer">
+                <div slot="preview">
+<div class="stack-space-between">
                     <div class="stack-item">Left</div>
                     <div class="stack-item">Center</div>
                     <div class="stack-item">Right</div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="space-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="space-html">&lt;div class="stack-space-between"&gt;
-  &lt;div&gt;Left&lt;/div&gt;
-  &lt;div&gt;Right&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="space-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="space-css">.stack-space-between {
+                <script type="text/html" slot="html">
+<div class="stack-space-between">
+  <div>Left</div>
+  <div>Right</div>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.stack-space-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
         </div>
@@ -322,7 +231,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

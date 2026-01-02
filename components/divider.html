@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Divider Components" />
     <title>Divider - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/divider.css" />
   </head>
   <body>
@@ -88,7 +69,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="solid-html">&lt;div class="divider-solid"&gt;&lt;/div&gt;</code></pre>
+                    <pre>&lt;div class="divider-solid"&gt;&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -97,12 +78,12 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="solid-css">.divider-solid {
+                    <pre>.divider-solid {
   width: 100%;
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
   margin: 24px 0;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -135,7 +116,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="dashed-html">&lt;div class="divider-dashed"&gt;&lt;/div&gt;</code></pre>
+                    <pre>&lt;div class="divider-dashed"&gt;&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -144,10 +125,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="dashed-css">.divider-dashed {
+                    <pre>.divider-dashed {
   border-top: 1px dashed rgba(255, 255, 255, 0.2);
   margin: 24px 0;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -180,7 +161,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="gradient-html">&lt;div class="divider-gradient"&gt;&lt;/div&gt;</code></pre>
+                    <pre>&lt;div class="divider-gradient"&gt;&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -189,11 +170,11 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="gradient-css">.divider-gradient {
+                    <pre>.divider-gradient {
   height: 2px;
   background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.5), transparent);
   margin: 24px 0;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -226,7 +207,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glow-html">&lt;div class="divider-glow"&gt;&lt;/div&gt;</code></pre>
+                    <pre>&lt;div class="divider-glow"&gt;&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -235,12 +216,12 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glow-css">.divider-glow {
+                    <pre>.divider-glow {
   height: 2px;
   background: #00d4ff;
   box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
   margin: 24px 0;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -273,7 +254,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="text-html">&lt;div class="divider-text"&gt;OR&lt;/div&gt;</code></pre>
+                    <pre>&lt;div class="divider-text"&gt;OR&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -282,7 +263,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="text-css">.divider-text {
+                    <pre>.divider-text {
   display: flex;
   align-items: center;
 }
@@ -293,7 +274,7 @@
   flex: 1;
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -302,47 +283,23 @@
             <section id="vertical" class="docs-section" data-aos="fade-up">
               <h2>Vertical Divider</h2>
               <p>Vertical divider for inline content.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <span>Left content</span>
+              <div class="component-viewer">
+                <div slot="preview">
+<span>Left content</span>
                   <div class="divider-vertical"></div>
                   <span>Right content</span>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="vertical-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="vertical-html">&lt;div class="divider-vertical"&gt;&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="vertical-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="vertical-css">.divider-vertical {
+                <script type="text/html" slot="html">
+<div class="divider-vertical"></div>
+                </script>
+                <script type="text/css" slot="css">
+.divider-vertical {
   width: 1px;
   min-height: 50px;
   background: rgba(255, 255, 255, 0.1);
   margin: 0 24px;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
         </div>
@@ -350,7 +307,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Alert Components" />
     <title>Alert - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/alert.css" />
   </head>
   <body>
@@ -101,14 +82,14 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="info-html">&lt;div class="alert alert-info"&gt;
+                    <pre>&lt;div class="alert alert-info"&gt;
   &lt;div class="alert-icon"&gt;&lt;i class="fas fa-info-circle"&gt;&lt;/i&gt;&lt;/div&gt;
   &lt;div class="alert-content"&gt;
     &lt;div class="alert-title"&gt;Information&lt;/div&gt;
     &lt;div class="alert-message"&gt;Your message here.&lt;/div&gt;
   &lt;/div&gt;
   &lt;button class="alert-close"&gt;&lt;i class="fas fa-times"&gt;&lt;/i&gt;&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -117,7 +98,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="info-css">.alert {
+                    <pre>.alert {
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -134,7 +115,7 @@
   color: #93c5fd;
 }
 
-.alert-info .alert-icon { color: #3b82f6; }</code></pre>
+.alert-info .alert-icon { color: #3b82f6; }</pre>
                   </div>
                 </details>
               </div>
@@ -176,13 +157,13 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="success-html">&lt;div class="alert alert-success"&gt;
+                    <pre>&lt;div class="alert alert-success"&gt;
   &lt;div class="alert-icon"&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt;&lt;/div&gt;
   &lt;div class="alert-content"&gt;
     &lt;div class="alert-title"&gt;Success&lt;/div&gt;
     &lt;div class="alert-message"&gt;Your action was completed!&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -191,13 +172,13 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="success-css">.alert-success {
+                    <pre>.alert-success {
   background: rgba(34, 197, 94, 0.1);
   border: 1px solid rgba(34, 197, 94, 0.3);
   color: #86efac;
 }
 
-.alert-success .alert-icon { color: #22c55e; }</code></pre>
+.alert-success .alert-icon { color: #22c55e; }</pre>
                   </div>
                 </details>
               </div>
@@ -239,13 +220,13 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="warning-html">&lt;div class="alert alert-warning"&gt;
+                    <pre>&lt;div class="alert alert-warning"&gt;
   &lt;div class="alert-icon"&gt;&lt;i class="fas fa-exclamation-triangle"&gt;&lt;/i&gt;&lt;/div&gt;
   &lt;div class="alert-content"&gt;
     &lt;div class="alert-title"&gt;Warning&lt;/div&gt;
     &lt;div class="alert-message"&gt;Please review this.&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -254,13 +235,13 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="warning-css">.alert-warning {
+                    <pre>.alert-warning {
   background: rgba(245, 158, 11, 0.1);
   border: 1px solid rgba(245, 158, 11, 0.3);
   color: #fcd34d;
 }
 
-.alert-warning .alert-icon { color: #f59e0b; }</code></pre>
+.alert-warning .alert-icon { color: #f59e0b; }</pre>
                   </div>
                 </details>
               </div>
@@ -302,13 +283,13 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="error-html">&lt;div class="alert alert-error"&gt;
+                    <pre>&lt;div class="alert alert-error"&gt;
   &lt;div class="alert-icon"&gt;&lt;i class="fas fa-times-circle"&gt;&lt;/i&gt;&lt;/div&gt;
   &lt;div class="alert-content"&gt;
     &lt;div class="alert-title"&gt;Error&lt;/div&gt;
     &lt;div class="alert-message"&gt;Something went wrong.&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -317,13 +298,13 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="error-css">.alert-error {
+                    <pre>.alert-error {
   background: rgba(239, 68, 68, 0.1);
   border: 1px solid rgba(239, 68, 68, 0.3);
   color: #fca5a5;
 }
 
-.alert-error .alert-icon { color: #ef4444; }</code></pre>
+.alert-error .alert-icon { color: #ef4444; }</pre>
                   </div>
                 </details>
               </div>
@@ -365,13 +346,13 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glass-html">&lt;div class="alert alert-glass"&gt;
+                    <pre>&lt;div class="alert alert-glass"&gt;
   &lt;div class="alert-icon"&gt;&lt;i class="fas fa-info-circle"&gt;&lt;/i&gt;&lt;/div&gt;
   &lt;div class="alert-content"&gt;
     &lt;div class="alert-title"&gt;Glass Style&lt;/div&gt;
     &lt;div class="alert-message"&gt;Glassmorphism alert.&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -380,12 +361,12 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glass-css">.alert-glass {
+                    <pre>.alert-glass {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.9);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -457,10 +438,10 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="solid-html">&lt;div class="alert alert-solid-info"&gt;...&lt;/div&gt;
+                    <pre>&lt;div class="alert alert-solid-info"&gt;...&lt;/div&gt;
 &lt;div class="alert alert-solid-success"&gt;...&lt;/div&gt;
 &lt;div class="alert alert-solid-warning"&gt;...&lt;/div&gt;
-&lt;div class="alert alert-solid-error"&gt;...&lt;/div&gt;</code></pre>
+&lt;div class="alert alert-solid-error"&gt;...&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -469,7 +450,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="solid-css">.alert-solid-info {
+                    <pre>.alert-solid-info {
   background: #3b82f6;
   color: #fff;
   border: none;
@@ -491,7 +472,7 @@
   background: #ef4444;
   color: #fff;
   border: none;
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -531,13 +512,13 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="neon-html">&lt;div class="alert alert-neon"&gt;
+                    <pre>&lt;div class="alert alert-neon"&gt;
   &lt;div class="alert-icon"&gt;&lt;i class="fas fa-bolt"&gt;&lt;/i&gt;&lt;/div&gt;
   &lt;div class="alert-content"&gt;
     &lt;div class="alert-title"&gt;Neon Glow&lt;/div&gt;
     &lt;div class="alert-message"&gt;Neon style alert.&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -546,12 +527,12 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="neon-css">.alert-neon {
+                    <pre>.alert-neon {
   background: rgba(0, 212, 255, 0.05);
   border: 1px solid #00d4ff;
   color: #00d4ff;
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
-}</code></pre>
+}</pre>
                   </div>
                 </details>
               </div>
@@ -561,8 +542,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

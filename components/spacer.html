@@ -6,26 +6,7 @@
     <meta name="view-transition" content="same-origin" />
     <meta name="description" content="KvoLib Spacer Components" />
     <title>Spacer - KvoLib</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/spacer.css" />
   </head>
   <body>
@@ -98,12 +79,12 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="vertical-html">&lt;div class="spacer-xs"&gt;&lt;/div&gt; &lt;!-- 8px --&gt;
+                    <pre>&lt;div class="spacer-xs"&gt;&lt;/div&gt; &lt;!-- 8px --&gt;
 &lt;div class="spacer-sm"&gt;&lt;/div&gt; &lt;!-- 16px --&gt;
 &lt;div class="spacer-md"&gt;&lt;/div&gt; &lt;!-- 24px --&gt;
 &lt;div class="spacer-lg"&gt;&lt;/div&gt; &lt;!-- 32px --&gt;
 &lt;div class="spacer-xl"&gt;&lt;/div&gt; &lt;!-- 48px --&gt;
-&lt;div class="spacer-2xl"&gt;&lt;/div&gt; &lt;!-- 64px --&gt;</code></pre>
+&lt;div class="spacer-2xl"&gt;&lt;/div&gt; &lt;!-- 64px --&gt;</pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -112,12 +93,12 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="vertical-css">.spacer-xs { height: 8px; }
+                    <pre>.spacer-xs { height: 8px; }
 .spacer-sm { height: 16px; }
 .spacer-md { height: 24px; }
 .spacer-lg { height: 32px; }
 .spacer-xl { height: 48px; }
-.spacer-2xl { height: 64px; }</code></pre>
+.spacer-2xl { height: 64px; }</pre>
                   </div>
                 </details>
               </div>
@@ -126,9 +107,9 @@
             <section id="horizontal" class="docs-section" data-aos="fade-up">
               <h2>Horizontal Spacers</h2>
               <p>Spacing utilities for horizontal layouts.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <span>Left</span>
+              <div class="component-viewer">
+                <div slot="preview">
+<span>Left</span>
                   <div class="spacer-h-xs spacer-demo"></div>
                   <span>8px</span>
                   <div class="spacer-h-sm spacer-demo"></div>
@@ -138,46 +119,22 @@
                   <div class="spacer-h-lg spacer-demo"></div>
                   <span>Right</span>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="horizontal-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="horizontal-html">&lt;div class="spacer-h-xs"&gt;&lt;/div&gt; &lt;!-- 8px --&gt;
-&lt;div class="spacer-h-sm"&gt;&lt;/div&gt; &lt;!-- 16px --&gt;
-&lt;div class="spacer-h-md"&gt;&lt;/div&gt; &lt;!-- 24px --&gt;
-&lt;div class="spacer-h-lg"&gt;&lt;/div&gt; &lt;!-- 32px --&gt;
-&lt;div class="spacer-h-xl"&gt;&lt;/div&gt; &lt;!-- 48px --&gt;
-&lt;div class="spacer-h-2xl"&gt;&lt;/div&gt; &lt;!-- 64px --&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="horizontal-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="horizontal-css">.spacer-h-xs { width: 8px; }
+                <script type="text/html" slot="html">
+<div class="spacer-h-xs"></div> <!-- 8px -->
+<div class="spacer-h-sm"></div> <!-- 16px -->
+<div class="spacer-h-md"></div> <!-- 24px -->
+<div class="spacer-h-lg"></div> <!-- 32px -->
+<div class="spacer-h-xl"></div> <!-- 48px -->
+<div class="spacer-h-2xl"></div> <!-- 64px -->
+                </script>
+                <script type="text/css" slot="css">
+.spacer-h-xs { width: 8px; }
 .spacer-h-sm { width: 16px; }
 .spacer-h-md { width: 24px; }
 .spacer-h-lg { width: 32px; }
 .spacer-h-xl { width: 48px; }
-.spacer-h-2xl { width: 64px; }</code></pre>
-                  </div>
-                </details>
+.spacer-h-2xl { width: 64px; }
+                </script>
               </div>
             </section>
         </div>
@@ -185,7 +142,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>

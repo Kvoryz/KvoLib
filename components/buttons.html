@@ -8,27 +8,7 @@
     <meta name="description" content="KvoLib Button Components" />
     <title>Buttons - KvoLib</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <style>
-      html,
-      body {
-        background: #000;
-        color: #fff;
-      }
-    </style>
-    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/head-loader.js"></script>
     <link rel="stylesheet" href="/assets/css/buttons.css" />
   </head>
   <body>
@@ -84,51 +64,27 @@
             <section id="pay" class="docs-section" data-aos="fade-up">
               <h2>Pay Button</h2>
               <p>Button with unique mix-blend-mode effect.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="Btn">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn1">
                     Pay
-                    <svg class="svgIcon" viewBox="0 0 576 512">
+                    <svg class="btn1-icon" viewBox="0 0 576 512">
                       <path
                         d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"
                       ></path>
                     </svg>
                   </button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="pay-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="pay-html">&lt;button class="Btn"&gt;
+                <script type="text/html" slot="html">
+<button class="kvo-btn-pay">
   Pay
-  &lt;svg class="svgIcon" viewBox="0 0 576 512"&gt;
-    &lt;path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512z..."&gt;&lt;/path&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="pay-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="pay-css">.Btn {
+  <svg class="kvo-btn-pay-icon" viewBox="0 0 576 512">
+    <path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512z..."></path>
+  </svg>
+</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-pay {
   width: 130px;
   height: 40px;
   display: flex;
@@ -146,7 +102,15 @@
   transition-duration: 0.3s;
 }
 
-.Btn::before {
+.kvo-btn-pay-icon {
+  width: 16px;
+}
+
+.kvo-btn-pay-icon path {
+  fill: white;
+}
+
+.kvo-btn-pay::before {
   width: 130px;
   height: 130px;
   position: absolute;
@@ -159,22 +123,27 @@
   mix-blend-mode: difference;
 }
 
-.Btn:hover::before {
+.kvo-btn-pay:hover::before {
+  transition-duration: 0.3s;
   transform: translate(100%, -50%);
   border-radius: 0;
-}</code></pre>
-                  </div>
-                </details>
+}
+
+.kvo-btn-pay:active {
+  transform: translate(5px, 5px);
+  transition-duration: 0.3s;
+}
+                </script>
               </div>
             </section>
 
             <!-- Button 2 - Send Button -->
             <section id="send" class="docs-section" data-aos="fade-up">
               <h2>Send Button</h2>
-              <p>Button with flying send icon animation.</p>
-              <div class="preview-box">
-                <div class="preview-area">
-                  <button class="send-btn">
+              <p>Button with fly animation on hover.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn2">
                     <div class="svg-wrapper-1">
                       <div class="svg-wrapper">
                         <svg
@@ -194,63 +163,74 @@
                     <span>Send</span>
                   </button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="send-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="send-html">&lt;button class="send-btn"&gt;
-  &lt;div class="svg-wrapper-1"&gt;
-    &lt;div class="svg-wrapper"&gt;
-      &lt;svg viewBox="0 0 24 24"&gt;...&lt;/svg&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;span&gt;Send&lt;/span&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="send-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="send-css">.send-btn {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-send">
+  <div class="svg-wrapper-1">
+    <div class="svg-wrapper">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+      </svg>
+    </div>
+  </div>
+  <span>Send</span>
+</button>
+                </script>
+                <script type="text/css" slot="css">
+/* Send Button */
+.kvo-btn-send {
+  font-family: inherit;
   font-size: 20px;
   background: royalblue;
   color: white;
   padding: 0.7em 1em;
+  padding-left: 0.9em;
   display: flex;
   align-items: center;
   border: none;
   border-radius: 16px;
   overflow: hidden;
+  transition: all 0.2s;
   cursor: pointer;
 }
 
-.send-btn:hover svg {
+.kvo-btn-send span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.kvo-btn-send svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.kvo-btn-send:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.kvo-btn-send:hover svg {
   transform: translateX(1.2em) rotate(45deg) scale(1.1);
 }
 
-.send-btn:hover span {
+.kvo-btn-send:hover span {
   transform: translateX(5em);
-}</code></pre>
-                  </div>
-                </details>
+}
+
+.kvo-btn-send:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+                </script>
               </div>
             </section>
 
@@ -258,62 +238,46 @@
             <section id="line" class="docs-section" data-aos="fade-up">
               <h2>Expanding Line Button</h2>
               <p>Button with line that appears on hover.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="line-btn">Button</button>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn3">Button</button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="line-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="line-html">&lt;button class="line-btn"&gt;Button&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="line-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="line-css">.line-btn {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-line">Button</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-line {
+  align-items: center;
+  background-color: transparent;
   color: #fff;
   cursor: pointer;
   display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
   font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
   text-transform: uppercase;
+  outline: 0;
   border: 0;
   padding: 1rem;
 }
 
-.line-btn:before {
+.kvo-btn-line:before {
   background-color: #fff;
   content: "";
   display: inline-block;
   height: 1px;
   margin-right: 10px;
+  transition: all 0.42s cubic-bezier(0.25, 0.8, 0.25, 1);
   width: 0;
 }
 
-.line-btn:hover:before {
+.kvo-btn-line:hover:before {
+  background-color: #fff;
   width: 3rem;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -321,39 +285,18 @@
             <section id="skew" class="docs-section" data-aos="fade-up">
               <h2>Skew Fill Button</h2>
               <p>Button with attractive skew effect.</p>
-              <div class="preview-box">
-                <div class="preview-area">
-                  <button class="skew-btn">Button</button>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn4">Button</button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="skew-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="skew-html">&lt;button class="skew-btn"&gt;Button&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="skew-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="skew-css">.skew-btn {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-skew">Button</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-skew {
+  padding: 0.5em 1.5em;
+  height: 2.3em;
+  margin: 0.5em;
   background: black;
   color: white;
   border: none;
@@ -362,22 +305,32 @@
   font-weight: bold;
   cursor: pointer;
   position: relative;
+  z-index: 1;
   overflow: hidden;
 }
 
-.skew-btn:after {
+.kvo-btn-skew:hover {
+  color: black;
+}
+
+.kvo-btn-skew:after {
   content: "";
   background: white;
   position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
   transform: skewX(-45deg) scale(0, 1);
   transition: all 0.5s;
 }
 
-.skew-btn:hover:after {
+.kvo-btn-skew:hover:after {
   transform: skewX(-45deg) scale(1, 1);
-}</code></pre>
-                  </div>
-                </details>
+  transition: all 0.5s;
+}
+                </script>
               </div>
             </section>
 
@@ -385,62 +338,56 @@
             <section id="fold" class="docs-section" data-aos="fade-up">
               <h2>Corner Fold Button</h2>
               <p>Button with fold corner effect.</p>
-              <div class="preview-box">
-                <div class="preview-area">
-                  <button class="fold-btn"><b>Fold me!</b></button>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn5"><b>Fold me!</b></button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="fold-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="fold-html">&lt;button class="fold-btn"&gt;&lt;b&gt;Fold me!&lt;/b&gt;&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="fold-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="fold-css">.fold-btn {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-fold"><b>Fold me!</b></button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-fold {
   position: relative;
+  font-size: 1.2em;
   padding: 0.7em 1.4em;
   background-color: #bf0426;
+  text-decoration: none;
   border: none;
   border-radius: 0.5em;
   color: #dedede;
+  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
-.fold-btn::before {
-  content: "";
+.kvo-btn-fold::before {
   position: absolute;
-  width: 0;
+  content: "";
   height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(33, 33, 33, 1) 0%,
+    rgba(33, 33, 33, 1) 50%,
+    rgba(150, 4, 31, 1) 50%,
+    rgba(191, 4, 38, 1) 60%
+  );
+  border-radius: 0 0 0.5em 0;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
   transition: 0.3s;
 }
 
-.fold-btn:hover::before {
+.kvo-btn-fold:hover::before {
   width: 1.6em;
   height: 1.6em;
-}</code></pre>
-                  </div>
-                </details>
+}
+
+.kvo-btn-fold:active {
+  box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+  transform: translate(0.1em, 0.1em);
+}
+                </script>
               </div>
             </section>
 
@@ -448,9 +395,9 @@
             <section id="type1" class="docs-section" data-aos="fade-up">
               <h2>3D Cube Button</h2>
               <p>Button with 3D cube hover effect.</p>
-              <div class="preview-box">
-                <div class="preview-area">
-                  <button class="btn cube cube-hover" type="button">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn6" type="button">
                     <div class="bg-top">
                       <div class="bg-inner"></div>
                     </div>
@@ -463,63 +410,99 @@
                     <div class="text">Hover Me</div>
                   </button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="type1-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="type1-html">&lt;button class="btn cube cube-hover" type="button"&gt;
-  &lt;div class="bg-top"&gt;
-    &lt;div class="bg-inner"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="bg-right"&gt;
-    &lt;div class="bg-inner"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="bg"&gt;
-    &lt;div class="bg-inner"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="text"&gt;Hover Me&lt;/div&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="type1-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="type1-css">.cube {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-cube" type="button">
+  <div class="bg-top">
+    <div class="bg-inner"></div>
+  </div>
+  <div class="bg-right">
+    <div class="bg-inner"></div>
+  </div>
+  <div class="bg">
+    <div class="bg-inner"></div>
+  </div>
+  <div class="text">Hover Me</div>
+</button>
+                </script>
+                <script type="text/css" slot="css">
+/* KvoLib 3D Cube Button */
+.kvo-btn-cube {
   position: relative;
   transition: all 0.5s;
+  display: block;
+  padding: 0.7em 1em;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: #d4af37;
+  letter-spacing: 0.1em;
+  font-family: monospace;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
 }
 
-.cube .bg-inner {
+.kvo-btn-cube .bg-top {
+  position: absolute;
+  height: 10px;
+  background: #d4af37;
+  bottom: 100%;
+  left: 5px;
+  right: -5px;
+  transform: skew(-45deg, 0);
+  transition: all 0.4s;
+}
+
+.kvo-btn-cube .bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background: #d4af37;
+  transition: all 0.4s;
+}
+
+.kvo-btn-cube .bg-right {
+  position: absolute;
+  background: #d4af37;
+  top: -5px;
+  bottom: 5px;
+  width: 10px;
+  left: 100%;
+  transform: skew(0, -45deg);
+  transition: all 0.4s;
+}
+
+.kvo-btn-cube .bg-inner {
   background: #28282d;
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
 }
 
-.cube:hover .bg-inner {
+.kvo-btn-cube .text {
+  position: relative;
+  transition: all 0.4s;
+}
+
+.kvo-btn-cube:hover .bg-inner {
   background: #d4af37;
 }
 
-.cube:hover .text {
+.kvo-btn-cube:hover .text {
   color: #28282d;
-}</code></pre>
-                  </div>
-                </details>
+}
+
+.kvo-btn-cube:hover .bg-right,
+.kvo-btn-cube:hover .bg,
+.kvo-btn-cube:hover .bg-top {
+  background: #28282d;
+}
+                </script>
               </div>
             </section>
 
@@ -527,66 +510,83 @@
             <section id="hover" class="docs-section" data-aos="fade-up">
               <h2>Text Swap Button</h2>
               <p>Button with smooth text transition.</p>
-              <div class="preview-box">
-                <div class="preview-area">
-                  <button class="hover-btn">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn7">
                     <span class="text">Hover me</span>
                     <span>Thanks!</span>
                   </button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="hover-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="hover-html">&lt;button class="hover-btn"&gt;
-  &lt;span class="text"&gt;Hover me&lt;/span&gt;
-  &lt;span&gt;Thanks!&lt;/span&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="hover-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="hover-css">.hover-btn {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-hover">
+  <span class="text">Hover me</span>
+  <span>Thanks!</span>
+</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-hover {
   position: relative;
   overflow: hidden;
   border: 1px solid #18181a;
-  padding: 18px;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
   cursor: pointer;
   background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.hover-btn:after {
+.kvo-btn-hover span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.kvo-btn-hover span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.kvo-btn-hover:after {
   content: "";
   position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
   transform: skewY(9.3deg) scaleY(0);
-  transition: transform 600ms;
+  z-index: 50;
 }
 
-.hover-btn:hover:after {
+.kvo-btn-hover:hover:after {
+  transform-origin: bottom center;
   transform: skewY(9.3deg) scaleY(2);
-}</code></pre>
-                  </div>
-                </details>
+}
+
+.kvo-btn-hover:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+                </script>
               </div>
             </section>
 
@@ -594,9 +594,9 @@
             <section id="star" class="docs-section" data-aos="fade-up">
               <h2>Sparkling Star Button</h2>
               <p>Button with spreading star animation.</p>
-              <div class="preview-box">
-                <div class="preview-area">
-                  <button class="star-btn">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn8">
                     Button
                     <div class="star-1">
                       <svg
@@ -692,58 +692,57 @@
                     </div>
                   </button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="star-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="star-html">&lt;button class="star-btn"&gt;
+                <script type="text/html" slot="html">
+<button class="kvo-btn-star">
   Button
-  &lt;div class="star-1"&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/div&gt;
-  &lt;!-- stars 2-6 --&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="star-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="star-css">.star-btn {
+  <div class="star-1"><svg>...</svg></div>
+  <!-- stars 2-6 -->
+</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-star {
   position: relative;
   padding: 12px 35px;
   background: #fec195;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
   border: 3px solid #fec195;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
-.star-btn:hover {
+.star-1, .star-2, .star-3, .star-4, .star-5, .star-6 {
+  position: absolute;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-1 { top: 20%; left: 20%; width: 25px; height: auto; }
+.star-2 { top: 45%; left: 45%; width: 15px; height: auto; }
+.star-3 { top: 40%; left: 40%; width: 5px; height: auto; }
+.star-4 { top: 20%; left: 40%; width: 8px; height: auto; }
+.star-5 { top: 25%; left: 45%; width: 15px; height: auto; }
+.star-6 { top: 5%; left: 50%; width: 5px; height: auto; }
+
+.kvo-btn-star:hover {
   background: transparent;
+  color: #fec195;
   box-shadow: 0 0 25px #fec1958c;
 }
 
-.star-btn:hover .star-1 {
-  top: -80%;
-  left: -30%;
-  filter: drop-shadow(0 0 10px #fffdef);
-}</code></pre>
-                  </div>
-                </details>
+.kvo-btn-star:hover .star-1 { top: -80%; left: -30%; filter: drop-shadow(0 0 10px #fffdef); z-index: 2; }
+.kvo-btn-star:hover .star-2 { top: -25%; left: 10%; filter: drop-shadow(0 0 10px #fffdef); z-index: 2; }
+.kvo-btn-star:hover .star-3 { top: 55%; left: 25%; filter: drop-shadow(0 0 10px #fffdef); z-index: 2; }
+.kvo-btn-star:hover .star-4 { top: 30%; left: 80%; filter: drop-shadow(0 0 10px #fffdef); z-index: 2; }
+.kvo-btn-star:hover .star-5 { top: 25%; left: 115%; filter: drop-shadow(0 0 10px #fffdef); z-index: 2; }
+.kvo-btn-star:hover .star-6 { top: 5%; left: 60%; filter: drop-shadow(0 0 10px #fffdef); z-index: 2; }
+
+.fil0 { fill: #fffdef; }
+                </script>
               </div>
             </section>
 
@@ -751,9 +750,9 @@
             <section id="tooltip" class="docs-section" data-aos="fade-up">
               <h2>Shopping Cart Button</h2>
               <p>Button with tooltip and icon transition.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <div data-tooltip="Price:-$20" class="tooltip-btn">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div data-tooltip="Price:-$20" class="btn9">
                     <div class="button-wrapper">
                       <div class="tooltip-text">Buy Now</div>
                       <span class="tooltip-icon">
@@ -773,56 +772,97 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="tooltip-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="tooltip-html">&lt;div data-tooltip="Price:-$20" class="tooltip-btn"&gt;
-  &lt;div class="button-wrapper"&gt;
-    &lt;div class="tooltip-text"&gt;Buy Now&lt;/div&gt;
-    &lt;span class="tooltip-icon"&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="tooltip-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="tooltip-css">.tooltip-btn {
-  width: 100px;
-  height: 35px;
-  background: #222;
+                <script type="text/html" slot="html">
+<div data-tooltip="Price:-$20" class="kvo-btn-tooltip">
+  <div class="button-wrapper">
+    <div class="tooltip-text">Buy Now</div>
+    <span class="tooltip-icon"><svg>...</svg></span>
+  </div>
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-tooltip {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #222;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
   border-radius: 0.45em;
+  transition: background 0.3s;
+  border: none;
   cursor: pointer;
 }
 
-.tooltip-btn:hover .tooltip-text {
-  top: -100%;
+.kvo-btn-tooltip::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: #555;
+  font-size: 0.9rem;
+  color: #fff;
+  border-radius: 0.25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
 }
 
-.tooltip-btn:hover .tooltip-icon {
+.kvo-btn-tooltip::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #555;
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.button-wrapper, .tooltip-text, .tooltip-icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.tooltip-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 0;
-}</code></pre>
-                  </div>
-                </details>
+  transition: top 0.5s;
+}
+
+.tooltip-icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 0.5s;
+}
+
+.tooltip-icon svg { width: 24px; height: 24px; }
+
+.kvo-btn-tooltip:hover .tooltip-text { top: -100%; }
+.kvo-btn-tooltip:hover .tooltip-icon { top: 0; }
+.kvo-btn-tooltip:hover::before, .kvo-btn-tooltip:hover::after { opacity: 1; visibility: visible; }
+                </script>
               </div>
             </section>
 
@@ -830,53 +870,38 @@
             <section id="jump" class="docs-section" data-aos="fade-up">
               <h2>Bounce Button</h2>
               <p>Button with jump animation on hover.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="jump-btn">Hover Me!</button>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn10">Hover Me!</button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="jump-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="jump-html">&lt;button class="jump-btn"&gt;Hover Me!&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="jump-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="jump-css">.jump-btn {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-jump">Hover Me!</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-jump {
+  width: 130px;
+  height: 40px;
+  font-size: 1.1em;
+  cursor: pointer;
   background-color: #171717;
   color: #fff;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   transition: all 0.4s;
 }
 
-.jump-btn:hover {
+.kvo-btn-jump:hover {
+  border-radius: 5px;
   transform: translateY(-10px);
-  box-shadow: 0 7px 0 -2px #f85959, 0 15px 0 -4px #39a2db;
-}</code></pre>
-                  </div>
-                </details>
+  box-shadow: 0 7px 0 -2px #f85959, 0 15px 0 -4px #39a2db, 0 16px 10px -3px #39a2db;
+}
+
+.kvo-btn-jump:active {
+  transition: all 0.2s;
+  transform: translateY(-5px);
+  box-shadow: 0 2px 0 -2px #f85959, 0 8px 0 -4px #39a2db, 0 12px 10px -3px #39a2db;
+}
+                </script>
               </div>
             </section>
 
@@ -884,9 +909,9 @@
             <section id="shake" class="docs-section" data-aos="fade-up">
               <h2>Arrow Entry Button</h2>
               <p>Button with animated arrows and expanding circle.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="arrow-entry-btn">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn11">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="arr-2"
@@ -909,64 +934,84 @@
                     </svg>
                   </button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="shake-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="shake-html">&lt;button class="arrow-entry-btn"&gt;
-  &lt;svg class="arr-2" viewBox="0 0 24 24"&gt;
-    &lt;path d="M16.1716 10.9999..."&gt;&lt;/path&gt;
-  &lt;/svg&gt;
-  &lt;span class="text"&gt;E N T R Y&lt;/span&gt;
-  &lt;span class="circle"&gt;&lt;/span&gt;
-  &lt;svg class="arr-1" viewBox="0 0 24 24"&gt;
-    &lt;path d="M16.1716 10.9999..."&gt;&lt;/path&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="shake-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="shake-css">.arrow-entry-btn {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-arrow">
+  <svg class="arr-2" viewBox="0 0 24 24">
+    <path d="M16.1716 10.9999..."></path>
+  </svg>
+  <span class="text">E N T R Y</span>
+  <span class="circle"></span>
+  <svg class="arr-1" viewBox="0 0 24 24">
+    <path d="M16.1716 10.9999..."></path>
+  </svg>
+</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-arrow {
+  position: relative;
   display: inline-flex;
   align-items: center;
+  gap: 4px;
   padding: 16px 36px;
   border: 4px solid transparent;
+  font-size: 16px;
+  background-color: transparent;
   border-radius: 100px;
+  font-weight: 600;
   color: #1f387e;
   box-shadow: 0 0 0 2px #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.arrow-entry-btn:hover {
+.kvo-btn-arrow svg {
+  position: absolute;
+  width: 24px;
+  fill: #1f387e;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.kvo-btn-arrow .arr-1 { right: 16px; }
+.kvo-btn-arrow .arr-2 { left: -25%; }
+
+.kvo-btn-arrow .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #c5e5e4;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.kvo-btn-arrow .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.kvo-btn-arrow:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
   border-radius: 12px;
 }
 
-.arrow-entry-btn:hover .circle {
-  width: 220px;
-  height: 220px;
-  opacity: 1;
-}</code></pre>
-                  </div>
-                </details>
+.kvo-btn-arrow:hover .arr-1 { right: -25%; }
+.kvo-btn-arrow:hover .arr-2 { left: 16px; }
+.kvo-btn-arrow:hover .text { transform: translateX(12px); }
+.kvo-btn-arrow:hover .circle { width: 220px; height: 220px; opacity: 1; }
+
+.kvo-btn-arrow:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px greenyellow;
+}
+                </script>
               </div>
             </section>
 
@@ -974,49 +1019,33 @@
             <section id="underline" class="docs-section" data-aos="fade-up">
               <h2>Growing Underline Button</h2>
               <p>Button with double underline animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="underline-btn">HOVER ME</button>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn12">HOVER ME</button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="underline-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="underline-html">&lt;button class="underline-btn"&gt;HOVER ME&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="underline-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="underline-css">.underline-btn {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-underline">HOVER ME</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-underline {
   color: white;
+  text-decoration: none;
   font-size: 25px;
   border: none;
   background: none;
   font-weight: 600;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
+  padding: 10px 20px;
+  display: inline-block;
 }
 
-.underline-btn::after,
-.underline-btn::before {
+.kvo-btn-underline::before {
+  margin-left: auto;
+}
+
+.kvo-btn-underline::after,
+.kvo-btn-underline::before {
   content: "";
   width: 0%;
   height: 2px;
@@ -1025,12 +1054,11 @@
   transition: 0.5s;
 }
 
-.underline-btn:hover::after,
-.underline-btn:hover::before {
+.kvo-btn-underline:hover::after,
+.kvo-btn-underline:hover::before {
   width: 100%;
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -1038,58 +1066,73 @@
             <section id="glitch" class="docs-section" data-aos="fade-up">
               <h2>Glitch Button</h2>
               <p>Button with retro glitch effect.</p>
-              <div class="preview-box">
-                <div class="preview-area">
-                  <a class="btn-glitch-fill">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <a class="btn13">
                     <span class="text">// Hover me</span>
                     <span class="text-decoration">_</span
                     ><span class="decoration">⇒</span>
                   </a>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="glitch-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="glitch-html">&lt;a class="btn-glitch-fill"&gt;
-  &lt;span class="text"&gt;// Hover me&lt;/span&gt;
-  &lt;span class="decoration"&gt;⇒&lt;/span&gt;
-&lt;/a&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="glitch-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="glitch-css">.btn-glitch-fill:hover {
-  animation-name: glitch;
+                <script type="text/html" slot="html">
+<a class="kvo-btn-glitch">
+  <span class="text">// Hover me</span>
+  <span class="decoration">⇒</span>
+</a>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-glitch {
+  display: inline-block;
+  font-family: "VT323", monospace;
+  border: 1px solid #000;
+  color: #000;
+  padding: 10px 20px;
+  line-height: 1.5em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 15px;
+  text-decoration: none;
+  background: white;
+  text-align: center;
+}
+
+.kvo-btn-glitch .text, .kvo-btn-glitch .decoration {
+  display: inline-block;
+}
+
+.kvo-btn-glitch .decoration {
+  float: right;
+}
+
+.kvo-btn-glitch:hover {
+  animation: glitch 0.2s;
   background-color: yellow;
   color: black;
+  border: 1px solid yellow;
+}
+
+.kvo-btn-glitch:hover .decoration {
+  animation: blink 0.1s infinite;
+}
+
+.kvo-btn-glitch:active {
+  background: none;
+  color: yellow;
 }
 
 @keyframes glitch {
-  25% { background-color: red; }
-  35% { background-color: green; }
-  60% { background-color: blue; }
-}</code></pre>
-                  </div>
-                </details>
+  25% { background-color: red; transform: translateX(-10px); letter-spacing: 10px; }
+  35% { background-color: green; transform: translate(10px); }
+  59% { opacity: 0; }
+  60% { background-color: blue; transform: translate(-10px); filter: blur(5px); }
+  100% { background-color: yellow; filter: blur(5px); }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+                </script>
               </div>
             </section>
 
@@ -1097,9 +1140,9 @@
             <section id="letter" class="docs-section" data-aos="fade-up">
               <h2>Flipping Letters Button</h2>
               <p>Button with letter flip animation.</p>
-              <div class="preview-box">
-                <div class="preview-area">
-                  <div class="letter-box">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="btn14">
                     <div class="box">H</div>
                     <div class="box">O</div>
                     <div class="box">V</div>
@@ -1107,52 +1150,55 @@
                     <div class="box">R</div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="letter-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="letter-html">&lt;div class="letter-box"&gt;
-  &lt;div class="box"&gt;H&lt;/div&gt;
-  &lt;div class="box"&gt;O&lt;/div&gt;
-  &lt;!-- more boxes --&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="letter-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="letter-css">.letter-box { display: flex; }
+                <script type="text/html" slot="html">
+<div class="kvo-btn-letter">
+  <div class="box">H</div>
+  <div class="box">O</div>
+  <!-- more boxes -->
+</div>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-letter { display: flex; }
 
 .box {
   width: 35px;
   height: 40px;
-  background: rgb(58, 165, 253);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  transition: all 0.8s;
   cursor: pointer;
+  position: relative;
+  background: rgb(58, 165, 253);
+  overflow: hidden;
 }
 
-.letter-box:hover .box:before {
+.box:before {
+  content: "W";
+  position: absolute;
+  top: 0;
+  background: #0f0f0f;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform 0.4s;
+}
+
+.box:nth-child(2)::before { transform: translateY(-100%); content: "O"; }
+.box:nth-child(3)::before { content: "R"; }
+.box:nth-child(4)::before { transform: translateY(-100%); content: "L"; }
+.box:nth-child(5)::before { content: "D"; }
+
+.kvo-btn-letter:hover .box:before {
   transform: translateY(0);
-}</code></pre>
-                  </div>
-                </details>
+}
+                </script>
               </div>
             </section>
 
@@ -1160,9 +1206,9 @@
             <section id="layered" class="docs-section" data-aos="fade-up">
               <h2>3D Layers Button</h2>
               <p>Button with 3D layered effect.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="layered-btn">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn15">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -1170,48 +1216,69 @@
                     <span>Button</span>
                   </button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="layered-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="layered-html">&lt;button class="layered-btn"&gt;
-  &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
-  &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
-  &lt;span&gt;Button&lt;/span&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="layered-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="layered-css">.layered-btn {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-layered">
+  <span></span><span></span>
+  <span></span><span></span>
+  <span>Button</span>
+</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-layered {
   transform: rotate(-25deg) skew(25deg);
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100px;
+  height: 32px;
+  border: none;
+  background: transparent;
   cursor: pointer;
 }
 
-.layered-btn:hover span {
-  background: #52e19f;
-}</code></pre>
-                  </div>
-                </details>
+.kvo-btn-layered:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: -5px;
+  width: 100%;
+  height: 10px;
+  background: #2a2a2a;
+  transform: skewX(-41deg);
+}
+
+.kvo-btn-layered:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -9px;
+  width: 9px;
+  height: 100%;
+  background: #2a2a2a;
+  transform: skewY(-49deg);
+}
+
+.kvo-btn-layered span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 16px;
+  transition: 1.1s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kvo-btn-layered:hover span { z-index: 1000; transition: 0.3s; background: #52e19f; }
+.kvo-btn-layered:hover span:nth-child(5) { transform: translate(40px, -40px); opacity: 1; }
+.kvo-btn-layered:hover span:nth-child(4) { transform: translate(30px, -30px); opacity: 0.8; }
+.kvo-btn-layered:hover span:nth-child(3) { transform: translate(20px, -20px); opacity: 0.6; }
+.kvo-btn-layered:hover span:nth-child(2) { transform: translate(10px, -10px); opacity: 0.4; }
+.kvo-btn-layered:hover span:nth-child(1) { transform: translate(0px, 0px); opacity: 0.2; }
+                </script>
               </div>
             </section>
 
@@ -1219,54 +1286,67 @@
             <section id="ui" class="docs-section" data-aos="fade-up">
               <h2>Chitchat Text Button</h2>
               <p>Button with text chitchat animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="ui-btn">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn16">
                     <span>Button</span>
                   </button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="ui-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="ui-html">&lt;button class="ui-btn"&gt;
-  &lt;span&gt;Button&lt;/span&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="ui-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="ui-css">.ui-btn {
-  background: rgb(41, 41, 41);
+                <script type="text/html" slot="html">
+<button class="kvo-btn-ui">
+  <span>Button</span>
+</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-ui {
+  --btn-default-bg: rgb(41, 41, 41);
+  --btn-hover-bg: rgb(51, 51, 51);
+  --hover-btn-color: #fac921;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
+  font: 600 16px Menlo, Roboto Mono, monospace;
+  background: var(--btn-default-bg);
   border: none;
   cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.137);
 }
 
-.ui-btn:hover span::before {
-  animation: chitchat linear both 1.2s;
-}</code></pre>
-                  </div>
-                </details>
+.kvo-btn-ui span {
+  letter-spacing: 0.1rem;
+  transition: 0.3s;
+  position: relative;
+  background: inherit;
+}
+
+.kvo-btn-ui span::before {
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.kvo-btn-ui:hover { background: var(--btn-hover-bg); }
+.kvo-btn-ui:hover span { color: var(--hover-btn-color); }
+.kvo-btn-ui:hover span::before { animation: chitchat linear both 1.2s; }
+
+@keyframes chitchat {
+  0% { content: "#"; }
+  10% { content: "^{"; }
+  20% { content: "#$_"; }
+  30% { content: "#{+."; }
+  40% { content: "?{4@%"; }
+  50% { content: "?2@%"; }
+  60% { content: "?{%:%"; right: 0; }
+  70% { content: "{4%0%"; right: 0; }
+  80% { content: "{0%"; right: 0; }
+  90% { content: "4"; right: 0; }
+  100% { content: ""; right: 0; }
+}
+                </script>
               </div>
             </section>
 
@@ -1274,58 +1354,70 @@
             <section id="btn31" class="docs-section" data-aos="fade-up">
               <h2>Morphing Button</h2>
               <p>Button with smooth clip-path animation.</p>
-              <div class="preview-box">
-                <div class="preview-area">
-                  <button class="btn-31">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn17">
                     <span class="text-container">
                       <span class="text">Button</span>
                     </span>
                   </button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="btn31-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="btn31-html">&lt;button class="btn-31"&gt;
-  &lt;span class="text-container"&gt;
-    &lt;span class="text"&gt;Button&lt;/span&gt;
-  &lt;/span&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="btn31-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="btn31-css">.btn-31 {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-31">
+  <span class="text-container">
+    <span class="text">Button</span>
+  </span>
+</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-31 {
   background-color: #000;
   color: #fff;
   cursor: pointer;
+  font-weight: 900;
+  line-height: 1.5;
+  padding: 1rem 2rem;
+  position: relative;
   text-transform: uppercase;
+  border: 1px solid;
 }
 
-.btn-31:hover .text {
+.kvo-btn-31:before {
+  --progress: 100%;
+  background: #fff;
+  clip-path: polygon(100% 0, var(--progress) var(--progress), 0 100%, 100% 100%);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transition: clip-path 0.2s ease;
+}
+
+.kvo-btn-31:hover:before { --progress: 0%; }
+
+.kvo-btn-31 .text-container {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.kvo-btn-31 .text {
+  display: block;
+  font-weight: 900;
+  mix-blend-mode: difference;
+  position: relative;
+}
+
+.kvo-btn-31:hover .text {
   animation: move-up-alternate 0.3s ease forwards;
-}</code></pre>
-                  </div>
-                </details>
+}
+
+@keyframes move-up-alternate {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(80%); }
+  51% { transform: translateY(-80%); }
+  to { transform: translateY(0); }
+}
+                </script>
               </div>
             </section>
 
@@ -1333,60 +1425,60 @@
             <section id="cti" class="docs-section" data-aos="fade-up">
               <h2>Typewriter Button</h2>
               <p>Button with typewriter effect.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="cti">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn18">
                     <div class="CTI">Code to Infinity</div>
                   </button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="cti-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="cti-html">&lt;button class="cti"&gt;
-  &lt;div class="CTI"&gt;Code to Infinity&lt;/div&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="cti-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="cti-css">.cti {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-cti">
+  <div class="CTI">Code to Infinity</div>
+</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-cti {
   background-color: #6019bd;
   padding: 17px 30px;
   border: 3px solid transparent;
+  border-radius: 0.6em;
+  transition: 0.2s;
   cursor: pointer;
+  display: inline-block;
 }
 
-.cti:hover {
+.kvo-btn-cti:hover {
   background-color: transparent;
   border: 3px solid #6019bd;
   box-shadow: 0px 0px 27px 5px #6019bd;
 }
 
-.cti:hover .CTI {
-  animation: letters 1.75s steps(22, end);
-}</code></pre>
-                  </div>
-                </details>
+.CTI {
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 17px;
+  font-weight: bold;
+  overflow: hidden;
+  border-right: 4px solid transparent;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.kvo-btn-cti:hover .CTI {
+  border-right: 4px solid #6019bd;
+  animation: letters 1.75s steps(22, end), cursor 0.4s step-end infinite;
+}
+
+@keyframes letters {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes cursor {
+  from { border-color: transparent; }
+  50% { border-color: #6019bd; }
+}
+                </script>
               </div>
             </section>
 
@@ -1394,9 +1486,9 @@
             <section id="edit" class="docs-section" data-aos="fade-up">
               <h2>Edit Button</h2>
               <p>Icon button with pen animation.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="editBtn">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn19">
                     <svg height="1em" viewBox="0 0 512 512">
                       <path
                         d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"
@@ -1404,49 +1496,76 @@
                     </svg>
                   </button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="edit-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="edit-html">&lt;button class="editBtn"&gt;
-  &lt;svg viewBox="0 0 512 512"&gt;...&lt;/svg&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="edit-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="edit-css">.editBtn {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-edit">
+  <svg viewBox="0 0 512 512">...</svg>
+</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-edit {
   width: 55px;
   height: 55px;
   border-radius: 20px;
+  border: none;
   background-color: rgb(93, 93, 116);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
 }
 
-.editBtn:hover svg {
+.kvo-btn-edit::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  background-color: rgb(102, 102, 141);
+  position: absolute;
+  z-index: 1;
+  transform: scale(0);
+  transition: all 0.3s;
+  border-radius: 50%;
+  filter: blur(10px);
+}
+
+.kvo-btn-edit:hover::before { transform: scale(1); }
+.kvo-btn-edit:hover { box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.336); }
+
+.kvo-btn-edit svg {
+  height: 17px;
+  fill: white;
+  z-index: 3;
+  transition: all 0.2s;
+  transform-origin: bottom;
+}
+
+.kvo-btn-edit:hover svg {
   transform: rotate(-15deg) translateX(5px);
-}</code></pre>
-                  </div>
-                </details>
+}
+
+.kvo-btn-edit::after {
+  content: "";
+  width: 25px;
+  height: 1.5px;
+  position: absolute;
+  bottom: 19px;
+  left: -5px;
+  background-color: white;
+  border-radius: 2px;
+  z-index: 2;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
+}
+
+.kvo-btn-edit:hover::after {
+  transform: scaleX(1);
+  left: 0px;
+}
+                </script>
               </div>
             </section>
 
@@ -1454,67 +1573,62 @@
             <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Border Gradient Button</h2>
               <p>Button with sweep gradient effect.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <button class="gradient-btn">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <button class="btn20">
                     <span>Hover me</span>
                   </button>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i>
-                    View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-html">&lt;button class="gradient-btn"&gt;
-  &lt;span&gt;Hover me&lt;/span&gt;
-&lt;/button&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-css">.gradient-btn {
+                <script type="text/html" slot="html">
+<button class="kvo-btn-gradient">
+  <span>Hover me</span>
+</button>
+                </script>
+                <script type="text/css" slot="css">
+.kvo-btn-gradient {
   position: relative;
   padding: 15px 30px;
+  font-family: inherit;
   background-color: #4a00e0;
   border: 2px solid;
   font-size: 20px;
+  font-weight: 600;
   color: white;
   cursor: pointer;
   text-transform: uppercase;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  display: inline-block;
 }
 
-.gradient-btn:hover span {
+.kvo-btn-gradient:hover span {
   background: linear-gradient(135deg, #aefb2a 0%, #57ebde 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gradient-btn:hover {
+.kvo-btn-gradient::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: -110%;
+  top: 0;
+  background: #aefb2a;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.kvo-btn-gradient:hover {
   letter-spacing: 2px;
   border-image: linear-gradient(135deg, #aefb2a 0%, #57ebde 100%);
   border-image-slice: 1;
-}</code></pre>
-                  </div>
-                </details>
+}
+
+.kvo-btn-gradient:hover::before { left: 110%; }
+.kvo-btn-gradient:active { scale: 0.95; }
+                </script>
               </div>
             </section>
         </div>
@@ -1522,7 +1636,6 @@
     </section>
 
     <div data-include="assets/layout/footer.html"></div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scripts-loader.js"></script>
   </body>
 </html>
