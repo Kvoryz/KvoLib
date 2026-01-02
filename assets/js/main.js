@@ -73,6 +73,43 @@ const searchData = [
     icon: "fa-layer-group",
     url: "/components/stack.html",
   },
+  // Feedback Components
+  {
+    title: "Alert",
+    desc: "10 alert styles for notifications",
+    icon: "fa-exclamation-triangle",
+    url: "/components/alert.html",
+  },
+  {
+    title: "Toast",
+    desc: "8 toast styles for notifications",
+    icon: "fa-sticky-note",
+    url: "/components/toast.html",
+  },
+  {
+    title: "Modal",
+    desc: "6 modal styles for dialogs",
+    icon: "fa-window-maximize",
+    url: "/components/modal.html",
+  },
+  {
+    title: "Spinner",
+    desc: "8 loading spinner styles",
+    icon: "fa-spinner",
+    url: "/components/spinner.html",
+  },
+  {
+    title: "Progress",
+    desc: "8 progress bar styles",
+    icon: "fa-tasks",
+    url: "/components/progress.html",
+  },
+  {
+    title: "Skeleton",
+    desc: "10 skeleton loading placeholders",
+    icon: "fa-bone",
+    url: "/components/skeleton.html",
+  },
   // Categories
   {
     title: "Inputs",
@@ -114,6 +151,16 @@ const searchData = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize AOS
+  if (typeof AOS !== "undefined") {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      offset: 100,
+    });
+  }
+
   initSearch();
   initCopyButtons();
   initRippleEffect();

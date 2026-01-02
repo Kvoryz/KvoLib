@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KvoLib Skeleton Components" />
+    <title>Skeleton - KvoLib</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <style>
+      html,
+      body {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/skeleton.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/img/icon.png" alt="KvoLib" width="24" height="24" />
+          <span>KvoLib</span>
+        </a>
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="global-search"
+            placeholder="Search components..."
+          />
+          <span class="search-kbd">⌘K</span>
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/components.html" class="nav-link">Components</a>
+          <a href="/docs.html" class="nav-link">Docs</a>
+          <a
+            href="https://github.com/Kvoryz/KvoLib"
+            target="_blank"
+            class="nav-link"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Skeleton</span>
+        </div>
+        <h1 class="page-title">Skeleton</h1>
+        <p class="page-description">10 skeleton loading placeholders.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Skeleton Types</h4>
+              <ul>
+                <li><a href="#text">Text</a></li>
+                <li><a href="#avatar">Avatar</a></li>
+                <li><a href="#image">Image</a></li>
+                <li><a href="#button">Button</a></li>
+                <li><a href="#card">Card</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#list">List Item</a></li>
+                <li><a href="#paragraph">Paragraph</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <!-- Text Skeleton -->
+            <section id="text" class="docs-section">
+              <h2>Text Skeleton</h2>
+              <p>Placeholder for text content.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="skeleton skeleton-title"></div>
+                  <div class="skeleton skeleton-text"></div>
+                  <div class="skeleton skeleton-text"></div>
+                  <div class="skeleton skeleton-text" style="width: 70%"></div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="text-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="text-html">&lt;div class="skeleton skeleton-title"&gt;&lt;/div&gt;
+&lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+&lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+&lt;div class="skeleton skeleton-text" style="width: 70%;"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="text-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="text-css">.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-text {
+  height: 16px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.skeleton-title {
+  height: 24px;
+  width: 60%;
+  margin-bottom: 16px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Avatar Skeleton -->
+            <section id="avatar" class="docs-section">
+              <h2>Avatar Skeleton</h2>
+              <p>Circular placeholder for avatars.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="display: flex; gap: 16px; align-items: center"
+                >
+                  <div
+                    class="skeleton skeleton-avatar skeleton-avatar-sm"
+                  ></div>
+                  <div class="skeleton skeleton-avatar"></div>
+                  <div
+                    class="skeleton skeleton-avatar skeleton-avatar-lg"
+                  ></div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="avatar-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="avatar-html">&lt;div class="skeleton skeleton-avatar skeleton-avatar-sm"&gt;&lt;/div&gt;
+&lt;div class="skeleton skeleton-avatar"&gt;&lt;/div&gt;
+&lt;div class="skeleton skeleton-avatar skeleton-avatar-lg"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="avatar-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="avatar-css">.skeleton-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.skeleton-avatar-sm { width: 32px; height: 32px; }
+.skeleton-avatar-lg { width: 64px; height: 64px; }</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Image Skeleton -->
+            <section id="image" class="docs-section">
+              <h2>Image Skeleton</h2>
+              <p>Placeholder for images.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div
+                    class="skeleton skeleton-image"
+                    style="height: 150px"
+                  ></div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="image-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="image-html">&lt;div class="skeleton skeleton-image"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="image-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="image-css">.skeleton-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button Skeleton -->
+            <section id="button" class="docs-section">
+              <h2>Button Skeleton</h2>
+              <p>Placeholder for buttons.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="display: flex; gap: 12px"
+                >
+                  <div class="skeleton skeleton-button"></div>
+                  <div
+                    class="skeleton skeleton-button"
+                    style="width: 160px"
+                  ></div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="button-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="button-html">&lt;div class="skeleton skeleton-button"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="button-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="button-css">.skeleton-button {
+  height: 40px;
+  width: 120px;
+  border-radius: 8px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Card Skeleton -->
+            <section id="card" class="docs-section">
+              <h2>Card Skeleton</h2>
+              <p>Full card placeholder.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="skeleton-card" style="max-width: 300px">
+                    <div
+                      class="skeleton skeleton-image"
+                      style="height: 120px; margin-bottom: 16px"
+                    ></div>
+                    <div class="skeleton skeleton-title"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div
+                      class="skeleton skeleton-text"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="card-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="card-html">&lt;div class="skeleton-card"&gt;
+  &lt;div class="skeleton skeleton-image"&gt;&lt;/div&gt;
+  &lt;div class="skeleton skeleton-title"&gt;&lt;/div&gt;
+  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="card-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="card-css">.skeleton-card {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Profile Skeleton -->
+            <section id="profile" class="docs-section">
+              <h2>Profile Skeleton</h2>
+              <p>User profile placeholder.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="skeleton-profile">
+                    <div
+                      class="skeleton skeleton-avatar skeleton-avatar-lg"
+                    ></div>
+                    <div class="skeleton-profile-info" style="flex: 1">
+                      <div
+                        class="skeleton skeleton-title"
+                        style="width: 40%; margin-bottom: 8px"
+                      ></div>
+                      <div
+                        class="skeleton skeleton-text"
+                        style="width: 60%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="profile-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="profile-html">&lt;div class="skeleton-profile"&gt;
+  &lt;div class="skeleton skeleton-avatar skeleton-avatar-lg"&gt;&lt;/div&gt;
+  &lt;div class="skeleton-profile-info"&gt;
+    &lt;div class="skeleton skeleton-title"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="profile-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="profile-css">.skeleton-profile {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.skeleton-profile-info {
+  flex: 1;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- List Item Skeleton -->
+            <section id="list" class="docs-section">
+              <h2>List Item Skeleton</h2>
+              <p>List item placeholders.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="skeleton-list-item">
+                    <div class="skeleton skeleton-avatar"></div>
+                    <div class="skeleton-list-content">
+                      <div
+                        class="skeleton skeleton-text"
+                        style="width: 80%; margin-bottom: 4px"
+                      ></div>
+                      <div
+                        class="skeleton skeleton-text"
+                        style="width: 50%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="skeleton-list-item">
+                    <div class="skeleton skeleton-avatar"></div>
+                    <div class="skeleton-list-content">
+                      <div
+                        class="skeleton skeleton-text"
+                        style="width: 70%; margin-bottom: 4px"
+                      ></div>
+                      <div
+                        class="skeleton skeleton-text"
+                        style="width: 40%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="list-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="list-html">&lt;div class="skeleton-list-item"&gt;
+  &lt;div class="skeleton skeleton-avatar"&gt;&lt;/div&gt;
+  &lt;div class="skeleton-list-content"&gt;
+    &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="list-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="list-css">.skeleton-list-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.skeleton-list-item .skeleton-avatar {
+  flex-shrink: 0;
+}
+
+.skeleton-list-content {
+  flex: 1;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Paragraph Skeleton -->
+            <section id="paragraph" class="docs-section">
+              <h2>Paragraph Skeleton</h2>
+              <p>Multi-line text placeholder.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="skeleton-paragraph">
+                    <div
+                      class="skeleton skeleton-text"
+                      style="width: 100%"
+                    ></div>
+                    <div
+                      class="skeleton skeleton-text"
+                      style="width: 90%"
+                    ></div>
+                    <div
+                      class="skeleton skeleton-text"
+                      style="width: 80%"
+                    ></div>
+                    <div
+                      class="skeleton skeleton-text"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="paragraph-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="paragraph-html">&lt;div class="skeleton-paragraph"&gt;
+  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="paragraph-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="paragraph-css">.skeleton-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="footer-logo"
+              ><img
+                src="/assets/img/icon.png"
+                alt="KvoLib"
+                width="20"
+                height="20"
+              /><span>KvoLib</span></a
+            >
+            <p>Build beautiful interfaces faster.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="/components.html">Components</a></li>
+              <li><a href="/docs.html">Documentation</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/docs.html">Getting Started</a></li>
+              <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 KvoLib. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

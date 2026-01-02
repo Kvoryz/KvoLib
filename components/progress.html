@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KvoLib Progress Components" />
+    <title>Progress - KvoLib</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <style>
+      html,
+      body {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/progress.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/img/icon.png" alt="KvoLib" width="24" height="24" />
+          <span>KvoLib</span>
+        </a>
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="global-search"
+            placeholder="Search components..."
+          />
+          <span class="search-kbd">⌘K</span>
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/components.html" class="nav-link">Components</a>
+          <a href="/docs.html" class="nav-link">Docs</a>
+          <a
+            href="https://github.com/Kvoryz/KvoLib"
+            target="_blank"
+            class="nav-link"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Progress</span>
+        </div>
+        <h1 class="page-title">Progress</h1>
+        <p class="page-description">8 progress bar styles.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Progress Types</h4>
+              <ul>
+                <li><a href="#basic">Basic</a></li>
+                <li><a href="#sizes">Sizes</a></li>
+                <li><a href="#colors">Colors</a></li>
+                <li><a href="#striped">Striped</a></li>
+                <li><a href="#animated">Animated</a></li>
+                <li><a href="#indeterminate">Indeterminate</a></li>
+                <li><a href="#neon">Neon</a></li>
+                <li><a href="#circular">Circular</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <!-- Basic Progress -->
+            <section id="basic" class="docs-section">
+              <h2>Basic Progress</h2>
+              <p>Standard gradient progress bar.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 65%"></div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="basic-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="basic-html">&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width: 65%;"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="basic-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="basic-css">.progress {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Sizes -->
+            <section id="sizes" class="docs-section">
+              <h2>Progress Sizes</h2>
+              <p>Different bar heights.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="progress progress-sm" style="margin-bottom: 16px">
+                    <div class="progress-bar" style="width: 50%"></div>
+                  </div>
+                  <div class="progress" style="margin-bottom: 16px">
+                    <div class="progress-bar" style="width: 60%"></div>
+                  </div>
+                  <div class="progress progress-lg" style="margin-bottom: 16px">
+                    <div class="progress-bar" style="width: 70%"></div>
+                  </div>
+                  <div class="progress progress-xl">
+                    <div class="progress-bar" style="width: 80%"></div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="sizes-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="sizes-html">&lt;div class="progress progress-sm"&gt;...&lt;/div&gt;
+&lt;div class="progress"&gt;...&lt;/div&gt;
+&lt;div class="progress progress-lg"&gt;...&lt;/div&gt;
+&lt;div class="progress progress-xl"&gt;...&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="sizes-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="sizes-css">.progress-sm { height: 4px; }
+.progress-lg { height: 12px; }
+.progress-xl { height: 16px; }</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Colors -->
+            <section id="colors" class="docs-section">
+              <h2>Progress Colors</h2>
+              <p>Different color variants.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div
+                    class="progress progress-success"
+                    style="margin-bottom: 12px"
+                  >
+                    <div class="progress-bar" style="width: 75%"></div>
+                  </div>
+                  <div
+                    class="progress progress-warning"
+                    style="margin-bottom: 12px"
+                  >
+                    <div class="progress-bar" style="width: 60%"></div>
+                  </div>
+                  <div
+                    class="progress progress-error"
+                    style="margin-bottom: 12px"
+                  >
+                    <div class="progress-bar" style="width: 45%"></div>
+                  </div>
+                  <div class="progress progress-info">
+                    <div class="progress-bar" style="width: 85%"></div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="colors-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="colors-html">&lt;div class="progress progress-success"&gt;...&lt;/div&gt;
+&lt;div class="progress progress-warning"&gt;...&lt;/div&gt;
+&lt;div class="progress progress-error"&gt;...&lt;/div&gt;
+&lt;div class="progress progress-info"&gt;...&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="colors-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="colors-css">.progress-success .progress-bar {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+.progress-warning .progress-bar {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+.progress-error .progress-bar {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+.progress-info .progress-bar {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Striped -->
+            <section id="striped" class="docs-section">
+              <h2>Striped Progress</h2>
+              <p>Static striped pattern.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="progress progress-striped">
+                    <div class="progress-bar" style="width: 70%"></div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="striped-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="striped-html">&lt;div class="progress progress-striped"&gt;
+  &lt;div class="progress-bar" style="width: 70%;"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="striped-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="striped-css">.progress-striped .progress-bar {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 1rem 1rem;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Animated -->
+            <section id="animated" class="docs-section">
+              <h2>Animated Stripes</h2>
+              <p>Moving stripe animation.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="progress progress-animated">
+                    <div class="progress-bar" style="width: 65%"></div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="animated-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="animated-html">&lt;div class="progress progress-animated"&gt;
+  &lt;div class="progress-bar" style="width: 65%;"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="animated-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="animated-css">.progress-animated .progress-bar {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%
+  );
+  background-size: 1rem 1rem;
+  animation: progressStripes 1s linear infinite;
+}
+
+@keyframes progressStripes {
+  from { background-position: 1rem 0; }
+  to { background-position: 0 0; }
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Indeterminate -->
+            <section id="indeterminate" class="docs-section">
+              <h2>Indeterminate</h2>
+              <p>Loading state with no known progress.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="progress progress-indeterminate">
+                    <div class="progress-bar"></div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="indeterminate-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="indeterminate-html">&lt;div class="progress progress-indeterminate"&gt;
+  &lt;div class="progress-bar"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="indeterminate-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="indeterminate-css">.progress-indeterminate .progress-bar {
+  width: 30% !important;
+  animation: indeterminate 1.5s ease-in-out infinite;
+}
+
+@keyframes indeterminate {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Neon -->
+            <section id="neon" class="docs-section">
+              <h2>Neon Progress</h2>
+              <p>Glowing neon effect.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="progress progress-neon">
+                    <div class="progress-bar" style="width: 60%"></div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="neon-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="neon-html">&lt;div class="progress progress-neon"&gt;
+  &lt;div class="progress-bar" style="width: 60%;"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="neon-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="neon-css">.progress-neon {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.progress-neon .progress-bar {
+  background: #00d4ff;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Circular -->
+            <section id="circular" class="docs-section">
+              <h2>Circular Progress</h2>
+              <p>Round progress indicator.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <div class="progress-circular">
+                    <svg width="80" height="80">
+                      <circle
+                        class="progress-bg"
+                        cx="40"
+                        cy="40"
+                        r="35"
+                      ></circle>
+                      <circle
+                        class="progress-fill"
+                        cx="40"
+                        cy="40"
+                        r="35"
+                        style="stroke-dashoffset: 77"
+                      ></circle>
+                    </svg>
+                    <span class="progress-circular-label">65%</span>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="circular-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="circular-html">&lt;div class="progress-circular"&gt;
+  &lt;svg width="80" height="80"&gt;
+    &lt;circle class="progress-bg" cx="40" cy="40" r="35"&gt;&lt;/circle&gt;
+    &lt;circle class="progress-fill" cx="40" cy="40" r="35" 
+      style="stroke-dashoffset: 77;"&gt;&lt;/circle&gt;
+  &lt;/svg&gt;
+  &lt;span class="progress-circular-label"&gt;65%&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="circular-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="circular-css">.progress-circular {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.progress-circular svg { transform: rotate(-90deg); }
+
+.progress-circular circle {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.progress-circular .progress-bg {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.progress-circular .progress-fill {
+  stroke: #667eea;
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.progress-circular-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #fff;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="footer-logo"
+              ><img
+                src="/assets/img/icon.png"
+                alt="KvoLib"
+                width="20"
+                height="20"
+              /><span>KvoLib</span></a
+            >
+            <p>Build beautiful interfaces faster.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="/components.html">Components</a></li>
+              <li><a href="/docs.html">Documentation</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/docs.html">Getting Started</a></li>
+              <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 KvoLib. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

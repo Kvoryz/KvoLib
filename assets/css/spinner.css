@@ -1,0 +1,202 @@
+/* ========================================
+   SPINNER COMPONENTS
+   ======================================== */
+
+/* Spinner 1 - Default */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Spinner Sizes */
+.spinner-sm {
+  width: 24px;
+  height: 24px;
+  border-width: 2px;
+}
+
+.spinner-lg {
+  width: 56px;
+  height: 56px;
+  border-width: 4px;
+}
+
+.spinner-xl {
+  width: 72px;
+  height: 72px;
+  border-width: 5px;
+}
+
+/* Spinner 2 - Dots */
+.spinner-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.spinner-dots span {
+  width: 12px;
+  height: 12px;
+  background: #667eea;
+  border-radius: 50%;
+  animation: dotBounce 0.6s infinite alternate;
+}
+
+.spinner-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.spinner-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dotBounce {
+  from {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+/* Spinner 3 - Pulse */
+.spinner-pulse {
+  width: 40px;
+  height: 40px;
+  background: #667eea;
+  border-radius: 50%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+/* Spinner 4 - Ring */
+.spinner-ring {
+  width: 40px;
+  height: 40px;
+  border: 3px solid transparent;
+  border-top-color: #667eea;
+  border-bottom-color: #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner 5 - Gradient */
+.spinner-gradient {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent, #667eea);
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 4px),
+    #000 calc(100% - 4px)
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 4px),
+    #000 calc(100% - 4px)
+  );
+  animation: spin 0.8s linear infinite;
+}
+
+/* Spinner 6 - Bars */
+.spinner-bars {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  height: 40px;
+}
+
+.spinner-bars span {
+  width: 4px;
+  height: 20px;
+  background: #667eea;
+  border-radius: 2px;
+  animation: barGrow 0.8s ease-in-out infinite;
+}
+
+.spinner-bars span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.spinner-bars span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.spinner-bars span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes barGrow {
+  0%,
+  100% {
+    transform: scaleY(0.5);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* Spinner 7 - Neon */
+.spinner-neon {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(0, 212, 255, 0.2);
+  border-top-color: #00d4ff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+/* Spinner 8 - Dual Ring */
+.spinner-dual {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.spinner-dual::before,
+.spinner-dual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-radius: 50%;
+}
+
+.spinner-dual::before {
+  border-top-color: #667eea;
+  animation: spin 0.8s linear infinite;
+}
+
+.spinner-dual::after {
+  border-bottom-color: #764ba2;
+  animation: spin 0.8s linear infinite reverse;
+}

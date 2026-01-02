@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KvoLib Modal Components" />
+    <title>Modal - KvoLib</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <style>
+      html,
+      body {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/modal.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/img/icon.png" alt="KvoLib" width="24" height="24" />
+          <span>KvoLib</span>
+        </a>
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="global-search"
+            placeholder="Search components..."
+          />
+          <span class="search-kbd">⌘K</span>
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/components.html" class="nav-link">Components</a>
+          <a href="/docs.html" class="nav-link">Docs</a>
+          <a
+            href="https://github.com/Kvoryz/KvoLib"
+            target="_blank"
+            class="nav-link"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Modal</span>
+        </div>
+        <h1 class="page-title">Modals</h1>
+        <p class="page-description">6 modal styles for dialogs.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Modal Types</h4>
+              <ul>
+                <li><a href="#basic">Basic</a></li>
+                <li><a href="#glass">Glass</a></li>
+                <li><a href="#gradient">Gradient</a></li>
+                <li><a href="#neon">Neon</a></li>
+                <li><a href="#sizes">Sizes</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <!-- Basic Modal -->
+            <section id="basic" class="docs-section">
+              <h2>Basic Modal</h2>
+              <p>Standard modal dialog.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="display: block; min-height: 300px; position: relative"
+                >
+                  <div
+                    class="modal"
+                    style="position: relative; transform: none; margin: 0 auto"
+                  >
+                    <div class="modal-header">
+                      <h3 class="modal-title">Modal Title</h3>
+                      <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>
+                        This is the modal content. You can put any content here.
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="modal-btn modal-btn-secondary">
+                        Cancel
+                      </button>
+                      <button class="modal-btn modal-btn-primary">
+                        Confirm
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="basic-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="basic-html">&lt;div class="modal-overlay active"&gt;
+  &lt;div class="modal"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3 class="modal-title"&gt;Modal Title&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&lt;i class="fas fa-times"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;Modal content here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="modal-btn modal-btn-secondary"&gt;Cancel&lt;/button&gt;
+      &lt;button class="modal-btn modal-btn-primary"&gt;Confirm&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="basic-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="basic-css">.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: #1a1a1a;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Glass Modal -->
+            <section id="glass" class="docs-section">
+              <h2>Glass Modal</h2>
+              <p>Glassmorphism style modal.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="display: block; min-height: 280px; position: relative"
+                >
+                  <div
+                    class="modal modal-glass"
+                    style="position: relative; transform: none; margin: 0 auto"
+                  >
+                    <div class="modal-header">
+                      <h3 class="modal-title">Glass Modal</h3>
+                      <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Beautiful glassmorphism effect with blur.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="modal-btn modal-btn-primary">
+                        Got it
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="glass-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="glass-html">&lt;div class="modal modal-glass"&gt;...&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="glass-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="glass-css">.modal-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Gradient Modal -->
+            <section id="gradient" class="docs-section">
+              <h2>Gradient Border Modal</h2>
+              <p>Modal with animated gradient border.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="display: block; min-height: 280px; position: relative"
+                >
+                  <div
+                    class="modal modal-gradient"
+                    style="position: relative; transform: none; margin: 0 auto"
+                  >
+                    <div class="modal-header">
+                      <h3 class="modal-title">Gradient Border</h3>
+                      <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Eye-catching gradient border effect.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="modal-btn modal-btn-primary">
+                        Confirm
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="gradient-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-html">&lt;div class="modal modal-gradient"&gt;...&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="gradient-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-css">.modal-gradient {
+  background: #1a1a1a;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.modal-gradient::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+  border-radius: 18px;
+  z-index: -1;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Neon Modal -->
+            <section id="neon" class="docs-section">
+              <h2>Neon Modal</h2>
+              <p>Glowing neon style modal.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="display: block; min-height: 280px; position: relative"
+                >
+                  <div
+                    class="modal modal-neon"
+                    style="position: relative; transform: none; margin: 0 auto"
+                  >
+                    <div class="modal-header">
+                      <h3 class="modal-title" style="color: #00d4ff">
+                        Neon Modal
+                      </h3>
+                      <button class="modal-close" style="color: #00d4ff">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p style="color: rgba(0, 212, 255, 0.8)">
+                        Cyberpunk-style neon glow effect.
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="modal-btn modal-btn-primary">
+                        Confirm
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="neon-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="neon-html">&lt;div class="modal modal-neon"&gt;...&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="neon-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="neon-css">.modal-neon {
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid #00d4ff;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+.modal-neon .modal-header {
+  border-bottom-color: rgba(0, 212, 255, 0.3);
+}
+
+.modal-neon .modal-footer {
+  border-top-color: rgba(0, 212, 255, 0.3);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Sizes -->
+            <section id="sizes" class="docs-section">
+              <h2>Modal Sizes</h2>
+              <p>Different modal size options.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <p style="margin-bottom: 12px">
+                    <strong>Available sizes:</strong>
+                  </p>
+                  <ul style="list-style: none; padding: 0">
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                      "
+                    >
+                      <code>.modal-sm</code> - 400px max-width
+                    </li>
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                      "
+                    >
+                      <code>.modal</code> - 500px (default)
+                    </li>
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                      "
+                    >
+                      <code>.modal-lg</code> - 700px max-width
+                    </li>
+                    <li
+                      style="
+                        padding: 8px 0;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                      "
+                    >
+                      <code>.modal-xl</code> - 900px max-width
+                    </li>
+                    <li style="padding: 8px 0">
+                      <code>.modal-fullscreen</code> - Full screen
+                    </li>
+                  </ul>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="sizes-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="sizes-html">&lt;div class="modal modal-sm"&gt;...&lt;/div&gt;
+&lt;div class="modal modal-lg"&gt;...&lt;/div&gt;
+&lt;div class="modal modal-xl"&gt;...&lt;/div&gt;
+&lt;div class="modal modal-fullscreen"&gt;...&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="sizes-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="sizes-css">.modal-sm { max-width: 400px; }
+.modal-lg { max-width: 700px; }
+.modal-xl { max-width: 900px; }
+
+.modal-fullscreen {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  border-radius: 0;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="footer-logo"
+              ><img
+                src="/assets/img/icon.png"
+                alt="KvoLib"
+                width="20"
+                height="20"
+              /><span>KvoLib</span></a
+            >
+            <p>Build beautiful interfaces faster.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="/components.html">Components</a></li>
+              <li><a href="/docs.html">Documentation</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/docs.html">Getting Started</a></li>
+              <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 KvoLib. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

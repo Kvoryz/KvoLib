@@ -28,6 +28,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
     <link rel="icon" type="image/png" href="assets/img/icon.png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -66,17 +67,17 @@
     </nav>
 
     <section class="hero" id="hero">
-      <div class="hero-content">
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
         <h1 class="hero-title">
           <span class="typewriter-text">Web Components</span>
         </h1>
 
-        <p class="hero-description">
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
           KvoLib is my personal collection of flexible and clean UI components
           for building modern web interfaces.
         </p>
 
-        <div class="hero-actions">
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
           <a href="components.html" class="btn btn-primary btn-xl">
             See Components
             <i class="fas fa-arrow-right"></i>
@@ -104,19 +105,19 @@
     <section class="stats-section">
       <div class="container">
         <div class="stats-grid">
-          <div class="stat-card">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
             <span class="stat-value">50+</span>
             <span class="stat-label">Components</span>
           </div>
-          <div class="stat-card">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
             <span class="stat-value">Open</span>
             <span class="stat-label">Source</span>
           </div>
-          <div class="stat-card">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
             <span class="stat-value">Actively</span>
             <span class="stat-label">Maintained</span>
           </div>
-          <div class="stat-card">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
             <span class="stat-value">Small</span>
             <span class="stat-label">Bundle Size</span>
           </div>
@@ -126,7 +127,7 @@
 
     <section id="components" class="components-section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-badge">Components</span>
           <h2 class="section-title">Everything you need</h2>
           <p class="section-description">
@@ -136,7 +137,12 @@
         </div>
 
         <div class="components-grid">
-          <a href="/components.html#inputs" class="component-card">
+          <a
+            href="/components.html#inputs"
+            class="component-card"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div class="card-icon">
               <i class="fas fa-hand-pointer"></i>
             </div>
@@ -145,7 +151,12 @@
             <span class="card-arrow">→</span>
           </a>
 
-          <a href="/components.html#layout" class="component-card">
+          <a
+            href="/components.html#layout"
+            class="component-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="card-icon">
               <i class="fas fa-th-large"></i>
             </div>
@@ -154,7 +165,12 @@
             <span class="card-arrow">→</span>
           </a>
 
-          <a href="/components.html#feedback" class="component-card">
+          <a
+            href="/components.html#feedback"
+            class="component-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="card-icon">
               <i class="fas fa-bell"></i>
             </div>
@@ -163,7 +179,12 @@
             <span class="card-arrow">→</span>
           </a>
 
-          <a href="/components.html#navigation" class="component-card">
+          <a
+            href="/components.html#navigation"
+            class="component-card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div class="card-icon">
               <i class="fas fa-compass"></i>
             </div>
@@ -177,7 +198,7 @@
 
     <section class="cta-section">
       <div class="container">
-        <div class="cta-content">
+        <div class="cta-content" data-aos="zoom-in">
           <h2>Ready to explore?</h2>
           <p>Check out the component library and start using KvoLib.</p>
           <div class="cta-actions">
@@ -237,6 +258,7 @@
       </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
