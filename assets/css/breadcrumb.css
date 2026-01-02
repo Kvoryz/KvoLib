@@ -1,0 +1,109 @@
+/* ========================================
+   BREADCRUMB COMPONENTS
+   ======================================== */
+
+/* Breadcrumb 1 - Basic */
+.kvo-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+.kvo-breadcrumb-item {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.kvo-breadcrumb-item:hover {
+  color: #fff;
+}
+
+.kvo-breadcrumb-item.active {
+  color: #fff;
+  pointer-events: none;
+}
+
+.kvo-breadcrumb-separator {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.75rem;
+}
+
+/* Breadcrumb 2 - With Icons */
+.kvo-breadcrumb-icons .kvo-breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kvo-breadcrumb-icons .kvo-breadcrumb-item i {
+  font-size: 0.8rem;
+}
+
+/* Breadcrumb 3 - Pills */
+.kvo-breadcrumb-pills .kvo-breadcrumb-item {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.kvo-breadcrumb-pills .kvo-breadcrumb-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.kvo-breadcrumb-pills .kvo-breadcrumb-item.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Breadcrumb 4 - Boxed */
+.kvo-breadcrumb-boxed {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+/* Breadcrumb 5 - Arrow */
+.kvo-breadcrumb-arrow .kvo-breadcrumb-item {
+  padding: 8px 16px 8px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  position: relative;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 12px) 0,
+    100% 50%,
+    calc(100% - 12px) 100%,
+    0 100%,
+    12px 50%
+  );
+}
+
+.kvo-breadcrumb-arrow .kvo-breadcrumb-item:first-child {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 12px) 0,
+    100% 50%,
+    calc(100% - 12px) 100%,
+    0 100%
+  );
+  padding-left: 16px;
+}
+
+.kvo-breadcrumb-arrow .kvo-breadcrumb-item.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.kvo-breadcrumb-arrow .kvo-breadcrumb-separator {
+  display: none;
+}
+
+/* Breadcrumb 6 - Neon */
+.kvo-breadcrumb-neon .kvo-breadcrumb-item.active {
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.kvo-breadcrumb-neon .kvo-breadcrumb-separator {
+  color: #00d4ff;
+}

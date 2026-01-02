@@ -1,0 +1,151 @@
+/* ========================================
+   NAVBAR COMPONENTS
+   ======================================== */
+
+/* Navbar 1 - Basic */
+.kvo-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: rgba(20, 20, 20, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kvo-navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.kvo-navbar-brand img {
+  width: 28px;
+  height: 28px;
+}
+
+.kvo-navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.kvo-navbar-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.kvo-navbar-link:hover,
+.kvo-navbar-link.active {
+  color: #fff;
+}
+
+.kvo-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Navbar 2 - Glass */
+.kvo-navbar-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Navbar 3 - Gradient */
+.kvo-navbar-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(102, 126, 234, 0.9),
+    rgba(118, 75, 162, 0.9)
+  );
+  border-bottom: none;
+}
+
+/* Navbar 4 - Centered */
+.kvo-navbar-centered {
+  justify-content: center;
+  gap: 40px;
+}
+
+.kvo-navbar-centered .kvo-navbar-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Navbar 5 - Fixed */
+.kvo-navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Navbar 6 - With Search */
+.kvo-navbar-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.kvo-navbar-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 0.875rem;
+  width: 200px;
+}
+
+.kvo-navbar-search input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.kvo-navbar-search i {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Mobile Toggle */
+.kvo-navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .kvo-navbar-menu {
+    display: none;
+  }
+
+  .kvo-navbar-toggle {
+    display: block;
+  }
+
+  .kvo-navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
+    padding: 16px;
+    gap: 16px;
+  }
+}

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="KvoLib Switch Components" />
-    <title>Switches - KvoLib</title>
+    <meta name="description" content="KvoLib Breadcrumb Components" />
+    <title>Breadcrumb - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <style>
       html,
       body {
@@ -24,7 +25,7 @@
     </style>
     <link rel="icon" type="image/png" href="/assets/img/icon.png" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/switch.css" />
+    <link rel="stylesheet" href="/assets/css/breadcrumb.css" />
   </head>
   <body>
     <nav class="navbar">
@@ -52,9 +53,8 @@
             href="https://github.com/Kvoryz/KvoLib"
             target="_blank"
             class="nav-link"
-          >
-            <i class="fab fa-github"></i>
-          </a>
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
       </div>
     </nav>
@@ -62,13 +62,13 @@
     <section class="page-header">
       <div class="container">
         <div class="breadcrumb">
-          <a href="/components.html#inputs">Components</a>
+          <a href="/components.html#navigation">Components</a>
           <i class="fas fa-chevron-right"></i>
-          <span>Switches</span>
+          <span>Breadcrumb</span>
         </div>
-        <h1 class="page-title">Toggle Switches</h1>
+        <h1 class="page-title">Breadcrumb</h1>
         <p class="page-description">
-          6 beautiful toggle switch styles for settings.
+          6 breadcrumb styles for navigation paths.
         </p>
       </div>
     </section>
@@ -78,32 +78,35 @@
         <div class="docs-grid">
           <aside class="docs-sidebar">
             <nav class="docs-nav">
-              <h4>Switch Styles</h4>
+              <h4>Breadcrumb Types</h4>
               <ul>
-                <li><a href="#ios">iOS Style</a></li>
-                <li><a href="#material">Material</a></li>
+                <li><a href="#basic">Basic</a></li>
+                <li><a href="#icons">With Icons</a></li>
+                <li><a href="#pills">Pills</a></li>
+                <li><a href="#boxed">Boxed</a></li>
                 <li><a href="#neon">Neon</a></li>
-                <li><a href="#gradient">Gradient</a></li>
-                <li><a href="#minimal">Minimal</a></li>
-                <li><a href="#square">Square</a></li>
               </ul>
             </nav>
           </aside>
 
           <main class="docs-content">
-            <section id="ios" class="docs-section">
-              <h2>iOS Style Switch</h2>
-              <p>Classic iOS-inspired toggle switch.</p>
+            <!-- Basic Breadcrumb -->
+            <section id="basic" class="docs-section">
+              <h2>Basic Breadcrumb</h2>
+              <p>Standard breadcrumb navigation.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">
-                  <label class="switch-ios">
-                    <input type="checkbox" />
-                    <span class="slider"></span>
-                  </label>
-                  <label class="switch-ios">
-                    <input type="checkbox" checked />
-                    <span class="slider"></span>
-                  </label>
+                  <nav class="kvo-breadcrumb">
+                    <a href="#" class="kvo-breadcrumb-item">Home</a>
+                    <span class="kvo-breadcrumb-separator"
+                      ><i class="fas fa-chevron-right"></i
+                    ></span>
+                    <a href="#" class="kvo-breadcrumb-item">Products</a>
+                    <span class="kvo-breadcrumb-separator"
+                      ><i class="fas fa-chevron-right"></i
+                    ></span>
+                    <span class="kvo-breadcrumb-item active">Category</span>
+                  </nav>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -118,48 +121,68 @@
                   </div>
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="ios-html">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="basic-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="ios-html">&lt;label class="switch-ios"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
+                    <pre><code id="basic-html">&lt;nav class="kvo-breadcrumb"&gt;
+  &lt;a href="#" class="kvo-breadcrumb-item"&gt;Home&lt;/a&gt;
+  &lt;span class="kvo-breadcrumb-separator"&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;a href="#" class="kvo-breadcrumb-item"&gt;Products&lt;/a&gt;
+  &lt;span class="kvo-breadcrumb-separator"&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;span class="kvo-breadcrumb-item active"&gt;Category&lt;/span&gt;
+&lt;/nav&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="ios-css">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="basic-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="ios-css">.switch-ios input:checked + .slider {
-  background-color: #34c759;
+                    <pre><code id="basic-css">.kvo-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
 }
 
-.switch-ios input:checked + .slider::before {
-  transform: translateX(22px);
-}</code></pre>
+.kvo-breadcrumb-item {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s;
+}
+
+.kvo-breadcrumb-item:hover { color: #fff; }
+.kvo-breadcrumb-item.active { color: #fff; }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <section id="material" class="docs-section">
-              <h2>Material Switch</h2>
-              <p>Material design toggle switch.</p>
+            <!-- With Icons -->
+            <section id="icons" class="docs-section">
+              <h2>Breadcrumb with Icons</h2>
+              <p>Breadcrumb with icon labels.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">
-                  <label class="switch-material">
-                    <input type="checkbox" />
-                    <span class="slider"></span>
-                  </label>
-                  <label class="switch-material">
-                    <input type="checkbox" checked />
-                    <span class="slider"></span>
-                  </label>
+                  <nav class="kvo-breadcrumb kvo-breadcrumb-icons">
+                    <a href="#" class="kvo-breadcrumb-item"
+                      ><i class="fas fa-home"></i> Home</a
+                    >
+                    <span class="kvo-breadcrumb-separator"
+                      ><i class="fas fa-chevron-right"></i
+                    ></span>
+                    <a href="#" class="kvo-breadcrumb-item"
+                      ><i class="fas fa-folder"></i> Documents</a
+                    >
+                    <span class="kvo-breadcrumb-separator"
+                      ><i class="fas fa-chevron-right"></i
+                    ></span>
+                    <span class="kvo-breadcrumb-item active"
+                      ><i class="fas fa-file"></i> File.pdf</span
+                    >
+                  </nav>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -174,49 +197,161 @@
                   </div>
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="material-html">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="icons-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="material-html">&lt;label class="switch-material"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
+                    <pre><code id="icons-html">&lt;nav class="kvo-breadcrumb kvo-breadcrumb-icons"&gt;
+  &lt;a href="#" class="kvo-breadcrumb-item"&gt;
+    &lt;i class="fas fa-home"&gt;&lt;/i&gt; Home
+  &lt;/a&gt;
+  ...
+&lt;/nav&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="material-css">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="icons-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="material-css">.switch-material input:checked + .slider {
-  background-color: rgba(102, 126, 234, 0.5);
+                    <pre><code id="icons-css">.kvo-breadcrumb-icons .kvo-breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.switch-material input:checked + .slider::before {
-  background-color: #667eea;
-  transform: translateX(20px);
+.kvo-breadcrumb-icons .kvo-breadcrumb-item i {
+  font-size: 0.8rem;
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
+            <!-- Pills Breadcrumb -->
+            <section id="pills" class="docs-section">
+              <h2>Pills Breadcrumb</h2>
+              <p>Breadcrumb with pill-style items.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <nav class="kvo-breadcrumb kvo-breadcrumb-pills">
+                    <a href="#" class="kvo-breadcrumb-item">Home</a>
+                    <a href="#" class="kvo-breadcrumb-item">Products</a>
+                    <span class="kvo-breadcrumb-item active">Current</span>
+                  </nav>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="pills-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="pills-html">&lt;nav class="kvo-breadcrumb kvo-breadcrumb-pills"&gt;...&lt;/nav&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="pills-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="pills-css">.kvo-breadcrumb-pills .kvo-breadcrumb-item {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.kvo-breadcrumb-pills .kvo-breadcrumb-item.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Boxed Breadcrumb -->
+            <section id="boxed" class="docs-section">
+              <h2>Boxed Breadcrumb</h2>
+              <p>Breadcrumb with container box.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <nav class="kvo-breadcrumb kvo-breadcrumb-boxed">
+                    <a href="#" class="kvo-breadcrumb-item">Home</a>
+                    <span class="kvo-breadcrumb-separator">/</span>
+                    <a href="#" class="kvo-breadcrumb-item">Category</a>
+                    <span class="kvo-breadcrumb-separator">/</span>
+                    <span class="kvo-breadcrumb-item active">Page</span>
+                  </nav>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="boxed-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="boxed-html">&lt;nav class="kvo-breadcrumb kvo-breadcrumb-boxed"&gt;...&lt;/nav&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="boxed-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="boxed-css">.kvo-breadcrumb-boxed {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Neon Breadcrumb -->
             <section id="neon" class="docs-section">
-              <h2>Neon Switch</h2>
-              <p>Glowing neon toggle switch.</p>
+              <h2>Neon Breadcrumb</h2>
+              <p>Glowing neon style breadcrumb.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark">
-                  <label class="switch-neon">
-                    <input type="checkbox" />
-                    <span class="slider"></span>
-                  </label>
-                  <label class="switch-neon">
-                    <input type="checkbox" checked />
-                    <span class="slider"></span>
-                  </label>
+                  <nav class="kvo-breadcrumb kvo-breadcrumb-neon">
+                    <a href="#" class="kvo-breadcrumb-item">Home</a>
+                    <span class="kvo-breadcrumb-separator"
+                      ><i class="fas fa-chevron-right"></i
+                    ></span>
+                    <a href="#" class="kvo-breadcrumb-item">Section</a>
+                    <span class="kvo-breadcrumb-separator"
+                      ><i class="fas fa-chevron-right"></i
+                    ></span>
+                    <span class="kvo-breadcrumb-item active">Current</span>
+                  </nav>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -231,190 +366,27 @@
                   </div>
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="neon-html">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="neon-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="neon-html">&lt;label class="switch-neon"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
+                    <pre><code id="neon-html">&lt;nav class="kvo-breadcrumb kvo-breadcrumb-neon"&gt;...&lt;/nav&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="neon-css">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="neon-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="neon-css">.switch-neon input:checked + .slider {
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5),
-              0 0 40px rgba(0, 212, 255, 0.2);
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="gradient" class="docs-section">
-              <h2>Gradient Switch</h2>
-              <p>Switch with gradient colors.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="switch-gradient">
-                    <input type="checkbox" />
-                    <span class="slider"></span>
-                  </label>
-                  <label class="switch-gradient">
-                    <input type="checkbox" checked />
-                    <span class="slider"></span>
-                  </label>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-html">&lt;label class="switch-gradient"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-css">.switch-gradient input:checked + .slider {
-  background: linear-gradient(90deg, #667eea, #764ba2);
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="minimal" class="docs-section">
-              <h2>Minimal Switch</h2>
-              <p>Clean and minimal toggle switch.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="switch-minimal">
-                    <input type="checkbox" />
-                    <span class="slider"></span>
-                  </label>
-                  <label class="switch-minimal">
-                    <input type="checkbox" checked />
-                    <span class="slider"></span>
-                  </label>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="minimal-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="minimal-html">&lt;label class="switch-minimal"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="minimal-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="minimal-css">.switch-minimal input:checked + .slider {
-  border-color: #fff;
+                    <pre><code id="neon-css">.kvo-breadcrumb-neon .kvo-breadcrumb-item.active {
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
-.switch-minimal input:checked + .slider::before {
-  background-color: #fff;
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="square" class="docs-section">
-              <h2>Square Switch</h2>
-              <p>Square-shaped toggle switch.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <label class="switch-square">
-                    <input type="checkbox" />
-                    <span class="slider"></span>
-                  </label>
-                  <label class="switch-square">
-                    <input type="checkbox" checked />
-                    <span class="slider"></span>
-                  </label>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="square-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="square-html">&lt;label class="switch-square"&gt;
-  &lt;input type="checkbox" /&gt;
-  &lt;span class="slider"&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="square-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="square-css">.switch-square input:checked + .slider {
-  background-color: #f43f5e;
-}
-
-.switch-square input:checked + .slider::before {
-  transform: translateX(24px);
+.kvo-breadcrumb-neon .kvo-breadcrumb-separator {
+  color: #00d4ff;
 }</code></pre>
                   </div>
                 </details>
@@ -429,39 +401,28 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="/" class="footer-logo">
-              <img
+            <a href="/" class="footer-logo"
+              ><img
                 src="/assets/img/icon.png"
                 alt="KvoLib"
                 width="20"
                 height="20"
-              />
-              <span>KvoLib</span>
-            </a>
+              /><span>KvoLib</span></a
+            >
             <p>Build beautiful interfaces faster.</p>
           </div>
           <div class="footer-links">
             <h4>Product</h4>
             <ul>
-              <li><a href="/components.html#inputs">Components</a></li>
+              <li><a href="/components.html#navigation">Components</a></li>
               <li><a href="/docs.html">Documentation</a></li>
-              <li><a href="#">Changelog</a></li>
             </ul>
           </div>
           <div class="footer-links">
             <h4>Resources</h4>
             <ul>
               <li><a href="/docs.html">Getting Started</a></li>
-              <li><a href="#">Examples</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </div>
-          <div class="footer-links">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#">About</a></li>
               <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
             </ul>
           </div>
         </div>
@@ -471,6 +432,7 @@
       </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

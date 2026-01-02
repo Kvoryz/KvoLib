@@ -1,0 +1,137 @@
+/* ========================================
+   PAGINATION COMPONENTS
+   ======================================== */
+
+/* Pagination 1 - Basic */
+.kvo-pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.kvo-page {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.kvo-page:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.kvo-page.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border-color: transparent;
+}
+
+.kvo-page.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.kvo-page-ellipsis {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Pagination 2 - Pills */
+.kvo-pagination-pills .kvo-page {
+  border: none;
+  border-radius: 20px;
+}
+
+.kvo-pagination-pills .kvo-page:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Pagination 3 - Minimal */
+.kvo-pagination-minimal .kvo-page {
+  border: none;
+  background: transparent;
+}
+
+.kvo-pagination-minimal .kvo-page.active {
+  background: transparent;
+  color: #667eea;
+  font-weight: 700;
+}
+
+/* Pagination 4 - Bordered */
+.kvo-pagination-bordered {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 4px;
+  gap: 0;
+}
+
+.kvo-pagination-bordered .kvo-page {
+  border: none;
+  border-radius: 6px;
+}
+
+/* Pagination 5 - With Info */
+.kvo-pagination-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.kvo-pagination-text {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Pagination 6 - Simple */
+.kvo-pagination-simple {
+  gap: 16px;
+}
+
+.kvo-pagination-simple .kvo-page-prev,
+.kvo-pagination-simple .kvo-page-next {
+  padding: 8px 16px;
+  min-width: auto;
+}
+
+.kvo-pagination-current {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+}
+
+/* Pagination 7 - Neon */
+.kvo-pagination-neon .kvo-page.active {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: #00d4ff;
+  color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+/* Size Variants */
+.kvo-pagination-sm .kvo-page {
+  min-width: 32px;
+  height: 32px;
+  font-size: 0.75rem;
+}
+
+.kvo-pagination-lg .kvo-page {
+  min-width: 48px;
+  height: 48px;
+  font-size: 1rem;
+}

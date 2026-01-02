@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="KvoLib Skeleton Components" />
-    <title>Skeleton - KvoLib</title>
+    <meta name="description" content="KvoLib Link Components" />
+    <title>Link - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +25,7 @@
     </style>
     <link rel="icon" type="image/png" href="/assets/img/icon.png" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/skeleton.css" />
+    <link rel="stylesheet" href="/assets/css/link.css" />
   </head>
   <body>
     <nav class="navbar">
@@ -62,12 +62,12 @@
     <section class="page-header">
       <div class="container">
         <div class="breadcrumb">
-          <a href="/components.html#feedback">Components</a>
+          <a href="/components.html#navigation">Components</a>
           <i class="fas fa-chevron-right"></i>
-          <span>Skeleton</span>
+          <span>Link</span>
         </div>
-        <h1 class="page-title">Skeleton</h1>
-        <p class="page-description">10 skeleton loading placeholders.</p>
+        <h1 class="page-title">Links</h1>
+        <p class="page-description">10 link styles with hover effects.</p>
       </div>
     </section>
 
@@ -76,31 +76,30 @@
         <div class="docs-grid">
           <aside class="docs-sidebar">
             <nav class="docs-nav">
-              <h4>Skeleton Types</h4>
+              <h4>Link Types</h4>
               <ul>
-                <li><a href="#text">Text</a></li>
-                <li><a href="#avatar">Avatar</a></li>
-                <li><a href="#image">Image</a></li>
-                <li><a href="#button">Button</a></li>
-                <li><a href="#card">Card</a></li>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#list">List Item</a></li>
-                <li><a href="#paragraph">Paragraph</a></li>
+                <li><a href="#basic">Basic</a></li>
+                <li><a href="#animated">Animated</a></li>
+                <li><a href="#gradient">Gradient</a></li>
+                <li><a href="#arrow">With Arrow</a></li>
+                <li><a href="#icon">With Icon</a></li>
+                <li><a href="#external">External</a></li>
+                <li><a href="#neon">Neon</a></li>
+                <li><a href="#subtle">Subtle</a></li>
+                <li><a href="#button">Button Style</a></li>
+                <li><a href="#nav">Nav Style</a></li>
               </ul>
             </nav>
           </aside>
 
           <main class="docs-content">
-            <!-- Text Skeleton -->
-            <section id="text" class="docs-section">
-              <h2>Text Skeleton</h2>
-              <p>Placeholder for text content.</p>
+            <!-- Basic Link -->
+            <section id="basic" class="docs-section">
+              <h2>Basic Link</h2>
+              <p>Standard link with hover color change.</p>
               <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="skeleton skeleton-title"></div>
-                  <div class="skeleton skeleton-text"></div>
-                  <div class="skeleton skeleton-text"></div>
-                  <div class="skeleton skeleton-text" style="width: 70%"></div>
+                <div class="preview-area preview-dark">
+                  <a href="#" class="kvo-link">Click here to learn more</a>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -116,71 +115,224 @@
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
                       <span>HTML</span
-                      ><button class="copy-btn" data-copy="text-html">
+                      ><button class="copy-btn" data-copy="basic-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="text-html">&lt;div class="skeleton skeleton-title"&gt;&lt;/div&gt;
-&lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
-&lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
-&lt;div class="skeleton skeleton-text" style="width: 70%;"&gt;&lt;/div&gt;</code></pre>
+                    <pre><code id="basic-html">&lt;a href="#" class="kvo-link"&gt;Click here&lt;/a&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
                       <span>CSS</span
-                      ><button class="copy-btn" data-copy="text-css">
+                      ><button class="copy-btn" data-copy="basic-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="text-css">.skeleton {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.05) 25%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0.05) 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-  border-radius: 8px;
+                    <pre><code id="basic-css">.kvo-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
 }
 
-@keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-
-.skeleton-text {
-  height: 16px;
-  width: 100%;
-  margin-bottom: 8px;
-}
-
-.skeleton-title {
-  height: 24px;
-  width: 60%;
-  margin-bottom: 16px;
+.kvo-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <!-- Avatar Skeleton -->
-            <section id="avatar" class="docs-section">
-              <h2>Avatar Skeleton</h2>
-              <p>Circular placeholder for avatars.</p>
+            <!-- Animated Link -->
+            <section id="animated" class="docs-section">
+              <h2>Animated Underline</h2>
+              <p>Link with sliding underline animation.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <a href="#" class="kvo-link-animated"
+                    >Hover me for underline</a
+                  >
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="animated-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="animated-html">&lt;a href="#" class="kvo-link-animated"&gt;Hover me&lt;/a&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="animated-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="animated-css">.kvo-link-animated {
+  color: #667eea;
+  text-decoration: none;
+  position: relative;
+}
+
+.kvo-link-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.kvo-link-animated:hover::after {
+  width: 100%;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Gradient Link -->
+            <section id="gradient" class="docs-section">
+              <h2>Gradient Link</h2>
+              <p>Link with gradient text color.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <a href="#" class="kvo-link-gradient"
+                    >Beautiful gradient link</a
+                  >
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="gradient-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-html">&lt;a href="#" class="kvo-link-gradient"&gt;Gradient link&lt;/a&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="gradient-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-css">.kvo-link-gradient {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  font-weight: 600;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Arrow Link -->
+            <section id="arrow" class="docs-section">
+              <h2>Link with Arrow</h2>
+              <p>Link with animated arrow icon.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <a href="#" class="kvo-link-arrow"
+                    >Read more <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="arrow-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="arrow-html">&lt;a href="#" class="kvo-link-arrow"&gt;
+  Read more &lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;
+&lt;/a&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="arrow-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="arrow-css">.kvo-link-arrow {
+  color: #667eea;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kvo-link-arrow i {
+  transition: transform 0.2s;
+}
+
+.kvo-link-arrow:hover i {
+  transform: translateX(4px);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Icon Link -->
+            <section id="icon" class="docs-section">
+              <h2>Link with Icon</h2>
+              <p>Link with leading icon.</p>
               <div class="preview-box">
                 <div
                   class="preview-area preview-dark"
-                  style="display: flex; gap: 16px; align-items: center"
+                  style="display: flex; gap: 24px"
                 >
-                  <div
-                    class="skeleton skeleton-avatar skeleton-avatar-sm"
-                  ></div>
-                  <div class="skeleton skeleton-avatar"></div>
-                  <div
-                    class="skeleton skeleton-avatar skeleton-avatar-lg"
-                  ></div>
+                  <a href="#" class="kvo-link-icon"
+                    ><i class="fas fa-home"></i> Home</a
+                  >
+                  <a href="#" class="kvo-link-icon"
+                    ><i class="fas fa-envelope"></i> Contact</a
+                  >
+                  <a href="#" class="kvo-link-icon"
+                    ><i class="fas fa-user"></i> Profile</a
+                  >
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -196,96 +348,206 @@
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
                       <span>HTML</span
-                      ><button class="copy-btn" data-copy="avatar-html">
+                      ><button class="copy-btn" data-copy="icon-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="avatar-html">&lt;div class="skeleton skeleton-avatar skeleton-avatar-sm"&gt;&lt;/div&gt;
-&lt;div class="skeleton skeleton-avatar"&gt;&lt;/div&gt;
-&lt;div class="skeleton skeleton-avatar skeleton-avatar-lg"&gt;&lt;/div&gt;</code></pre>
+                    <pre><code id="icon-html">&lt;a href="#" class="kvo-link-icon"&gt;
+  &lt;i class="fas fa-home"&gt;&lt;/i&gt; Home
+&lt;/a&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
                       <span>CSS</span
-                      ><button class="copy-btn" data-copy="avatar-css">
+                      ><button class="copy-btn" data-copy="icon-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="avatar-css">.skeleton-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+                    <pre><code id="icon-css">.kvo-link-icon {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.skeleton-avatar-sm { width: 32px; height: 32px; }
-.skeleton-avatar-lg { width: 64px; height: 64px; }</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
+.kvo-link-icon i {
+  color: #667eea;
+}
 
-            <!-- Image Skeleton -->
-            <section id="image" class="docs-section">
-              <h2>Image Skeleton</h2>
-              <p>Placeholder for images.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div
-                    class="skeleton skeleton-image"
-                    style="height: 150px"
-                  ></div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="image-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="image-html">&lt;div class="skeleton skeleton-image"&gt;&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="image-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="image-css">.skeleton-image {
-  width: 100%;
-  height: 200px;
-  border-radius: 12px;
+.kvo-link-icon:hover {
+  color: #fff;
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <!-- Button Skeleton -->
+            <!-- External Link -->
+            <section id="external" class="docs-section">
+              <h2>External Link</h2>
+              <p>Link with external icon indicator.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <a href="#" class="kvo-link-external">Visit external site</a>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="external-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="external-html">&lt;a href="#" class="kvo-link-external"&gt;Visit site&lt;/a&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="external-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="external-css">.kvo-link-external {
+  color: #667eea;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.kvo-link-external::after {
+  content: '\f35d';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 0.7rem;
+  opacity: 0.6;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Neon Link -->
+            <section id="neon" class="docs-section">
+              <h2>Neon Link</h2>
+              <p>Glowing neon style link.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <a href="#" class="kvo-link-neon">Cyberpunk link style</a>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="neon-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="neon-html">&lt;a href="#" class="kvo-link-neon"&gt;Neon link&lt;/a&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="neon-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="neon-css">.kvo-link-neon {
+  color: #00d4ff;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  transition: all 0.2s;
+}
+
+.kvo-link-neon:hover {
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Subtle Link -->
+            <section id="subtle" class="docs-section">
+              <h2>Subtle Link</h2>
+              <p>Subtle link with dotted underline.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <p style="color: rgba(255, 255, 255, 0.7)">
+                    This is some text with a
+                    <a href="#" class="kvo-link-subtle">subtle link</a> inside.
+                  </p>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="subtle-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="subtle-html">&lt;a href="#" class="kvo-link-subtle"&gt;subtle link&lt;/a&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="subtle-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="subtle-css">.kvo-link-subtle {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+}
+
+.kvo-link-subtle:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Button Style Link -->
             <section id="button" class="docs-section">
-              <h2>Button Skeleton</h2>
-              <p>Placeholder for buttons.</p>
+              <h2>Button Style Link</h2>
+              <p>Link styled like a button.</p>
               <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="display: flex; gap: 12px"
-                >
-                  <div class="skeleton skeleton-button"></div>
-                  <div
-                    class="skeleton skeleton-button"
-                    style="width: 160px"
-                  ></div>
+                <div class="preview-area preview-dark">
+                  <a href="#" class="kvo-link-button">Link as Button</a>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -305,7 +567,7 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="button-html">&lt;div class="skeleton skeleton-button"&gt;&lt;/div&gt;</code></pre>
+                    <pre><code id="button-html">&lt;a href="#" class="kvo-link-button"&gt;Link as Button&lt;/a&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
@@ -314,179 +576,37 @@
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="button-css">.skeleton-button {
-  height: 40px;
-  width: 120px;
-  border-radius: 8px;
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <!-- Card Skeleton -->
-            <section id="card" class="docs-section">
-              <h2>Card Skeleton</h2>
-              <p>Full card placeholder.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="skeleton-card" style="max-width: 300px">
-                    <div
-                      class="skeleton skeleton-image"
-                      style="height: 120px; margin-bottom: 16px"
-                    ></div>
-                    <div class="skeleton skeleton-title"></div>
-                    <div class="skeleton skeleton-text"></div>
-                    <div
-                      class="skeleton skeleton-text"
-                      style="width: 60%"
-                    ></div>
-                  </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="card-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="card-html">&lt;div class="skeleton-card"&gt;
-  &lt;div class="skeleton skeleton-image"&gt;&lt;/div&gt;
-  &lt;div class="skeleton skeleton-title"&gt;&lt;/div&gt;
-  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
-  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="card-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="card-css">.skeleton-card {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <!-- Profile Skeleton -->
-            <section id="profile" class="docs-section">
-              <h2>Profile Skeleton</h2>
-              <p>User profile placeholder.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="skeleton-profile">
-                    <div
-                      class="skeleton skeleton-avatar skeleton-avatar-lg"
-                    ></div>
-                    <div class="skeleton-profile-info" style="flex: 1">
-                      <div
-                        class="skeleton skeleton-title"
-                        style="width: 40%; margin-bottom: 8px"
-                      ></div>
-                      <div
-                        class="skeleton skeleton-text"
-                        style="width: 60%"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="profile-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="profile-html">&lt;div class="skeleton-profile"&gt;
-  &lt;div class="skeleton skeleton-avatar skeleton-avatar-lg"&gt;&lt;/div&gt;
-  &lt;div class="skeleton-profile-info"&gt;
-    &lt;div class="skeleton skeleton-title"&gt;&lt;/div&gt;
-    &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="profile-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="profile-css">.skeleton-profile {
-  display: flex;
-  gap: 16px;
-  align-items: center;
+                    <pre><code id="button-css">.kvo-link-button {
+  display: inline-block;
+  padding: 8px 16px;
+  color: #667eea;
+  text-decoration: none;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 6px;
 }
 
-.skeleton-profile-info {
-  flex: 1;
+.kvo-link-button:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: #667eea;
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <!-- List Item Skeleton -->
-            <section id="list" class="docs-section">
-              <h2>List Item Skeleton</h2>
-              <p>List item placeholders.</p>
+            <!-- Nav Style Link -->
+            <section id="nav" class="docs-section">
+              <h2>Nav Style Link</h2>
+              <p>Navigation link with scaling underline.</p>
               <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="skeleton-list-item">
-                    <div class="skeleton skeleton-avatar"></div>
-                    <div class="skeleton-list-content">
-                      <div
-                        class="skeleton skeleton-text"
-                        style="width: 80%; margin-bottom: 4px"
-                      ></div>
-                      <div
-                        class="skeleton skeleton-text"
-                        style="width: 50%"
-                      ></div>
-                    </div>
-                  </div>
-                  <div class="skeleton-list-item">
-                    <div class="skeleton skeleton-avatar"></div>
-                    <div class="skeleton-list-content">
-                      <div
-                        class="skeleton skeleton-text"
-                        style="width: 70%; margin-bottom: 4px"
-                      ></div>
-                      <div
-                        class="skeleton skeleton-text"
-                        style="width: 40%"
-                      ></div>
-                    </div>
-                  </div>
+                <div
+                  class="preview-area preview-dark"
+                  style="display: flex; gap: 32px"
+                >
+                  <a href="#" class="kvo-link-nav active">Home</a>
+                  <a href="#" class="kvo-link-nav">Products</a>
+                  <a href="#" class="kvo-link-nav">About</a>
+                  <a href="#" class="kvo-link-nav">Contact</a>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -502,105 +622,42 @@
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
                       <span>HTML</span
-                      ><button class="copy-btn" data-copy="list-html">
+                      ><button class="copy-btn" data-copy="nav-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="list-html">&lt;div class="skeleton-list-item"&gt;
-  &lt;div class="skeleton skeleton-avatar"&gt;&lt;/div&gt;
-  &lt;div class="skeleton-list-content"&gt;
-    &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
-    &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+                    <pre><code id="nav-html">&lt;a href="#" class="kvo-link-nav active"&gt;Home&lt;/a&gt;
+&lt;a href="#" class="kvo-link-nav"&gt;Products&lt;/a&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
                       <span>CSS</span
-                      ><button class="copy-btn" data-copy="list-css">
+                      ><button class="copy-btn" data-copy="nav-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="list-css">.skeleton-list-item {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  padding: 12px 0;
+                    <pre><code id="nav-css">.kvo-link-nav {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 8px 0;
+  position: relative;
 }
 
-.skeleton-list-item .skeleton-avatar {
-  flex-shrink: 0;
+.kvo-link-nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #667eea;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
-.skeleton-list-content {
-  flex: 1;
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <!-- Paragraph Skeleton -->
-            <section id="paragraph" class="docs-section">
-              <h2>Paragraph Skeleton</h2>
-              <p>Multi-line text placeholder.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="skeleton-paragraph">
-                    <div
-                      class="skeleton skeleton-text"
-                      style="width: 100%"
-                    ></div>
-                    <div
-                      class="skeleton skeleton-text"
-                      style="width: 90%"
-                    ></div>
-                    <div
-                      class="skeleton skeleton-text"
-                      style="width: 80%"
-                    ></div>
-                    <div
-                      class="skeleton skeleton-text"
-                      style="width: 60%"
-                    ></div>
-                  </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="paragraph-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="paragraph-html">&lt;div class="skeleton-paragraph"&gt;
-  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
-  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
-  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
-  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="paragraph-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="paragraph-css">.skeleton-paragraph {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.kvo-link-nav:hover::after,
+.kvo-link-nav.active::after {
+  transform: scaleX(1);
 }</code></pre>
                   </div>
                 </details>
@@ -628,7 +685,7 @@
           <div class="footer-links">
             <h4>Product</h4>
             <ul>
-              <li><a href="/components.html#feedback">Components</a></li>
+              <li><a href="/components.html#navigation">Components</a></li>
               <li><a href="/docs.html">Documentation</a></li>
             </ul>
           </div>

@@ -1,0 +1,135 @@
+/* ========================================
+   TABS COMPONENTS
+   ======================================== */
+
+/* Tabs 1 - Basic */
+.kvo-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kvo-tab {
+  padding: 12px 20px;
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.kvo-tab:hover {
+  color: #fff;
+}
+
+.kvo-tab.active {
+  color: #fff;
+}
+
+.kvo-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+/* Tabs 2 - Pills */
+.kvo-tabs-pills {
+  border-bottom: none;
+  gap: 8px;
+}
+
+.kvo-tabs-pills .kvo-tab {
+  border-radius: 8px;
+}
+
+.kvo-tabs-pills .kvo-tab:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.kvo-tabs-pills .kvo-tab.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.kvo-tabs-pills .kvo-tab.active::after {
+  display: none;
+}
+
+/* Tabs 3 - Boxed */
+.kvo-tabs-boxed {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kvo-tabs-boxed .kvo-tab {
+  border-radius: 8px;
+}
+
+.kvo-tabs-boxed .kvo-tab.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.kvo-tabs-boxed .kvo-tab.active::after {
+  display: none;
+}
+
+/* Tabs 4 - Vertical */
+.kvo-tabs-vertical {
+  flex-direction: column;
+  border-bottom: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  width: fit-content;
+}
+
+.kvo-tabs-vertical .kvo-tab {
+  text-align: left;
+}
+
+.kvo-tabs-vertical .kvo-tab.active::after {
+  bottom: auto;
+  right: -1px;
+  left: auto;
+  top: 0;
+  width: 2px;
+  height: 100%;
+}
+
+/* Tabs 5 - With Icons */
+.kvo-tab-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.kvo-tab-icon i {
+  font-size: 0.875rem;
+}
+
+/* Tabs 6 - Neon */
+.kvo-tabs-neon .kvo-tab.active {
+  color: #00d4ff;
+}
+
+.kvo-tabs-neon .kvo-tab.active::after {
+  background: #00d4ff;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+/* Tab Content */
+.kvo-tab-content {
+  display: none;
+  padding: 20px 0;
+}
+
+.kvo-tab-content.active {
+  display: block;
+}

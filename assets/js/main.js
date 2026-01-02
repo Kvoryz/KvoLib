@@ -110,6 +110,43 @@ const searchData = [
     icon: "fa-bone",
     url: "/components/skeleton.html",
   },
+  // Navigation Components
+  {
+    title: "Navbar",
+    desc: "6 navbar styles",
+    icon: "fa-bars",
+    url: "/components/navbar.html",
+  },
+  {
+    title: "Sidebar",
+    desc: "4 sidebar styles",
+    icon: "fa-stream",
+    url: "/components/sidebar.html",
+  },
+  {
+    title: "Breadcrumb",
+    desc: "6 breadcrumb styles",
+    icon: "fa-chevron-right",
+    url: "/components/breadcrumb.html",
+  },
+  {
+    title: "Tabs",
+    desc: "6 tab styles",
+    icon: "fa-folder-open",
+    url: "/components/tabs.html",
+  },
+  {
+    title: "Pagination",
+    desc: "7 pagination styles",
+    icon: "fa-ellipsis-h",
+    url: "/components/pagination.html",
+  },
+  {
+    title: "Link",
+    desc: "10 link styles with hover effects",
+    icon: "fa-link",
+    url: "/components/link.html",
+  },
   // Categories
   {
     title: "Inputs",
@@ -151,11 +188,10 @@ const searchData = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize AOS
   if (typeof AOS !== "undefined") {
     AOS.init({
       duration: 800,
-      easing: "ease-in-out",
+      easing: "ease-out",
       once: true,
       offset: 100,
     });

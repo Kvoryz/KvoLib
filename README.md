@@ -1,9 +1,9 @@
 # KvoLib
 
-> A modern, lightweight UI component library with beautiful aesthetics and smooth animations.
+> A modern, lightweight FrontEnd component library with beautiful aesthetics and smooth animations.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Components](https://img.shields.io/badge/Components-70+-green.svg)]()
+[![Components](https://img.shields.io/badge/Components-100+-green.svg)]()
 [![Made with Love](https://img.shields.io/badge/Made%20with-%E2%99%A5-red.svg)]()
 
 ## ✨ Features
@@ -13,7 +13,7 @@
 - 📱 **Responsive** - Mobile-first, works on all devices
 - 🎭 **Animations** - Smooth transitions and micro-interactions
 - 🔧 **Easy to Use** - Simple copy-paste integration
-- 🌈 **Rich Variety** - 70+ component variants across 12 categories
+- 🌈 **Rich Variety** - 100+ component variants across 22 categories
 - 🎯 **Zero Dependencies** - Pure HTML, CSS, and JavaScript
 
 ## 📦 Installation
@@ -40,38 +40,28 @@
 <link rel="stylesheet" href="https://cdn.kvolib.dev/css/divider.css" />
 <link rel="stylesheet" href="https://cdn.kvolib.dev/css/spacer.css" />
 <link rel="stylesheet" href="https://cdn.kvolib.dev/css/stack.css" />
+
+<!-- Feedback Components -->
+<link rel="stylesheet" href="https://cdn.kvolib.dev/css/alert.css" />
+<link rel="stylesheet" href="https://cdn.kvolib.dev/css/toast.css" />
+<link rel="stylesheet" href="https://cdn.kvolib.dev/css/modal.css" />
+<link rel="stylesheet" href="https://cdn.kvolib.dev/css/spinner.css" />
+<link rel="stylesheet" href="https://cdn.kvolib.dev/css/progress.css" />
+<link rel="stylesheet" href="https://cdn.kvolib.dev/css/skeleton.css" />
+
+<!-- Navigation Components -->
+<link rel="stylesheet" href="https://cdn.kvolib.dev/css/navbar.css" />
+<link rel="stylesheet" href="https://cdn.kvolib.dev/css/sidebar.css" />
+<link rel="stylesheet" href="https://cdn.kvolib.dev/css/breadcrumb.css" />
+<link rel="stylesheet" href="https://cdn.kvolib.dev/css/tabs.css" />
+<link rel="stylesheet" href="https://cdn.kvolib.dev/css/pagination.css" />
+<link rel="stylesheet" href="https://cdn.kvolib.dev/css/link.css" />
 ```
 
 ### Download
 
 ```bash
 git clone https://github.com/Kvoryz/KvoLib.git
-```
-
-## 🎯 Quick Start
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My App</title>
-
-    <!-- Include KvoLib CSS -->
-    <link rel="stylesheet" href="path/to/buttons.css" />
-    <link rel="stylesheet" href="path/to/forms.css" />
-  </head>
-  <body>
-    <!-- Use KvoLib components -->
-    <button class="btn-glow">Click Me</button>
-
-    <div class="input-floating-group">
-      <input type="text" class="input-floating" placeholder=" " />
-      <label>Your Name</label>
-    </div>
-  </body>
-</html>
 ```
 
 ## 📚 Components
@@ -98,7 +88,29 @@ git clone https://github.com/Kvoryz/KvoLib.git
 | **Spacer**    | 12 utilities | Spacing helpers         |
 | **Stack**     | 5 layouts    | Flex stacking layouts   |
 
-**Total:** 70+ component variants across 12 categories
+### Feedback Components (6 categories)
+
+| Component    | Variants  | Description                   |
+| ------------ | --------- | ----------------------------- |
+| **Alert**    | 10 styles | Notification alerts           |
+| **Toast**    | 8 styles  | Toast notifications           |
+| **Modal**    | 6 styles  | Modal dialogs                 |
+| **Spinner**  | 8 styles  | Loading spinners              |
+| **Progress** | 8 styles  | Progress bars                 |
+| **Skeleton** | 10 styles | Skeleton loading placeholders |
+
+### Navigation Components (6 categories)
+
+| Component      | Variants  | Description            |
+| -------------- | --------- | ---------------------- |
+| **Navbar**     | 6 styles  | Navigation bars        |
+| **Sidebar**    | 4 styles  | Sidebar navigation     |
+| **Breadcrumb** | 6 styles  | Breadcrumb trails      |
+| **Tabs**       | 6 styles  | Tab navigation         |
+| **Pagination** | 7 styles  | Page navigation        |
+| **Link**       | 10 styles | Styled link components |
+
+**Total:** 100+ component variants across 22 categories
 
 ## 🎨 Component Examples
 

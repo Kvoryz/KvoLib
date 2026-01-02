@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="KvoLib Select Components" />
-    <title>Select Dropdowns - KvoLib</title>
+    <meta name="description" content="KvoLib Navbar Components" />
+    <title>Navbar - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <style>
       html,
       body {
@@ -24,7 +25,7 @@
     </style>
     <link rel="icon" type="image/png" href="/assets/img/icon.png" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/select.css" />
+    <link rel="stylesheet" href="/assets/css/navbar.css" />
   </head>
   <body>
     <nav class="navbar">
@@ -52,9 +53,8 @@
             href="https://github.com/Kvoryz/KvoLib"
             target="_blank"
             class="nav-link"
-          >
-            <i class="fab fa-github"></i>
-          </a>
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
       </div>
     </nav>
@@ -62,12 +62,12 @@
     <section class="page-header">
       <div class="container">
         <div class="breadcrumb">
-          <a href="/components.html#inputs">Components</a>
+          <a href="/components.html#navigation">Components</a>
           <i class="fas fa-chevron-right"></i>
-          <span>Select</span>
+          <span>Navbar</span>
         </div>
-        <h1 class="page-title">Select Dropdowns</h1>
-        <p class="page-description">5 beautiful select dropdown styles.</p>
+        <h1 class="page-title">Navbar</h1>
+        <p class="page-description">6 navbar styles for navigation.</p>
       </div>
     </section>
 
@@ -76,34 +76,49 @@
         <div class="docs-grid">
           <aside class="docs-sidebar">
             <nav class="docs-nav">
-              <h4>Select Styles</h4>
+              <h4>Navbar Types</h4>
               <ul>
-                <li><a href="#modern">Modern</a></li>
-                <li><a href="#minimal">Minimal</a></li>
-                <li><a href="#glass">Glassmorphism</a></li>
-                <li><a href="#neon">Neon</a></li>
-                <li><a href="#gradient">Gradient Border</a></li>
+                <li><a href="#basic">Basic</a></li>
+                <li><a href="#glass">Glass</a></li>
+                <li><a href="#gradient">Gradient</a></li>
+                <li><a href="#search">With Search</a></li>
+                <li><a href="#centered">Centered</a></li>
               </ul>
             </nav>
           </aside>
 
           <main class="docs-content">
-            <section id="modern" class="docs-section">
-              <h2>Modern Select</h2>
-              <p>Clean modern select dropdown.</p>
+            <!-- Basic Navbar -->
+            <section id="basic" class="docs-section">
+              <h2>Basic Navbar</h2>
+              <p>Standard navigation bar.</p>
               <div class="preview-box">
                 <div
                   class="preview-area preview-dark"
-                  style="flex-direction: column; align-items: stretch"
+                  style="display: block; padding: 0"
                 >
-                  <div class="select-modern">
-                    <select>
-                      <option>Select option...</option>
-                      <option>Option 1</option>
-                      <option>Option 2</option>
-                      <option>Option 3</option>
-                    </select>
-                  </div>
+                  <nav class="kvo-navbar">
+                    <a href="#" class="kvo-navbar-brand"><span>Brand</span></a>
+                    <div class="kvo-navbar-menu">
+                      <a href="#" class="kvo-navbar-link active">Home</a>
+                      <a href="#" class="kvo-navbar-link">Products</a>
+                      <a href="#" class="kvo-navbar-link">About</a>
+                    </div>
+                    <div class="kvo-navbar-actions">
+                      <button
+                        style="
+                          padding: 8px 16px;
+                          background: linear-gradient(135deg, #667eea, #764ba2);
+                          border: none;
+                          border-radius: 6px;
+                          color: #fff;
+                          cursor: pointer;
+                        "
+                      >
+                        Sign In
+                      </button>
+                    </div>
+                  </nav>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -118,109 +133,81 @@
                   </div>
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="modern-html">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="basic-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="modern-html">&lt;div class="select-modern"&gt;
-  &lt;select&gt;
-    &lt;option&gt;Select option...&lt;/option&gt;
-    &lt;option&gt;Option 1&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;</code></pre>
+                    <pre><code id="basic-html">&lt;nav class="kvo-navbar"&gt;
+  &lt;a href="#" class="kvo-navbar-brand"&gt;Brand&lt;/a&gt;
+  &lt;div class="kvo-navbar-menu"&gt;
+    &lt;a href="#" class="kvo-navbar-link active"&gt;Home&lt;/a&gt;
+    &lt;a href="#" class="kvo-navbar-link"&gt;Products&lt;/a&gt;
+    &lt;a href="#" class="kvo-navbar-link"&gt;About&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="kvo-navbar-actions"&gt;
+    &lt;button&gt;Sign In&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="modern-css">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="basic-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="modern-css">.select-modern select:focus {
-  outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+                    <pre><code id="basic-css">.kvo-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: rgba(20, 20, 20, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kvo-navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.kvo-navbar-menu {
+  display: flex;
+  gap: 32px;
+}
+
+.kvo-navbar-link {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s;
+}
+
+.kvo-navbar-link:hover,
+.kvo-navbar-link.active {
+  color: #fff;
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <section id="minimal" class="docs-section">
-              <h2>Minimal Select</h2>
-              <p>Minimal underline select.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="flex-direction: column; align-items: stretch"
-                >
-                  <div class="select-minimal">
-                    <select>
-                      <option>Choose language...</option>
-                      <option>English</option>
-                      <option>Spanish</option>
-                      <option>French</option>
-                    </select>
-                  </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="minimal-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="minimal-html">&lt;div class="select-minimal"&gt;
-  &lt;select&gt;
-    &lt;option&gt;Choose language...&lt;/option&gt;
-    &lt;option&gt;English&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="minimal-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="minimal-css">.select-minimal select:focus {
-  outline: none;
-  border-bottom-color: #fff;
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
+            <!-- Glass Navbar -->
             <section id="glass" class="docs-section">
-              <h2>Glassmorphism Select</h2>
-              <p>Glass blur effect select.</p>
+              <h2>Glass Navbar</h2>
+              <p>Glassmorphism style navbar.</p>
               <div class="preview-box">
                 <div
-                  class="preview-area preview-gradient"
-                  style="flex-direction: column; align-items: stretch"
+                  class="preview-area preview-dark"
+                  style="display: block; padding: 0"
                 >
-                  <div class="select-glass">
-                    <select>
-                      <option>Select country...</option>
-                      <option>United States</option>
-                      <option>United Kingdom</option>
-                      <option>Canada</option>
-                    </select>
-                  </div>
+                  <nav class="kvo-navbar kvo-navbar-glass">
+                    <a href="#" class="kvo-navbar-brand"><span>Brand</span></a>
+                    <div class="kvo-navbar-menu">
+                      <a href="#" class="kvo-navbar-link active">Home</a>
+                      <a href="#" class="kvo-navbar-link">Products</a>
+                      <a href="#" class="kvo-navbar-link">About</a>
+                    </div>
+                  </nav>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -235,109 +222,62 @@
                   </div>
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="glass-html">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="glass-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glass-html">&lt;div class="select-glass"&gt;
-  &lt;select&gt;
-    &lt;option&gt;Select country...&lt;/option&gt;
-    &lt;option&gt;United States&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;</code></pre>
+                    <pre><code id="glass-html">&lt;nav class="kvo-navbar kvo-navbar-glass"&gt;...&lt;/nav&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="glass-css">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="glass-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="glass-css">.select-glass select {
+                    <pre><code id="glass-css">.kvo-navbar-glass {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <section id="neon" class="docs-section">
-              <h2>Neon Select</h2>
-              <p>Glowing neon select dropdown.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="flex-direction: column; align-items: stretch"
-                >
-                  <div class="select-neon">
-                    <select>
-                      <option>Choose plan...</option>
-                      <option>Free</option>
-                      <option>Pro</option>
-                      <option>Enterprise</option>
-                    </select>
-                  </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-html">&lt;div class="select-neon"&gt;
-  &lt;select&gt;
-    &lt;option&gt;Choose plan...&lt;/option&gt;
-    &lt;option&gt;Free&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="neon-css">.select-neon select:focus {
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5),
-              0 0 40px rgba(0, 212, 255, 0.2);
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
+            <!-- Gradient Navbar -->
             <section id="gradient" class="docs-section">
-              <h2>Gradient Border Select</h2>
-              <p>Select with animated gradient border.</p>
+              <h2>Gradient Navbar</h2>
+              <p>Gradient background navbar.</p>
               <div class="preview-box">
                 <div
                   class="preview-area preview-dark"
-                  style="flex-direction: column; align-items: stretch"
+                  style="display: block; padding: 0"
                 >
-                  <div class="select-gradient">
-                    <select>
-                      <option>Select category...</option>
-                      <option>Technology</option>
-                      <option>Design</option>
-                      <option>Marketing</option>
-                    </select>
-                  </div>
+                  <nav class="kvo-navbar kvo-navbar-gradient">
+                    <a href="#" class="kvo-navbar-brand"><span>Brand</span></a>
+                    <div class="kvo-navbar-menu">
+                      <a
+                        href="#"
+                        class="kvo-navbar-link active"
+                        style="color: #fff"
+                        >Home</a
+                      >
+                      <a
+                        href="#"
+                        class="kvo-navbar-link"
+                        style="color: rgba(255, 255, 255, 0.8)"
+                        >Products</a
+                      >
+                      <a
+                        href="#"
+                        class="kvo-navbar-link"
+                        style="color: rgba(255, 255, 255, 0.8)"
+                        >About</a
+                      >
+                    </div>
+                  </nav>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -352,29 +292,154 @@
                   </div>
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="gradient-html">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="gradient-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="gradient-html">&lt;div class="select-gradient"&gt;
-  &lt;select&gt;
-    &lt;option&gt;Select category...&lt;/option&gt;
-    &lt;option&gt;Technology&lt;/option&gt;
-  &lt;/select&gt;
+                    <pre><code id="gradient-html">&lt;nav class="kvo-navbar kvo-navbar-gradient"&gt;...&lt;/nav&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="gradient-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-css">.kvo-navbar-gradient {
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+  border-bottom: none;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Navbar with Search -->
+            <section id="search" class="docs-section">
+              <h2>Navbar with Search</h2>
+              <p>Navbar with integrated search bar.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="display: block; padding: 0"
+                >
+                  <nav class="kvo-navbar">
+                    <a href="#" class="kvo-navbar-brand"><span>Brand</span></a>
+                    <div class="kvo-navbar-search">
+                      <i class="fas fa-search"></i>
+                      <input type="text" placeholder="Search..." />
+                    </div>
+                    <div class="kvo-navbar-menu">
+                      <a href="#" class="kvo-navbar-link">Home</a>
+                      <a href="#" class="kvo-navbar-link">Products</a>
+                    </div>
+                  </nav>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="search-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="search-html">&lt;div class="kvo-navbar-search"&gt;
+  &lt;i class="fas fa-search"&gt;&lt;/i&gt;
+  &lt;input type="text" placeholder="Search..." /&gt;
 &lt;/div&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="gradient-css">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="search-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="gradient-css">.select-gradient {
-  padding: 2px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  border-radius: 12px;
+                    <pre><code id="search-css">.kvo-navbar-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.kvo-navbar-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 200px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Centered Navbar -->
+            <section id="centered" class="docs-section">
+              <h2>Centered Navbar</h2>
+              <p>Navbar with centered menu links.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="display: block; padding: 0"
+                >
+                  <nav
+                    class="kvo-navbar"
+                    style="justify-content: center; gap: 48px"
+                  >
+                    <a href="#" class="kvo-navbar-brand"><span>Brand</span></a>
+                    <div class="kvo-navbar-menu">
+                      <a href="#" class="kvo-navbar-link active">Home</a>
+                      <a href="#" class="kvo-navbar-link">Products</a>
+                      <a href="#" class="kvo-navbar-link">About</a>
+                      <a href="#" class="kvo-navbar-link">Contact</a>
+                    </div>
+                  </nav>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="centered-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="centered-html">&lt;nav class="kvo-navbar kvo-navbar-centered"&gt;...&lt;/nav&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="centered-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="centered-css">.kvo-navbar-centered {
+  justify-content: center;
+  gap: 40px;
 }</code></pre>
                   </div>
                 </details>
@@ -389,39 +454,28 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="/" class="footer-logo">
-              <img
+            <a href="/" class="footer-logo"
+              ><img
                 src="/assets/img/icon.png"
                 alt="KvoLib"
                 width="20"
                 height="20"
-              />
-              <span>KvoLib</span>
-            </a>
+              /><span>KvoLib</span></a
+            >
             <p>Build beautiful interfaces faster.</p>
           </div>
           <div class="footer-links">
             <h4>Product</h4>
             <ul>
-              <li><a href="/components.html#inputs">Components</a></li>
+              <li><a href="/components.html#navigation">Components</a></li>
               <li><a href="/docs.html">Documentation</a></li>
-              <li><a href="#">Changelog</a></li>
             </ul>
           </div>
           <div class="footer-links">
             <h4>Resources</h4>
             <ul>
               <li><a href="/docs.html">Getting Started</a></li>
-              <li><a href="#">Examples</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </div>
-          <div class="footer-links">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#">About</a></li>
               <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
             </ul>
           </div>
         </div>
@@ -431,6 +485,7 @@
       </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

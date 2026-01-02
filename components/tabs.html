@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="KvoLib Divider Components" />
-    <title>Divider - KvoLib</title>
+    <meta name="description" content="KvoLib Tabs Components" />
+    <title>Tabs - KvoLib</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <style>
       html,
       body {
@@ -24,7 +25,7 @@
     </style>
     <link rel="icon" type="image/png" href="/assets/img/icon.png" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/divider.css" />
+    <link rel="stylesheet" href="/assets/css/tabs.css" />
   </head>
   <body>
     <nav class="navbar">
@@ -52,9 +53,8 @@
             href="https://github.com/Kvoryz/KvoLib"
             target="_blank"
             class="nav-link"
-          >
-            <i class="fab fa-github"></i>
-          </a>
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
       </div>
     </nav>
@@ -62,12 +62,12 @@
     <section class="page-header">
       <div class="container">
         <div class="breadcrumb">
-          <a href="/components.html#layout">Components</a>
+          <a href="/components.html#navigation">Components</a>
           <i class="fas fa-chevron-right"></i>
-          <span>Divider</span>
+          <span>Tabs</span>
         </div>
-        <h1 class="page-title">Dividers</h1>
-        <p class="page-description">5 divider styles for content separation.</p>
+        <h1 class="page-title">Tabs</h1>
+        <p class="page-description">6 tab styles for content switching.</p>
       </div>
     </section>
 
@@ -76,27 +76,30 @@
         <div class="docs-grid">
           <aside class="docs-sidebar">
             <nav class="docs-nav">
-              <h4>Divider Styles</h4>
+              <h4>Tab Types</h4>
               <ul>
-                <li><a href="#solid">Solid</a></li>
-                <li><a href="#dashed">Dashed</a></li>
-                <li><a href="#gradient">Gradient</a></li>
-                <li><a href="#glow">Glow</a></li>
-                <li><a href="#text">With Text</a></li>
-                <li><a href="#vertical">Vertical</a></li>
+                <li><a href="#basic">Basic</a></li>
+                <li><a href="#pills">Pills</a></li>
+                <li><a href="#boxed">Boxed</a></li>
+                <li><a href="#icons">With Icons</a></li>
+                <li><a href="#neon">Neon</a></li>
               </ul>
             </nav>
           </aside>
 
           <main class="docs-content">
-            <section id="solid" class="docs-section">
-              <h2>Solid Divider</h2>
-              <p>Simple solid line divider.</p>
+            <!-- Basic Tabs -->
+            <section id="basic" class="docs-section">
+              <h2>Basic Tabs</h2>
+              <p>Standard tab navigation with underline.</p>
               <div class="preview-box">
                 <div class="preview-area preview-dark" style="display: block">
-                  <p>Content above</p>
-                  <div class="divider-solid"></div>
-                  <p>Content below</p>
+                  <div class="kvo-tabs">
+                    <button class="kvo-tab active">Overview</button>
+                    <button class="kvo-tab">Features</button>
+                    <button class="kvo-tab">Pricing</button>
+                    <button class="kvo-tab">FAQ</button>
+                  </div>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -111,230 +114,69 @@
                   </div>
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="solid-html">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="basic-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="solid-html">&lt;div class="divider-solid"&gt;&lt;/div&gt;</code></pre>
+                    <pre><code id="basic-html">&lt;div class="kvo-tabs"&gt;
+  &lt;button class="kvo-tab active"&gt;Overview&lt;/button&gt;
+  &lt;button class="kvo-tab"&gt;Features&lt;/button&gt;
+  &lt;button class="kvo-tab"&gt;Pricing&lt;/button&gt;
+  &lt;button class="kvo-tab"&gt;FAQ&lt;/button&gt;
+&lt;/div&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="solid-css">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="basic-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="solid-css">.divider-solid {
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 24px 0;
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="dashed" class="docs-section">
-              <h2>Dashed Divider</h2>
-              <p>Divider with dashed border.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <p>Content above</p>
-                  <div class="divider-dashed"></div>
-                  <p>Content below</p>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="dashed-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="dashed-html">&lt;div class="divider-dashed"&gt;&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="dashed-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="dashed-css">.divider-dashed {
-  border-top: 1px dashed rgba(255, 255, 255, 0.2);
-  margin: 24px 0;
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="gradient" class="docs-section">
-              <h2>Gradient Divider</h2>
-              <p>Divider with gradient effect.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <p>Content above</p>
-                  <div class="divider-gradient"></div>
-                  <p>Content below</p>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-html">&lt;div class="divider-gradient"&gt;&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="gradient-css">.divider-gradient {
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.5), transparent);
-  margin: 24px 0;
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="glow" class="docs-section">
-              <h2>Glow Divider</h2>
-              <p>Divider with neon glow effect.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <p>Content above</p>
-                  <div class="divider-glow"></div>
-                  <p>Content below</p>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="glow-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="glow-html">&lt;div class="divider-glow"&gt;&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="glow-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="glow-css">.divider-glow {
-  height: 2px;
-  background: #00d4ff;
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-  margin: 24px 0;
-}</code></pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="text" class="docs-section">
-              <h2>Divider with Text</h2>
-              <p>Divider with centered text label.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <p>Content above</p>
-                  <div class="divider-text">OR</div>
-                  <p>Content below</p>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="text-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="text-html">&lt;div class="divider-text"&gt;OR&lt;/div&gt;</code></pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="text-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre><code id="text-css">.divider-text {
+                    <pre><code id="basic-css">.kvo-tabs {
   display: flex;
-  align-items: center;
+  gap: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.divider-text::before,
-.divider-text::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
+.kvo-tab {
+  padding: 12px 20px;
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.kvo-tab.active {
+  color: #fff;
+}
+
+.kvo-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
 }</code></pre>
                   </div>
                 </details>
               </div>
             </section>
 
-            <section id="vertical" class="docs-section">
-              <h2>Vertical Divider</h2>
-              <p>Vertical divider for inline content.</p>
+            <!-- Pills Tabs -->
+            <section id="pills" class="docs-section">
+              <h2>Pills Tabs</h2>
+              <p>Tab navigation with pill style.</p>
               <div class="preview-box">
-                <div class="preview-area preview-dark">
-                  <span>Left content</span>
-                  <div class="divider-vertical"></div>
-                  <span>Right content</span>
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="kvo-tabs kvo-tabs-pills">
+                    <button class="kvo-tab active">Overview</button>
+                    <button class="kvo-tab">Features</button>
+                    <button class="kvo-tab">Pricing</button>
+                  </div>
                 </div>
                 <details class="code-dropdown">
                   <summary>
@@ -349,25 +191,210 @@
                   </div>
                   <div class="code-content active" data-content="html">
                     <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="vertical-html">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="pills-html">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="vertical-html">&lt;div class="divider-vertical"&gt;&lt;/div&gt;</code></pre>
+                    <pre><code id="pills-html">&lt;div class="kvo-tabs kvo-tabs-pills"&gt;...&lt;/div&gt;</code></pre>
                   </div>
                   <div class="code-content" data-content="css">
                     <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="vertical-css">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="pills-css">
                         <i class="fas fa-copy"></i> Copy
                       </button>
                     </div>
-                    <pre><code id="vertical-css">.divider-vertical {
-  width: 1px;
-  min-height: 50px;
+                    <pre><code id="pills-css">.kvo-tabs-pills {
+  border-bottom: none;
+  gap: 8px;
+}
+
+.kvo-tabs-pills .kvo-tab {
+  border-radius: 8px;
+}
+
+.kvo-tabs-pills .kvo-tab:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.kvo-tabs-pills .kvo-tab.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.kvo-tabs-pills .kvo-tab.active::after {
+  display: none;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Boxed Tabs -->
+            <section id="boxed" class="docs-section">
+              <h2>Boxed Tabs</h2>
+              <p>Tab navigation with box container.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="kvo-tabs kvo-tabs-boxed">
+                    <button class="kvo-tab active">Tab 1</button>
+                    <button class="kvo-tab">Tab 2</button>
+                    <button class="kvo-tab">Tab 3</button>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="boxed-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="boxed-html">&lt;div class="kvo-tabs kvo-tabs-boxed"&gt;...&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="boxed-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="boxed-css">.kvo-tabs-boxed {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kvo-tabs-boxed .kvo-tab {
+  border-radius: 8px;
+}
+
+.kvo-tabs-boxed .kvo-tab.active {
   background: rgba(255, 255, 255, 0.1);
-  margin: 0 24px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Tabs with Icons -->
+            <section id="icons" class="docs-section">
+              <h2>Tabs with Icons</h2>
+              <p>Tab navigation with icons.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="kvo-tabs">
+                    <button class="kvo-tab kvo-tab-icon active">
+                      <i class="fas fa-home"></i> Home
+                    </button>
+                    <button class="kvo-tab kvo-tab-icon">
+                      <i class="fas fa-user"></i> Profile
+                    </button>
+                    <button class="kvo-tab kvo-tab-icon">
+                      <i class="fas fa-cog"></i> Settings
+                    </button>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="icons-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="icons-html">&lt;button class="kvo-tab kvo-tab-icon"&gt;
+  &lt;i class="fas fa-home"&gt;&lt;/i&gt; Home
+&lt;/button&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="icons-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="icons-css">.kvo-tab-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.kvo-tab-icon i {
+  font-size: 0.875rem;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Neon Tabs -->
+            <section id="neon" class="docs-section">
+              <h2>Neon Tabs</h2>
+              <p>Glowing neon style tabs.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <div class="kvo-tabs kvo-tabs-neon">
+                    <button class="kvo-tab active">Overview</button>
+                    <button class="kvo-tab">Features</button>
+                    <button class="kvo-tab">Pricing</button>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span
+                      ><button class="copy-btn" data-copy="neon-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="neon-html">&lt;div class="kvo-tabs kvo-tabs-neon"&gt;...&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span
+                      ><button class="copy-btn" data-copy="neon-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="neon-css">.kvo-tabs-neon .kvo-tab.active {
+  color: #00d4ff;
+}
+
+.kvo-tabs-neon .kvo-tab.active::after {
+  background: #00d4ff;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }</code></pre>
                   </div>
                 </details>
@@ -382,39 +409,28 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="/" class="footer-logo">
-              <img
+            <a href="/" class="footer-logo"
+              ><img
                 src="/assets/img/icon.png"
                 alt="KvoLib"
                 width="20"
                 height="20"
-              />
-              <span>KvoLib</span>
-            </a>
+              /><span>KvoLib</span></a
+            >
             <p>Build beautiful interfaces faster.</p>
           </div>
           <div class="footer-links">
             <h4>Product</h4>
             <ul>
-              <li><a href="/components.html#layout">Components</a></li>
+              <li><a href="/components.html#navigation">Components</a></li>
               <li><a href="/docs.html">Documentation</a></li>
-              <li><a href="#">Changelog</a></li>
             </ul>
           </div>
           <div class="footer-links">
             <h4>Resources</h4>
             <ul>
               <li><a href="/docs.html">Getting Started</a></li>
-              <li><a href="#">Examples</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </div>
-          <div class="footer-links">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#">About</a></li>
               <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
             </ul>
           </div>
         </div>
@@ -424,6 +440,7 @@
       </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

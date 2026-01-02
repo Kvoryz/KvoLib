@@ -1,0 +1,194 @@
+/* ========================================
+   LINK COMPONENTS
+   ======================================== */
+
+/* Link 1 - Basic */
+.kvo-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.kvo-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Link 2 - Underline Animation */
+.kvo-link-animated {
+  color: #667eea;
+  text-decoration: none;
+  position: relative;
+}
+
+.kvo-link-animated::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.kvo-link-animated:hover::after {
+  width: 100%;
+}
+
+/* Link 3 - Gradient */
+.kvo-link-gradient {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.kvo-link-gradient:hover {
+  background: linear-gradient(90deg, #764ba2, #f093fb);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Link 4 - With Arrow */
+.kvo-link-arrow {
+  color: #667eea;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.kvo-link-arrow i {
+  font-size: 0.75rem;
+  transition: transform 0.2s;
+}
+
+.kvo-link-arrow:hover {
+  color: #764ba2;
+}
+
+.kvo-link-arrow:hover i {
+  transform: translateX(4px);
+}
+
+/* Link 5 - With Icon */
+.kvo-link-icon {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+
+.kvo-link-icon i {
+  color: #667eea;
+}
+
+.kvo-link-icon:hover {
+  color: #fff;
+}
+
+/* Link 6 - External */
+.kvo-link-external {
+  color: #667eea;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.kvo-link-external::after {
+  content: "\f35d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+.kvo-link-external:hover {
+  text-decoration: underline;
+}
+
+/* Link 7 - Neon */
+.kvo-link-neon {
+  color: #00d4ff;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  transition: all 0.2s;
+}
+
+.kvo-link-neon:hover {
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+}
+
+/* Link 8 - Subtle */
+.kvo-link-subtle {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+  transition: all 0.2s;
+}
+
+.kvo-link-subtle:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* Link 9 - Button Style */
+.kvo-link-button {
+  display: inline-block;
+  padding: 8px 16px;
+  color: #667eea;
+  text-decoration: none;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.kvo-link-button:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: #667eea;
+}
+
+/* Link 10 - Nav Style */
+.kvo-link-nav {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.kvo-link-nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #667eea;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.kvo-link-nav:hover {
+  color: #fff;
+}
+
+.kvo-link-nav:hover::after {
+  transform: scaleX(1);
+}
+
+.kvo-link-nav.active {
+  color: #fff;
+}
+
+.kvo-link-nav.active::after {
+  transform: scaleX(1);
+}
