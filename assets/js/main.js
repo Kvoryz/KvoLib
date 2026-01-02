@@ -187,7 +187,26 @@ const searchData = [
   },
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
+async function loadIncludes() {
+  const includes = document.querySelectorAll("[data-include]");
+
+  for (const el of includes) {
+    const file = el.getAttribute("data-include");
+    try {
+      const response = await fetch("/" + file);
+      if (response.ok) {
+        const html = await response.text();
+        el.outerHTML = html;
+      }
+    } catch (err) {
+      console.error("Failed to load include:", file, err);
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadIncludes();
+
   if (typeof AOS !== "undefined") {
     AOS.init({
       duration: 800,

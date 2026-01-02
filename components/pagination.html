@@ -28,36 +28,7 @@
     <link rel="stylesheet" href="/assets/css/pagination.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="/" class="nav-logo">
-          <img src="/assets/img/icon.png" alt="KvoLib" width="24" height="24" />
-          <span>KvoLib</span>
-        </a>
-        <div class="search-wrapper">
-          <i class="fas fa-search search-icon"></i>
-          <input
-            type="text"
-            class="search-input"
-            id="global-search"
-            placeholder="Search components..."
-          />
-          <span class="search-kbd">⌘K</span>
-          <div class="search-results" id="search-results"></div>
-        </div>
-        <div class="nav-links">
-          <a href="/" class="nav-link">Home</a>
-          <a href="/components.html" class="nav-link">Components</a>
-          <a href="/docs.html" class="nav-link">Docs</a>
-          <a
-            href="https://github.com/Kvoryz/KvoLib"
-            target="_blank"
-            class="nav-link"
-            ><i class="fab fa-github"></i
-          ></a>
-        </div>
-      </div>
-    </nav>
+        <script src="/assets/js/navbar-loader.js"></script>
 
     <section class="page-header">
       <div class="container">
@@ -496,40 +467,7 @@
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <a href="/" class="footer-logo"
-              ><img
-                src="/assets/img/icon.png"
-                alt="KvoLib"
-                width="20"
-                height="20"
-              /><span>KvoLib</span></a
-            >
-            <p>Build beautiful interfaces faster.</p>
-          </div>
-          <div class="footer-links">
-            <h4>Product</h4>
-            <ul>
-              <li><a href="/components.html#navigation">Components</a></li>
-              <li><a href="/docs.html">Documentation</a></li>
-            </ul>
-          </div>
-          <div class="footer-links">
-            <h4>Resources</h4>
-            <ul>
-              <li><a href="/docs.html">Getting Started</a></li>
-              <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2026 KvoLib. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <div data-include="assets/layout/footer.html"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
