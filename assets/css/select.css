@@ -1,0 +1,182 @@
+/* Select 1 - Modern */
+.select-modern {
+  position: relative;
+  width: 100%;
+}
+
+.select-modern select {
+  width: 100%;
+  padding: 14px 40px 14px 16px;
+  font-size: 0.95rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  appearance: none;
+}
+
+.select-modern select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.select-modern::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  font-size: 0.75rem;
+}
+
+/* Select 2 - Minimal */
+.select-minimal {
+  position: relative;
+  width: 100%;
+}
+
+.select-minimal select {
+  width: 100%;
+  padding: 12px 36px 12px 0;
+  font-size: 0.95rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+  appearance: none;
+}
+
+.select-minimal select:focus {
+  outline: none;
+  border-bottom-color: #fff;
+}
+
+.select-minimal::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  font-size: 0.7rem;
+}
+
+/* Select 3 - Glass */
+.select-glass {
+  position: relative;
+  width: 100%;
+}
+
+.select-glass select {
+  width: 100%;
+  padding: 14px 40px 14px 16px;
+  font-size: 0.95rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  appearance: none;
+}
+
+.select-glass select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.select-glass::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  font-size: 0.75rem;
+}
+
+/* Select 4 - Neon */
+.select-neon {
+  position: relative;
+  width: 100%;
+}
+
+.select-neon select {
+  width: 100%;
+  padding: 14px 40px 14px 16px;
+  font-size: 0.95rem;
+  color: #00d4ff;
+  background: rgba(0, 212, 255, 0.05);
+  border: 2px solid #00d4ff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  appearance: none;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+.select-neon select:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5), 0 0 40px rgba(0, 212, 255, 0.2);
+}
+
+.select-neon::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  color: #00d4ff;
+  pointer-events: none;
+  font-size: 0.75rem;
+}
+
+/* Select 5 - Gradient Border */
+.select-gradient {
+  position: relative;
+  width: 100%;
+  padding: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 12px;
+}
+
+.select-gradient select {
+  width: 100%;
+  padding: 14px 40px 14px 16px;
+  font-size: 0.95rem;
+  color: #fff;
+  background: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  appearance: none;
+}
+
+.select-gradient select:focus {
+  outline: none;
+}
+
+.select-gradient::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  font-size: 0.75rem;
+}

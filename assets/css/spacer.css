@@ -1,0 +1,61 @@
+/* Spacer utility classes */
+.spacer-xs {
+  height: 8px;
+}
+
+.spacer-sm {
+  height: 16px;
+}
+
+.spacer-md {
+  height: 24px;
+}
+
+.spacer-lg {
+  height: 32px;
+}
+
+.spacer-xl {
+  height: 48px;
+}
+
+.spacer-2xl {
+  height: 64px;
+}
+
+/* Horizontal spacers */
+.spacer-h-xs {
+  width: 8px;
+  display: inline-block;
+}
+
+.spacer-h-sm {
+  width: 16px;
+  display: inline-block;
+}
+
+.spacer-h-md {
+  width: 24px;
+  display: inline-block;
+}
+
+.spacer-h-lg {
+  width: 32px;
+  display: inline-block;
+}
+
+.spacer-h-xl {
+  width: 48px;
+  display: inline-block;
+}
+
+.spacer-h-2xl {
+  width: 64px;
+  display: inline-block;
+}
+
+/* Demo visualization */
+.spacer-demo {
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px dashed rgba(102, 126, 234, 0.3);
+}

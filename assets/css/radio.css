@@ -1,0 +1,298 @@
+/* Radio 1 - Modern */
+.radio-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.radio-modern input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-modern .radiomark {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.radio-modern .radiomark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+}
+
+.radio-modern input:checked ~ .radiomark {
+  background: #667eea;
+  border-color: #667eea;
+}
+
+.radio-modern input:checked ~ .radiomark::after {
+  display: block;
+}
+
+.radio-modern .label-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+/* Radio 2 - Minimal */
+.radio-minimal {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.radio-minimal input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-minimal .radiomark {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.radio-minimal .radiomark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #000;
+}
+
+.radio-minimal input:checked ~ .radiomark {
+  background: #fff;
+  border-color: #fff;
+}
+
+.radio-minimal input:checked ~ .radiomark::after {
+  display: block;
+}
+
+.radio-minimal .label-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+/* Radio 3 - Neon */
+.radio-neon {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.radio-neon input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-neon .radiomark {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #00d4ff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  box-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
+}
+
+.radio-neon .radiomark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00d4ff;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.radio-neon input:checked ~ .radiomark {
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.6), 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+.radio-neon input:checked ~ .radiomark::after {
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.radio-neon .label-text {
+  color: #00d4ff;
+  font-size: 0.95rem;
+}
+
+/* Radio 4 - Gradient */
+.radio-gradient {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.radio-gradient input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-gradient .radiomark {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.radio-gradient .radiomark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.radio-gradient .radiomark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  z-index: 1;
+}
+
+.radio-gradient input:checked ~ .radiomark {
+  border-color: transparent;
+}
+
+.radio-gradient input:checked ~ .radiomark::before {
+  opacity: 1;
+}
+
+.radio-gradient input:checked ~ .radiomark::after {
+  display: block;
+}
+
+.radio-gradient .label-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+/* Radio 5 - Ripple */
+.radio-ripple {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.radio-ripple input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-ripple .radiomark {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.radio-ripple .radiomark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(102, 126, 234, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.radio-ripple .radiomark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #667eea;
+  z-index: 1;
+}
+
+.radio-ripple input:checked ~ .radiomark {
+  border-color: #667eea;
+}
+
+.radio-ripple input:checked ~ .radiomark::before {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 0;
+}
+
+.radio-ripple input:checked ~ .radiomark::after {
+  display: block;
+}
+
+.radio-ripple .label-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}

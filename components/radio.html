@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KvoLib Radio Components" />
+    <title>Radio Buttons - KvoLib</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      html,
+      body {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/radio.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/img/icon.png" alt="KvoLib" width="24" height="24" />
+          <span>KvoLib</span>
+        </a>
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="global-search"
+            placeholder="Search components..."
+          />
+          <span class="search-kbd">⌘K</span>
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/components.html" class="nav-link">Components</a>
+          <a href="/docs.html" class="nav-link">Docs</a>
+          <a
+            href="https://github.com/Kvoryz/KvoLib"
+            target="_blank"
+            class="nav-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Radio Buttons</span>
+        </div>
+        <h1 class="page-title">Radio Buttons</h1>
+        <p class="page-description">
+          5 modern radio button styles with smooth animations.
+        </p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Radio Styles</h4>
+              <ul>
+                <li><a href="#modern">Modern</a></li>
+                <li><a href="#minimal">Minimal</a></li>
+                <li><a href="#neon">Neon</a></li>
+                <li><a href="#gradient">Gradient</a></li>
+                <li><a href="#ripple">Ripple</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <!-- Radio 1 - Modern -->
+            <section id="modern" class="docs-section">
+              <h2>Modern Radio</h2>
+              <p>Clean radio button with smooth animation.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <label class="radio-modern">
+                    <input type="radio" name="modern" />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Option 1</span>
+                  </label>
+                  <label class="radio-modern">
+                    <input type="radio" name="modern" checked />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Option 2</span>
+                  </label>
+                  <label class="radio-modern">
+                    <input type="radio" name="modern" />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Option 3</span>
+                  </label>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="modern-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="modern-html">&lt;label class="radio-modern"&gt;
+  &lt;input type="radio" name="group" /&gt;
+  &lt;span class="radiomark"&gt;&lt;/span&gt;
+  &lt;span class="label-text"&gt;Option 1&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="modern-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="modern-css">.radio-modern input:checked ~ .radiomark {
+  background: #667eea;
+  border-color: #667eea;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Radio 2 - Minimal -->
+            <section id="minimal" class="docs-section">
+              <h2>Minimal Radio</h2>
+              <p>Simple and clean radio button design.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <label class="radio-minimal">
+                    <input type="radio" name="minimal" />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Small</span>
+                  </label>
+                  <label class="radio-minimal">
+                    <input type="radio" name="minimal" checked />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Medium</span>
+                  </label>
+                  <label class="radio-minimal">
+                    <input type="radio" name="minimal" />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Large</span>
+                  </label>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="minimal-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="minimal-html">&lt;label class="radio-minimal"&gt;
+  &lt;input type="radio" name="size" /&gt;
+  &lt;span class="radiomark"&gt;&lt;/span&gt;
+  &lt;span class="label-text"&gt;Small&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="minimal-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="minimal-css">.radio-minimal input:checked ~ .radiomark {
+  background: #fff;
+  border-color: #fff;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Radio 3 - Neon -->
+            <section id="neon" class="docs-section">
+              <h2>Neon Radio</h2>
+              <p>Glowing neon effect radio button.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <label class="radio-neon">
+                    <input type="radio" name="neon" />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Light theme</span>
+                  </label>
+                  <label class="radio-neon">
+                    <input type="radio" name="neon" checked />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Dark theme</span>
+                  </label>
+                  <label class="radio-neon">
+                    <input type="radio" name="neon" />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Auto theme</span>
+                  </label>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="neon-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="neon-html">&lt;label class="radio-neon"&gt;
+  &lt;input type="radio" name="theme" /&gt;
+  &lt;span class="radiomark"&gt;&lt;/span&gt;
+  &lt;span class="label-text"&gt;Dark theme&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="neon-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="neon-css">.radio-neon input:checked ~ .radiomark {
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.6),
+              0 0 30px rgba(0, 212, 255, 0.3);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Radio 4 - Gradient -->
+            <section id="gradient" class="docs-section">
+              <h2>Gradient Radio</h2>
+              <p>Radio button with beautiful gradient fill.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <label class="radio-gradient">
+                    <input type="radio" name="gradient" />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Monthly</span>
+                  </label>
+                  <label class="radio-gradient">
+                    <input type="radio" name="gradient" checked />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Yearly</span>
+                  </label>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="gradient-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-html">&lt;label class="radio-gradient"&gt;
+  &lt;input type="radio" name="plan" /&gt;
+  &lt;span class="radiomark"&gt;&lt;/span&gt;
+  &lt;span class="label-text"&gt;Monthly&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="gradient-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-css">.radio-gradient .radiomark::before {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  opacity: 0;
+}
+
+.radio-gradient input:checked ~ .radiomark::before {
+  opacity: 1;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- Radio 5 - Ripple -->
+            <section id="ripple" class="docs-section">
+              <h2>Ripple Radio</h2>
+              <p>Radio with ripple effect animation.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <label class="radio-ripple">
+                    <input type="radio" name="ripple" />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Low priority</span>
+                  </label>
+                  <label class="radio-ripple">
+                    <input type="radio" name="ripple" checked />
+                    <span class="radiomark"></span>
+                    <span class="label-text">Medium priority</span>
+                  </label>
+                  <label class="radio-ripple">
+                    <input type="radio" name="ripple" />
+                    <span class="radiomark"></span>
+                    <span class="label-text">High priority</span>
+                  </label>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="ripple-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="ripple-html">&lt;label class="radio-ripple"&gt;
+  &lt;input type="radio" name="priority" /&gt;
+  &lt;span class="radiomark"&gt;&lt;/span&gt;
+  &lt;span class="label-text"&gt;High priority&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="ripple-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="ripple-css">.radio-ripple input:checked ~ .radiomark::before {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 0;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="footer-logo">
+              <img
+                src="/assets/img/icon.png"
+                alt="KvoLib"
+                width="20"
+                height="20"
+              />
+              <span>KvoLib</span>
+            </a>
+            <p>Build beautiful interfaces faster.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="/components.html">Components</a></li>
+              <li><a href="/docs.html">Documentation</a></li>
+              <li><a href="#">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/docs.html">Getting Started</a></li>
+              <li><a href="#">Examples</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 KvoLib. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KvoLib Divider Components" />
+    <title>Divider - KvoLib</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      html,
+      body {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/divider.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/img/icon.png" alt="KvoLib" width="24" height="24" />
+          <span>KvoLib</span>
+        </a>
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="global-search"
+            placeholder="Search components..."
+          />
+          <span class="search-kbd">⌘K</span>
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/components.html" class="nav-link">Components</a>
+          <a href="/docs.html" class="nav-link">Docs</a>
+          <a
+            href="https://github.com/Kvoryz/KvoLib"
+            target="_blank"
+            class="nav-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Divider</span>
+        </div>
+        <h1 class="page-title">Dividers</h1>
+        <p class="page-description">5 divider styles for content separation.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Divider Styles</h4>
+              <ul>
+                <li><a href="#solid">Solid</a></li>
+                <li><a href="#dashed">Dashed</a></li>
+                <li><a href="#gradient">Gradient</a></li>
+                <li><a href="#glow">Glow</a></li>
+                <li><a href="#text">With Text</a></li>
+                <li><a href="#vertical">Vertical</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="solid" class="docs-section">
+              <h2>Solid Divider</h2>
+              <p>Simple solid line divider.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <p>Content above</p>
+                  <div class="divider-solid"></div>
+                  <p>Content below</p>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="solid-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="solid-html">&lt;div class="divider-solid"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="solid-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="solid-css">.divider-solid {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 24px 0;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="dashed" class="docs-section">
+              <h2>Dashed Divider</h2>
+              <p>Divider with dashed border.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <p>Content above</p>
+                  <div class="divider-dashed"></div>
+                  <p>Content below</p>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="dashed-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="dashed-html">&lt;div class="divider-dashed"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="dashed-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="dashed-css">.divider-dashed {
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  margin: 24px 0;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="gradient" class="docs-section">
+              <h2>Gradient Divider</h2>
+              <p>Divider with gradient effect.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <p>Content above</p>
+                  <div class="divider-gradient"></div>
+                  <p>Content below</p>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="gradient-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-html">&lt;div class="divider-gradient"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="gradient-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-css">.divider-gradient {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.5), transparent);
+  margin: 24px 0;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="glow" class="docs-section">
+              <h2>Glow Divider</h2>
+              <p>Divider with neon glow effect.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <p>Content above</p>
+                  <div class="divider-glow"></div>
+                  <p>Content below</p>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="glow-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="glow-html">&lt;div class="divider-glow"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="glow-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="glow-css">.divider-glow {
+  height: 2px;
+  background: #00d4ff;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  margin: 24px 0;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="text" class="docs-section">
+              <h2>Divider with Text</h2>
+              <p>Divider with centered text label.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark" style="display: block">
+                  <p>Content above</p>
+                  <div class="divider-text">OR</div>
+                  <p>Content below</p>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="text-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="text-html">&lt;div class="divider-text"&gt;OR&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="text-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="text-css">.divider-text {
+  display: flex;
+  align-items: center;
+}
+
+.divider-text::before,
+.divider-text::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="vertical" class="docs-section">
+              <h2>Vertical Divider</h2>
+              <p>Vertical divider for inline content.</p>
+              <div class="preview-box">
+                <div class="preview-area preview-dark">
+                  <span>Left content</span>
+                  <div class="divider-vertical"></div>
+                  <span>Right content</span>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="vertical-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="vertical-html">&lt;div class="divider-vertical"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="vertical-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="vertical-css">.divider-vertical {
+  width: 1px;
+  min-height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 24px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="footer-logo">
+              <img
+                src="/assets/img/icon.png"
+                alt="KvoLib"
+                width="20"
+                height="20"
+              />
+              <span>KvoLib</span>
+            </a>
+            <p>Build beautiful interfaces faster.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="/components.html">Components</a></li>
+              <li><a href="/docs.html">Documentation</a></li>
+              <li><a href="#">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/docs.html">Getting Started</a></li>
+              <li><a href="#">Examples</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 KvoLib. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

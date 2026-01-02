@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KvoLib Container Components" />
+    <title>Container - KvoLib</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      html,
+      body {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/container.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/img/icon.png" alt="KvoLib" width="24" height="24" />
+          <span>KvoLib</span>
+        </a>
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="global-search"
+            placeholder="Search components..."
+          />
+          <span class="search-kbd">⌘K</span>
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/components.html" class="nav-link">Components</a>
+          <a href="/docs.html" class="nav-link">Docs</a>
+          <a
+            href="https://github.com/Kvoryz/KvoLib"
+            target="_blank"
+            class="nav-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Container</span>
+        </div>
+        <h1 class="page-title">Containers</h1>
+        <p class="page-description">4 container styles for content layout.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Container Types</h4>
+              <ul>
+                <li><a href="#centered">Centered</a></li>
+                <li><a href="#fluid">Fluid</a></li>
+                <li><a href="#narrow">Narrow</a></li>
+                <li><a href="#wide">Wide</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="centered" class="docs-section">
+              <h2>Centered Container</h2>
+              <p>Standard centered container with max-width 1200px.</p>
+              <div class="preview-box" style="padding: 0">
+                <div class="container-demo">
+                  <div class="container-centered">
+                    <div class="container-demo-content">
+                      <p>Centered container (max-width: 1200px)</p>
+                    </div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="centered-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="centered-html">&lt;div class="container-centered"&gt;
+  &lt;!-- Content here --&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="centered-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="centered-css">.container-centered {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="fluid" class="docs-section">
+              <h2>Fluid Container</h2>
+              <p>Full-width fluid container.</p>
+              <div class="preview-box" style="padding: 0">
+                <div class="container-demo">
+                  <div class="container-fluid">
+                    <div class="container-demo-content">
+                      <p>Fluid container (100% width)</p>
+                    </div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="fluid-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="fluid-html">&lt;div class="container-fluid"&gt;
+  &lt;!-- Content here --&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="fluid-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="fluid-css">.container-fluid {
+  width: 100%;
+  padding: 0 24px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="narrow" class="docs-section">
+              <h2>Narrow Container</h2>
+              <p>Narrow container for focused content (max-width: 768px).</p>
+              <div class="preview-box" style="padding: 0">
+                <div class="container-demo">
+                  <div class="container-narrow">
+                    <div class="container-demo-content">
+                      <p>Narrow container (max-width: 768px)</p>
+                    </div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="narrow-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="narrow-html">&lt;div class="container-narrow"&gt;
+  &lt;!-- Content here --&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="narrow-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="narrow-css">.container-narrow {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 24px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="wide" class="docs-section">
+              <h2>Wide Container</h2>
+              <p>Wide container for large layouts (max-width: 1400px).</p>
+              <div class="preview-box" style="padding: 0">
+                <div class="container-demo">
+                  <div class="container-wide">
+                    <div class="container-demo-content">
+                      <p>Wide container (max-width: 1400px)</p>
+                    </div>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="wide-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="wide-html">&lt;div class="container-wide"&gt;
+  &lt;!-- Content here --&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="wide-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="wide-css">.container-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="footer-logo">
+              <img
+                src="/assets/img/icon.png"
+                alt="KvoLib"
+                width="20"
+                height="20"
+              />
+              <span>KvoLib</span>
+            </a>
+            <p>Build beautiful interfaces faster.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="/components.html">Components</a></li>
+              <li><a href="/docs.html">Documentation</a></li>
+              <li><a href="#">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/docs.html">Getting Started</a></li>
+              <li><a href="#">Examples</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 KvoLib. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+/* Container 1 - Centered */
+.container-centered {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Container 2 - Fluid */
+.container-fluid {
+  width: 100%;
+  padding: 0 24px;
+}
+
+/* Container 3 - Narrow */
+.container-narrow {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Container 4 - Wide */
+.container-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Demo styles */
+.container-demo {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 40px 0;
+  margin-bottom: 24px;
+}
+
+.container-demo-content {
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px dashed rgba(102, 126, 234, 0.3);
+  border-radius: 6px;
+  padding: 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+}

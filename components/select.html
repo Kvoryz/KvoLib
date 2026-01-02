@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KvoLib Select Components" />
+    <title>Select Dropdowns - KvoLib</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      html,
+      body {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/select.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/img/icon.png" alt="KvoLib" width="24" height="24" />
+          <span>KvoLib</span>
+        </a>
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="global-search"
+            placeholder="Search components..."
+          />
+          <span class="search-kbd">⌘K</span>
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/components.html" class="nav-link">Components</a>
+          <a href="/docs.html" class="nav-link">Docs</a>
+          <a
+            href="https://github.com/Kvoryz/KvoLib"
+            target="_blank"
+            class="nav-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Select</span>
+        </div>
+        <h1 class="page-title">Select Dropdowns</h1>
+        <p class="page-description">5 beautiful select dropdown styles.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Select Styles</h4>
+              <ul>
+                <li><a href="#modern">Modern</a></li>
+                <li><a href="#minimal">Minimal</a></li>
+                <li><a href="#glass">Glassmorphism</a></li>
+                <li><a href="#neon">Neon</a></li>
+                <li><a href="#gradient">Gradient Border</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="modern" class="docs-section">
+              <h2>Modern Select</h2>
+              <p>Clean modern select dropdown.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="select-modern">
+                    <select>
+                      <option>Select option...</option>
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </select>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="modern-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="modern-html">&lt;div class="select-modern"&gt;
+  &lt;select&gt;
+    &lt;option&gt;Select option...&lt;/option&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="modern-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="modern-css">.select-modern select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="minimal" class="docs-section">
+              <h2>Minimal Select</h2>
+              <p>Minimal underline select.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="select-minimal">
+                    <select>
+                      <option>Choose language...</option>
+                      <option>English</option>
+                      <option>Spanish</option>
+                      <option>French</option>
+                    </select>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="minimal-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="minimal-html">&lt;div class="select-minimal"&gt;
+  &lt;select&gt;
+    &lt;option&gt;Choose language...&lt;/option&gt;
+    &lt;option&gt;English&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="minimal-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="minimal-css">.select-minimal select:focus {
+  outline: none;
+  border-bottom-color: #fff;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="glass" class="docs-section">
+              <h2>Glassmorphism Select</h2>
+              <p>Glass blur effect select.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-gradient"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="select-glass">
+                    <select>
+                      <option>Select country...</option>
+                      <option>United States</option>
+                      <option>United Kingdom</option>
+                      <option>Canada</option>
+                    </select>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="glass-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="glass-html">&lt;div class="select-glass"&gt;
+  &lt;select&gt;
+    &lt;option&gt;Select country...&lt;/option&gt;
+    &lt;option&gt;United States&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="glass-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="glass-css">.select-glass select {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="neon" class="docs-section">
+              <h2>Neon Select</h2>
+              <p>Glowing neon select dropdown.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="select-neon">
+                    <select>
+                      <option>Choose plan...</option>
+                      <option>Free</option>
+                      <option>Pro</option>
+                      <option>Enterprise</option>
+                    </select>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="neon-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="neon-html">&lt;div class="select-neon"&gt;
+  &lt;select&gt;
+    &lt;option&gt;Choose plan...&lt;/option&gt;
+    &lt;option&gt;Free&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="neon-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="neon-css">.select-neon select:focus {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5),
+              0 0 40px rgba(0, 212, 255, 0.2);
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section id="gradient" class="docs-section">
+              <h2>Gradient Border Select</h2>
+              <p>Select with animated gradient border.</p>
+              <div class="preview-box">
+                <div
+                  class="preview-area preview-dark"
+                  style="flex-direction: column; align-items: stretch"
+                >
+                  <div class="select-gradient">
+                    <select>
+                      <option>Select category...</option>
+                      <option>Technology</option>
+                      <option>Design</option>
+                      <option>Marketing</option>
+                    </select>
+                  </div>
+                </div>
+                <details class="code-dropdown">
+                  <summary>
+                    <i class="fas fa-code"></i> View Code
+                    <i class="fas fa-chevron-down"></i>
+                  </summary>
+                  <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">
+                      HTML
+                    </button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                  </div>
+                  <div class="code-content active" data-content="html">
+                    <div class="code-header">
+                      <span>HTML</span>
+                      <button class="copy-btn" data-copy="gradient-html">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-html">&lt;div class="select-gradient"&gt;
+  &lt;select&gt;
+    &lt;option&gt;Select category...&lt;/option&gt;
+    &lt;option&gt;Technology&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                  <div class="code-content" data-content="css">
+                    <div class="code-header">
+                      <span>CSS</span>
+                      <button class="copy-btn" data-copy="gradient-css">
+                        <i class="fas fa-copy"></i> Copy
+                      </button>
+                    </div>
+                    <pre><code id="gradient-css">.select-gradient {
+  padding: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 12px;
+}</code></pre>
+                  </div>
+                </details>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="footer-logo">
+              <img
+                src="/assets/img/icon.png"
+                alt="KvoLib"
+                width="20"
+                height="20"
+              />
+              <span>KvoLib</span>
+            </a>
+            <p>Build beautiful interfaces faster.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="/components.html">Components</a></li>
+              <li><a href="/docs.html">Documentation</a></li>
+              <li><a href="#">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/docs.html">Getting Started</a></li>
+              <li><a href="#">Examples</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="https://github.com/Kvoryz/KvoLib">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 KvoLib. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

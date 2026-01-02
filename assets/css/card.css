@@ -1,0 +1,139 @@
+/* Card 1 - Basic */
+.card-basic {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.card-basic:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Card 2 - Glass */
+.card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.card-glass:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Card 3 - Gradient */
+.card-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+  color: #fff;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-gradient:hover::before {
+  opacity: 0.1;
+}
+
+/* Card 4 - Neon */
+.card-neon {
+  background: rgba(0, 212, 255, 0.05);
+  border: 2px solid #00d4ff;
+  border-radius: 12px;
+  padding: 24px;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card-neon:hover {
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.4), 0 0 60px rgba(0, 212, 255, 0.2);
+  background: rgba(0, 212, 255, 0.08);
+}
+
+/* Card 5 - 3D */
+.card-3d {
+  background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+  border: none;
+  border-radius: 12px;
+  padding: 24px;
+  color: #fff;
+  box-shadow: 8px 8px 16px #0d0d0d, -8px -8px 16px #3d3d3d;
+  transition: all 0.3s ease;
+}
+
+.card-3d:hover {
+  transform: translateY(-4px);
+  box-shadow: 12px 12px 24px #0d0d0d, -12px -12px 24px #3d3d3d;
+}
+
+/* Card 6 - Hoverable */
+.card-hoverable {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  color: #fff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.card-hoverable:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Common Elements */
+.card-header {
+  margin-bottom: 16px;
+}
+
+.card-title {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.card-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card-body {
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

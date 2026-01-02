@@ -1,57 +1,115 @@
 const searchData = [
+  // Input Components
   {
     title: "Buttons",
-    desc: "Button variants and sizes",
+    desc: "20+ unique button styles with animations",
     icon: "fa-hand-pointer",
-    url: "components/buttons.html",
+    url: "/components/buttons.html",
   },
   {
     title: "Forms",
-    desc: "Input, select, checkbox",
+    desc: "Input fields with various styles",
     icon: "fa-keyboard",
-    url: "components/forms.html",
+    url: "/components/forms.html",
+  },
+  {
+    title: "Checkbox",
+    desc: "8 checkbox styles with custom animations",
+    icon: "fa-check-square",
+    url: "/components/checkbox.html",
+  },
+  {
+    title: "Radio",
+    desc: "5 radio button styles for selection",
+    icon: "fa-dot-circle",
+    url: "/components/radio.html",
+  },
+  {
+    title: "Switch",
+    desc: "6 toggle switch styles",
+    icon: "fa-toggle-on",
+    url: "/components/switch.html",
+  },
+  {
+    title: "Select",
+    desc: "5 dropdown select styles",
+    icon: "fa-caret-down",
+    url: "/components/select.html",
+  },
+  // Layout Components
+  {
+    title: "Grid",
+    desc: "5 responsive grid layouts",
+    icon: "fa-columns",
+    url: "/components/grid.html",
+  },
+  {
+    title: "Container",
+    desc: "4 container styles for layouts",
+    icon: "fa-box",
+    url: "/components/container.html",
+  },
+  {
+    title: "Card",
+    desc: "6 card styles for content display",
+    icon: "fa-id-card",
+    url: "/components/card.html",
+  },
+  {
+    title: "Divider",
+    desc: "6 divider styles for sections",
+    icon: "fa-grip-lines",
+    url: "/components/divider.html",
+  },
+  {
+    title: "Spacer",
+    desc: "Spacing utilities for layouts",
+    icon: "fa-expand-alt",
+    url: "/components/spacer.html",
+  },
+  {
+    title: "Stack",
+    desc: "5 stack layouts for arrangement",
+    icon: "fa-layer-group",
+    url: "/components/stack.html",
+  },
+  // Categories
+  {
+    title: "Inputs",
+    desc: "All input components",
+    icon: "fa-hand-pointer",
+    url: "/components.html#inputs",
   },
   {
     title: "Layout",
-    desc: "Grid and containers",
+    desc: "Grid and container components",
     icon: "fa-th-large",
-    url: "components.html",
-  },
-  {
-    title: "Data Display",
-    desc: "Tables and lists",
-    icon: "fa-table",
-    url: "components.html",
+    url: "/components.html#layout",
   },
   {
     title: "Feedback",
-    desc: "Alerts, modals, toasts",
+    desc: "Alerts, modals, and notifications",
     icon: "fa-bell",
-    url: "components.html",
+    url: "/components.html#feedback",
   },
   {
     title: "Navigation",
-    desc: "Navbar, sidebar, tabs",
+    desc: "Navbar, sidebar, and menus",
     icon: "fa-compass",
-    url: "components.html",
+    url: "/components.html#navigation",
   },
+  // Docs
   {
     title: "Documentation",
     desc: "Getting started guide",
     icon: "fa-book",
-    url: "docs.html",
+    url: "/docs.html",
   },
   {
     title: "Installation",
-    desc: "CDN and NPM setup",
+    desc: "CDN and download setup",
     icon: "fa-download",
-    url: "docs.html#installation",
-  },
-  {
-    title: "Customization",
-    desc: "CSS variables",
-    icon: "fa-paint-brush",
-    url: "docs.html#customization",
+    url: "/docs.html#installation",
   },
 ];
 
@@ -60,7 +118,29 @@ document.addEventListener("DOMContentLoaded", () => {
   initCopyButtons();
   initRippleEffect();
   initKeyboardShortcuts();
+  initCodeTabs();
 });
+
+function initCodeTabs() {
+  document.querySelectorAll(".code-tab").forEach((tab) => {
+    tab.addEventListener("click", function () {
+      const parent = this.closest(".code-dropdown");
+      const tabType = this.dataset.tab;
+
+      parent
+        .querySelectorAll(".code-tab")
+        .forEach((t) => t.classList.remove("active"));
+      parent
+        .querySelectorAll(".code-content")
+        .forEach((c) => c.classList.remove("active"));
+
+      this.classList.add("active");
+      parent
+        .querySelector(`[data-content="${tabType}"]`)
+        .classList.add("active");
+    });
+  });
+}
 
 function initTypewriter() {
   const element = document.getElementById("typewriter");
@@ -118,10 +198,8 @@ function initSearch() {
       return;
     }
 
-    const filtered = searchData.filter(
-      (item) =>
-        item.title.toLowerCase().includes(query) ||
-        item.desc.toLowerCase().includes(query)
+    const filtered = searchData.filter((item) =>
+      item.title.toLowerCase().includes(query)
     );
 
     if (filtered.length === 0) {
