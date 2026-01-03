@@ -20,8 +20,7 @@ const navbarHTML = `<nav class="navbar">
       <a href="/components.html" class="nav-link">Components</a>
       <a href="/template.html" class="nav-link">Templates</a>
       <a
-        href="https://github.com/Kvoryz/KvoLib"
-        target="_blank"
+        href="changelog.html"
         class="nav-link"
       >
         <i class="fab fa-github"></i>
