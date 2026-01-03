@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/components/alert.css" />
   </head>
   <body>
-        <script src="/assets/js/navbar-loader.js"></script>
+    <script src="/assets/js/navbar-loader.js"></script>
 
     <section class="page-header" data-aos="fade-down">
       <div class="container">
@@ -36,27 +36,25 @@
                 <li><a href="#warning">Warning</a></li>
                 <li><a href="#error">Error</a></li>
                 <li><a href="#glass">Glass</a></li>
-                <li><a href="#solid">Solid</a></li>
                 <li><a href="#neon">Neon</a></li>
               </ul>
             </nav>
           </aside>
 
           <main class="docs-content">
-            <!-- Info Alert -->
             <section id="info" class="docs-section" data-aos="fade-up">
               <h2>Info Alert</h2>
               <p>Informational alert for general messages.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="alert alert-info">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="alert alert-info" style="width: 100%">
                     <div class="alert-icon">
                       <i class="fas fa-info-circle"></i>
                     </div>
                     <div class="alert-content">
                       <div class="alert-title">Information</div>
                       <div class="alert-message">
-                        This is an informational message for the user.
+                        This is an informational message.
                       </div>
                     </div>
                     <button class="alert-close">
@@ -64,70 +62,46 @@
                     </button>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
+                <script type="text/html" slot="html">
+                  <div class="alert alert-info">
+                    <div class="alert-icon">
+                      <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="alert-content">
+                      <div class="alert-title">Information</div>
+                      <div class="alert-message">Your message here.</div>
+                    </div>
+                    <button class="alert-close">
+                      <i class="fas fa-times"></i>
                     </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
                   </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="info-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="alert alert-info"&gt;
-  &lt;div class="alert-icon"&gt;&lt;i class="fas fa-info-circle"&gt;&lt;/i&gt;&lt;/div&gt;
-  &lt;div class="alert-content"&gt;
-    &lt;div class="alert-title"&gt;Information&lt;/div&gt;
-    &lt;div class="alert-message"&gt;Your message here.&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;button class="alert-close"&gt;&lt;i class="fas fa-times"&gt;&lt;/i&gt;&lt;/button&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="info-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.alert {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 16px 20px;
-  border-radius: 12px;
-  font-size: 0.9375rem;
-  line-height: 1.5;
-  position: relative;
-}
+                </script>
+                <script type="text/css" slot="css">
+                  .alert {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 12px;
+                    padding: 16px 20px;
+                    border-radius: 12px;
+                  }
 
-.alert-info {
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  color: #93c5fd;
-}
+                  .alert-info {
+                    background: rgba(59, 130, 246, 0.1);
+                    border: 1px solid rgba(59, 130, 246, 0.3);
+                    color: #93c5fd;
+                  }
 
-.alert-info .alert-icon { color: #3b82f6; }</pre>
-                  </div>
-                </details>
+                  .alert-info .alert-icon { color: #3b82f6; }
+                </script>
               </div>
             </section>
 
-            <!-- Success Alert -->
             <section id="success" class="docs-section" data-aos="fade-up">
               <h2>Success Alert</h2>
               <p>Success alert for positive feedback.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="alert alert-success">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="alert alert-success" style="width: 100%">
                     <div class="alert-icon">
                       <i class="fas fa-check-circle"></i>
                     </div>
@@ -139,58 +113,35 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="success-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
+                <script type="text/html" slot="html">
+                  <div class="alert alert-success">
+                    <div class="alert-icon">
+                      <i class="fas fa-check-circle"></i>
                     </div>
-                    <pre>&lt;div class="alert alert-success"&gt;
-  &lt;div class="alert-icon"&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt;&lt;/div&gt;
-  &lt;div class="alert-content"&gt;
-    &lt;div class="alert-title"&gt;Success&lt;/div&gt;
-    &lt;div class="alert-message"&gt;Your action was completed!&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="success-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
+                    <div class="alert-content">
+                      <div class="alert-title">Success</div>
+                      <div class="alert-message">Action completed!</div>
                     </div>
-                    <pre>.alert-success {
-  background: rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  color: #86efac;
-}
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .alert-success {
+                    background: rgba(34, 197, 94, 0.1);
+                    border: 1px solid rgba(34, 197, 94, 0.3);
+                    color: #86efac;
+                  }
 
-.alert-success .alert-icon { color: #22c55e; }</pre>
-                  </div>
-                </details>
+                  .alert-success .alert-icon { color: #22c55e; }
+                </script>
               </div>
             </section>
 
-            <!-- Warning Alert -->
             <section id="warning" class="docs-section" data-aos="fade-up">
               <h2>Warning Alert</h2>
               <p>Warning alert for cautionary messages.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="alert alert-warning">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="alert alert-warning" style="width: 100%">
                     <div class="alert-icon">
                       <i class="fas fa-exclamation-triangle"></i>
                     </div>
@@ -202,58 +153,35 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="warning-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
+                <script type="text/html" slot="html">
+                  <div class="alert alert-warning">
+                    <div class="alert-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
                     </div>
-                    <pre>&lt;div class="alert alert-warning"&gt;
-  &lt;div class="alert-icon"&gt;&lt;i class="fas fa-exclamation-triangle"&gt;&lt;/i&gt;&lt;/div&gt;
-  &lt;div class="alert-content"&gt;
-    &lt;div class="alert-title"&gt;Warning&lt;/div&gt;
-    &lt;div class="alert-message"&gt;Please review this.&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="warning-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
+                    <div class="alert-content">
+                      <div class="alert-title">Warning</div>
+                      <div class="alert-message">Your message here.</div>
                     </div>
-                    <pre>.alert-warning {
-  background: rgba(245, 158, 11, 0.1);
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  color: #fcd34d;
-}
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .alert-warning {
+                    background: rgba(245, 158, 11, 0.1);
+                    border: 1px solid rgba(245, 158, 11, 0.3);
+                    color: #fcd34d;
+                  }
 
-.alert-warning .alert-icon { color: #f59e0b; }</pre>
-                  </div>
-                </details>
+                  .alert-warning .alert-icon { color: #f59e0b; }
+                </script>
               </div>
             </section>
 
-            <!-- Error Alert -->
             <section id="error" class="docs-section" data-aos="fade-up">
               <h2>Error Alert</h2>
               <p>Error alert for critical issues.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="alert alert-error">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="alert alert-error" style="width: 100%">
                     <div class="alert-icon">
                       <i class="fas fa-times-circle"></i>
                     </div>
@@ -265,58 +193,35 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="error-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
+                <script type="text/html" slot="html">
+                  <div class="alert alert-error">
+                    <div class="alert-icon">
+                      <i class="fas fa-times-circle"></i>
                     </div>
-                    <pre>&lt;div class="alert alert-error"&gt;
-  &lt;div class="alert-icon"&gt;&lt;i class="fas fa-times-circle"&gt;&lt;/i&gt;&lt;/div&gt;
-  &lt;div class="alert-content"&gt;
-    &lt;div class="alert-title"&gt;Error&lt;/div&gt;
-    &lt;div class="alert-message"&gt;Something went wrong.&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="error-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
+                    <div class="alert-content">
+                      <div class="alert-title">Error</div>
+                      <div class="alert-message">Something went wrong.</div>
                     </div>
-                    <pre>.alert-error {
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  color: #fca5a5;
-}
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .alert-error {
+                    background: rgba(239, 68, 68, 0.1);
+                    border: 1px solid rgba(239, 68, 68, 0.3);
+                    color: #fca5a5;
+                  }
 
-.alert-error .alert-icon { color: #ef4444; }</pre>
-                  </div>
-                </details>
+                  .alert-error .alert-icon { color: #ef4444; }
+                </script>
               </div>
             </section>
 
-            <!-- Glass Alert -->
             <section id="glass" class="docs-section" data-aos="fade-up">
               <h2>Glass Alert</h2>
               <p>Glassmorphism style alert.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="alert alert-glass">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="alert alert-glass" style="width: 100%">
                     <div class="alert-icon">
                       <i class="fas fa-info-circle"></i>
                     </div>
@@ -328,163 +233,34 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="glass-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="alert alert-glass"&gt;
-  &lt;div class="alert-icon"&gt;&lt;i class="fas fa-info-circle"&gt;&lt;/i&gt;&lt;/div&gt;
-  &lt;div class="alert-content"&gt;
-    &lt;div class="alert-title"&gt;Glass Style&lt;/div&gt;
-    &lt;div class="alert-message"&gt;Glassmorphism alert.&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="glass-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.alert-glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.9);
-}</pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <!-- Solid Alerts -->
-            <section id="solid" class="docs-section" data-aos="fade-up">
-              <h2>Solid Alerts</h2>
-              <p>Solid background color alerts.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div
-                    class="alert alert-solid-info"
-                    style="margin-bottom: 12px"
-                  >
+                <script type="text/html" slot="html">
+                  <div class="alert alert-glass">
                     <div class="alert-icon">
                       <i class="fas fa-info-circle"></i>
                     </div>
                     <div class="alert-content">
-                      <div class="alert-message">Solid info alert</div>
+                      <div class="alert-title">Glass Style</div>
+                      <div class="alert-message">Glassmorphism alert.</div>
                     </div>
                   </div>
-                  <div
-                    class="alert alert-solid-success"
-                    style="margin-bottom: 12px"
-                  >
-                    <div class="alert-icon">
-                      <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div class="alert-content">
-                      <div class="alert-message">Solid success alert</div>
-                    </div>
-                  </div>
-                  <div
-                    class="alert alert-solid-warning"
-                    style="margin-bottom: 12px"
-                  >
-                    <div class="alert-icon">
-                      <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <div class="alert-content">
-                      <div class="alert-message">Solid warning alert</div>
-                    </div>
-                  </div>
-                  <div class="alert alert-solid-error">
-                    <div class="alert-icon">
-                      <i class="fas fa-times-circle"></i>
-                    </div>
-                    <div class="alert-content">
-                      <div class="alert-message">Solid error alert</div>
-                    </div>
-                  </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="solid-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="alert alert-solid-info"&gt;...&lt;/div&gt;
-&lt;div class="alert alert-solid-success"&gt;...&lt;/div&gt;
-&lt;div class="alert alert-solid-warning"&gt;...&lt;/div&gt;
-&lt;div class="alert alert-solid-error"&gt;...&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="solid-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.alert-solid-info {
-  background: #3b82f6;
-  color: #fff;
-  border: none;
-}
-
-.alert-solid-success {
-  background: #22c55e;
-  color: #fff;
-  border: none;
-}
-
-.alert-solid-warning {
-  background: #f59e0b;
-  color: #fff;
-  border: none;
-}
-
-.alert-solid-error {
-  background: #ef4444;
-  color: #fff;
-  border: none;
-}</pre>
-                  </div>
-                </details>
+                </script>
+                <script type="text/css" slot="css">
+                  .alert-glass {
+                    background: rgba(255, 255, 255, 0.05);
+                    backdrop-filter: blur(10px);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    color: rgba(255, 255, 255, 0.9);
+                  }
+                </script>
               </div>
             </section>
 
-            <!-- Neon Alert -->
             <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Alert</h2>
               <p>Glowing neon style alert.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="alert alert-neon">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="alert alert-neon" style="width: 100%">
                     <div class="alert-icon"><i class="fas fa-bolt"></i></div>
                     <div class="alert-content">
                       <div class="alert-title">Neon Glow</div>
@@ -494,49 +270,26 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
+                <script type="text/html" slot="html">
+                  <div class="alert alert-neon">
+                    <div class="alert-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="alert-content">
+                      <div class="alert-title">Neon Glow</div>
+                      <div class="alert-message">Neon style alert.</div>
                     </div>
-                    <pre>&lt;div class="alert alert-neon"&gt;
-  &lt;div class="alert-icon"&gt;&lt;i class="fas fa-bolt"&gt;&lt;/i&gt;&lt;/div&gt;
-  &lt;div class="alert-content"&gt;
-    &lt;div class="alert-title"&gt;Neon Glow&lt;/div&gt;
-    &lt;div class="alert-message"&gt;Neon style alert.&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
                   </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.alert-neon {
-  background: rgba(0, 212, 255, 0.05);
-  border: 1px solid #00d4ff;
-  color: #00d4ff;
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
-}</pre>
-                  </div>
-                </details>
+                </script>
+                <script type="text/css" slot="css">
+                  .alert-neon {
+                    background: rgba(0, 212, 255, 0.05);
+                    border: 1px solid #00d4ff;
+                    color: #00d4ff;
+                    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+                  }
+                </script>
               </div>
             </section>
+          </main>
         </div>
       </div>
     </section>

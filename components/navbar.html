@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/components/navbar.css" />
   </head>
   <body>
-        <script src="/assets/js/navbar-loader.js"></script>
+    <script src="/assets/js/navbar-loader.js"></script>
 
     <section class="page-header" data-aos="fade-down">
       <div class="container">
@@ -20,7 +20,7 @@
           <span>Navbar</span>
         </div>
         <h1 class="page-title">Navbar</h1>
-        <p class="page-description">6 navbar styles for navigation.</p>
+        <p class="page-description">Navigation bar components.</p>
       </div>
     </section>
 
@@ -32,372 +32,206 @@
               <h4>Navbar Types</h4>
               <ul>
                 <li><a href="#basic">Basic</a></li>
-                <li><a href="#glass">Glass</a></li>
+                <li><a href="#glass">Glassmorphism</a></li>
                 <li><a href="#gradient">Gradient</a></li>
-                <li><a href="#search">With Search</a></li>
-                <li><a href="#centered">Centered</a></li>
               </ul>
             </nav>
           </aside>
 
           <main class="docs-content">
-            <!-- Basic Navbar -->
             <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Navbar</h2>
               <p>Standard navigation bar.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="display: block; padding: 0"
-                >
-                  <nav class="kvo-navbar">
-                    <a href="#" class="kvo-navbar-brand"><span>Brand</span></a>
-                    <div class="kvo-navbar-menu">
-                      <a href="#" class="kvo-navbar-link active">Home</a>
-                      <a href="#" class="kvo-navbar-link">Products</a>
-                      <a href="#" class="kvo-navbar-link">About</a>
-                    </div>
-                    <div class="kvo-navbar-actions">
-                      <button
-                        style="
-                          padding: 8px 16px;
-                          background: linear-gradient(135deg, #667eea, #764ba2);
-                          border: none;
-                          border-radius: 6px;
-                          color: #fff;
-                          cursor: pointer;
-                        "
+              <div class="component-viewer">
+                <div slot="preview">
+                  <nav
+                    class="demo-nav"
+                    style="
+                      width: 100%;
+                      padding: 16px 24px;
+                      background: rgba(255, 255, 255, 0.03);
+                      border-radius: 12px;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    "
+                  >
+                    <div style="font-weight: 600">Brand</div>
+                    <div style="display: flex; gap: 24px">
+                      <a href="#" style="color: #fff">Home</a>
+                      <a href="#" style="color: rgba(255, 255, 255, 0.6)"
+                        >About</a
                       >
-                        Sign In
-                      </button>
+                      <a href="#" style="color: rgba(255, 255, 255, 0.6)"
+                        >Contact</a
+                      >
                     </div>
+                    <button
+                      style="
+                        padding: 8px 16px;
+                        background: #667eea;
+                        border: none;
+                        border-radius: 8px;
+                        color: #fff;
+                        cursor: pointer;
+                      "
+                    >
+                      Sign Up
+                    </button>
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="basic-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
+                <script type="text/html" slot="html">
+                  <nav class="navbar">
+                    <div class="nav-brand">Brand</div>
+                    <div class="nav-links">
+                      <a href="#" class="nav-link active">Home</a>
+                      <a href="#" class="nav-link">About</a>
+                      <a href="#" class="nav-link">Contact</a>
                     </div>
-                    <pre>&lt;nav class="kvo-navbar"&gt;
-  &lt;a href="#" class="kvo-navbar-brand"&gt;Brand&lt;/a&gt;
-  &lt;div class="kvo-navbar-menu"&gt;
-    &lt;a href="#" class="kvo-navbar-link active"&gt;Home&lt;/a&gt;
-    &lt;a href="#" class="kvo-navbar-link"&gt;Products&lt;/a&gt;
-    &lt;a href="#" class="kvo-navbar-link"&gt;About&lt;/a&gt;
-  &lt;/div&gt;
-  &lt;div class="kvo-navbar-actions"&gt;
-    &lt;button&gt;Sign In&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/nav&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="basic-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 24px;
-  background: rgba(20, 20, 20, 0.95);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+                    <button class="nav-cta">Sign Up</button>
+                  </nav>
+                </script>
+                <script type="text/css" slot="css">
+                  .navbar {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 16px 24px;
+                    background: rgba(255,255,255,0.03);
+                    border-bottom: 1px solid rgba(255,255,255,0.06);
+                  }
 
-.kvo-navbar-brand {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #fff;
-}
+                  .nav-links {
+                    display: flex;
+                    gap: 24px;
+                  }
 
-.kvo-navbar-menu {
-  display: flex;
-  gap: 32px;
-}
+                  .nav-link {
+                    color: rgba(255,255,255,0.6);
+                    text-decoration: none;
+                    transition: color 0.2s;
+                  }
 
-.kvo-navbar-link {
-  color: rgba(255, 255, 255, 0.7);
-  transition: color 0.2s;
-}
-
-.kvo-navbar-link:hover,
-.kvo-navbar-link.active {
-  color: #fff;
-}</pre>
-                  </div>
-                </details>
+                  .nav-link:hover, .nav-link.active {
+                    color: #fff;
+                  }
+                </script>
               </div>
             </section>
 
-            <!-- Glass Navbar -->
             <section id="glass" class="docs-section" data-aos="fade-up">
-              <h2>Glass Navbar</h2>
-              <p>Glassmorphism style navbar.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="display: block; padding: 0"
-                >
-                  <nav class="kvo-navbar kvo-navbar-glass">
-                    <a href="#" class="kvo-navbar-brand"><span>Brand</span></a>
-                    <div class="kvo-navbar-menu">
-                      <a href="#" class="kvo-navbar-link active">Home</a>
-                      <a href="#" class="kvo-navbar-link">Products</a>
-                      <a href="#" class="kvo-navbar-link">About</a>
+              <h2>Glassmorphism Navbar</h2>
+              <p>Navbar with glass effect.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <nav
+                    class="demo-nav"
+                    style="
+                      width: 100%;
+                      padding: 16px 24px;
+                      background: rgba(255, 255, 255, 0.05);
+                      backdrop-filter: blur(10px);
+                      border-radius: 12px;
+                      border: 1px solid rgba(255, 255, 255, 0.1);
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    "
+                  >
+                    <div style="font-weight: 600">Brand</div>
+                    <div style="display: flex; gap: 24px">
+                      <a href="#" style="color: #fff">Home</a>
+                      <a href="#" style="color: rgba(255, 255, 255, 0.6)"
+                        >Features</a
+                      >
                     </div>
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="glass-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
+                <script type="text/html" slot="html">
+                  <nav class="navbar navbar-glass">
+                    <div class="nav-brand">Brand</div>
+                    <div class="nav-links">
+                      <a href="#">Home</a>
+                      <a href="#">Features</a>
                     </div>
-                    <pre>&lt;nav class="kvo-navbar kvo-navbar-glass"&gt;...&lt;/nav&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="glass-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-navbar-glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}</pre>
-                  </div>
-                </details>
+                  </nav>
+                </script>
+                <script type="text/css" slot="css">
+                  .navbar-glass {
+                    background: rgba(255,255,255,0.05);
+                    backdrop-filter: blur(10px);
+                    border: 1px solid rgba(255,255,255,0.1);
+                  }
+                </script>
               </div>
             </section>
 
-            <!-- Gradient Navbar -->
             <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Navbar</h2>
-              <p>Gradient background navbar.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="display: block; padding: 0"
-                >
-                  <nav class="kvo-navbar kvo-navbar-gradient">
-                    <a href="#" class="kvo-navbar-brand"><span>Brand</span></a>
-                    <div class="kvo-navbar-menu">
-                      <a
-                        href="#"
-                        class="kvo-navbar-link active"
-                        style="color: #fff"
-                        >Home</a
-                      >
-                      <a
-                        href="#"
-                        class="kvo-navbar-link"
-                        style="color: rgba(255, 255, 255, 0.8)"
-                        >Products</a
-                      >
-                      <a
-                        href="#"
-                        class="kvo-navbar-link"
-                        style="color: rgba(255, 255, 255, 0.8)"
+              <p>Navbar with gradient accent.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <nav
+                    class="demo-nav"
+                    style="
+                      width: 100%;
+                      padding: 16px 24px;
+                      background: linear-gradient(
+                        135deg,
+                        rgba(102, 126, 234, 0.1),
+                        rgba(118, 75, 162, 0.1)
+                      );
+                      border-radius: 12px;
+                      border: 1px solid rgba(102, 126, 234, 0.2);
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      style="
+                        font-weight: 600;
+                        background: linear-gradient(90deg, #667eea, #764ba2);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                      "
+                    >
+                      Brand
+                    </div>
+                    <div style="display: flex; gap: 24px">
+                      <a href="#" style="color: #667eea">Home</a>
+                      <a href="#" style="color: rgba(255, 255, 255, 0.6)"
                         >About</a
                       >
                     </div>
                   </nav>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;nav class="kvo-navbar kvo-navbar-gradient"&gt;...&lt;/nav&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-navbar-gradient {
-  background: linear-gradient(90deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
-  border-bottom: none;
-}</pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <!-- Navbar with Search -->
-            <section id="search" class="docs-section" data-aos="fade-up">
-              <h2>Navbar with Search</h2>
-              <p>Navbar with integrated search bar.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="display: block; padding: 0"
-                >
-                  <nav class="kvo-navbar">
-                    <a href="#" class="kvo-navbar-brand"><span>Brand</span></a>
-                    <div class="kvo-navbar-search">
-                      <i class="fas fa-search"></i>
-                      <input type="text" placeholder="Search..." />
-                    </div>
-                    <div class="kvo-navbar-menu">
-                      <a href="#" class="kvo-navbar-link">Home</a>
-                      <a href="#" class="kvo-navbar-link">Products</a>
+                <script type="text/html" slot="html">
+                  <nav class="navbar navbar-gradient">
+                    <div class="nav-brand">Brand</div>
+                    <div class="nav-links">
+                      <a href="#">Home</a>
+                      <a href="#">About</a>
                     </div>
                   </nav>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="search-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="kvo-navbar-search"&gt;
-  &lt;i class="fas fa-search"&gt;&lt;/i&gt;
-  &lt;input type="text" placeholder="Search..." /&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="search-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-navbar-search {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-}
+                </script>
+                <script type="text/css" slot="css">
+                  .navbar-gradient {
+                    background: linear-gradient(135deg,
+                      rgba(102,126,234,0.1),
+                      rgba(118,75,162,0.1));
+                    border: 1px solid rgba(102,126,234,0.2);
+                  }
 
-.kvo-navbar-search input {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #fff;
-  width: 200px;
-}</pre>
-                  </div>
-                </details>
+                  .navbar-gradient .nav-brand {
+                    background: linear-gradient(90deg, #667eea, #764ba2);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                </script>
               </div>
             </section>
-
-            <!-- Centered Navbar -->
-            <section id="centered" class="docs-section" data-aos="fade-up">
-              <h2>Centered Navbar</h2>
-              <p>Navbar with centered menu links.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="display: block; padding: 0"
-                >
-                  <nav
-                    class="kvo-navbar"
-                    style="justify-content: center; gap: 48px"
-                  >
-                    <a href="#" class="kvo-navbar-brand"><span>Brand</span></a>
-                    <div class="kvo-navbar-menu">
-                      <a href="#" class="kvo-navbar-link active">Home</a>
-                      <a href="#" class="kvo-navbar-link">Products</a>
-                      <a href="#" class="kvo-navbar-link">About</a>
-                      <a href="#" class="kvo-navbar-link">Contact</a>
-                    </div>
-                  </nav>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="centered-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;nav class="kvo-navbar kvo-navbar-centered"&gt;...&lt;/nav&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="centered-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-navbar-centered {
-  justify-content: center;
-  gap: 40px;
-}</pre>
-                  </div>
-                </details>
-              </div>
-            </section>
+          </main>
         </div>
       </div>
     </section>

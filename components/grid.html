@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/components/grid.css" />
   </head>
   <body>
-        <script src="/assets/js/navbar-loader.js"></script>
+    <script src="/assets/js/navbar-loader.js"></script>
 
     <section class="page-header" data-aos="fade-down">
       <div class="container">
@@ -19,10 +19,8 @@
           <i class="fas fa-chevron-right"></i>
           <span>Grid</span>
         </div>
-        <h1 class="page-title">Grid Layouts</h1>
-        <p class="page-description">
-          5 responsive grid systems for modern layouts.
-        </p>
+        <h1 class="page-title">Grid</h1>
+        <p class="page-description">Responsive grid layout system.</p>
       </div>
     </section>
 
@@ -31,335 +29,344 @@
         <div class="docs-grid">
           <aside class="docs-sidebar">
             <nav class="docs-nav">
-              <h4>Grid Layouts</h4>
+              <h4>Grid Types</h4>
               <ul>
-                <li><a href="#two-column">Two Column</a></li>
-                <li><a href="#three-column">Three Column</a></li>
-                <li><a href="#four-column">Four Column</a></li>
-                <li><a href="#auto-fit">Auto Fit</a></li>
-                <li><a href="#masonry">Masonry</a></li>
+                <li><a href="#basic">Basic</a></li>
+                <li><a href="#columns">Columns</a></li>
+                <li><a href="#autofit">Auto-fit</a></li>
+                <li><a href="#gap">Gap Sizes</a></li>
               </ul>
             </nav>
           </aside>
 
           <main class="docs-content">
-            <section id="two-column" class="docs-section" data-aos="fade-up">
-              <h2>Two Column Grid</h2>
-              <p>Responsive 2-column grid layout.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="grid-two-col">
-                    <div class="grid-item">
-                      <h3>Item 1</h3>
-                      <p>Content here</p>
+            <section id="basic" class="docs-section" data-aos="fade-up">
+              <h2>Basic Grid</h2>
+              <p>Simple 12-column grid.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: repeat(3, 1fr);
+                      gap: 12px;
+                      width: 100%;
+                    "
+                  >
+                    <div
+                      style="
+                        background: rgba(102, 126, 234, 0.2);
+                        padding: 16px;
+                        border-radius: 8px;
+                        text-align: center;
+                      "
+                    >
+                      1
                     </div>
-                    <div class="grid-item">
-                      <h3>Item 2</h3>
-                      <p>Content here</p>
+                    <div
+                      style="
+                        background: rgba(102, 126, 234, 0.2);
+                        padding: 16px;
+                        border-radius: 8px;
+                        text-align: center;
+                      "
+                    >
+                      2
                     </div>
-                    <div class="grid-item">
-                      <h3>Item 3</h3>
-                      <p>Content here</p>
-                    </div>
-                    <div class="grid-item">
-                      <h3>Item 4</h3>
-                      <p>Content here</p>
-                    </div>
-                  </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="two-col-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="grid-two-col"&gt;
-  &lt;div class="grid-item"&gt;Item 1&lt;/div&gt;
-  &lt;div class="grid-item"&gt;Item 2&lt;/div&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="two-col-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.grid-two-col {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}</pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="three-column" class="docs-section" data-aos="fade-up">
-              <h2>Three Column Grid</h2>
-              <p>Responsive 3-column grid layout.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="grid-three-col">
-                    <div class="grid-item">
-                      <h3>Item 1</h3>
-                      <p>Content here</p>
-                    </div>
-                    <div class="grid-item">
-                      <h3>Item 2</h3>
-                      <p>Content here</p>
-                    </div>
-                    <div class="grid-item">
-                      <h3>Item 3</h3>
-                      <p>Content here</p>
-                    </div>
-                    <div class="grid-item">
-                      <h3>Item 4</h3>
-                      <p>Content here</p>
-                    </div>
-                    <div class="grid-item">
-                      <h3>Item 5</h3>
-                      <p>Content here</p>
-                    </div>
-                    <div class="grid-item">
-                      <h3>Item 6</h3>
-                      <p>Content here</p>
+                    <div
+                      style="
+                        background: rgba(102, 126, 234, 0.2);
+                        padding: 16px;
+                        border-radius: 8px;
+                        text-align: center;
+                      "
+                    >
+                      3
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
+                <script type="text/html" slot="html">
+                  <div class="grid grid-cols-3">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
                   </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="three-col-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="grid-three-col"&gt;
-  &lt;div class="grid-item"&gt;Item 1&lt;/div&gt;
-  &lt;div class="grid-item"&gt;Item 2&lt;/div&gt;
-  &lt;div class="grid-item"&gt;Item 3&lt;/div&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="three-col-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.grid-three-col {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}</pre>
-                  </div>
-                </details>
+                </script>
+                <script type="text/css" slot="css">
+                  .grid {
+                    display: grid;
+                    gap: 16px;
+                  }
+
+                  .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+                  .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+                  .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+                  .grid-item {
+                    background: rgba(102,126,234,0.2);
+                    padding: 16px;
+                    border-radius: 8px;
+                    text-align: center;
+                  }
+                </script>
               </div>
             </section>
 
-            <section id="four-column" class="docs-section" data-aos="fade-up">
-              <h2>Four Column Grid</h2>
-              <p>Responsive 4-column grid layout.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="grid-four-col">
-                    <div class="grid-item"><h3>1</h3></div>
-                    <div class="grid-item"><h3>2</h3></div>
-                    <div class="grid-item"><h3>3</h3></div>
-                    <div class="grid-item"><h3>4</h3></div>
-                  </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="four-col-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
+            <section id="columns" class="docs-section" data-aos="fade-up">
+              <h2>Column Variations</h2>
+              <p>2, 3, 4, and 6 column layouts.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      gap: 16px;
+                      width: 100%;
+                    "
+                  >
+                    <div
+                      style="
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 8px;
+                      "
+                    >
+                      <div
+                        style="
+                          background: rgba(0, 212, 255, 0.2);
+                          padding: 12px;
+                          border-radius: 6px;
+                          text-align: center;
+                        "
+                      >
+                        2-col
+                      </div>
+                      <div
+                        style="
+                          background: rgba(0, 212, 255, 0.2);
+                          padding: 12px;
+                          border-radius: 6px;
+                          text-align: center;
+                        "
+                      >
+                        2-col
+                      </div>
                     </div>
-                    <pre>&lt;div class="grid-four-col"&gt;
-  &lt;div class="grid-item"&gt;1&lt;/div&gt;
-  &lt;div class="grid-item"&gt;2&lt;/div&gt;
-  &lt;div class="grid-item"&gt;3&lt;/div&gt;
-  &lt;div class="grid-item"&gt;4&lt;/div&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="four-col-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.grid-four-col {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}</pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="auto-fit" class="docs-section" data-aos="fade-up">
-              <h2>Auto Fit Grid</h2>
-              <p>
-                Grid that automatically fits items based on available space.
-              </p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="grid-auto-fit">
-                    <div class="grid-item">
-                      <h3>Auto 1</h3>
-                      <p>Responsive</p>
-                    </div>
-                    <div class="grid-item">
-                      <h3>Auto 2</h3>
-                      <p>Responsive</p>
-                    </div>
-                    <div class="grid-item">
-                      <h3>Auto 3</h3>
-                      <p>Responsive</p>
-                    </div>
-                  </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="auto-fit-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="grid-auto-fit"&gt;
-  &lt;div class="grid-item"&gt;Auto 1&lt;/div&gt;
-  &lt;div class="grid-item"&gt;Auto 2&lt;/div&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="auto-fit-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.grid-auto-fit {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-}</pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <section id="masonry" class="docs-section" data-aos="fade-up">
-              <h2>Masonry Grid</h2>
-              <p>Pinterest-style masonry layout.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="grid-masonry">
-                    <div class="grid-item grid-item-tall">
-                      <h3>Tall Item</h3>
-                      <p>Variable height content</p>
-                    </div>
-                    <div class="grid-item grid-item-short"><h3>Short</h3></div>
-                    <div class="grid-item grid-item-medium">
-                      <h3>Medium Item</h3>
-                      <p>Content here</p>
-                    </div>
-                    <div class="grid-item grid-item-tall">
-                      <h3>Tall Item</h3>
-                      <p>Variable height content</p>
+                    <div
+                      style="
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 8px;
+                      "
+                    >
+                      <div
+                        style="
+                          background: rgba(240, 147, 251, 0.2);
+                          padding: 12px;
+                          border-radius: 6px;
+                          text-align: center;
+                        "
+                      >
+                        4
+                      </div>
+                      <div
+                        style="
+                          background: rgba(240, 147, 251, 0.2);
+                          padding: 12px;
+                          border-radius: 6px;
+                          text-align: center;
+                        "
+                      >
+                        4
+                      </div>
+                      <div
+                        style="
+                          background: rgba(240, 147, 251, 0.2);
+                          padding: 12px;
+                          border-radius: 6px;
+                          text-align: center;
+                        "
+                      >
+                        4
+                      </div>
+                      <div
+                        style="
+                          background: rgba(240, 147, 251, 0.2);
+                          padding: 12px;
+                          border-radius: 6px;
+                          text-align: center;
+                        "
+                      >
+                        4
+                      </div>
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="masonry-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="grid-masonry"&gt;
-  &lt;div class="grid-item"&gt;Item 1&lt;/div&gt;
-  &lt;div class="grid-item"&gt;Item 2&lt;/div&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="masonry-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.grid-masonry {
-  column-count: 3;
-  column-gap: 24px;
-}
-
-.grid-masonry > * {
-  break-inside: avoid;
-  margin-bottom: 24px;
-}</pre>
-                  </div>
-                </details>
+                <script type="text/html" slot="html">
+                  <div class="grid grid-cols-2">...</div>
+                  <div class="grid grid-cols-3">...</div>
+                  <div class="grid grid-cols-4">...</div>
+                  <div class="grid grid-cols-6">...</div>
+                </script>
+                <script type="text/css" slot="css">
+                  .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+                  .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+                  .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+                  .grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+                </script>
               </div>
             </section>
+
+            <section id="autofit" class="docs-section" data-aos="fade-up">
+              <h2>Auto-fit Grid</h2>
+              <p>Responsive grid with auto-fit.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: repeat(
+                        auto-fit,
+                        minmax(120px, 1fr)
+                      );
+                      gap: 12px;
+                      width: 100%;
+                    "
+                  >
+                    <div
+                      style="
+                        background: rgba(34, 197, 94, 0.2);
+                        padding: 16px;
+                        border-radius: 8px;
+                        text-align: center;
+                      "
+                    >
+                      Auto
+                    </div>
+                    <div
+                      style="
+                        background: rgba(34, 197, 94, 0.2);
+                        padding: 16px;
+                        border-radius: 8px;
+                        text-align: center;
+                      "
+                    >
+                      Auto
+                    </div>
+                    <div
+                      style="
+                        background: rgba(34, 197, 94, 0.2);
+                        padding: 16px;
+                        border-radius: 8px;
+                        text-align: center;
+                      "
+                    >
+                      Auto
+                    </div>
+                    <div
+                      style="
+                        background: rgba(34, 197, 94, 0.2);
+                        padding: 16px;
+                        border-radius: 8px;
+                        text-align: center;
+                      "
+                    >
+                      Auto
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="grid grid-auto-fit">
+                    <div>Auto</div>
+                    <div>Auto</div>
+                    <div>Auto</div>
+                    <div>Auto</div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .grid-auto-fit {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 16px;
+                  }
+
+                  /* Auto-fill variant */
+                  .grid-auto-fill {
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="gap" class="docs-section" data-aos="fade-up">
+              <h2>Gap Sizes</h2>
+              <p>Different gap options.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div style="text-align: left; width: 100%">
+                    <p><strong>Gap utilities:</strong></p>
+                    <ul style="list-style: none; padding: 0">
+                      <li
+                        style="
+                          padding: 8px 0;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        "
+                      >
+                        <code>.gap-0</code> - 0px
+                      </li>
+                      <li
+                        style="
+                          padding: 8px 0;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        "
+                      >
+                        <code>.gap-1</code> - 4px
+                      </li>
+                      <li
+                        style="
+                          padding: 8px 0;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        "
+                      >
+                        <code>.gap-2</code> - 8px
+                      </li>
+                      <li
+                        style="
+                          padding: 8px 0;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        "
+                      >
+                        <code>.gap-3</code> - 12px
+                      </li>
+                      <li
+                        style="
+                          padding: 8px 0;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        "
+                      >
+                        <code>.gap-4</code> - 16px
+                      </li>
+                      <li style="padding: 8px 0"><code>.gap-6</code> - 24px</li>
+                    </ul>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="grid grid-cols-3 gap-4">...</div>
+                  <div class="grid grid-cols-3 gap-6">...</div>
+                </script>
+                <script type="text/css" slot="css">
+                  .gap-0 { gap: 0; }
+                  .gap-1 { gap: 4px; }
+                  .gap-2 { gap: 8px; }
+                  .gap-3 { gap: 12px; }
+                  .gap-4 { gap: 16px; }
+                  .gap-6 { gap: 24px; }
+                  .gap-8 { gap: 32px; }
+                </script>
+              </div>
+            </section>
+          </main>
         </div>
       </div>
     </section>

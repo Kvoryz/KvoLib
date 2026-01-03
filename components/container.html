@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/components/container.css" />
   </head>
   <body>
-        <script src="/assets/js/navbar-loader.js"></script>
+    <script src="/assets/js/navbar-loader.js"></script>
 
     <section class="page-header" data-aos="fade-down">
       <div class="container">
@@ -19,8 +19,8 @@
           <i class="fas fa-chevron-right"></i>
           <span>Container</span>
         </div>
-        <h1 class="page-title">Containers</h1>
-        <p class="page-description">4 container styles for content layout.</p>
+        <h1 class="page-title">Container</h1>
+        <p class="page-description">Layout container components.</p>
       </div>
     </section>
 
@@ -31,213 +31,188 @@
             <nav class="docs-nav">
               <h4>Container Types</h4>
               <ul>
-                <li><a href="#centered">Centered</a></li>
+                <li><a href="#basic">Basic</a></li>
                 <li><a href="#fluid">Fluid</a></li>
-                <li><a href="#narrow">Narrow</a></li>
-                <li><a href="#wide">Wide</a></li>
+                <li><a href="#sizes">Sizes</a></li>
+                <li><a href="#boxed">Boxed</a></li>
               </ul>
             </nav>
           </aside>
 
           <main class="docs-content">
-            <section id="centered" class="docs-section" data-aos="fade-up">
-              <h2>Centered Container</h2>
-              <p>Standard centered container with max-width 1200px.</p>
-              <div class="preview-box" style="padding: 0">
-                <div class="container-demo">
-                  <div class="container-centered">
-                    <div class="container-demo-content">
-                      <p>Centered container (max-width: 1200px)</p>
-                    </div>
+            <section id="basic" class="docs-section" data-aos="fade-up">
+              <h2>Basic Container</h2>
+              <p>Centered container with max-width.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    style="
+                      width: 100%;
+                      background: rgba(255, 255, 255, 0.05);
+                      padding: 20px;
+                      border: 1px dashed rgba(255, 255, 255, 0.2);
+                      border-radius: 8px;
+                      text-align: center;
+                    "
+                  >
+                    <code>.container</code> - max-width: 1200px
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
+                <script type="text/html" slot="html">
+                  <div class="container">
+                    <!-- Your content here -->
                   </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="centered-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="container-centered"&gt;
-  &lt;!-- Content here --&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="centered-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.container-centered {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}</pre>
-                  </div>
-                </details>
+                </script>
+                <script type="text/css" slot="css">
+                  .container {
+                    width: 100%;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 0 24px;
+                  }
+                </script>
               </div>
             </section>
 
             <section id="fluid" class="docs-section" data-aos="fade-up">
               <h2>Fluid Container</h2>
-              <p>Full-width fluid container.</p>
-              <div class="preview-box" style="padding: 0">
-                <div class="container-demo">
+              <p>Full-width container.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    style="
+                      width: 100%;
+                      background: rgba(0, 212, 255, 0.05);
+                      padding: 20px;
+                      border: 1px dashed rgba(0, 212, 255, 0.3);
+                      border-radius: 8px;
+                      text-align: center;
+                    "
+                  >
+                    <code>.container-fluid</code> - 100% width
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
                   <div class="container-fluid">
-                    <div class="container-demo-content">
-                      <p>Fluid container (100% width)</p>
-                    </div>
+                    <!-- Full width content -->
                   </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="fluid-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="container-fluid"&gt;
-  &lt;!-- Content here --&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="fluid-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.container-fluid {
-  width: 100%;
-  padding: 0 24px;
-}</pre>
-                  </div>
-                </details>
+                </script>
+                <script type="text/css" slot="css">
+                  .container-fluid {
+                    width: 100%;
+                    padding: 0 24px;
+                  }
+                </script>
               </div>
             </section>
 
-            <section id="narrow" class="docs-section" data-aos="fade-up">
-              <h2>Narrow Container</h2>
-              <p>Narrow container for focused content (max-width: 768px).</p>
-              <div class="preview-box" style="padding: 0">
-                <div class="container-demo">
-                  <div class="container-narrow">
-                    <div class="container-demo-content">
-                      <p>Narrow container (max-width: 768px)</p>
+            <section id="sizes" class="docs-section" data-aos="fade-up">
+              <h2>Container Sizes</h2>
+              <p>Different max-width options.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      gap: 12px;
+                      width: 100%;
+                    "
+                  >
+                    <div
+                      style="
+                        background: rgba(102, 126, 234, 0.1);
+                        padding: 12px;
+                        border-radius: 6px;
+                        text-align: center;
+                      "
+                    >
+                      <code>.container-sm</code> - 640px
+                    </div>
+                    <div
+                      style="
+                        background: rgba(118, 75, 162, 0.1);
+                        padding: 12px;
+                        border-radius: 6px;
+                        text-align: center;
+                      "
+                    >
+                      <code>.container-md</code> - 768px
+                    </div>
+                    <div
+                      style="
+                        background: rgba(240, 147, 251, 0.1);
+                        padding: 12px;
+                        border-radius: 6px;
+                        text-align: center;
+                      "
+                    >
+                      <code>.container-lg</code> - 1024px
+                    </div>
+                    <div
+                      style="
+                        background: rgba(0, 212, 255, 0.1);
+                        padding: 12px;
+                        border-radius: 6px;
+                        text-align: center;
+                      "
+                    >
+                      <code>.container-xl</code> - 1280px
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="narrow-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="container-narrow"&gt;
-  &lt;!-- Content here --&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="narrow-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.container-narrow {
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 0 24px;
-}</pre>
-                  </div>
-                </details>
+                <script type="text/html" slot="html">
+                  <div class="container-sm">Small container</div>
+                  <div class="container-md">Medium container</div>
+                  <div class="container-lg">Large container</div>
+                  <div class="container-xl">Extra large container</div>
+                </script>
+                <script type="text/css" slot="css">
+                  .container-sm { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+                  .container-md { max-width: 768px; margin: 0 auto; padding: 0 24px; }
+                  .container-lg { max-width: 1024px; margin: 0 auto; padding: 0 24px; }
+                  .container-xl { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+                </script>
               </div>
             </section>
 
-            <section id="wide" class="docs-section" data-aos="fade-up">
-              <h2>Wide Container</h2>
-              <p>Wide container for large layouts (max-width: 1400px).</p>
-              <div class="preview-box" style="padding: 0">
-                <div class="container-demo">
-                  <div class="container-wide">
-                    <div class="container-demo-content">
-                      <p>Wide container (max-width: 1400px)</p>
-                    </div>
+            <section id="boxed" class="docs-section" data-aos="fade-up">
+              <h2>Boxed Container</h2>
+              <p>Container with background and border.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.02);
+                      border: 1px solid rgba(255, 255, 255, 0.06);
+                      border-radius: 16px;
+                      padding: 32px;
+                      width: 100%;
+                    "
+                  >
+                    <p style="margin: 0; text-align: center">
+                      Content inside boxed container
+                    </p>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
+                <script type="text/html" slot="html">
+                  <div class="container-boxed">
+                    <p>Content inside boxed container</p>
                   </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="wide-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="container-wide"&gt;
-  &lt;!-- Content here --&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="wide-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.container-wide {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 32px;
-}</pre>
-                  </div>
-                </details>
+                </script>
+                <script type="text/css" slot="css">
+                  .container-boxed {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 32px;
+                    background: rgba(255,255,255,0.02);
+                    border: 1px solid rgba(255,255,255,0.06);
+                    border-radius: 16px;
+                  }
+                </script>
               </div>
             </section>
+          </main>
         </div>
       </div>
     </section>

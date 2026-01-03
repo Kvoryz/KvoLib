@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/components/modal.css" />
   </head>
   <body>
-        <script src="/assets/js/navbar-loader.js"></script>
+    <script src="/assets/js/navbar-loader.js"></script>
 
     <section class="page-header" data-aos="fade-down">
       <div class="container">
@@ -41,18 +41,19 @@
           </aside>
 
           <main class="docs-content">
-            <!-- Basic Modal -->
             <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Modal</h2>
               <p>Standard modal dialog.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="display: block; min-height: 300px; position: relative"
-                >
+              <div class="component-viewer">
+                <div slot="preview">
                   <div
                     class="modal"
-                    style="position: relative; transform: none; margin: 0 auto"
+                    style="
+                      position: relative;
+                      transform: none;
+                      margin: 0 auto;
+                      max-width: 400px;
+                    "
                   >
                     <div class="modal-header">
                       <h3 class="modal-title">Modal Title</h3>
@@ -75,92 +76,82 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="basic-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
+                <script type="text/html" slot="html">
+                  <div class="modal-overlay active">
+                    <div class="modal">
+                      <div class="modal-header">
+                        <h3 class="modal-title">Modal Title</h3>
+                        <button class="modal-close">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Modal content here.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="modal-btn modal-btn-secondary">
+                          Cancel
+                        </button>
+                        <button class="modal-btn modal-btn-primary">
+                          Confirm
+                        </button>
+                      </div>
                     </div>
-                    <pre>&lt;div class="modal-overlay active"&gt;
-  &lt;div class="modal"&gt;
-    &lt;div class="modal-header"&gt;
-      &lt;h3 class="modal-title"&gt;Modal Title&lt;/h3&gt;
-      &lt;button class="modal-close"&gt;&lt;i class="fas fa-times"&gt;&lt;/i&gt;&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;div class="modal-body"&gt;
-      &lt;p&gt;Modal content here.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="modal-footer"&gt;
-      &lt;button class="modal-btn modal-btn-secondary"&gt;Cancel&lt;/button&gt;
-      &lt;button class="modal-btn modal-btn-primary"&gt;Confirm&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
                   </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="basic-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
+                </script>
+                <script type="text/css" slot="css">
+                  .modal-overlay {
+                    position: fixed;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.7);
+                    backdrop-filter: blur(4px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 9999;
+                  }
 
-.modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
+                  .modal {
+                    background: #1a1a1a;
+                    border-radius: 16px;
+                    width: 90%;
+                    max-width: 500px;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                  }
 
-.modal {
-  background: #1a1a1a;
-  border-radius: 16px;
-  width: 90%;
-  max-width: 500px;
-  max-height: 90vh;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}</pre>
-                  </div>
-                </details>
+                  .modal-header {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px 24px;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                  }
+
+                  .modal-body { padding: 24px; }
+
+                  .modal-footer {
+                    display: flex;
+                    gap: 12px;
+                    justify-content: flex-end;
+                    padding: 20px 24px;
+                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                  }
+                </script>
               </div>
             </section>
 
-            <!-- Glass Modal -->
             <section id="glass" class="docs-section" data-aos="fade-up">
               <h2>Glass Modal</h2>
               <p>Glassmorphism style modal.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="display: block; min-height: 280px; position: relative"
-                >
+              <div class="component-viewer">
+                <div slot="preview">
                   <div
                     class="modal modal-glass"
-                    style="position: relative; transform: none; margin: 0 auto"
+                    style="
+                      position: relative;
+                      transform: none;
+                      margin: 0 auto;
+                      max-width: 400px;
+                    "
                   >
                     <div class="modal-header">
                       <h3 class="modal-title">Glass Modal</h3>
@@ -178,55 +169,32 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="glass-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="modal modal-glass"&gt;...&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="glass-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.modal-glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}</pre>
-                  </div>
-                </details>
+                <script type="text/html" slot="html">
+                  <div class="modal modal-glass">...</div>
+                </script>
+                <script type="text/css" slot="css">
+                  .modal-glass {
+                    background: rgba(255, 255, 255, 0.05);
+                    backdrop-filter: blur(20px);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                  }
+                </script>
               </div>
             </section>
 
-            <!-- Gradient Modal -->
             <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Border Modal</h2>
               <p>Modal with animated gradient border.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="display: block; min-height: 280px; position: relative"
-                >
+              <div class="component-viewer">
+                <div slot="preview">
                   <div
                     class="modal modal-gradient"
-                    style="position: relative; transform: none; margin: 0 auto"
+                    style="
+                      position: relative;
+                      transform: none;
+                      margin: 0 auto;
+                      max-width: 400px;
+                    "
                   >
                     <div class="modal-header">
                       <h3 class="modal-title">Gradient Border</h3>
@@ -244,68 +212,41 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="modal modal-gradient"&gt;...&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.modal-gradient {
-  background: #1a1a1a;
-  border: 2px solid transparent;
-  background-clip: padding-box;
-  position: relative;
-}
+                <script type="text/html" slot="html">
+                  <div class="modal modal-gradient">...</div>
+                </script>
+                <script type="text/css" slot="css">
+                  .modal-gradient {
+                    background: #1a1a1a;
+                    border: 2px solid transparent;
+                    position: relative;
+                  }
 
-.modal-gradient::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
-  border-radius: 18px;
-  z-index: -1;
-}</pre>
-                  </div>
-                </details>
+                  .modal-gradient::before {
+                    content: '';
+                    position: absolute;
+                    top: -2px; left: -2px; right: -2px; bottom: -2px;
+                    background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+                    border-radius: 18px;
+                    z-index: -1;
+                  }
+                </script>
               </div>
             </section>
 
-            <!-- Neon Modal -->
             <section id="neon" class="docs-section" data-aos="fade-up">
               <h2>Neon Modal</h2>
               <p>Glowing neon style modal.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="display: block; min-height: 280px; position: relative"
-                >
+              <div class="component-viewer">
+                <div slot="preview">
                   <div
                     class="modal modal-neon"
-                    style="position: relative; transform: none; margin: 0 auto"
+                    style="
+                      position: relative;
+                      transform: none;
+                      margin: 0 auto;
+                      max-width: 400px;
+                    "
                   >
                     <div class="modal-header">
                       <h3 class="modal-title" style="color: #00d4ff">
@@ -327,143 +268,95 @@
                     </div>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="modal modal-neon"&gt;...&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.modal-neon {
-  background: rgba(0, 0, 0, 0.95);
-  border: 1px solid #00d4ff;
-  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
-}
+                <script type="text/html" slot="html">
+                  <div class="modal modal-neon">...</div>
+                </script>
+                <script type="text/css" slot="css">
+                  .modal-neon {
+                    background: rgba(0, 0, 0, 0.95);
+                    border: 1px solid #00d4ff;
+                    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+                  }
 
-.modal-neon .modal-header {
-  border-bottom-color: rgba(0, 212, 255, 0.3);
-}
+                  .modal-neon .modal-header {
+                    border-bottom-color: rgba(0, 212, 255, 0.3);
+                  }
 
-.modal-neon .modal-footer {
-  border-top-color: rgba(0, 212, 255, 0.3);
-}</pre>
-                  </div>
-                </details>
+                  .modal-neon .modal-footer {
+                    border-top-color: rgba(0, 212, 255, 0.3);
+                  }
+                </script>
               </div>
             </section>
 
-            <!-- Sizes -->
             <section id="sizes" class="docs-section" data-aos="fade-up">
               <h2>Modal Sizes</h2>
               <p>Different modal size options.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <p style="margin-bottom: 12px">
-                    <strong>Available sizes:</strong>
-                  </p>
-                  <ul style="list-style: none; padding: 0">
-                    <li
-                      style="
-                        padding: 8px 0;
-                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                      "
-                    >
-                      <code>.modal-sm - 400px max-width
-                    </li>
-                    <li
-                      style="
-                        padding: 8px 0;
-                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                      "
-                    >
-                      <code>.modal - 500px (default)
-                    </li>
-                    <li
-                      style="
-                        padding: 8px 0;
-                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                      "
-                    >
-                      <code>.modal-lg - 700px max-width
-                    </li>
-                    <li
-                      style="
-                        padding: 8px 0;
-                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                      "
-                    >
-                      <code>.modal-xl - 900px max-width
-                    </li>
-                    <li style="padding: 8px 0">
-                      <code>.modal-fullscreen - Full screen
-                    </li>
-                  </ul>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div style="text-align: left; width: 100%">
+                    <p><strong>Available sizes:</strong></p>
+                    <ul style="list-style: none; padding: 0">
+                      <li
+                        style="
+                          padding: 8px 0;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        "
+                      >
+                        <code>.modal-sm</code> - 400px
+                      </li>
+                      <li
+                        style="
+                          padding: 8px 0;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        "
+                      >
+                        <code>.modal</code> - 500px (default)
+                      </li>
+                      <li
+                        style="
+                          padding: 8px 0;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        "
+                      >
+                        <code>.modal-lg</code> - 700px
+                      </li>
+                      <li
+                        style="
+                          padding: 8px 0;
+                          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        "
+                      >
+                        <code>.modal-xl</code> - 900px
+                      </li>
+                      <li style="padding: 8px 0">
+                        <code>.modal-fullscreen</code> - Full screen
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="sizes-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="modal modal-sm"&gt;...&lt;/div&gt;
-&lt;div class="modal modal-lg"&gt;...&lt;/div&gt;
-&lt;div class="modal modal-xl"&gt;...&lt;/div&gt;
-&lt;div class="modal modal-fullscreen"&gt;...&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="sizes-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.modal-sm { max-width: 400px; }
-.modal-lg { max-width: 700px; }
-.modal-xl { max-width: 900px; }
+                <script type="text/html" slot="html">
+                  <div class="modal modal-sm">...</div>
+                  <div class="modal modal-lg">...</div>
+                  <div class="modal modal-xl">...</div>
+                  <div class="modal modal-fullscreen">...</div>
+                </script>
+                <script type="text/css" slot="css">
+                  .modal-sm { max-width: 400px; }
+                  .modal-lg { max-width: 700px; }
+                  .modal-xl { max-width: 900px; }
 
-.modal-fullscreen {
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  max-height: 100%;
-  border-radius: 0;
-}</pre>
-                  </div>
-                </details>
+                  .modal-fullscreen {
+                    width: 100%;
+                    max-width: 100%;
+                    height: 100%;
+                    max-height: 100%;
+                    border-radius: 0;
+                  }
+                </script>
               </div>
             </section>
+          </main>
         </div>
       </div>
     </section>

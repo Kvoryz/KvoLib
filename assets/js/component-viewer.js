@@ -42,6 +42,9 @@ class ComponentViewer {
                 ? `<button class="code-tab" data-tab="css">CSS</button>`
                 : ""
             }
+            <button class="code-tab playground-tab" data-html="${uniqueId}-html" data-css="${uniqueId}-css">
+              <i class="fas fa-play"></i> Playground
+            </button>
           </div>
           <div class="code-content active" data-content="html">
             <div class="code-header">
@@ -71,11 +74,6 @@ class ComponentViewer {
           `
               : ""
           }
-          <div class="code-actions">
-            <button class="playground-link" data-html="${uniqueId}-html" data-css="${uniqueId}-css">
-              Try in Playground
-            </button>
-          </div>
         </details>
       </div>
     `;
@@ -197,7 +195,7 @@ class ComponentViewer {
   }
 
   initPlaygroundLinks(container) {
-    const playgroundBtn = container.querySelector(".playground-link");
+    const playgroundBtn = container.querySelector(".playground-tab");
     if (!playgroundBtn) return;
 
     playgroundBtn.addEventListener("click", () => {

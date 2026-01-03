@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/components/select.css" />
   </head>
   <body>
-        <script src="/assets/js/navbar-loader.js"></script>
+    <script src="/assets/js/navbar-loader.js"></script>
 
     <section class="page-header" data-aos="fade-down">
       <div class="container">
@@ -34,7 +34,6 @@
                 <li><a href="#modern">Modern</a></li>
                 <li><a href="#minimal">Minimal</a></li>
                 <li><a href="#glass">Glassmorphism</a></li>
-                <li><a href="#neon">Neon</a></li>
                 <li><a href="#gradient">Gradient Border</a></li>
               </ul>
             </nav>
@@ -44,12 +43,12 @@
             <section id="modern" class="docs-section" data-aos="fade-up">
               <h2>Modern Select</h2>
               <p>Clean modern select dropdown.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="flex-direction: column; align-items: stretch"
-                >
-                  <div class="select-modern">
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    class="select-modern"
+                    style="width: 100%; max-width: 300px"
+                  >
                     <select>
                       <option>Select option...</option>
                       <option>Option 1</option>
@@ -58,281 +57,181 @@
                     </select>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
+                <script type="text/html" slot="html">
+                  <div class="select-modern">
+                    <select>
+                      <option>Select option...</option>
+                      <option>Option 1</option>
+                    </select>
                   </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="modern-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="select-modern"&gt;
-  &lt;select&gt;
-    &lt;option&gt;Select option...&lt;/option&gt;
-    &lt;option&gt;Option 1&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="modern-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.select-modern select:focus {
-  outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
-}</pre>
-                  </div>
-                </details>
+                </script>
+                <script type="text/css" slot="css">
+                  .select-modern {
+                    position: relative;
+                    width: 100%;
+                  }
+
+                  .select-modern select {
+                    width: 100%;
+                    padding: 14px 48px 14px 16px;
+                    font-size: 0.9rem;
+                    color: #fff;
+                    background: rgba(255,255,255,0.05);
+                    border: 1px solid rgba(255,255,255,0.1);
+                    border-radius: 10px;
+                    appearance: none;
+                    cursor: pointer;
+                  }
+
+                  .select-modern select:focus {
+                    outline: none;
+                    border-color: #667eea;
+                    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+                  }
+                </script>
               </div>
             </section>
 
             <section id="minimal" class="docs-section" data-aos="fade-up">
               <h2>Minimal Select</h2>
               <p>Minimal underline select.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="flex-direction: column; align-items: stretch"
-                >
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    class="select-minimal"
+                    style="width: 100%; max-width: 300px"
+                  >
+                    <select>
+                      <option>Choose language...</option>
+                      <option>English</option>
+                      <option>Indonesian</option>
+                      <option>Japanese</option>
+                    </select>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
                   <div class="select-minimal">
                     <select>
                       <option>Choose language...</option>
                       <option>English</option>
-                      <option>Spanish</option>
-                      <option>French</option>
                     </select>
                   </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="minimal-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="select-minimal"&gt;
-  &lt;select&gt;
-    &lt;option&gt;Choose language...&lt;/option&gt;
-    &lt;option&gt;English&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="minimal-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.select-minimal select:focus {
-  outline: none;
-  border-bottom-color: #fff;
-}</pre>
-                  </div>
-                </details>
+                </script>
+                <script type="text/css" slot="css">
+                  .select-minimal select {
+                    width: 100%;
+                    padding: 12px 0;
+                    font-size: 0.9rem;
+                    color: #fff;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 2px solid rgba(255,255,255,0.2);
+                    appearance: none;
+                    cursor: pointer;
+                  }
+
+                  .select-minimal select:focus {
+                    outline: none;
+                    border-bottom-color: #fff;
+                  }
+                </script>
               </div>
             </section>
 
             <section id="glass" class="docs-section" data-aos="fade-up">
               <h2>Glassmorphism Select</h2>
-              <p>Glass blur effect select.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-gradient"
-                  style="flex-direction: column; align-items: stretch"
-                >
+              <p>Glass effect select dropdown.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    class="select-glass"
+                    style="width: 100%; max-width: 300px"
+                  >
+                    <select>
+                      <option>Select country...</option>
+                      <option>Indonesia</option>
+                      <option>Japan</option>
+                      <option>USA</option>
+                    </select>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
                   <div class="select-glass">
                     <select>
                       <option>Select country...</option>
-                      <option>United States</option>
-                      <option>United Kingdom</option>
-                      <option>Canada</option>
+                      <option>Indonesia</option>
                     </select>
                   </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="glass-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="select-glass"&gt;
-  &lt;select&gt;
-    &lt;option&gt;Select country...&lt;/option&gt;
-    &lt;option&gt;United States&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="glass-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.select-glass select {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}</pre>
-                  </div>
-                </details>
-              </div>
-            </section>
+                </script>
+                <script type="text/css" slot="css">
+                  .select-glass select {
+                    width: 100%;
+                    padding: 16px 20px;
+                    font-size: 0.9rem;
+                    color: #fff;
+                    background: rgba(255,255,255,0.05);
+                    backdrop-filter: blur(10px);
+                    border: 1px solid rgba(255,255,255,0.1);
+                    border-radius: 12px;
+                    appearance: none;
+                  }
 
-            <section id="neon" class="docs-section" data-aos="fade-up">
-              <h2>Neon Select</h2>
-              <p>Glowing neon select dropdown.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="flex-direction: column; align-items: stretch"
-                >
-                  <div class="select-neon">
-                    <select>
-                      <option>Choose plan...</option>
-                      <option>Free</option>
-                      <option>Pro</option>
-                      <option>Enterprise</option>
-                    </select>
-                  </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="select-neon"&gt;
-  &lt;select&gt;
-    &lt;option&gt;Choose plan...&lt;/option&gt;
-    &lt;option&gt;Free&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.select-neon select:focus {
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5),
-              0 0 40px rgba(0, 212, 255, 0.2);
-}</pre>
-                  </div>
-                </details>
+                  .select-glass select:focus {
+                    outline: none;
+                    background: rgba(255,255,255,0.1);
+                    border-color: rgba(255,255,255,0.3);
+                  }
+                </script>
               </div>
             </section>
 
             <section id="gradient" class="docs-section" data-aos="fade-up">
               <h2>Gradient Border Select</h2>
-              <p>Select with animated gradient border.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="flex-direction: column; align-items: stretch"
-                >
-                  <div class="select-gradient">
+              <p>Select with gradient border.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    class="select-gradient"
+                    style="width: 100%; max-width: 300px"
+                  >
                     <select>
-                      <option>Select category...</option>
-                      <option>Technology</option>
-                      <option>Design</option>
-                      <option>Marketing</option>
+                      <option>Select framework...</option>
+                      <option>React</option>
+                      <option>Vue</option>
+                      <option>Angular</option>
                     </select>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
+                <script type="text/html" slot="html">
+                  <div class="select-gradient">
+                    <select>
+                      <option>Select framework...</option>
+                      <option>React</option>
+                    </select>
                   </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span>
-                      <button class="copy-btn" data-copy="gradient-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="select-gradient"&gt;
-  &lt;select&gt;
-    &lt;option&gt;Select category...&lt;/option&gt;
-    &lt;option&gt;Technology&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span>
-                      <button class="copy-btn" data-copy="gradient-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.select-gradient {
-  padding: 2px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  border-radius: 12px;
-}</pre>
-                  </div>
-                </details>
+                </script>
+                <script type="text/css" slot="css">
+                  .select-gradient {
+                    position: relative;
+                    padding: 2px;
+                    background: linear-gradient(90deg, #667eea, #764ba2);
+                    border-radius: 12px;
+                  }
+
+                  .select-gradient select {
+                    width: 100%;
+                    padding: 14px 20px;
+                    font-size: 0.9rem;
+                    color: #fff;
+                    background: #0a0a0a;
+                    border: none;
+                    border-radius: 10px;
+                    appearance: none;
+                  }
+                </script>
               </div>
             </section>
+          </main>
         </div>
       </div>
     </section>

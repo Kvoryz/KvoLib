@@ -907,6 +907,28 @@ body {
   transform: translateY(-1px);
 }
 
+.playground-link-legacy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: white;
+  border: none;
+  border-radius: 8px;
+  color: #1a1a1a;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.playground-link-legacy:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
 .copy-btn {
   position: relative;
   overflow: hidden;
@@ -1059,6 +1081,17 @@ body {
 .code-tab.active {
   color: var(--white);
   background: rgba(255, 255, 255, 0.1);
+}
+
+.code-tab.playground-tab {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.code-tab.playground-tab i {
+  font-size: 0.7rem;
 }
 
 .code-content {

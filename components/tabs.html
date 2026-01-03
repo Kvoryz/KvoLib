@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/components/tabs.css" />
   </head>
   <body>
-        <script src="/assets/js/navbar-loader.js"></script>
+    <script src="/assets/js/navbar-loader.js"></script>
 
     <section class="page-header" data-aos="fade-down">
       <div class="container">
@@ -35,18 +35,16 @@
                 <li><a href="#pills">Pills</a></li>
                 <li><a href="#boxed">Boxed</a></li>
                 <li><a href="#icons">With Icons</a></li>
-                <li><a href="#neon">Neon</a></li>
               </ul>
             </nav>
           </aside>
 
           <main class="docs-content">
-            <!-- Basic Tabs -->
             <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Tabs</h2>
               <p>Standard tab navigation with underline.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
+              <div class="component-viewer">
+                <div slot="preview">
                   <div class="kvo-tabs">
                     <button class="kvo-tab active">Overview</button>
                     <button class="kvo-tab">Features</button>
@@ -54,305 +52,160 @@
                     <button class="kvo-tab">FAQ</button>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
+                <script type="text/html" slot="html">
+                  <div class="kvo-tabs">
+                    <button class="kvo-tab active">Overview</button>
+                    <button class="kvo-tab">Features</button>
+                    <button class="kvo-tab">Pricing</button>
                   </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="basic-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="kvo-tabs"&gt;
-  &lt;button class="kvo-tab active"&gt;Overview&lt;/button&gt;
-  &lt;button class="kvo-tab"&gt;Features&lt;/button&gt;
-  &lt;button class="kvo-tab"&gt;Pricing&lt;/button&gt;
-  &lt;button class="kvo-tab"&gt;FAQ&lt;/button&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="basic-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-tabs {
-  display: flex;
-  gap: 4px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+                </script>
+                <script type="text/css" slot="css">
+                  .kvo-tabs {
+                    display: flex;
+                    gap: 4px;
+                    border-bottom: 1px solid rgba(255,255,255,0.1);
+                  }
 
-.kvo-tab {
-  padding: 12px 20px;
-  color: rgba(255, 255, 255, 0.6);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  position: relative;
-}
+                  .kvo-tab {
+                    padding: 12px 20px;
+                    background: none;
+                    border: none;
+                    color: rgba(255,255,255,0.5);
+                    font-size: 0.9rem;
+                    cursor: pointer;
+                    position: relative;
+                  }
 
-.kvo-tab.active {
-  color: #fff;
-}
+                  .kvo-tab.active {
+                    color: #fff;
+                  }
 
-.kvo-tab.active::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-}</pre>
-                  </div>
-                </details>
+                  .kvo-tab.active::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0; right: 0;
+                    height: 2px;
+                    background: linear-gradient(90deg, #667eea, #764ba2);
+                  }
+                </script>
               </div>
             </section>
 
-            <!-- Pills Tabs -->
             <section id="pills" class="docs-section" data-aos="fade-up">
               <h2>Pills Tabs</h2>
               <p>Tab navigation with pill style.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
+              <div class="component-viewer">
+                <div slot="preview">
                   <div class="kvo-tabs kvo-tabs-pills">
                     <button class="kvo-tab active">Overview</button>
                     <button class="kvo-tab">Features</button>
                     <button class="kvo-tab">Pricing</button>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
+                <script type="text/html" slot="html">
+                  <div class="kvo-tabs kvo-tabs-pills">
+                    <button class="kvo-tab active">Overview</button>
+                    <button class="kvo-tab">Features</button>
                   </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="pills-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="kvo-tabs kvo-tabs-pills"&gt;...&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="pills-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-tabs-pills {
-  border-bottom: none;
-  gap: 8px;
-}
+                </script>
+                <script type="text/css" slot="css">
+                  .kvo-tabs-pills {
+                    border-bottom: none;
+                    gap: 8px;
+                  }
 
-.kvo-tabs-pills .kvo-tab {
-  border-radius: 8px;
-}
+                  .kvo-tabs-pills .kvo-tab {
+                    border-radius: 8px;
+                  }
 
-.kvo-tabs-pills .kvo-tab:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
+                  .kvo-tabs-pills .kvo-tab.active {
+                    background: linear-gradient(135deg, #667eea, #764ba2);
+                  }
 
-.kvo-tabs-pills .kvo-tab.active {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-}
-
-.kvo-tabs-pills .kvo-tab.active::after {
-  display: none;
-}</pre>
-                  </div>
-                </details>
+                  .kvo-tabs-pills .kvo-tab.active::after {
+                    display: none;
+                  }
+                </script>
               </div>
             </section>
 
-            <!-- Boxed Tabs -->
             <section id="boxed" class="docs-section" data-aos="fade-up">
               <h2>Boxed Tabs</h2>
-              <p>Tab navigation with box container.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
+              <p>Segmented control style tabs.</p>
+              <div class="component-viewer">
+                <div slot="preview">
                   <div class="kvo-tabs kvo-tabs-boxed">
-                    <button class="kvo-tab active">Tab 1</button>
-                    <button class="kvo-tab">Tab 2</button>
-                    <button class="kvo-tab">Tab 3</button>
+                    <button class="kvo-tab active">Daily</button>
+                    <button class="kvo-tab">Weekly</button>
+                    <button class="kvo-tab">Monthly</button>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
+                <script type="text/html" slot="html">
+                  <div class="kvo-tabs kvo-tabs-boxed">
+                    <button class="kvo-tab active">Daily</button>
+                    <button class="kvo-tab">Weekly</button>
                   </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="boxed-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="kvo-tabs kvo-tabs-boxed"&gt;...&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="boxed-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-tabs-boxed {
-  background: rgba(255, 255, 255, 0.03);
-  padding: 4px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
+                </script>
+                <script type="text/css" slot="css">
+                  .kvo-tabs-boxed {
+                    background: rgba(255,255,255,0.05);
+                    border-radius: 10px;
+                    padding: 4px;
+                    border-bottom: none;
+                    gap: 0;
+                  }
 
-.kvo-tabs-boxed .kvo-tab {
-  border-radius: 8px;
-}
+                  .kvo-tabs-boxed .kvo-tab {
+                    border-radius: 8px;
+                  }
 
-.kvo-tabs-boxed .kvo-tab.active {
-  background: rgba(255, 255, 255, 0.1);
-}</pre>
-                  </div>
-                </details>
+                  .kvo-tabs-boxed .kvo-tab.active {
+                    background: rgba(255,255,255,0.1);
+                  }
+
+                  .kvo-tabs-boxed .kvo-tab.active::after {
+                    display: none;
+                  }
+                </script>
               </div>
             </section>
 
-            <!-- Tabs with Icons -->
             <section id="icons" class="docs-section" data-aos="fade-up">
               <h2>Tabs with Icons</h2>
-              <p>Tab navigation with icons.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
+              <p>Tabs with icon + label.</p>
+              <div class="component-viewer">
+                <div slot="preview">
                   <div class="kvo-tabs">
-                    <button class="kvo-tab kvo-tab-icon active">
+                    <button class="kvo-tab active">
                       <i class="fas fa-home"></i> Home
                     </button>
-                    <button class="kvo-tab kvo-tab-icon">
+                    <button class="kvo-tab">
                       <i class="fas fa-user"></i> Profile
                     </button>
-                    <button class="kvo-tab kvo-tab-icon">
+                    <button class="kvo-tab">
                       <i class="fas fa-cog"></i> Settings
                     </button>
                   </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
+                <script type="text/html" slot="html">
+                  <div class="kvo-tabs">
+                    <button class="kvo-tab active">
+                      <i class="fas fa-home"></i> Home
                     </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
+                    <button class="kvo-tab">
+                      <i class="fas fa-user"></i> Profile
+                    </button>
                   </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="icons-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;button class="kvo-tab kvo-tab-icon"&gt;
-  &lt;i class="fas fa-home"&gt;&lt;/i&gt; Home
-&lt;/button&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="icons-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-tab-icon {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.kvo-tab-icon i {
-  font-size: 0.875rem;
-}</pre>
-                  </div>
-                </details>
+                </script>
+                <script type="text/css" slot="css">
+                  .kvo-tab i {
+                    margin-right: 8px;
+                  }
+                </script>
               </div>
             </section>
-
-            <!-- Neon Tabs -->
-            <section id="neon" class="docs-section" data-aos="fade-up">
-              <h2>Neon Tabs</h2>
-              <p>Glowing neon style tabs.</p>
-              <div class="preview-box">
-                <div class="preview-area preview-dark" style="display: block">
-                  <div class="kvo-tabs kvo-tabs-neon">
-                    <button class="kvo-tab active">Overview</button>
-                    <button class="kvo-tab">Features</button>
-                    <button class="kvo-tab">Pricing</button>
-                  </div>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="neon-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="kvo-tabs kvo-tabs-neon"&gt;...&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="neon-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-tabs-neon .kvo-tab.active {
-  color: #00d4ff;
-}
-
-.kvo-tabs-neon .kvo-tab.active::after {
-  background: #00d4ff;
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-}</pre>
-                  </div>
-                </details>
-              </div>
-            </section>
+          </main>
         </div>
       </div>
     </section>

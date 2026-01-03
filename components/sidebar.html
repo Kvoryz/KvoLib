@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/components/sidebar.css" />
   </head>
   <body>
-        <script src="/assets/js/navbar-loader.js"></script>
+    <script src="/assets/js/navbar-loader.js"></script>
 
     <section class="page-header" data-aos="fade-down">
       <div class="container">
@@ -20,7 +20,7 @@
           <span>Sidebar</span>
         </div>
         <h1 class="page-title">Sidebar</h1>
-        <p class="page-description">4 sidebar styles for navigation.</p>
+        <p class="page-description">Sidebar navigation components.</p>
       </div>
     </section>
 
@@ -32,382 +32,294 @@
               <h4>Sidebar Types</h4>
               <ul>
                 <li><a href="#basic">Basic</a></li>
-                <li><a href="#glass">Glass</a></li>
-                <li><a href="#compact">Compact</a></li>
-                <li><a href="#user">With User</a></li>
+                <li><a href="#icons">With Icons</a></li>
+                <li><a href="#collapsed">Collapsed</a></li>
               </ul>
             </nav>
           </aside>
 
           <main class="docs-content">
-            <!-- Basic Sidebar -->
             <section id="basic" class="docs-section" data-aos="fade-up">
               <h2>Basic Sidebar</h2>
               <p>Standard sidebar navigation.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="
-                    display: block;
-                    padding: 0;
-                    height: 350px;
-                    overflow: hidden;
-                  "
-                >
-                  <aside
-                    class="kvo-sidebar"
-                    style="height: 100%; position: relative"
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    style="
+                      width: 220px;
+                      background: rgba(255, 255, 255, 0.02);
+                      border-radius: 12px;
+                      padding: 20px;
+                      border: 1px solid rgba(255, 255, 255, 0.06);
+                    "
                   >
-                    <div class="kvo-sidebar-header">
-                      <div
-                        class="kvo-sidebar-logo"
+                    <div style="font-weight: 600; margin-bottom: 24px">
+                      Dashboard
+                    </div>
+                    <nav
+                      style="display: flex; flex-direction: column; gap: 4px"
+                    >
+                      <a
+                        href="#"
                         style="
-                          width: 28px;
-                          height: 28px;
-                          background: linear-gradient(135deg, #667eea, #764ba2);
-                          border-radius: 6px;
+                          padding: 12px 16px;
+                          background: rgba(102, 126, 234, 0.1);
+                          color: #667eea;
+                          border-radius: 8px;
+                          text-decoration: none;
                         "
-                      ></div>
-                      <span class="kvo-sidebar-title">Dashboard</span>
-                    </div>
-                    <nav class="kvo-sidebar-nav">
-                      <a href="#" class="kvo-sidebar-link active"
-                        ><i class="fas fa-home"></i><span>Home</span></a
+                        >Overview</a
                       >
-                      <a href="#" class="kvo-sidebar-link"
-                        ><i class="fas fa-chart-bar"></i
-                        ><span>Analytics</span></a
+                      <a
+                        href="#"
+                        style="
+                          padding: 12px 16px;
+                          color: rgba(255, 255, 255, 0.6);
+                          text-decoration: none;
+                          border-radius: 8px;
+                        "
+                        >Analytics</a
                       >
-                      <a href="#" class="kvo-sidebar-link"
-                        ><i class="fas fa-users"></i><span>Users</span></a
-                      >
-                      <a href="#" class="kvo-sidebar-link"
-                        ><i class="fas fa-cog"></i><span>Settings</span></a
+                      <a
+                        href="#"
+                        style="
+                          padding: 12px 16px;
+                          color: rgba(255, 255, 255, 0.6);
+                          text-decoration: none;
+                          border-radius: 8px;
+                        "
+                        >Settings</a
                       >
                     </nav>
-                  </aside>
+                  </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="basic-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;aside class="kvo-sidebar"&gt;
-  &lt;div class="kvo-sidebar-header"&gt;
-    &lt;div class="kvo-sidebar-logo"&gt;&lt;/div&gt;
-    &lt;span class="kvo-sidebar-title"&gt;Dashboard&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;nav class="kvo-sidebar-nav"&gt;
-    &lt;a href="#" class="kvo-sidebar-link active"&gt;
-      &lt;i class="fas fa-home"&gt;&lt;/i&gt;&lt;span&gt;Home&lt;/span&gt;
-    &lt;/a&gt;
-    &lt;a href="#" class="kvo-sidebar-link"&gt;...&lt;/a&gt;
-  &lt;/nav&gt;
-&lt;/aside&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="basic-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-sidebar {
-  width: 260px;
-  height: 100vh;
-  background: #0f0f0f;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 24px 16px;
-}
+                <script type="text/html" slot="html">
+                  <aside class="sidebar">
+                    <div class="sidebar-brand">Dashboard</div>
+                    <nav class="sidebar-nav">
+                      <a href="#" class="sidebar-link active">Overview</a>
+                      <a href="#" class="sidebar-link">Analytics</a>
+                      <a href="#" class="sidebar-link">Settings</a>
+                    </nav>
+                  </aside>
+                </script>
+                <script type="text/css" slot="css">
+                  .sidebar {
+                    width: 240px;
+                    background: rgba(255,255,255,0.02);
+                    border-right: 1px solid rgba(255,255,255,0.06);
+                    padding: 20px;
+                  }
 
-.kvo-sidebar-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  color: rgba(255, 255, 255, 0.6);
-  border-radius: 8px;
-  transition: all 0.2s;
-}
+                  .sidebar-nav {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                  }
 
-.kvo-sidebar-link.active {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: #fff;
-}</pre>
-                  </div>
-                </details>
+                  .sidebar-link {
+                    padding: 12px 16px;
+                    color: rgba(255,255,255,0.6);
+                    text-decoration: none;
+                    border-radius: 8px;
+                    transition: all 0.2s;
+                  }
+
+                  .sidebar-link:hover {
+                    background: rgba(255,255,255,0.05);
+                    color: #fff;
+                  }
+
+                  .sidebar-link.active {
+                    background: rgba(102,126,234,0.1);
+                    color: #667eea;
+                  }
+                </script>
               </div>
             </section>
 
-            <!-- Glass Sidebar -->
-            <section id="glass" class="docs-section" data-aos="fade-up">
-              <h2>Glass Sidebar</h2>
-              <p>Glassmorphism style sidebar.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="
-                    display: block;
-                    padding: 0;
-                    height: 300px;
-                    overflow: hidden;
-                  "
-                >
-                  <aside
-                    class="kvo-sidebar kvo-sidebar-glass"
-                    style="height: 100%; position: relative"
+            <section id="icons" class="docs-section" data-aos="fade-up">
+              <h2>Sidebar with Icons</h2>
+              <p>Sidebar with icon + label links.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    style="
+                      width: 220px;
+                      background: rgba(255, 255, 255, 0.02);
+                      border-radius: 12px;
+                      padding: 20px;
+                      border: 1px solid rgba(255, 255, 255, 0.06);
+                    "
                   >
-                    <div class="kvo-sidebar-header">
-                      <span class="kvo-sidebar-title">Glass Menu</span>
-                    </div>
-                    <nav class="kvo-sidebar-nav">
-                      <a href="#" class="kvo-sidebar-link active"
-                        ><i class="fas fa-home"></i><span>Home</span></a
+                    <nav
+                      style="display: flex; flex-direction: column; gap: 4px"
+                    >
+                      <a
+                        href="#"
+                        style="
+                          padding: 12px 16px;
+                          display: flex;
+                          align-items: center;
+                          gap: 12px;
+                          background: rgba(102, 126, 234, 0.1);
+                          color: #667eea;
+                          border-radius: 8px;
+                          text-decoration: none;
+                        "
+                        ><i class="fas fa-home"></i> Home</a
                       >
-                      <a href="#" class="kvo-sidebar-link"
-                        ><i class="fas fa-folder"></i><span>Projects</span></a
+                      <a
+                        href="#"
+                        style="
+                          padding: 12px 16px;
+                          display: flex;
+                          align-items: center;
+                          gap: 12px;
+                          color: rgba(255, 255, 255, 0.6);
+                          text-decoration: none;
+                        "
+                        ><i class="fas fa-chart-bar"></i> Analytics</a
                       >
-                      <a href="#" class="kvo-sidebar-link"
-                        ><i class="fas fa-bell"></i
-                        ><span>Notifications</span></a
+                      <a
+                        href="#"
+                        style="
+                          padding: 12px 16px;
+                          display: flex;
+                          align-items: center;
+                          gap: 12px;
+                          color: rgba(255, 255, 255, 0.6);
+                          text-decoration: none;
+                        "
+                        ><i class="fas fa-cog"></i> Settings</a
                       >
                     </nav>
-                  </aside>
+                  </div>
                 </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="glass-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;aside class="kvo-sidebar kvo-sidebar-glass"&gt;...&lt;/aside&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="glass-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-sidebar-glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(20px);
-}</pre>
-                  </div>
-                </details>
+                <script type="text/html" slot="html">
+                  <aside class="sidebar">
+                    <nav class="sidebar-nav">
+                      <a href="#" class="sidebar-link active">
+                        <i class="fas fa-home"></i> Home
+                      </a>
+                      <a href="#" class="sidebar-link">
+                        <i class="fas fa-chart-bar"></i> Analytics
+                      </a>
+                    </nav>
+                  </aside>
+                </script>
+                <script type="text/css" slot="css">
+                  .sidebar-link {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                  }
+
+                  .sidebar-link i {
+                    width: 20px;
+                    text-align: center;
+                  }
+                </script>
               </div>
             </section>
 
-            <!-- Compact Sidebar -->
-            <section id="compact" class="docs-section" data-aos="fade-up">
-              <h2>Compact Sidebar</h2>
-              <p>Icon-only compact sidebar.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="
-                    display: block;
-                    padding: 0;
-                    height: 300px;
-                    overflow: hidden;
-                  "
-                >
-                  <aside
-                    class="kvo-sidebar kvo-sidebar-compact"
-                    style="height: 100%; position: relative"
+            <section id="collapsed" class="docs-section" data-aos="fade-up">
+              <h2>Collapsed Sidebar</h2>
+              <p>Icon-only collapsed state.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    style="
+                      width: 64px;
+                      background: rgba(255, 255, 255, 0.02);
+                      border-radius: 12px;
+                      padding: 20px 12px;
+                      border: 1px solid rgba(255, 255, 255, 0.06);
+                    "
                   >
-                    <nav class="kvo-sidebar-nav">
-                      <a href="#" class="kvo-sidebar-link active"
+                    <nav
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        align-items: center;
+                      "
+                    >
+                      <a
+                        href="#"
+                        style="
+                          width: 40px;
+                          height: 40px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          background: rgba(102, 126, 234, 0.1);
+                          color: #667eea;
+                          border-radius: 8px;
+                          text-decoration: none;
+                        "
                         ><i class="fas fa-home"></i
                       ></a>
-                      <a href="#" class="kvo-sidebar-link"
+                      <a
+                        href="#"
+                        style="
+                          width: 40px;
+                          height: 40px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          color: rgba(255, 255, 255, 0.6);
+                          text-decoration: none;
+                        "
                         ><i class="fas fa-chart-bar"></i
                       ></a>
-                      <a href="#" class="kvo-sidebar-link"
-                        ><i class="fas fa-users"></i
+                      <a
+                        href="#"
+                        style="
+                          width: 40px;
+                          height: 40px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          color: rgba(255, 255, 255, 0.6);
+                          text-decoration: none;
+                        "
+                        ><i class="fas fa-cog"></i
                       ></a>
-                      <a href="#" class="kvo-sidebar-link"
+                    </nav>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <aside class="sidebar sidebar-collapsed">
+                    <nav class="sidebar-nav">
+                      <a href="#" class="sidebar-link active"
+                        ><i class="fas fa-home"></i
+                      ></a>
+                      <a href="#" class="sidebar-link"
+                        ><i class="fas fa-chart-bar"></i
+                      ></a>
+                      <a href="#" class="sidebar-link"
                         ><i class="fas fa-cog"></i
                       ></a>
                     </nav>
                   </aside>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="compact-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;aside class="kvo-sidebar kvo-sidebar-compact"&gt;
-  &lt;nav class="kvo-sidebar-nav"&gt;
-    &lt;a href="#" class="kvo-sidebar-link"&gt;&lt;i class="fas fa-home"&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;/nav&gt;
-&lt;/aside&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="compact-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-sidebar-compact {
-  width: 72px;
-  align-items: center;
-  padding: 16px 8px;
-}
+                </script>
+                <script type="text/css" slot="css">
+                  .sidebar-collapsed {
+                    width: 64px;
+                    padding: 20px 12px;
+                  }
 
-.kvo-sidebar-compact .kvo-sidebar-link {
-  justify-content: center;
-  padding: 12px;
-}
-
-.kvo-sidebar-compact .kvo-sidebar-link span {
-  display: none;
-}</pre>
-                  </div>
-                </details>
-              </div>
-            </section>
-
-            <!-- Sidebar with User -->
-            <section id="user" class="docs-section" data-aos="fade-up">
-              <h2>Sidebar with User</h2>
-              <p>Sidebar with user profile footer.</p>
-              <div class="preview-box">
-                <div
-                  class="preview-area preview-dark"
-                  style="
-                    display: block;
+                  .sidebar-collapsed .sidebar-link {
+                    width: 40px;
+                    height: 40px;
                     padding: 0;
-                    height: 350px;
-                    overflow: hidden;
-                  "
-                >
-                  <aside
-                    class="kvo-sidebar"
-                    style="height: 100%; position: relative"
-                  >
-                    <div class="kvo-sidebar-header">
-                      <span class="kvo-sidebar-title">App Name</span>
-                    </div>
-                    <nav class="kvo-sidebar-nav">
-                      <a href="#" class="kvo-sidebar-link active"
-                        ><i class="fas fa-home"></i><span>Home</span></a
-                      >
-                      <a href="#" class="kvo-sidebar-link"
-                        ><i class="fas fa-inbox"></i><span>Inbox</span></a
-                      >
-                    </nav>
-                    <div class="kvo-sidebar-footer">
-                      <div class="kvo-sidebar-user">
-                        <div class="kvo-sidebar-avatar"></div>
-                        <div class="kvo-sidebar-user-info">
-                          <div class="kvo-sidebar-user-name">John Doe</div>
-                          <div class="kvo-sidebar-user-email">
-                            john@example.com
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </aside>
-                </div>
-                <details class="code-dropdown">
-                  <summary>
-                    <i class="fas fa-code"></i> View Code
-                    <i class="fas fa-chevron-down"></i>
-                  </summary>
-                  <div class="code-tabs">
-                    <button class="code-tab active" data-tab="html">
-                      HTML
-                    </button>
-                    <button class="code-tab" data-tab="css">CSS</button>
-                  </div>
-                  <div class="code-content active" data-content="html">
-                    <div class="code-header">
-                      <span>HTML</span
-                      ><button class="copy-btn" data-copy="user-html">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>&lt;div class="kvo-sidebar-footer"&gt;
-  &lt;div class="kvo-sidebar-user"&gt;
-    &lt;div class="kvo-sidebar-avatar"&gt;&lt;/div&gt;
-    &lt;div class="kvo-sidebar-user-info"&gt;
-      &lt;div class="kvo-sidebar-user-name"&gt;John Doe&lt;/div&gt;
-      &lt;div class="kvo-sidebar-user-email"&gt;john@example.com&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-                  </div>
-                  <div class="code-content" data-content="css">
-                    <div class="code-header">
-                      <span>CSS</span
-                      ><button class="copy-btn" data-copy="user-css">
-                        <i class="fas fa-copy"></i> Copy
-                      </button>
-                    </div>
-                    <pre>.kvo-sidebar-footer {
-  margin-top: auto;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.kvo-sidebar-user {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px;
-  border-radius: 8px;
-}
-
-.kvo-sidebar-avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-}</pre>
-                  </div>
-                </details>
+                    justify-content: center;
+                  }
+                </script>
               </div>
             </section>
+          </main>
         </div>
       </div>
     </section>
