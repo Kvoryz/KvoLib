@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta
+      name="description"
+      content="KvoLib Code Playground - Experiment with components"
+    />
+    <title>Playground - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <style>
+      .playground-page {
+        min-height: calc(100vh - 80px);
+        padding: 40px 0;
+      }
+
+      .playground-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        min-height: 500px;
+      }
+
+      .editor-side {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .editor-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .editor-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        background: rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .editor-header h3 {
+        font-size: 0.85rem;
+        color: var(--gray-300);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .editor-header h3 i {
+        color: var(--primary);
+      }
+
+      .editor-textarea {
+        flex: 1;
+        width: 100%;
+        min-height: 150px;
+        background: transparent;
+        border: none;
+        padding: 16px;
+        color: var(--gray-200);
+        font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+        font-size: 0.85rem;
+        line-height: 1.6;
+        resize: none;
+        outline: none;
+      }
+
+      .preview-side {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .preview-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        background: rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .preview-header h3 {
+        font-size: 0.85rem;
+        color: var(--gray-300);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .preview-header h3 i {
+        color: #10b981;
+      }
+
+      .preview-content {
+        flex: 1;
+        padding: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--gray-950);
+      }
+
+      .action-bar {
+        display: flex;
+        gap: 12px;
+        padding: 16px;
+        background: rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .action-btn {
+        flex: 1;
+        padding: 12px 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: var(--gray-300);
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .action-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+      }
+
+      .action-btn.primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        color: white;
+      }
+
+      .action-btn.primary:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+      }
+
+      .action-btn.danger:hover {
+        background: rgba(239, 68, 68, 0.15);
+        border-color: rgba(239, 68, 68, 0.3);
+        color: #ef4444;
+      }
+
+      /* Quick Controls */
+      .quick-controls {
+        display: flex;
+        gap: 16px;
+        padding: 16px;
+        background: rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        flex-wrap: wrap;
+      }
+
+      .quick-control {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .quick-control label {
+        color: var(--gray-400);
+        font-size: 0.8rem;
+      }
+
+      .quick-control input[type="color"] {
+        width: 32px;
+        height: 32px;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        border-radius: 6px;
+        cursor: pointer;
+        background: transparent;
+        padding: 2px;
+      }
+
+      .quick-control input[type="range"] {
+        width: 80px;
+        height: 6px;
+        -webkit-appearance: none;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+        outline: none;
+      }
+
+      .quick-control input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 14px;
+        height: 14px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .slider-value {
+        color: var(--gray-500);
+        font-size: 0.75rem;
+        min-width: 30px;
+      }
+
+      /* Templates */
+      .templates-bar {
+        padding: 16px;
+        background: rgba(0, 0, 0, 0.15);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .templates-bar h4 {
+        font-size: 0.75rem;
+        color: var(--gray-500);
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .template-btns {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .template-btn {
+        padding: 8px 14px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        color: var(--gray-400);
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .template-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+      }
+
+      @media (max-width: 900px) {
+        .playground-wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb" id="breadcrumb">
+          <a href="/" id="breadcrumb-link">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Playground</span>
+        </div>
+        <h1 class="page-title">Code Playground</h1>
+        <p class="page-description">
+          Experiment with components - edit HTML & CSS, see live preview.
+        </p>
+      </div>
+    </section>
+
+    <section class="playground-page">
+      <div class="container">
+        <div class="templates-bar" id="templates-bar">
+          <h4>Quick Start Templates</h4>
+          <div class="template-btns">
+            <button class="template-btn" data-template="button">Button</button>
+            <button class="template-btn" data-template="card">Card</button>
+            <button class="template-btn" data-template="badge">Badge</button>
+            <button class="template-btn" data-template="input">Input</button>
+          </div>
+        </div>
+
+        <div class="playground-wrapper">
+          <!-- Editor Side -->
+          <div class="editor-side">
+            <div class="editor-card">
+              <div class="editor-header">
+                <h3><i class="fab fa-html5"></i> HTML</h3>
+              </div>
+              <textarea
+                id="html-editor"
+                class="editor-textarea"
+                spellcheck="false"
+                placeholder="Write your HTML here..."
+              >
+<button class="my-btn">
+  Click Me
+</button></textarea
+              >
+            </div>
+
+            <div class="editor-card">
+              <div class="editor-header">
+                <h3><i class="fab fa-css3-alt"></i> CSS</h3>
+              </div>
+              <textarea
+                id="css-editor"
+                class="editor-textarea"
+                spellcheck="false"
+                placeholder="Write your CSS here..."
+              >
+.my-btn {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.my-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}</textarea
+              >
+            </div>
+          </div>
+
+          <!-- Preview Side -->
+          <div class="preview-side">
+            <div class="preview-header">
+              <h3><i class="fas fa-eye"></i> Live Preview</h3>
+            </div>
+
+            <div class="preview-content" id="preview-area">
+              <!-- Preview renders here -->
+            </div>
+
+            <div class="action-bar">
+              <button class="action-btn" id="copy-html-btn">
+                <i class="fas fa-copy"></i> Copy HTML
+              </button>
+              <button class="action-btn" id="copy-css-btn">
+                <i class="fas fa-copy"></i> Copy CSS
+              </button>
+              <button class="action-btn danger" id="reset-btn">
+                <i class="fas fa-undo"></i> Reset
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+
+    <script>
+      const templates = {
+        button: {
+          html: `<button class="my-btn">
+  Click Me
+</button>`,
+          css: `.my-btn {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.my-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}`,
+        },
+        card: {
+          html: `<div class="my-card">
+  <h3>Card Title</h3>
+  <p>Card description goes here.</p>
+  <button>Learn More</button>
+</div>`,
+          css: `.my-card {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  max-width: 280px;
+}
+
+.my-card h3 {
+  color: white;
+  margin-bottom: 8px;
+}
+
+.my-card p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.my-card button {
+  padding: 10px 20px;
+  background: #667eea;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}`,
+        },
+        badge: {
+          html: `<span class="my-badge">New</span>`,
+          css: `.my-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 50px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}`,
+        },
+        input: {
+          html: `<input type="text" class="my-input" placeholder="Enter your email...">`,
+          css: `.my-input {
+  width: 280px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.my-input::placeholder {
+  color: #6b7280;
+}
+
+.my-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}`,
+        },
+      };
+
+      const htmlEditor = document.getElementById("html-editor");
+      const cssEditor = document.getElementById("css-editor");
+      const previewArea = document.getElementById("preview-area");
+
+      function updatePreview() {
+        const html = htmlEditor.value;
+        const css = cssEditor.value;
+
+        previewArea.innerHTML = `
+          <style>${css}</style>
+          ${html}
+        `;
+      }
+
+      htmlEditor.addEventListener("input", updatePreview);
+      cssEditor.addEventListener("input", updatePreview);
+
+      document.querySelectorAll(".template-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const template = templates[btn.dataset.template];
+          if (template) {
+            htmlEditor.value = template.html;
+            cssEditor.value = template.css;
+            updatePreview();
+          }
+        });
+      });
+
+      document
+        .getElementById("copy-html-btn")
+        .addEventListener("click", async () => {
+          await navigator.clipboard.writeText(htmlEditor.value);
+          const btn = document.getElementById("copy-html-btn");
+          btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+          setTimeout(
+            () => (btn.innerHTML = '<i class="fas fa-copy"></i> Copy HTML'),
+            1500
+          );
+        });
+
+      document
+        .getElementById("copy-css-btn")
+        .addEventListener("click", async () => {
+          await navigator.clipboard.writeText(cssEditor.value);
+          const btn = document.getElementById("copy-css-btn");
+          btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+          setTimeout(
+            () => (btn.innerHTML = '<i class="fas fa-copy"></i> Copy CSS'),
+            1500
+          );
+        });
+
+      let originalHtml = templates.button.html;
+      let originalCss = templates.button.css;
+
+      document.getElementById("reset-btn").addEventListener("click", () => {
+        htmlEditor.value = originalHtml;
+        cssEditor.value = originalCss;
+        updatePreview();
+      });
+
+      function loadFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const htmlParam = params.get("html");
+        const cssParam = params.get("css");
+        const fromParam = params.get("from");
+
+        if (htmlParam || cssParam) {
+          try {
+            if (htmlParam) {
+              const decoded = decodeURIComponent(atob(htmlParam));
+              htmlEditor.value = decoded;
+              originalHtml = decoded;
+            }
+            if (cssParam) {
+              const decoded = decodeURIComponent(atob(cssParam));
+              cssEditor.value = decoded;
+              originalCss = decoded;
+            }
+
+            document.getElementById("templates-bar").style.display = "none";
+            if (fromParam) {
+              const anchorParam = params.get("anchor");
+              const breadcrumbLink = document.getElementById("breadcrumb-link");
+              const anchorHash = anchorParam ? `#${anchorParam}` : "";
+              breadcrumbLink.href = `/components/${fromParam.toLowerCase()}.html${anchorHash}`;
+              breadcrumbLink.textContent = fromParam;
+            }
+
+            return true;
+          } catch (e) {
+            console.error("Failed to decode URL params:", e);
+          }
+        }
+        return false;
+      }
+
+      if (!loadFromUrl()) {
+      }
+      updatePreview();
+    </script>
+  </body>
+</html>

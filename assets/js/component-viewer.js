@@ -26,60 +26,69 @@ class ComponentViewer {
     const hasCss = !!cssCode;
 
     const template = `
-            <div class="preview-box">
-                <div class="preview-area preview-dark">
-                    ${previewContent}
-                </div>
-                <details class="code-dropdown">
-                    <summary>
-                        <i class="fas fa-code"></i> View Code
-                        <i class="fas fa-chevron-down"></i>
-                    </summary>
-                    <div class="code-tabs">
-                        <button class="code-tab active" data-tab="html">HTML</button>
-                        ${
-                          hasCss
-                            ? `<button class="code-tab" data-tab="css">CSS</button>`
-                            : ""
-                        }
-                    </div>
-                    <div class="code-content active" data-content="html">
-                        <div class="code-header">
-                            <span>HTML</span>
-                            <button class="copy-btn" data-copy-target="${uniqueId}-html">
-                                <i class="fas fa-copy"></i> Copy
-                            </button>
-                        </div>
-                        <pre><code id="${uniqueId}-html" class="language-html">${this.escapeHtml(
+      <div class="preview-box">
+        <div class="preview-area preview-dark">
+          ${previewContent}
+        </div>
+        <details class="code-dropdown">
+          <summary>
+            <i class="fas fa-code"></i> View Code
+            <i class="fas fa-chevron-down"></i>
+          </summary>
+          <div class="code-tabs">
+            <button class="code-tab active" data-tab="html">HTML</button>
+            ${
+              hasCss
+                ? `<button class="code-tab" data-tab="css">CSS</button>`
+                : ""
+            }
+          </div>
+          <div class="code-content active" data-content="html">
+            <div class="code-header">
+              <span>HTML</span>
+              <button class="copy-btn" data-copy-target="${uniqueId}-html">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+            <pre><code id="${uniqueId}-html" class="language-html">${this.escapeHtml(
       htmlCode
     )}</code></pre>
-                    </div>
-                    ${
-                      hasCss
-                        ? `
-                    <div class="code-content" data-content="css">
-                        <div class="code-header">
-                            <span>CSS</span>
-                            <button class="copy-btn" data-copy-target="${uniqueId}-css">
-                                <i class="fas fa-copy"></i> Copy
-                            </button>
-                        </div>
-                        <pre><code id="${uniqueId}-css" class="language-css">${this.escapeHtml(
-                            cssCode
-                          )}</code></pre>
-                    </div>
-                    `
-                        : ""
-                    }
-                </details>
+          </div>
+          ${
+            hasCss
+              ? `
+          <div class="code-content" data-content="css">
+            <div class="code-header">
+              <span>CSS</span>
+              <button class="copy-btn" data-copy-target="${uniqueId}-css">
+                <i class="fas fa-copy"></i> Copy
+              </button>
             </div>
-        `;
+            <pre><code id="${uniqueId}-css" class="language-css">${this.escapeHtml(
+                  cssCode
+                )}</code></pre>
+          </div>
+          `
+              : ""
+          }
+          <div class="code-actions">
+            <button class="playground-link" data-html="${uniqueId}-html" data-css="${uniqueId}-css">
+              Try in Playground
+            </button>
+          </div>
+        </details>
+      </div>
+    `;
 
     container.innerHTML = template;
     container.classList.add("initialized");
 
+    container.dataset.htmlCode = htmlCode;
+    container.dataset.cssCode = cssCode;
+
     this.initTabs(container);
-    this.initCopyBoxes(container);
+    this.initCopyButtons(container);
+    this.initPlaygroundLinks(container);
   }
 
   escapeHtml(unsafe) {
@@ -116,7 +125,6 @@ class ComponentViewer {
           .forEach((c) => c.classList.remove("active"));
 
         this.classList.add("active");
-
         const content = parent.querySelector(
           `.code-content[data-content="${tabType}"]`
         );
@@ -125,15 +133,49 @@ class ComponentViewer {
     });
   }
 
-  initCopyBoxes(container) {
+  initCopyButtons(container) {
     container.querySelectorAll(".copy-btn").forEach((btn) => {
-      btn.addEventListener("click", async function () {
+      btn.addEventListener("click", async function (e) {
         const targetId = this.getAttribute("data-copy-target");
         const codeElement = document.getElementById(targetId);
 
         if (codeElement) {
           try {
             await navigator.clipboard.writeText(codeElement.textContent);
+
+            const ripple = document.createElement("span");
+            ripple.classList.add("ripple");
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            ripple.style.width = ripple.style.height = size + "px";
+            ripple.style.left = e.clientX - rect.left - size / 2 + "px";
+            ripple.style.top = e.clientY - rect.top - size / 2 + "px";
+            this.appendChild(ripple);
+
+            const colors = [
+              "#10b981",
+              "#34d399",
+              "#6ee7b7",
+              "#a7f3d0",
+              "#fbbf24",
+            ];
+            for (let i = 0; i < 6; i++) {
+              const confetti = document.createElement("span");
+              confetti.classList.add("confetti");
+              confetti.style.background =
+                colors[Math.floor(Math.random() * colors.length)];
+              confetti.style.left = "50%";
+              confetti.style.top = "50%";
+              confetti.style.setProperty(
+                "--x",
+                (Math.random() - 0.5) * 60 + "px"
+              );
+              confetti.style.setProperty(
+                "--y",
+                (Math.random() - 0.5) * 60 + "px"
+              );
+              this.appendChild(confetti);
+            }
 
             const originalHTML = this.innerHTML;
             this.innerHTML = '<i class="fas fa-check"></i> Copied!';
@@ -142,12 +184,37 @@ class ComponentViewer {
             setTimeout(() => {
               this.innerHTML = originalHTML;
               this.classList.remove("copied");
-            }, 2000);
+              this.querySelectorAll(".ripple, .confetti").forEach((el) =>
+                el.remove()
+              );
+            }, 1500);
           } catch (err) {
             console.error("Failed to copy:", err);
           }
         }
       });
+    });
+  }
+
+  initPlaygroundLinks(container) {
+    const playgroundBtn = container.querySelector(".playground-link");
+    if (!playgroundBtn) return;
+
+    playgroundBtn.addEventListener("click", () => {
+      const html = container.dataset.htmlCode || "";
+      const css = container.dataset.cssCode || "";
+
+      const htmlEncoded = btoa(encodeURIComponent(html));
+      const cssEncoded = btoa(encodeURIComponent(css));
+
+      const pathParts = window.location.pathname.split("/");
+      const page = pathParts[pathParts.length - 1].replace(".html", "");
+      const componentName = page.charAt(0).toUpperCase() + page.slice(1);
+
+      const section = container.closest("[id]");
+      const anchor = section ? section.id : "";
+
+      window.location.href = `/playground.html?html=${htmlEncoded}&css=${cssEncoded}&from=${componentName}&anchor=${anchor}`;
     });
   }
 }
