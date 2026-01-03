@@ -20,10 +20,10 @@ const navbarHTML = `<nav class="navbar">
       <a href="/components.html" class="nav-link">Components</a>
       <a href="/template.html" class="nav-link">Templates</a>
       <a
-        href="changelog.html"
+        href="/changelog.html"
         class="nav-link"
       >
-        <i class="fab fa-github"></i>
+        <i class="fas fa-history"></i>
       </a>
     </div>
   </div>

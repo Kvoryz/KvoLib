@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib Before/After Template" />
+    <title>Before/After - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/before-after.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#media">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Before/After</span>
+        </div>
+        <h1 class="page-title">Before/After</h1>
+        <p class="page-description">Comparison slider for image comparisons.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Comparison Styles</h4>
+              <ul>
+                <li><a href="#slider">Slider Compare</a></li>
+                <li><a href="#sidebyside">Side by Side</a></li>
+                <li><a href="#hover">Hover Reveal</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="slider" class="docs-section" data-aos="fade-up">
+              <h2>Slider Compare</h2>
+              <p>Drag slider to compare before/after.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="compare-slider">
+                    <div class="compare-before">
+                      <img
+                        src="https://picsum.photos/600/400?random=70&grayscale"
+                        alt="Before"
+                      />
+                      <span class="compare-label">Before</span>
+                    </div>
+                    <div
+                      class="compare-after"
+                      style="clip-path: inset(0 50% 0 0)"
+                    >
+                      <img
+                        src="https://picsum.photos/600/400?random=70"
+                        alt="After"
+                      />
+                      <span class="compare-label">After</span>
+                    </div>
+                    <div class="compare-handle" style="left: 50%">
+                      <div class="handle-line"></div>
+                      <div class="handle-circle">
+                        <i class="fas fa-arrows-alt-h"></i>
+                      </div>
+                      <div class="handle-line"></div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="compare-slider">
+                    <div class="compare-before">
+                      <img src="before.jpg" alt="Before" />
+                      <span class="compare-label">Before</span>
+                    </div>
+                    <div class="compare-after">
+                      <img src="after.jpg" alt="After" />
+                      <span class="compare-label">After</span>
+                    </div>
+                    <div class="compare-handle">
+                      <div class="handle-line"></div>
+                      <div class="handle-circle">
+                        <i class="fas fa-arrows-alt-h"></i>
+                      </div>
+                      <div class="handle-line"></div>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .compare-slider {
+                    position: relative;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    cursor: ew-resize;
+                  }
+
+                  .compare-before,
+                  .compare-after {
+                    position: relative;
+                  }
+
+                  .compare-after {
+                    position: absolute;
+                    inset: 0;
+                    clip-path: inset(0 50% 0 0);
+                  }
+
+                  .compare-slider img {
+                    width: 100%;
+                    display: block;
+                  }
+
+                  .compare-label {
+                    position: absolute;
+                    top: 20px;
+                    padding: 6px 12px;
+                    background: rgba(0, 0, 0, 0.6);
+                    color: #fff;
+                    font-size: 0.875rem;
+                    border-radius: 6px;
+                  }
+
+                  .compare-before .compare-label { right: 20px; }
+                  .compare-after .compare-label { left: 20px; }
+
+                  .compare-handle {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    transform: translateX(-50%);
+                  }
+
+                  .handle-line {
+                    flex: 1;
+                    width: 3px;
+                    background: #fff;
+                  }
+
+                  .handle-circle {
+                    width: 48px;
+                    height: 48px;
+                    background: #fff;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #000;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="sidebyside" class="docs-section" data-aos="fade-up">
+              <h2>Side by Side</h2>
+              <p>Two images placed next to each other.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="side-by-side">
+                    <div class="side-image">
+                      <img
+                        src="https://picsum.photos/400/300?random=71&grayscale"
+                        alt="Before"
+                      />
+                      <span class="side-label">Before</span>
+                    </div>
+                    <div class="side-image">
+                      <img
+                        src="https://picsum.photos/400/300?random=71"
+                        alt="After"
+                      />
+                      <span class="side-label">After</span>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="side-by-side">
+                    <div class="side-image">
+                      <img src="before.jpg" alt="Before" />
+                      <span class="side-label">Before</span>
+                    </div>
+                    <div class="side-image">
+                      <img src="after.jpg" alt="After" />
+                      <span class="side-label">After</span>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .side-by-side {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 16px;
+                  }
+
+                  .side-image {
+                    position: relative;
+                    border-radius: 12px;
+                    overflow: hidden;
+                  }
+
+                  .side-image img {
+                    width: 100%;
+                    display: block;
+                  }
+
+                  .side-label {
+                    position: absolute;
+                    bottom: 12px;
+                    left: 12px;
+                    padding: 6px 12px;
+                    background: rgba(0, 0, 0, 0.7);
+                    color: #fff;
+                    font-size: 0.875rem;
+                    border-radius: 6px;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="hover" class="docs-section" data-aos="fade-up">
+              <h2>Hover Reveal</h2>
+              <p>After image reveals on hover.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="max-width: 500px">
+                  <div class="hover-compare">
+                    <img
+                      class="hover-before"
+                      src="https://picsum.photos/500/350?random=72&grayscale"
+                      alt="Before"
+                    />
+                    <img
+                      class="hover-after"
+                      src="https://picsum.photos/500/350?random=72"
+                      alt="After"
+                    />
+                    <div class="hover-hint">
+                      <i class="fas fa-hand-pointer"></i> Hover to see after
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="hover-compare">
+                    <img class="hover-before" src="before.jpg" alt="Before" />
+                    <img class="hover-after" src="after.jpg" alt="After" />
+                    <div class="hover-hint">
+                      <i class="fas fa-hand-pointer"></i> Hover to see after
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .hover-compare {
+                    position: relative;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    cursor: pointer;
+                  }
+
+                  .hover-compare img {
+                    width: 100%;
+                    display: block;
+                    transition: opacity 0.3s ease;
+                  }
+
+                  .hover-after {
+                    position: absolute;
+                    inset: 0;
+                    opacity: 0;
+                  }
+
+                  .hover-compare:hover .hover-after {
+                    opacity: 1;
+                  }
+
+                  .hover-compare:hover .hover-hint {
+                    opacity: 0;
+                  }
+
+                  .hover-hint {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    padding: 8px 16px;
+                    background: rgba(0, 0, 0, 0.7);
+                    color: #fff;
+                    font-size: 0.875rem;
+                    border-radius: 20px;
+                    transition: opacity 0.3s ease;
+                  }
+
+                  .hover-hint i {
+                    margin-right: 8px;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

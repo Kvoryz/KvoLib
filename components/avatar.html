@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib Avatar Components" />
+    <title>Avatar - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/components/avatar.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html#data-display">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Avatar</span>
+        </div>
+        <h1 class="page-title">Avatar</h1>
+        <p class="page-description">
+          User profile images with various sizes and styles.
+        </p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Avatar Styles</h4>
+              <ul>
+                <li><a href="#sizes">Avatar Sizes</a></li>
+                <li><a href="#image">Image Avatar</a></li>
+                <li><a href="#status">With Status</a></li>
+                <li><a href="#group">Avatar Group</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="sizes" class="docs-section" data-aos="fade-up">
+              <h2>Avatar Sizes</h2>
+              <p>Different sizes for various use cases.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="
+                    display: flex;
+                    gap: 16px;
+                    align-items: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <div class="avatar avatar-xs">XS</div>
+                  <div class="avatar avatar-sm">SM</div>
+                  <div class="avatar avatar-md">MD</div>
+                  <div class="avatar avatar-lg">LG</div>
+                  <div class="avatar avatar-xl">XL</div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="avatar avatar-xs">XS</div>
+                  <div class="avatar avatar-sm">SM</div>
+                  <div class="avatar avatar-md">MD</div>
+                  <div class="avatar avatar-lg">LG</div>
+                  <div class="avatar avatar-xl">XL</div>
+                </script>
+                <script type="text/css" slot="css">
+                  .avatar {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background: linear-gradient(135deg, #667eea, #764ba2);
+                    color: #fff;
+                    font-weight: 600;
+                    flex-shrink: 0;
+                  }
+
+                  .avatar-xs { width: 24px; height: 24px; font-size: 0.6rem; }
+                  .avatar-sm { width: 32px; height: 32px; font-size: 0.75rem; }
+                  .avatar-md { width: 40px; height: 40px; font-size: 0.875rem; }
+                  .avatar-lg { width: 56px; height: 56px; font-size: 1.125rem; }
+                  .avatar-xl { width: 80px; height: 80px; font-size: 1.5rem; }
+                </script>
+              </div>
+            </section>
+
+            <section id="image" class="docs-section" data-aos="fade-up">
+              <h2>Image Avatar</h2>
+              <p>Avatars with user profile images.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="
+                    display: flex;
+                    gap: 16px;
+                    align-items: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <img
+                    class="avatar avatar-md"
+                    src="https://i.pravatar.cc/100?img=1"
+                    alt="User"
+                  />
+                  <img
+                    class="avatar avatar-md"
+                    src="https://i.pravatar.cc/100?img=2"
+                    alt="User"
+                  />
+                  <img
+                    class="avatar avatar-md"
+                    src="https://i.pravatar.cc/100?img=3"
+                    alt="User"
+                  />
+                  <img
+                    class="avatar avatar-lg"
+                    src="https://i.pravatar.cc/150?img=4"
+                    alt="User"
+                  />
+                </div>
+                <script type="text/html" slot="html">
+                  <img class="avatar avatar-md" src="user1.jpg" alt="User" />
+                  <img class="avatar avatar-md" src="user2.jpg" alt="User" />
+                  <img class="avatar avatar-lg" src="user3.jpg" alt="User" />
+                </script>
+                <script type="text/css" slot="css">
+                  .avatar {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    flex-shrink: 0;
+                  }
+
+                  .avatar-md { width: 40px; height: 40px; }
+                  .avatar-lg { width: 56px; height: 56px; }
+                </script>
+              </div>
+            </section>
+
+            <section id="status" class="docs-section" data-aos="fade-up">
+              <h2>Avatar with Status</h2>
+              <p>Show online/offline status on avatars.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="
+                    display: flex;
+                    gap: 24px;
+                    align-items: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <div class="avatar-wrapper">
+                    <img
+                      class="avatar avatar-md"
+                      src="https://i.pravatar.cc/100?img=5"
+                      alt="User"
+                    />
+                    <span class="avatar-status status-online"></span>
+                  </div>
+                  <div class="avatar-wrapper">
+                    <img
+                      class="avatar avatar-md"
+                      src="https://i.pravatar.cc/100?img=6"
+                      alt="User"
+                    />
+                    <span class="avatar-status status-offline"></span>
+                  </div>
+                  <div class="avatar-wrapper">
+                    <img
+                      class="avatar avatar-md"
+                      src="https://i.pravatar.cc/100?img=7"
+                      alt="User"
+                    />
+                    <span class="avatar-status status-busy"></span>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="avatar-wrapper">
+                    <img class="avatar avatar-md" src="user.jpg" alt="User" />
+                    <span class="avatar-status status-online"></span>
+                  </div>
+
+                  <div class="avatar-wrapper">
+                    <img class="avatar avatar-md" src="user.jpg" alt="User" />
+                    <span class="avatar-status status-busy"></span>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .avatar-wrapper {
+                    position: relative;
+                    display: inline-block;
+                  }
+
+                  .avatar {
+                    border-radius: 50%;
+                    object-fit: cover;
+                  }
+
+                  .avatar-md { width: 40px; height: 40px; }
+
+                  .avatar-status {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    border: 2px solid #000;
+                  }
+
+                  .status-online { background: #4ade80; }
+                  .status-offline { background: #6b7280; }
+                  .status-busy { background: #f87171; }
+                </script>
+              </div>
+            </section>
+
+            <section id="group" class="docs-section" data-aos="fade-up">
+              <h2>Avatar Group</h2>
+              <p>Stacked avatars for team displays.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="
+                    display: flex;
+                    gap: 32px;
+                    align-items: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <div class="avatar-group">
+                    <img
+                      class="avatar avatar-md"
+                      src="https://i.pravatar.cc/100?img=8"
+                      alt="User"
+                    />
+                    <img
+                      class="avatar avatar-md"
+                      src="https://i.pravatar.cc/100?img=9"
+                      alt="User"
+                    />
+                    <img
+                      class="avatar avatar-md"
+                      src="https://i.pravatar.cc/100?img=10"
+                      alt="User"
+                    />
+                    <img
+                      class="avatar avatar-md"
+                      src="https://i.pravatar.cc/100?img=11"
+                      alt="User"
+                    />
+                    <div class="avatar avatar-md avatar-more">+5</div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="avatar-group">
+                    <img class="avatar avatar-md" src="user1.jpg" alt="User" />
+                    <img class="avatar avatar-md" src="user2.jpg" alt="User" />
+                    <img class="avatar avatar-md" src="user3.jpg" alt="User" />
+                    <div class="avatar avatar-md avatar-more">+5</div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .avatar-group {
+                    display: flex;
+                  }
+
+                  .avatar-group .avatar {
+                    margin-left: -12px;
+                    border: 2px solid #000;
+                    transition: transform 0.2s ease;
+                  }
+
+                  .avatar-group .avatar:first-child {
+                    margin-left: 0;
+                  }
+
+                  .avatar-group .avatar:hover {
+                    transform: translateY(-4px);
+                    z-index: 10;
+                  }
+
+                  .avatar {
+                    border-radius: 50%;
+                    object-fit: cover;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+
+                  .avatar-md { width: 40px; height: 40px; }
+
+                  .avatar-more {
+                    background: rgba(255, 255, 255, 0.1);
+                    color: #fff;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

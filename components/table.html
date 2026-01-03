@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib Table Components" />
+    <title>Table - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/components/table.css" />
+    <link rel="stylesheet" href="/assets/css/components/badge.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html#data-display">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Table</span>
+        </div>
+        <h1 class="page-title">Table</h1>
+        <p class="page-description">Data tables with modern styling.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Table Styles</h4>
+              <ul>
+                <li><a href="#basic">Basic Table</a></li>
+                <li><a href="#striped">Striped Table</a></li>
+                <li><a href="#hover">Hover Table</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="basic" class="docs-section" data-aos="fade-up">
+              <h2>Basic Table</h2>
+              <p>Clean table with status badges.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%; overflow-x: auto">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>Developer</td>
+                        <td><span class="badge badge-success">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>Jane Smith</td>
+                        <td>jane@example.com</td>
+                        <td>Designer</td>
+                        <td><span class="badge badge-success">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>Bob Wilson</td>
+                        <td>bob@example.com</td>
+                        <td>Manager</td>
+                        <td><span class="badge badge-warning">Away</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <script type="text/html" slot="html">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>Developer</td>
+                        <td><span class="badge badge-success">Active</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </script>
+                <script type="text/css" slot="css">
+                  .table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 0.875rem;
+                  }
+
+                  .table th,
+                  .table td {
+                    padding: 12px 16px;
+                    text-align: left;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                  }
+
+                  .table th {
+                    font-weight: 600;
+                    color: rgba(255, 255, 255, 0.6);
+                    text-transform: uppercase;
+                    font-size: 0.75rem;
+                    letter-spacing: 0.05em;
+                  }
+
+                  .badge {
+                    display: inline-flex;
+                    padding: 4px 8px;
+                    font-size: 0.7rem;
+                    font-weight: 500;
+                    border-radius: 9999px;
+                  }
+
+                  .badge-success {
+                    background: rgba(34, 197, 94, 0.2);
+                    color: #4ade80;
+                  }
+
+                  .badge-warning {
+                    background: rgba(234, 179, 8, 0.2);
+                    color: #facc15;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="striped" class="docs-section" data-aos="fade-up">
+              <h2>Striped Table</h2>
+              <p>Alternating row colors for better readability.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%; overflow-x: auto">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>MacBook Pro</td>
+                        <td>Electronics</td>
+                        <td>$2,499</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>iPhone 15</td>
+                        <td>Electronics</td>
+                        <td>$999</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>AirPods Pro</td>
+                        <td>Audio</td>
+                        <td>$249</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>iPad Air</td>
+                        <td>Electronics</td>
+                        <td>$599</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <script type="text/html" slot="html">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>MacBook Pro</td>
+                        <td>Electronics</td>
+                        <td>$2,499</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </script>
+                <script type="text/css" slot="css">
+                  .table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 0.875rem;
+                  }
+
+                  .table th,
+                  .table td {
+                    padding: 12px 16px;
+                    text-align: left;
+                  }
+
+                  .table th {
+                    font-weight: 600;
+                    color: rgba(255, 255, 255, 0.6);
+                    text-transform: uppercase;
+                    font-size: 0.75rem;
+                    background: rgba(255, 255, 255, 0.05);
+                  }
+
+                  .table-striped tbody tr:nth-child(odd) {
+                    background: rgba(255, 255, 255, 0.02);
+                  }
+
+                  .table-striped tbody tr:nth-child(even) {
+                    background: rgba(255, 255, 255, 0.05);
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="hover" class="docs-section" data-aos="fade-up">
+              <h2>Hover Table</h2>
+              <p>Row highlight on hover for interactive tables.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%; overflow-x: auto">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>User</th>
+                        <th>Action</th>
+                        <th>Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>alice@mail.com</td>
+                        <td>Logged in</td>
+                        <td>2 min ago</td>
+                      </tr>
+                      <tr>
+                        <td>bob@mail.com</td>
+                        <td>Updated profile</td>
+                        <td>15 min ago</td>
+                      </tr>
+                      <tr>
+                        <td>carol@mail.com</td>
+                        <td>Created post</td>
+                        <td>1 hour ago</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <script type="text/html" slot="html">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>User</th>
+                        <th>Action</th>
+                        <th>Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>alice@mail.com</td>
+                        <td>Logged in</td>
+                        <td>2 min ago</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </script>
+                <script type="text/css" slot="css">
+                  .table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 0.875rem;
+                  }
+
+                  .table th,
+                  .table td {
+                    padding: 12px 16px;
+                    text-align: left;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                  }
+
+                  .table th {
+                    font-weight: 600;
+                    color: rgba(255, 255, 255, 0.6);
+                  }
+
+                  .table-hover tbody tr {
+                    transition: background 0.15s ease;
+                    cursor: pointer;
+                  }
+
+                  .table-hover tbody tr:hover {
+                    background: rgba(255, 255, 255, 0.08);
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

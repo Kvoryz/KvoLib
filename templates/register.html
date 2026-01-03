@@ -146,10 +146,29 @@
                 </script>
                 <script type="text/css" slot="css">
                   .register-card {
+                    width: 100%;
+                    max-width: 450px;
                     background: rgba(255, 255, 255, 0.03);
-                    padding: 40px;
-                    border-radius: 20px;
+                    padding: 48px 40px;
+                    border-radius: 24px;
                     border: 1px solid rgba(255, 255, 255, 0.08);
+                    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+                  }
+
+                  .register-header {
+                    text-align: center;
+                    margin-bottom: 40px;
+                  }
+
+                  .register-header h2 {
+                    font-size: 1.75rem;
+                    margin-bottom: 8px;
+                    color: #fff;
+                  }
+
+                  .register-header p {
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 0.95rem;
                   }
 
                   .form-row {
@@ -158,16 +177,114 @@
                     gap: 16px;
                   }
 
+                  .tpl-input-group {
+                    position: relative;
+                    margin-bottom: 24px;
+                  }
+
+                  .tpl-input {
+                    width: 100%;
+                    padding: 16px 14px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 12px;
+                    color: #fff;
+                    font-size: 1rem;
+                    transition: all 0.3s ease;
+                    outline: none;
+                  }
+
+                  .tpl-input:focus {
+                    border-color: #00d4ff;
+                    background: rgba(0, 212, 255, 0.05);
+                  }
+
+                  .tpl-input::placeholder {
+                    color: transparent;
+                  }
+
+                  .tpl-input-group label {
+                    position: absolute;
+                    left: 14px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 1rem;
+                    pointer-events: none;
+                    transition: all 0.3s ease;
+                    background: transparent;
+                    padding: 0 4px;
+                  }
+
+                  .tpl-input:focus + label,
+                  .tpl-input:not(:placeholder-shown) + label {
+                    top: 0;
+                    font-size: 0.75rem;
+                    color: #00d4ff;
+                    background: #0a0a0a;
+                  }
+
                   .terms-checkbox {
                     display: flex;
                     align-items: flex-start;
                     gap: 10px;
                     margin-bottom: 24px;
                     font-size: 0.875rem;
+                    color: rgba(255, 255, 255, 0.7);
+                  }
+
+                  .terms-checkbox input[type="checkbox"] {
+                    width: 18px;
+                    height: 18px;
+                    accent-color: #00d4ff;
+                    cursor: pointer;
+                    margin-top: 2px;
                   }
 
                   .terms-checkbox a {
                     color: #00d4ff;
+                    text-decoration: none;
+                  }
+
+                  .tpl-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    padding: 14px 28px;
+                    border-radius: 12px;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    border: none;
+                  }
+
+                  .tpl-btn-primary {
+                    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+                    color: #fff;
+                  }
+
+                  .tpl-btn-primary:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+                  }
+
+                  .tpl-btn-full {
+                    width: 100%;
+                  }
+
+                  .register-footer {
+                    text-align: center;
+                    margin-top: 24px;
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 0.9rem;
+                  }
+
+                  .register-footer a {
+                    color: #00d4ff;
+                    text-decoration: none;
+                    font-weight: 500;
                   }
                 </script>
               </div>

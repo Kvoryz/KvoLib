@@ -1,0 +1,119 @@
+/* Blockquote Component Styles */
+
+.blockquote {
+  padding: 24px 32px;
+  border-left: 4px solid #667eea;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0 8px 8px 0;
+  margin: 0;
+}
+
+.blockquote p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 12px 0;
+  font-style: italic;
+}
+
+.blockquote cite {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: normal;
+}
+
+/* Icon Blockquote */
+.blockquote-icon {
+  position: relative;
+  padding: 32px 32px 32px 80px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  margin: 0;
+}
+
+.blockquote-icon i {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  font-size: 2rem;
+  color: #667eea;
+  opacity: 0.5;
+}
+
+.blockquote-icon p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 12px 0;
+}
+
+.blockquote-icon cite {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: normal;
+}
+
+/* Card Blockquote */
+.blockquote-card {
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  margin: 0;
+}
+
+.blockquote-card p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #fff;
+  margin: 0 0 24px 0;
+}
+
+.blockquote-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-info strong {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.author-info span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Colored Blockquotes */
+.blockquote-info {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.blockquote-success {
+  border-color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+}
+
+.blockquote-warning {
+  border-color: #facc15;
+  background: rgba(250, 204, 21, 0.1);
+}
+
+.blockquote-danger {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}

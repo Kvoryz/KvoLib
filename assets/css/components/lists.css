@@ -1,0 +1,122 @@
+/* Lists Component Styles */
+
+/* Unordered List */
+.list-disc {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-disc li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.list-disc li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: #667eea;
+  border-radius: 50%;
+}
+
+/* Ordered List */
+.list-numbered {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: list-counter;
+}
+
+.list-numbered li {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  counter-increment: list-counter;
+}
+
+.list-numbered li::before {
+  content: counter(list-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: rgba(102, 126, 234, 0.2);
+  color: #818cf8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon List */
+.list-icon {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-icon li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.list-icon li:last-child {
+  border-bottom: none;
+}
+
+.list-icon li i {
+  width: 20px;
+  text-align: center;
+}
+
+.list-icon li .fa-check {
+  color: #4ade80;
+}
+
+.list-icon li .fa-times {
+  color: #f87171;
+}
+
+/* Description List */
+.list-description {
+  margin: 0;
+}
+
+.list-description dt {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.list-description dd {
+  margin: 0 0 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+}
+
+.list-description dd:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}

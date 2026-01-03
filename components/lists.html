@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib Lists Components" />
+    <title>Lists - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/components/lists.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html#typography">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Lists</span>
+        </div>
+        <h1 class="page-title">Lists</h1>
+        <p class="page-description">Styled ordered and unordered lists.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>List Styles</h4>
+              <ul>
+                <li><a href="#unordered">Unordered List</a></li>
+                <li><a href="#ordered">Ordered List</a></li>
+                <li><a href="#icon">Icon List</a></li>
+                <li><a href="#description">Description List</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="unordered" class="docs-section" data-aos="fade-up">
+              <h2>Unordered List</h2>
+              <p>Bullet point list with custom styling.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="max-width: 400px">
+                  <ul class="list-disc">
+                    <li>First item in the list</li>
+                    <li>Second item with more content</li>
+                    <li>Third item here</li>
+                    <li>Fourth and final item</li>
+                  </ul>
+                </div>
+                <script type="text/html" slot="html">
+                  <ul class="list-disc">
+                    <li>First item in the list</li>
+                    <li>Second item with more content</li>
+                    <li>Third item here</li>
+                    <li>Fourth and final item</li>
+                  </ul>
+                </script>
+                <script type="text/css" slot="css">
+                  .list-disc {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                  }
+
+                  .list-disc li {
+                    position: relative;
+                    padding-left: 24px;
+                    margin-bottom: 12px;
+                    color: rgba(255, 255, 255, 0.8);
+                    line-height: 1.6;
+                  }
+
+                  .list-disc li::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 10px;
+                    width: 6px;
+                    height: 6px;
+                    background: #667eea;
+                    border-radius: 50%;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="ordered" class="docs-section" data-aos="fade-up">
+              <h2>Ordered List</h2>
+              <p>Numbered list with styled counter.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="max-width: 400px">
+                  <ol class="list-numbered">
+                    <li>Clone the repository</li>
+                    <li>Install dependencies</li>
+                    <li>Configure environment</li>
+                    <li>Start development server</li>
+                  </ol>
+                </div>
+                <script type="text/html" slot="html">
+                  <ol class="list-numbered">
+                    <li>Clone the repository</li>
+                    <li>Install dependencies</li>
+                    <li>Configure environment</li>
+                    <li>Start development server</li>
+                  </ol>
+                </script>
+                <script type="text/css" slot="css">
+                  .list-numbered {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    counter-reset: list-counter;
+                  }
+
+                  .list-numbered li {
+                    position: relative;
+                    padding-left: 36px;
+                    margin-bottom: 16px;
+                    color: rgba(255, 255, 255, 0.8);
+                    line-height: 1.6;
+                    counter-increment: list-counter;
+                  }
+
+                  .list-numbered li::before {
+                    content: counter(list-counter);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 24px;
+                    height: 24px;
+                    background: rgba(102, 126, 234, 0.2);
+                    color: #818cf8;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="icon" class="docs-section" data-aos="fade-up">
+              <h2>Icon List</h2>
+              <p>List with icon indicators.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="max-width: 400px">
+                  <ul class="list-icon">
+                    <li><i class="fas fa-check"></i> Feature included</li>
+                    <li><i class="fas fa-check"></i> Another great feature</li>
+                    <li><i class="fas fa-check"></i> Premium support</li>
+                    <li><i class="fas fa-times"></i> Not available</li>
+                  </ul>
+                </div>
+                <script type="text/html" slot="html">
+                  <ul class="list-icon">
+                    <li><i class="fas fa-check"></i> Feature included</li>
+                    <li><i class="fas fa-check"></i> Another great feature</li>
+                    <li><i class="fas fa-check"></i> Premium support</li>
+                    <li><i class="fas fa-times"></i> Not available</li>
+                  </ul>
+                </script>
+                <script type="text/css" slot="css">
+                  .list-icon {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                  }
+
+                  .list-icon li {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 12px 0;
+                    color: rgba(255, 255, 255, 0.8);
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                  }
+
+                  .list-icon li:last-child {
+                    border-bottom: none;
+                  }
+
+                  .list-icon li i {
+                    width: 20px;
+                    text-align: center;
+                  }
+
+                  .list-icon li .fa-check {
+                    color: #4ade80;
+                  }
+
+                  .list-icon li .fa-times {
+                    color: #f87171;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="description" class="docs-section" data-aos="fade-up">
+              <h2>Description List</h2>
+              <p>Key-value pair list for metadata.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="max-width: 500px">
+                  <dl class="list-description">
+                    <dt>Name</dt>
+                    <dd>KvoLib Component Library</dd>
+                    <dt>Version</dt>
+                    <dd>1.0.0</dd>
+                    <dt>License</dt>
+                    <dd>MIT License</dd>
+                    <dt>Author</dt>
+                    <dd>Kvoryz</dd>
+                  </dl>
+                </div>
+                <script type="text/html" slot="html">
+                  <dl class="list-description">
+                    <dt>Name</dt>
+                    <dd>KvoLib Component Library</dd>
+                    <dt>Version</dt>
+                    <dd>1.0.0</dd>
+                    <dt>License</dt>
+                    <dd>MIT License</dd>
+                  </dl>
+                </script>
+                <script type="text/css" slot="css">
+                  .list-description {
+                    margin: 0;
+                  }
+
+                  .list-description dt {
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    color: rgba(255, 255, 255, 0.5);
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    margin-bottom: 4px;
+                  }
+
+                  .list-description dd {
+                    margin: 0 0 20px 0;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    color: rgba(255, 255, 255, 0.9);
+                    font-size: 1rem;
+                  }
+
+                  .list-description dd:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border-bottom: none;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

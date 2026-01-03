@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib Blockquote Components" />
+    <title>Blockquote - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/components/blockquote.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html#typography">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Blockquote</span>
+        </div>
+        <h1 class="page-title">Blockquote</h1>
+        <p class="page-description">
+          Quote styles for citations and testimonials.
+        </p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Blockquote Styles</h4>
+              <ul>
+                <li><a href="#basic">Basic Blockquote</a></li>
+                <li><a href="#icon">Icon Blockquote</a></li>
+                <li><a href="#card">Card Blockquote</a></li>
+                <li><a href="#colored">Colored Blockquotes</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="basic" class="docs-section" data-aos="fade-up">
+              <h2>Basic Blockquote</h2>
+              <p>Simple quote with left border.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="max-width: 600px">
+                  <blockquote class="blockquote">
+                    <p>
+                      Design is not just what it looks like and feels like.
+                      Design is how it works.
+                    </p>
+                    <cite>— Steve Jobs</cite>
+                  </blockquote>
+                </div>
+                <script type="text/html" slot="html">
+                  <blockquote class="blockquote">
+                    <p>
+                      Design is not just what it looks like and feels like.
+                      Design is how it works.
+                    </p>
+                    <cite>— Steve Jobs</cite>
+                  </blockquote>
+                </script>
+                <script type="text/css" slot="css">
+                  .blockquote {
+                    padding: 24px 32px;
+                    border-left: 4px solid #667eea;
+                    background: rgba(255, 255, 255, 0.03);
+                    border-radius: 0 8px 8px 0;
+                  }
+
+                  .blockquote p {
+                    font-size: 1.125rem;
+                    line-height: 1.7;
+                    color: rgba(255, 255, 255, 0.9);
+                    margin-bottom: 12px;
+                    font-style: italic;
+                  }
+
+                  .blockquote cite {
+                    font-size: 0.875rem;
+                    color: rgba(255, 255, 255, 0.5);
+                    font-style: normal;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="icon" class="docs-section" data-aos="fade-up">
+              <h2>Icon Blockquote</h2>
+              <p>Quote with decorative quote icon.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="max-width: 600px">
+                  <blockquote class="blockquote-icon">
+                    <i class="fas fa-quote-left"></i>
+                    <p>The best way to predict the future is to invent it.</p>
+                    <cite>— Alan Kay</cite>
+                  </blockquote>
+                </div>
+                <script type="text/html" slot="html">
+                  <blockquote class="blockquote-icon">
+                    <i class="fas fa-quote-left"></i>
+                    <p>The best way to predict the future is to invent it.</p>
+                    <cite>— Alan Kay</cite>
+                  </blockquote>
+                </script>
+                <script type="text/css" slot="css">
+                  .blockquote-icon {
+                    position: relative;
+                    padding: 32px 32px 32px 80px;
+                    background: rgba(255, 255, 255, 0.03);
+                    border-radius: 12px;
+                  }
+
+                  .blockquote-icon i {
+                    position: absolute;
+                    left: 24px;
+                    top: 24px;
+                    font-size: 2rem;
+                    color: #667eea;
+                    opacity: 0.5;
+                  }
+
+                  .blockquote-icon p {
+                    font-size: 1.125rem;
+                    line-height: 1.7;
+                    color: rgba(255, 255, 255, 0.9);
+                    margin-bottom: 12px;
+                  }
+
+                  .blockquote-icon cite {
+                    font-size: 0.875rem;
+                    color: rgba(255, 255, 255, 0.5);
+                    font-style: normal;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="card" class="docs-section" data-aos="fade-up">
+              <h2>Card Blockquote</h2>
+              <p>Quote in card format with author info.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="max-width: 500px">
+                  <blockquote class="blockquote-card">
+                    <p>"Simplicity is the ultimate sophistication."</p>
+                    <div class="blockquote-author">
+                      <img
+                        src="https://i.pravatar.cc/50?img=12"
+                        alt="Author"
+                        class="author-avatar"
+                      />
+                      <div class="author-info">
+                        <strong>Leonardo da Vinci</strong>
+                        <span>Artist & Inventor</span>
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+                <script type="text/html" slot="html">
+                  <blockquote class="blockquote-card">
+                    <p>"Simplicity is the ultimate sophistication."</p>
+                    <div class="blockquote-author">
+                      <img
+                        src="author.jpg"
+                        alt="Author"
+                        class="author-avatar"
+                      />
+                      <div class="author-info">
+                        <strong>Leonardo da Vinci</strong>
+                        <span>Artist & Inventor</span>
+                      </div>
+                    </div>
+                  </blockquote>
+                </script>
+                <script type="text/css" slot="css">
+                  .blockquote-card {
+                    padding: 32px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 16px;
+                  }
+
+                  .blockquote-card p {
+                    font-size: 1.25rem;
+                    line-height: 1.6;
+                    color: #fff;
+                    margin-bottom: 24px;
+                  }
+
+                  .blockquote-author {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                  }
+
+                  .author-avatar {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  }
+
+                  .author-info {
+                    display: flex;
+                    flex-direction: column;
+                  }
+
+                  .author-info strong {
+                    font-size: 0.9rem;
+                    color: #fff;
+                  }
+
+                  .author-info span {
+                    font-size: 0.8rem;
+                    color: rgba(255, 255, 255, 0.5);
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="colored" class="docs-section" data-aos="fade-up">
+              <h2>Colored Blockquotes</h2>
+              <p>Semantic colored quotes for different contexts.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    max-width: 600px;
+                  "
+                >
+                  <blockquote class="blockquote blockquote-info">
+                    <p>
+                      <strong>Info:</strong> This is an informational quote.
+                    </p>
+                  </blockquote>
+                  <blockquote class="blockquote blockquote-success">
+                    <p><strong>Success:</strong> This is a success quote.</p>
+                  </blockquote>
+                  <blockquote class="blockquote blockquote-warning">
+                    <p><strong>Warning:</strong> This is a warning quote.</p>
+                  </blockquote>
+                </div>
+                <script type="text/html" slot="html">
+                  <blockquote class="blockquote blockquote-info">
+                    <p>
+                      <strong>Info:</strong> This is an informational quote.
+                    </p>
+                  </blockquote>
+
+                  <blockquote class="blockquote blockquote-success">
+                    <p><strong>Success:</strong> This is a success quote.</p>
+                  </blockquote>
+
+                  <blockquote class="blockquote blockquote-warning">
+                    <p><strong>Warning:</strong> This is a warning quote.</p>
+                  </blockquote>
+                </script>
+                <script type="text/css" slot="css">
+                  .blockquote {
+                    padding: 16px 20px;
+                    border-left: 4px solid;
+                    border-radius: 0 8px 8px 0;
+                  }
+
+                  .blockquote p {
+                    font-size: 0.9rem;
+                    line-height: 1.6;
+                    margin: 0;
+                  }
+
+                  .blockquote-info {
+                    border-color: #38bdf8;
+                    background: rgba(56, 189, 248, 0.1);
+                  }
+
+                  .blockquote-success {
+                    border-color: #4ade80;
+                    background: rgba(74, 222, 128, 0.1);
+                  }
+
+                  .blockquote-warning {
+                    border-color: #facc15;
+                    background: rgba(250, 204, 21, 0.1);
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

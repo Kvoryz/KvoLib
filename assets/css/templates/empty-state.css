@@ -1,0 +1,117 @@
+/* Empty State Template Styles */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+.empty-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+.empty-icon i {
+  font-size: 2rem;
+  color: #667eea;
+}
+
+.empty-state h3 {
+  font-size: 1.25rem;
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.empty-state p {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 24px 0;
+  line-height: 1.6;
+}
+
+.empty-action {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.empty-action:hover {
+  transform: translateY(-2px);
+}
+
+/* Light Variant */
+.empty-light {
+  background: linear-gradient(
+    180deg,
+    rgba(102, 126, 234, 0.05) 0%,
+    transparent 100%
+  );
+  border: none;
+}
+
+.empty-illustration {
+  position: relative;
+  color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 24px;
+}
+
+.empty-x {
+  position: absolute;
+  bottom: -5px;
+  right: -10px;
+  font-size: 1rem !important;
+  color: #f87171;
+}
+
+.empty-action-outline {
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.empty-action-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Error Variant */
+.empty-error {
+  background: rgba(248, 113, 113, 0.05);
+  border-color: rgba(248, 113, 113, 0.2);
+  border-style: solid;
+}
+
+.empty-icon-error {
+  background: rgba(248, 113, 113, 0.1);
+}
+
+.empty-icon-error i {
+  color: #f87171;
+}
+
+.empty-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

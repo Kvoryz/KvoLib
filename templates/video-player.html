@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib Video Player Template" />
+    <title>Video Player - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/video-player.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#media">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Video Player</span>
+        </div>
+        <h1 class="page-title">Video Player</h1>
+        <p class="page-description">
+          Custom video player with modern controls.
+        </p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Player Styles</h4>
+              <ul>
+                <li><a href="#basic">Basic Player</a></li>
+                <li><a href="#thumbnail">With Thumbnail</a></li>
+                <li><a href="#minimal">Minimal Player</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="basic" class="docs-section" data-aos="fade-up">
+              <h2>Basic Player</h2>
+              <p>Full-featured video player with controls.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="video-player">
+                    <div
+                      class="video-screen"
+                      style="
+                        background: url('https://picsum.photos/800/450?random=40')
+                          center/cover;
+                      "
+                    >
+                      <button class="play-button">
+                        <i class="fas fa-play"></i>
+                      </button>
+                    </div>
+                    <div class="video-controls">
+                      <button class="control-btn">
+                        <i class="fas fa-play"></i>
+                      </button>
+                      <div class="progress-bar-wrapper">
+                        <div class="progress-bar" style="width: 35%"></div>
+                      </div>
+                      <span class="time-display">2:45 / 8:12</span>
+                      <button class="control-btn">
+                        <i class="fas fa-volume-up"></i>
+                      </button>
+                      <button class="control-btn">
+                        <i class="fas fa-expand"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="video-player">
+                    <div class="video-screen">
+                      <video src="video.mp4"></video>
+                      <button class="play-button">
+                        <i class="fas fa-play"></i>
+                      </button>
+                    </div>
+                    <div class="video-controls">
+                      <button class="control-btn">
+                        <i class="fas fa-play"></i>
+                      </button>
+                      <div class="progress-bar-wrapper">
+                        <div class="progress-bar" style="width: 35%;"></div>
+                      </div>
+                      <span class="time-display">2:45 / 8:12</span>
+                      <button class="control-btn">
+                        <i class="fas fa-volume-up"></i>
+                      </button>
+                      <button class="control-btn">
+                        <i class="fas fa-expand"></i>
+                      </button>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .video-player {
+                    border-radius: 12px;
+                    overflow: hidden;
+                    background: #000;
+                  }
+
+                  .video-screen {
+                    position: relative;
+                    aspect-ratio: 16 / 9;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+
+                  .play-button {
+                    width: 80px;
+                    height: 80px;
+                    background: rgba(255, 255, 255, 0.9);
+                    border: none;
+                    border-radius: 50%;
+                    font-size: 1.5rem;
+                    color: #000;
+                    cursor: pointer;
+                    transition: transform 0.2s ease;
+                  }
+
+                  .play-button:hover {
+                    transform: scale(1.1);
+                  }
+
+                  .video-controls {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 12px 16px;
+                    background: rgba(0, 0, 0, 0.8);
+                  }
+
+                  .control-btn {
+                    background: none;
+                    border: none;
+                    color: #fff;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    padding: 4px;
+                  }
+
+                  .progress-bar-wrapper {
+                    flex: 1;
+                    height: 4px;
+                    background: rgba(255, 255, 255, 0.2);
+                    border-radius: 2px;
+                    cursor: pointer;
+                  }
+
+                  .progress-bar {
+                    height: 100%;
+                    background: #667eea;
+                    border-radius: 2px;
+                  }
+
+                  .time-display {
+                    font-size: 0.8rem;
+                    color: rgba(255, 255, 255, 0.7);
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="thumbnail" class="docs-section" data-aos="fade-up">
+              <h2>With Thumbnail</h2>
+              <p>Video card with thumbnail preview.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="max-width: 400px">
+                  <div class="video-card">
+                    <div class="video-thumbnail">
+                      <img
+                        src="https://picsum.photos/400/225?random=41"
+                        alt="Video"
+                      />
+                      <span class="video-duration">12:34</span>
+                      <div class="video-play-overlay">
+                        <i class="fas fa-play-circle"></i>
+                      </div>
+                    </div>
+                    <div class="video-info">
+                      <h3>Introduction to Web Design</h3>
+                      <p>Learn the basics of modern web design...</p>
+                      <div class="video-meta">
+                        <span><i class="fas fa-eye"></i> 12.5K views</span>
+                        <span><i class="fas fa-clock"></i> 2 days ago</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="video-card">
+                    <div class="video-thumbnail">
+                      <img src="thumbnail.jpg" alt="Video" />
+                      <span class="video-duration">12:34</span>
+                      <div class="video-play-overlay">
+                        <i class="fas fa-play-circle"></i>
+                      </div>
+                    </div>
+                    <div class="video-info">
+                      <h3>Video Title</h3>
+                      <p>Description...</p>
+                      <div class="video-meta">...</div>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .video-card {
+                    border-radius: 12px;
+                    overflow: hidden;
+                    background: rgba(255, 255, 255, 0.03);
+                  }
+
+                  .video-thumbnail {
+                    position: relative;
+                    cursor: pointer;
+                  }
+
+                  .video-thumbnail img {
+                    width: 100%;
+                    display: block;
+                  }
+
+                  .video-duration {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 8px;
+                    padding: 4px 8px;
+                    background: rgba(0, 0, 0, 0.8);
+                    color: #fff;
+                    font-size: 0.75rem;
+                    border-radius: 4px;
+                  }
+
+                  .video-play-overlay {
+                    position: absolute;
+                    inset: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(0, 0, 0, 0.3);
+                    opacity: 0;
+                    transition: opacity 0.2s ease;
+                  }
+
+                  .video-thumbnail:hover .video-play-overlay {
+                    opacity: 1;
+                  }
+
+                  .video-play-overlay i {
+                    font-size: 4rem;
+                    color: rgba(255, 255, 255, 0.9);
+                  }
+
+                  .video-info {
+                    padding: 16px;
+                  }
+
+                  .video-info h3 {
+                    font-size: 1rem;
+                    margin: 0 0 8px 0;
+                  }
+
+                  .video-info p {
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: 0.875rem;
+                    margin: 0 0 12px 0;
+                  }
+
+                  .video-meta {
+                    display: flex;
+                    gap: 16px;
+                    font-size: 0.8rem;
+                    color: rgba(255, 255, 255, 0.4);
+                  }
+
+                  .video-meta i { margin-right: 4px; }
+                </script>
+              </div>
+            </section>
+
+            <section id="minimal" class="docs-section" data-aos="fade-up">
+              <h2>Minimal Player</h2>
+              <p>Clean player with minimal controls.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="video-minimal">
+                    <div
+                      class="video-screen-minimal"
+                      style="
+                        background: url('https://picsum.photos/800/450?random=42')
+                          center/cover;
+                      "
+                    >
+                      <div class="minimal-play">
+                        <i class="fas fa-play"></i>
+                      </div>
+                    </div>
+                    <div class="minimal-progress">
+                      <div class="minimal-bar" style="width: 45%"></div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="video-minimal">
+                    <div class="video-screen-minimal">
+                      <video src="video.mp4"></video>
+                      <div class="minimal-play">
+                        <i class="fas fa-play"></i>
+                      </div>
+                    </div>
+                    <div class="minimal-progress">
+                      <div class="minimal-bar" style="width: 45%;"></div>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .video-minimal {
+                    border-radius: 12px;
+                    overflow: hidden;
+                  }
+
+                  .video-screen-minimal {
+                    aspect-ratio: 16 / 9;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                  }
+
+                  .minimal-play {
+                    width: 60px;
+                    height: 60px;
+                    background: rgba(0, 0, 0, 0.6);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                  }
+
+                  .minimal-play i {
+                    color: #fff;
+                    font-size: 1.25rem;
+                    margin-left: 4px;
+                  }
+
+                  .minimal-progress {
+                    height: 4px;
+                    background: rgba(255, 255, 255, 0.1);
+                  }
+
+                  .minimal-bar {
+                    height: 100%;
+                    background: #667eea;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

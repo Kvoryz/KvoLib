@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib File Upload Template" />
+    <title>File Upload - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/file-upload.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#utility">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>File Upload</span>
+        </div>
+        <h1 class="page-title">File Upload</h1>
+        <p class="page-description">
+          Drag & drop upload area with progress indicator.
+        </p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Upload Styles</h4>
+              <ul>
+                <li><a href="#dropzone">Dropzone</a></li>
+                <li><a href="#progress">With Progress</a></li>
+                <li><a href="#preview">With Preview</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="dropzone" class="docs-section" data-aos="fade-up">
+              <h2>Dropzone</h2>
+              <p>Drag and drop file upload area.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="upload-dropzone">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Drag & Drop files here</h3>
+                    <p>or click to browse</p>
+                    <span class="upload-hint">PNG, JPG, PDF up to 10MB</span>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="upload-dropzone">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Drag & Drop files here</h3>
+                    <p>or click to browse</p>
+                    <span class="upload-hint">PNG, JPG, PDF up to 10MB</span>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .upload-dropzone {
+                    border: 2px dashed rgba(255, 255, 255, 0.2);
+                    border-radius: 16px;
+                    padding: 48px;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    background: rgba(255, 255, 255, 0.02);
+                  }
+
+                  .upload-dropzone:hover {
+                    border-color: #667eea;
+                    background: rgba(102, 126, 234, 0.05);
+                  }
+
+                  .upload-dropzone i {
+                    font-size: 3rem;
+                    color: #667eea;
+                    margin-bottom: 16px;
+                  }
+
+                  .upload-dropzone h3 {
+                    font-size: 1.25rem;
+                    margin-bottom: 8px;
+                  }
+
+                  .upload-dropzone p {
+                    color: rgba(255, 255, 255, 0.5);
+                    margin-bottom: 16px;
+                  }
+
+                  .upload-hint {
+                    font-size: 0.8rem;
+                    color: rgba(255, 255, 255, 0.3);
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="progress" class="docs-section" data-aos="fade-up">
+              <h2>With Progress</h2>
+              <p>Upload with progress indicator.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="upload-item">
+                    <div class="upload-icon">
+                      <i class="fas fa-file-image"></i>
+                    </div>
+                    <div class="upload-info">
+                      <div class="upload-name">
+                        <span>photo.jpg</span>
+                        <span class="upload-size">2.4 MB</span>
+                      </div>
+                      <div class="upload-progress">
+                        <div class="progress-bar" style="width: 65%"></div>
+                      </div>
+                      <span class="upload-status">Uploading... 65%</span>
+                    </div>
+                    <button class="upload-cancel">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="upload-item">
+                    <div class="upload-icon">
+                      <i class="fas fa-file-image"></i>
+                    </div>
+                    <div class="upload-info">
+                      <div class="upload-name">
+                        <span>photo.jpg</span>
+                        <span class="upload-size">2.4 MB</span>
+                      </div>
+                      <div class="upload-progress">
+                        <div class="progress-bar" style="width: 65%;"></div>
+                      </div>
+                      <span class="upload-status">Uploading... 65%</span>
+                    </div>
+                    <button class="upload-cancel">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .upload-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    padding: 16px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border-radius: 12px;
+                  }
+
+                  .upload-icon {
+                    width: 48px;
+                    height: 48px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(102, 126, 234, 0.2);
+                    border-radius: 8px;
+                    color: #818cf8;
+                    font-size: 1.25rem;
+                  }
+
+                  .upload-info {
+                    flex: 1;
+                  }
+
+                  .upload-name {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 8px;
+                  }
+
+                  .upload-size {
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 0.875rem;
+                  }
+
+                  .upload-progress {
+                    height: 4px;
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 2px;
+                    margin-bottom: 4px;
+                  }
+
+                  .progress-bar {
+                    height: 100%;
+                    background: linear-gradient(90deg, #667eea, #764ba2);
+                    border-radius: 2px;
+                    transition: width 0.3s ease;
+                  }
+
+                  .upload-status {
+                    font-size: 0.75rem;
+                    color: rgba(255, 255, 255, 0.5);
+                  }
+
+                  .upload-cancel {
+                    background: none;
+                    border: none;
+                    color: rgba(255, 255, 255, 0.3);
+                    cursor: pointer;
+                    padding: 8px;
+                  }
+
+                  .upload-cancel:hover {
+                    color: #f87171;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="preview" class="docs-section" data-aos="fade-up">
+              <h2>With Preview</h2>
+              <p>Image upload with thumbnail preview.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="display: flex; gap: 16px; flex-wrap: wrap"
+                >
+                  <div class="upload-preview">
+                    <img
+                      src="https://picsum.photos/150/150?random=1"
+                      alt="Preview"
+                    />
+                    <div class="preview-overlay">
+                      <button class="preview-remove">
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </div>
+                    <span class="preview-name">image1.jpg</span>
+                  </div>
+                  <div class="upload-preview">
+                    <img
+                      src="https://picsum.photos/150/150?random=2"
+                      alt="Preview"
+                    />
+                    <div class="preview-overlay">
+                      <button class="preview-remove">
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </div>
+                    <span class="preview-name">image2.jpg</span>
+                  </div>
+                  <div class="upload-preview upload-add">
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="upload-preview">
+                    <img src="image.jpg" alt="Preview" />
+                    <div class="preview-overlay">
+                      <button class="preview-remove">
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </div>
+                    <span class="preview-name">image.jpg</span>
+                  </div>
+
+                  <div class="upload-preview upload-add">
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .upload-preview {
+                    position: relative;
+                    width: 120px;
+                    border-radius: 12px;
+                    overflow: hidden;
+                  }
+
+                  .upload-preview img {
+                    width: 100%;
+                    height: 100px;
+                    object-fit: cover;
+                  }
+
+                  .preview-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    transition: opacity 0.2s ease;
+                  }
+
+                  .upload-preview:hover .preview-overlay {
+                    opacity: 1;
+                  }
+
+                  .preview-remove {
+                    background: #ef4444;
+                    border: none;
+                    color: #fff;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                  }
+
+                  .preview-name {
+                    display: block;
+                    padding: 8px;
+                    font-size: 0.75rem;
+                    background: rgba(255, 255, 255, 0.05);
+                    text-align: center;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  }
+
+                  .upload-add {
+                    width: 120px;
+                    height: 132px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px dashed rgba(255, 255, 255, 0.2);
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    color: rgba(255, 255, 255, 0.3);
+                  }
+
+                  .upload-add:hover {
+                    border-color: #667eea;
+                    color: #667eea;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib Badge Components" />
+    <title>Badge - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/components/badge.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html#data-display">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Badge</span>
+        </div>
+        <h1 class="page-title">Badge</h1>
+        <p class="page-description">Status labels and notification badges.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Badge Styles</h4>
+              <ul>
+                <li><a href="#basic">Basic Badges</a></li>
+                <li><a href="#outline">Outline Badges</a></li>
+                <li><a href="#dot">Dot Badges</a></li>
+                <li><a href="#notification">Notification Badge</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="basic" class="docs-section" data-aos="fade-up">
+              <h2>Basic Badges</h2>
+              <p>Colored badges for status labels.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="display: flex; gap: 12px; flex-wrap: wrap"
+                >
+                  <span class="badge badge-default">Default</span>
+                  <span class="badge badge-primary">Primary</span>
+                  <span class="badge badge-success">Success</span>
+                  <span class="badge badge-warning">Warning</span>
+                  <span class="badge badge-danger">Danger</span>
+                  <span class="badge badge-info">Info</span>
+                </div>
+                <script type="text/html" slot="html">
+                  <span class="badge badge-default">Default</span>
+                  <span class="badge badge-primary">Primary</span>
+                  <span class="badge badge-success">Success</span>
+                  <span class="badge badge-warning">Warning</span>
+                  <span class="badge badge-danger">Danger</span>
+                  <span class="badge badge-info">Info</span>
+                </script>
+                <script type="text/css" slot="css">
+                  .badge {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 4px 10px;
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    border-radius: 9999px;
+                    letter-spacing: 0.02em;
+                  }
+
+                  .badge-default {
+                    background: rgba(255, 255, 255, 0.1);
+                    color: rgba(255, 255, 255, 0.8);
+                  }
+
+                  .badge-primary {
+                    background: rgba(99, 102, 241, 0.2);
+                    color: #818cf8;
+                  }
+
+                  .badge-success {
+                    background: rgba(34, 197, 94, 0.2);
+                    color: #4ade80;
+                  }
+
+                  .badge-warning {
+                    background: rgba(234, 179, 8, 0.2);
+                    color: #facc15;
+                  }
+
+                  .badge-danger {
+                    background: rgba(239, 68, 68, 0.2);
+                    color: #f87171;
+                  }
+
+                  .badge-info {
+                    background: rgba(14, 165, 233, 0.2);
+                    color: #38bdf8;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="outline" class="docs-section" data-aos="fade-up">
+              <h2>Outline Badges</h2>
+              <p>Border-only badges for subtle indicators.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="display: flex; gap: 12px; flex-wrap: wrap"
+                >
+                  <span class="badge badge-outline-primary">Primary</span>
+                  <span class="badge badge-outline-success">Success</span>
+                  <span class="badge badge-outline-warning">Warning</span>
+                  <span class="badge badge-outline-danger">Danger</span>
+                </div>
+                <script type="text/html" slot="html">
+                  <span class="badge badge-outline-primary">Primary</span>
+                  <span class="badge badge-outline-success">Success</span>
+                  <span class="badge badge-outline-warning">Warning</span>
+                  <span class="badge badge-outline-danger">Danger</span>
+                </script>
+                <script type="text/css" slot="css">
+                  .badge {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 4px 10px;
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    border-radius: 9999px;
+                  }
+
+                  .badge-outline-primary {
+                    background: transparent;
+                    border: 1px solid #818cf8;
+                    color: #818cf8;
+                  }
+
+                  .badge-outline-success {
+                    background: transparent;
+                    border: 1px solid #4ade80;
+                    color: #4ade80;
+                  }
+
+                  .badge-outline-warning {
+                    background: transparent;
+                    border: 1px solid #facc15;
+                    color: #facc15;
+                  }
+
+                  .badge-outline-danger {
+                    background: transparent;
+                    border: 1px solid #f87171;
+                    color: #f87171;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="dot" class="docs-section" data-aos="fade-up">
+              <h2>Dot Badges</h2>
+              <p>Status indicators with colored dots.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="display: flex; gap: 24px; flex-wrap: wrap"
+                >
+                  <span class="badge-dot badge-dot-online">Online</span>
+                  <span class="badge-dot badge-dot-offline">Offline</span>
+                  <span class="badge-dot badge-dot-busy">Busy</span>
+                  <span class="badge-dot badge-dot-away">Away</span>
+                </div>
+                <script type="text/html" slot="html">
+                  <span class="badge-dot badge-dot-online">Online</span>
+                  <span class="badge-dot badge-dot-offline">Offline</span>
+                  <span class="badge-dot badge-dot-busy">Busy</span>
+                  <span class="badge-dot badge-dot-away">Away</span>
+                </script>
+                <script type="text/css" slot="css">
+                  .badge-dot {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 0.875rem;
+                    color: rgba(255, 255, 255, 0.8);
+                  }
+
+                  .badge-dot::before {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                  }
+
+                  .badge-dot-online::before {
+                    background: #4ade80;
+                    box-shadow: 0 0 8px #4ade80;
+                  }
+
+                  .badge-dot-offline::before {
+                    background: #6b7280;
+                  }
+
+                  .badge-dot-busy::before {
+                    background: #f87171;
+                    box-shadow: 0 0 8px #f87171;
+                  }
+
+                  .badge-dot-away::before {
+                    background: #facc15;
+                    box-shadow: 0 0 8px #facc15;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="notification" class="docs-section" data-aos="fade-up">
+              <h2>Notification Badge</h2>
+              <p>Badges positioned on icons for notifications.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="display: flex; gap: 32px; flex-wrap: wrap"
+                >
+                  <div class="notification-wrapper">
+                    <i
+                      class="fas fa-bell"
+                      style="font-size: 1.5rem; color: #fff"
+                    ></i>
+                    <span class="notification-badge">3</span>
+                  </div>
+                  <div class="notification-wrapper">
+                    <i
+                      class="fas fa-envelope"
+                      style="font-size: 1.5rem; color: #fff"
+                    ></i>
+                    <span class="notification-badge">12</span>
+                  </div>
+                  <div class="notification-wrapper">
+                    <i
+                      class="fas fa-shopping-cart"
+                      style="font-size: 1.5rem; color: #fff"
+                    ></i>
+                    <span class="notification-badge notification-badge-pulse"
+                      >5</span
+                    >
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="notification-wrapper">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                  </div>
+
+                  <div class="notification-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <span class="notification-badge">12</span>
+                  </div>
+
+                  <div class="notification-wrapper">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="notification-badge notification-badge-pulse"
+                      >5</span
+                    >
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .notification-wrapper {
+                    position: relative;
+                    display: inline-block;
+                  }
+
+                  .notification-badge {
+                    position: absolute;
+                    top: -8px;
+                    right: -8px;
+                    min-width: 18px;
+                    height: 18px;
+                    padding: 0 5px;
+                    font-size: 0.7rem;
+                    font-weight: 600;
+                    color: #fff;
+                    background: #ef4444;
+                    border-radius: 9999px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+
+                  .notification-badge-pulse {
+                    animation: pulse 2s infinite;
+                  }
+
+                  @keyframes pulse {
+                    0%, 100% { transform: scale(1); }
+                    50% { transform: scale(1.1); }
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

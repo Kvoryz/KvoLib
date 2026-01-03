@@ -126,7 +126,7 @@
 
                   .profile-banner {
                     height: 120px;
-                    background-size: cover;
+                    background: linear-gradient(135deg, #667eea, #764ba2);
                   }
 
                   .profile-avatar {
@@ -140,6 +140,35 @@
                     align-items: center;
                     justify-content: center;
                     font-size: 2.5rem;
+                    color: rgba(255, 255, 255, 0.5);
+                  }
+
+                  .profile-info {
+                    padding: 20px;
+                  }
+
+                  .profile-info h2 {
+                    font-size: 1.25rem;
+                    color: #fff;
+                    margin-bottom: 8px;
+                  }
+
+                  .profile-bio {
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: 0.9rem;
+                    margin-bottom: 12px;
+                  }
+
+                  .profile-meta {
+                    display: flex;
+                    gap: 16px;
+                    justify-content: center;
+                    font-size: 0.85rem;
+                    color: rgba(255, 255, 255, 0.5);
+                  }
+
+                  .profile-meta i {
+                    margin-right: 6px;
                   }
 
                   .profile-stats {
@@ -148,6 +177,66 @@
                     gap: 40px;
                     padding: 20px;
                     border-top: 1px solid rgba(255, 255, 255, 0.06);
+                  }
+
+                  .stat {
+                    text-align: center;
+                  }
+
+                  .stat-value {
+                    display: block;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    color: #fff;
+                  }
+
+                  .stat-label {
+                    font-size: 0.8rem;
+                    color: rgba(255, 255, 255, 0.5);
+                  }
+
+                  .profile-actions {
+                    padding: 20px;
+                    display: flex;
+                    gap: 12px;
+                    justify-content: center;
+                    border-top: 1px solid rgba(255, 255, 255, 0.06);
+                  }
+
+                  .tpl-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    padding: 12px 24px;
+                    border-radius: 10px;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    border: none;
+                  }
+
+                  .tpl-btn-primary {
+                    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+                    color: #fff;
+                  }
+
+                  .tpl-btn-primary:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+                  }
+
+                  .tpl-btn-ghost {
+                    background: transparent;
+                    color: rgba(255, 255, 255, 0.7);
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+                    padding: 12px 14px;
+                  }
+
+                  .tpl-btn-ghost:hover {
+                    background: rgba(255, 255, 255, 0.05);
+                    border-color: rgba(255, 255, 255, 0.3);
                   }
                 </script>
               </div>

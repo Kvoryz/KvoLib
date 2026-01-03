@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib Tooltip Components" />
+    <title>Tooltip - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/components/tooltip.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/components.html#data-display">Components</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Tooltip</span>
+        </div>
+        <h1 class="page-title">Tooltip</h1>
+        <p class="page-description">
+          Hover information popups for additional context.
+        </p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Tooltip Styles</h4>
+              <ul>
+                <li><a href="#basic">Basic Tooltip</a></li>
+                <li><a href="#positions">Positions</a></li>
+                <li><a href="#colors">Colored Tooltips</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="basic" class="docs-section" data-aos="fade-up">
+              <h2>Basic Tooltip</h2>
+              <p>Simple hover tooltip on text.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="
+                    display: flex;
+                    gap: 32px;
+                    flex-wrap: wrap;
+                    padding: 40px 0;
+                  "
+                >
+                  <span class="tooltip" data-tooltip="This is a tooltip"
+                    >Hover me</span
+                  >
+                </div>
+                <script type="text/html" slot="html">
+                  <span class="tooltip" data-tooltip="This is a tooltip"
+                    >Hover me</span
+                  >
+                </script>
+                <script type="text/css" slot="css">
+                  .tooltip {
+                    position: relative;
+                    cursor: pointer;
+                    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+                  }
+
+                  .tooltip::after {
+                    content: attr(data-tooltip);
+                    position: absolute;
+                    bottom: calc(100% + 8px);
+                    left: 50%;
+                    transform: translateX(-50%) scale(0.8);
+                    padding: 8px 12px;
+                    background: rgba(0, 0, 0, 0.9);
+                    color: #fff;
+                    font-size: 0.8rem;
+                    border-radius: 6px;
+                    white-space: nowrap;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: all 0.2s ease;
+                  }
+
+                  .tooltip:hover::after {
+                    opacity: 1;
+                    transform: translateX(-50%) scale(1);
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="positions" class="docs-section" data-aos="fade-up">
+              <h2>Tooltip Positions</h2>
+              <p>Tooltips can appear in different positions.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="
+                    display: flex;
+                    gap: 48px;
+                    flex-wrap: wrap;
+                    padding: 60px 20px;
+                  "
+                >
+                  <span class="tooltip tooltip-top" data-tooltip="Top tooltip"
+                    >Top</span
+                  >
+                  <span
+                    class="tooltip tooltip-bottom"
+                    data-tooltip="Bottom tooltip"
+                    >Bottom</span
+                  >
+                  <span class="tooltip tooltip-left" data-tooltip="Left tooltip"
+                    >Left</span
+                  >
+                  <span
+                    class="tooltip tooltip-right"
+                    data-tooltip="Right tooltip"
+                    >Right</span
+                  >
+                </div>
+                <script type="text/html" slot="html">
+                  <span class="tooltip tooltip-top" data-tooltip="Top"
+                    >Top</span
+                  >
+                  <span class="tooltip tooltip-bottom" data-tooltip="Bottom"
+                    >Bottom</span
+                  >
+                  <span class="tooltip tooltip-left" data-tooltip="Left"
+                    >Left</span
+                  >
+                  <span class="tooltip tooltip-right" data-tooltip="Right"
+                    >Right</span
+                  >
+                </script>
+                <script type="text/css" slot="css">
+                  .tooltip {
+                    position: relative;
+                    cursor: pointer;
+                    padding: 8px 16px;
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 6px;
+                  }
+
+                  .tooltip::after {
+                    content: attr(data-tooltip);
+                    position: absolute;
+                    padding: 8px 12px;
+                    background: rgba(0, 0, 0, 0.9);
+                    color: #fff;
+                    font-size: 0.8rem;
+                    border-radius: 6px;
+                    white-space: nowrap;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: all 0.2s ease;
+                  }
+
+                  .tooltip-top::after {
+                    bottom: calc(100% + 8px);
+                    left: 50%;
+                    transform: translateX(-50%) translateY(4px);
+                  }
+
+                  .tooltip-top:hover::after {
+                    opacity: 1;
+                    transform: translateX(-50%) translateY(0);
+                  }
+
+                  .tooltip-bottom::after {
+                    top: calc(100% + 8px);
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-4px);
+                  }
+
+                  .tooltip-bottom:hover::after {
+                    opacity: 1;
+                    transform: translateX(-50%) translateY(0);
+                  }
+
+                  .tooltip-left::after {
+                    right: calc(100% + 8px);
+                    top: 50%;
+                    transform: translateY(-50%) translateX(4px);
+                  }
+
+                  .tooltip-left:hover::after {
+                    opacity: 1;
+                    transform: translateY(-50%) translateX(0);
+                  }
+
+                  .tooltip-right::after {
+                    left: calc(100% + 8px);
+                    top: 50%;
+                    transform: translateY(-50%) translateX(-4px);
+                  }
+
+                  .tooltip-right:hover::after {
+                    opacity: 1;
+                    transform: translateY(-50%) translateX(0);
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="colors" class="docs-section" data-aos="fade-up">
+              <h2>Colored Tooltips</h2>
+              <p>Tooltips with different background colors.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="
+                    display: flex;
+                    gap: 32px;
+                    flex-wrap: wrap;
+                    padding: 40px 0;
+                  "
+                >
+                  <span
+                    class="tooltip tooltip-primary"
+                    data-tooltip="Primary tooltip"
+                    >Primary</span
+                  >
+                  <span
+                    class="tooltip tooltip-success"
+                    data-tooltip="Success tooltip"
+                    >Success</span
+                  >
+                  <span
+                    class="tooltip tooltip-warning"
+                    data-tooltip="Warning tooltip"
+                    >Warning</span
+                  >
+                  <span
+                    class="tooltip tooltip-danger"
+                    data-tooltip="Danger tooltip"
+                    >Danger</span
+                  >
+                </div>
+                <script type="text/html" slot="html">
+                  <span class="tooltip tooltip-primary" data-tooltip="Primary"
+                    >Primary</span
+                  >
+                  <span class="tooltip tooltip-success" data-tooltip="Success"
+                    >Success</span
+                  >
+                  <span class="tooltip tooltip-warning" data-tooltip="Warning"
+                    >Warning</span
+                  >
+                  <span class="tooltip tooltip-danger" data-tooltip="Danger"
+                    >Danger</span
+                  >
+                </script>
+                <script type="text/css" slot="css">
+                  .tooltip {
+                    position: relative;
+                    cursor: pointer;
+                    padding: 8px 16px;
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 6px;
+                  }
+
+                  .tooltip::after {
+                    content: attr(data-tooltip);
+                    position: absolute;
+                    bottom: calc(100% + 8px);
+                    left: 50%;
+                    transform: translateX(-50%);
+                    padding: 8px 12px;
+                    color: #fff;
+                    font-size: 0.8rem;
+                    border-radius: 6px;
+                    white-space: nowrap;
+                    opacity: 0;
+                    transition: opacity 0.2s ease;
+                  }
+
+                  .tooltip:hover::after { opacity: 1; }
+
+                  .tooltip-primary::after { background: #6366f1; }
+                  .tooltip-success::after { background: #22c55e; }
+                  .tooltip-warning::after { background: #eab308; color: #000; }
+                  .tooltip-danger::after { background: #ef4444; }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+/* Carousel Template Styles */
+
+.carousel {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-prev {
+  left: 16px;
+}
+
+.carousel-next {
+  right: 16px;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.carousel-dot.active {
+  background: #fff;
+  width: 24px;
+  border-radius: 5px;
+}
+
+/* Card Carousel */
+.card-carousel {
+  overflow: hidden;
+  padding: 4px;
+}
+
+.card-carousel-track {
+  display: flex;
+  gap: 20px;
+}
+
+.carousel-card {
+  flex: 0 0 calc(33.333% - 14px);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.carousel-card:hover {
+  transform: translateY(-4px);
+}
+
+.carousel-card img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-card h4 {
+  padding: 16px;
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-card {
+    flex: 0 0 100%;
+  }
+}

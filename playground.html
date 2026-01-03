@@ -17,16 +17,21 @@
       }
 
       .playground-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-        min-height: 500px;
-      }
-
-      .editor-side {
         display: flex;
         flex-direction: column;
+        gap: 24px;
+      }
+
+      .editors-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 16px;
+      }
+
+      .editor-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 250px;
       }
 
       .editor-card {
@@ -82,6 +87,7 @@
         overflow: hidden;
         display: flex;
         flex-direction: column;
+        min-height: 400px;
       }
 
       .preview-header {
@@ -107,11 +113,14 @@
 
       .preview-content {
         flex: 1;
-        padding: 32px;
+        padding: 40px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        gap: 20px;
         background: var(--gray-950);
+        min-height: 300px;
       }
 
       .action-bar {
@@ -252,8 +261,8 @@
         color: white;
       }
 
-      @media (max-width: 900px) {
-        .playground-wrapper {
+      @media (max-width: 768px) {
+        .editors-row {
           grid-template-columns: 1fr;
         }
       }
@@ -289,8 +298,8 @@
         </div>
 
         <div class="playground-wrapper">
-          <!-- Editor Side -->
-          <div class="editor-side">
+          <!-- Editors Row -->
+          <div class="editors-row">
             <div class="editor-card">
               <div class="editor-header">
                 <h3><i class="fab fa-html5"></i> HTML</h3>

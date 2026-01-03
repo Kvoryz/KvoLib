@@ -145,11 +145,102 @@
                     gap: 40px;
                   }
 
+                  .contact-info h2 {
+                    font-size: 1.5rem;
+                    color: #fff;
+                    margin-bottom: 12px;
+                  }
+
+                  .contact-info p {
+                    color: rgba(255, 255, 255, 0.6);
+                    margin-bottom: 24px;
+                  }
+
+                  .info-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                  }
+
+                  .info-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                  }
+
+                  .info-icon {
+                    width: 48px;
+                    height: 48px;
+                    background: rgba(0, 212, 255, 0.1);
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #00d4ff;
+                  }
+
+                  .info-label {
+                    display: block;
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 0.8rem;
+                  }
+
+                  .info-value {
+                    color: #fff;
+                  }
+
                   .contact-form-card {
                     background: rgba(255, 255, 255, 0.03);
                     padding: 32px;
                     border-radius: 16px;
                     border: 1px solid rgba(255, 255, 255, 0.08);
+                  }
+
+                  .tpl-input-group {
+                    position: relative;
+                    margin-bottom: 20px;
+                  }
+
+                  .tpl-input {
+                    width: 100%;
+                    padding: 16px 14px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 12px;
+                    color: #fff;
+                    font-size: 1rem;
+                    transition: all 0.3s ease;
+                    outline: none;
+                  }
+
+                  .tpl-input:focus {
+                    border-color: #00d4ff;
+                    background: rgba(0, 212, 255, 0.05);
+                  }
+
+                  .tpl-input::placeholder {
+                    color: transparent;
+                  }
+
+                  .tpl-input-group label {
+                    position: absolute;
+                    left: 14px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 1rem;
+                    pointer-events: none;
+                    transition: all 0.3s ease;
+                    background: transparent;
+                    padding: 0 4px;
+                  }
+
+                  .tpl-input:focus + label,
+                  .tpl-input:not(:placeholder-shown) + label {
+                    top: 0;
+                    font-size: 0.75rem;
+                    color: #00d4ff;
+                    background: #0a0a0a;
                   }
 
                   .contact-textarea {
@@ -160,6 +251,42 @@
                     border-radius: 12px;
                     padding: 14px;
                     color: #fff;
+                    font-size: 1rem;
+                    resize: vertical;
+                    margin-bottom: 20px;
+                    outline: none;
+                  }
+
+                  .contact-textarea:focus {
+                    border-color: #00d4ff;
+                  }
+
+                  .tpl-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    padding: 14px 28px;
+                    border-radius: 12px;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    border: none;
+                  }
+
+                  .tpl-btn-primary {
+                    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+                    color: #fff;
+                  }
+
+                  .tpl-btn-primary:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+                  }
+
+                  .tpl-btn-full {
+                    width: 100%;
                   }
                 </script>
               </div>

@@ -1,0 +1,191 @@
+/* File Upload Template Styles */
+
+.upload-dropzone {
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.upload-dropzone:hover,
+.upload-dropzone.dragover {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.upload-dropzone i {
+  font-size: 3rem;
+  color: #667eea;
+  margin-bottom: 16px;
+}
+
+.upload-dropzone h3 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin: 0 0 8px 0;
+}
+
+.upload-dropzone p {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 16px 0;
+}
+
+.upload-hint {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Upload Item with Progress */
+.upload-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.upload-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(102, 126, 234, 0.2);
+  border-radius: 8px;
+  color: #818cf8;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.upload-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.upload-name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.upload-size {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+}
+
+.upload-progress {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.upload-status {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.upload-cancel {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.2s ease;
+}
+
+.upload-cancel:hover {
+  color: #f87171;
+}
+
+/* Upload Preview */
+.upload-preview {
+  position: relative;
+  width: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.upload-preview img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+}
+
+.preview-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 32px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.upload-preview:hover .preview-overlay {
+  opacity: 1;
+}
+
+.preview-remove {
+  background: #ef4444;
+  border: none;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.preview-remove:hover {
+  transform: scale(1.1);
+}
+
+.preview-name {
+  display: block;
+  padding: 8px;
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.upload-add {
+  width: 120px;
+  height: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.upload-add:hover {
+  border-color: #667eea;
+  color: #667eea;
+}

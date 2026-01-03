@@ -1,0 +1,153 @@
+/* Slider Compare */
+.compare-slider {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: ew-resize;
+}
+
+.compare-before,
+.compare-after {
+  position: relative;
+}
+
+.compare-after {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 50% 0 0);
+}
+
+.compare-slider img {
+  width: 100%;
+  display: block;
+}
+
+.compare-label {
+  position: absolute;
+  top: 20px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.875rem;
+  border-radius: 6px;
+}
+
+.compare-before .compare-label {
+  right: 20px;
+}
+
+.compare-after .compare-label {
+  left: 20px;
+}
+
+.compare-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.handle-line {
+  flex: 1;
+  width: 3px;
+  background: #fff;
+}
+
+.handle-circle {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+/* Side by Side */
+.side-by-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.side-image {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.side-image img {
+  width: 100%;
+  display: block;
+}
+
+.side-label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.875rem;
+  border-radius: 6px;
+}
+
+/* Hover Reveal */
+.hover-compare {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hover-compare img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.hover-after {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.hover-compare:hover .hover-after {
+  opacity: 1;
+}
+
+.hover-compare:hover .hover-hint {
+  opacity: 0;
+}
+
+.hover-hint {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.875rem;
+  border-radius: 20px;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.hover-hint i {
+  margin-right: 8px;
+}
+
+@media (max-width: 640px) {
+  .side-by-side {
+    grid-template-columns: 1fr;
+  }
+}

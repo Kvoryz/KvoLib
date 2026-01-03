@@ -172,6 +172,69 @@ const searchData = [
     icon: "fa-compass",
     url: "/components.html#navigation",
   },
+  // Data Display Components
+  {
+    title: "Badge",
+    desc: "Status labels and notification badges",
+    icon: "fa-certificate",
+    url: "/components/badge.html",
+  },
+  {
+    title: "Avatar",
+    desc: "User profile images with various sizes",
+    icon: "fa-user-circle",
+    url: "/components/avatar.html",
+  },
+  {
+    title: "Tooltip",
+    desc: "Hover information popups",
+    icon: "fa-comment-dots",
+    url: "/components/tooltip.html",
+  },
+  {
+    title: "Table",
+    desc: "Data tables with modern styling",
+    icon: "fa-table",
+    url: "/components/table.html",
+  },
+  // Typography Components
+  {
+    title: "Headings",
+    desc: "H1-H6 with various styles",
+    icon: "fa-heading",
+    url: "/components/headings.html",
+  },
+  {
+    title: "Blockquote",
+    desc: "Quote styles for citations",
+    icon: "fa-quote-left",
+    url: "/components/blockquote.html",
+  },
+  {
+    title: "Code Block",
+    desc: "Syntax highlighted code display",
+    icon: "fa-code",
+    url: "/components/code-block.html",
+  },
+  {
+    title: "Lists",
+    desc: "Styled ordered and unordered lists",
+    icon: "fa-list",
+    url: "/components/lists.html",
+  },
+  // Categories
+  {
+    title: "Data Display",
+    desc: "Badges, avatars, tooltips, and tables",
+    icon: "fa-table",
+    url: "/components.html#data-display",
+  },
+  {
+    title: "Typography",
+    desc: "Headings, blockquotes, code blocks, and lists",
+    icon: "fa-font",
+    url: "/components.html#typography",
+  },
   // Templates
   {
     title: "Templates",
@@ -179,9 +242,10 @@ const searchData = [
     icon: "fa-copy",
     url: "/template.html",
   },
+  // Auth Templates
   {
     title: "Login Template",
-    desc: "Login form with floating labels",
+    desc: "Clean login form with floating labels",
     icon: "fa-sign-in-alt",
     url: "/templates/login.html",
   },
@@ -190,6 +254,181 @@ const searchData = [
     desc: "Registration form with validation",
     icon: "fa-user-plus",
     url: "/templates/register.html",
+  },
+  {
+    title: "Forgot Password Template",
+    desc: "Password reset request form",
+    icon: "fa-key",
+    url: "/templates/forgot-password.html",
+  },
+  // Landing Templates
+  {
+    title: "Hero Section Template",
+    desc: "Eye-catching hero with gradient background",
+    icon: "fa-star",
+    url: "/templates/hero.html",
+  },
+  {
+    title: "Pricing Template",
+    desc: "Pricing cards with popular highlight",
+    icon: "fa-tags",
+    url: "/templates/pricing.html",
+  },
+  {
+    title: "Features Template",
+    desc: "Feature grid with icons",
+    icon: "fa-th-large",
+    url: "/templates/features.html",
+  },
+  {
+    title: "Testimonials Template",
+    desc: "Customer testimonial cards",
+    icon: "fa-quote-left",
+    url: "/templates/testimonials.html",
+  },
+  {
+    title: "FAQ Template",
+    desc: "Accordion-style FAQ section",
+    icon: "fa-question-circle",
+    url: "/templates/faq.html",
+  },
+  {
+    title: "CTA Section Template",
+    desc: "Call-to-action with gradient background",
+    icon: "fa-bullhorn",
+    url: "/templates/cta.html",
+  },
+  // Dashboard Templates
+  {
+    title: "Dashboard Layout Template",
+    desc: "Sidebar with stats cards",
+    icon: "fa-tachometer-alt",
+    url: "/templates/dashboard.html",
+  },
+  {
+    title: "Settings Page Template",
+    desc: "User settings with form sections",
+    icon: "fa-cog",
+    url: "/templates/settings.html",
+  },
+  {
+    title: "Profile Page Template",
+    desc: "User profile with avatar and info",
+    icon: "fa-user",
+    url: "/templates/profile.html",
+  },
+  // Content Templates
+  {
+    title: "Blog Cards Template",
+    desc: "Blog post grid layout",
+    icon: "fa-newspaper",
+    url: "/templates/blog.html",
+  },
+  {
+    title: "Portfolio Template",
+    desc: "Project showcase grid",
+    icon: "fa-briefcase",
+    url: "/templates/portfolio.html",
+  },
+  {
+    title: "Contact Template",
+    desc: "Contact form with info cards",
+    icon: "fa-envelope",
+    url: "/templates/contact.html",
+  },
+  {
+    title: "404 Page Template",
+    desc: "Creative error page design",
+    icon: "fa-exclamation-triangle",
+    url: "/templates/error-404.html",
+  },
+  // Template Categories
+  {
+    title: "Authentication Templates",
+    desc: "Login, register, and password reset",
+    icon: "fa-lock",
+    url: "/template.html#auth",
+  },
+  {
+    title: "Landing Page Templates",
+    desc: "Hero, pricing, features, and more",
+    icon: "fa-rocket",
+    url: "/template.html#landing",
+  },
+  {
+    title: "Dashboard Templates",
+    desc: "Dashboard, settings, and profile pages",
+    icon: "fa-chart-line",
+    url: "/template.html#dashboard",
+  },
+  {
+    title: "Content Templates",
+    desc: "Blog, portfolio, contact, and error pages",
+    icon: "fa-file-alt",
+    url: "/template.html#content",
+  },
+  // Utility / Application Templates
+  {
+    title: "File Upload Template",
+    desc: "Drag & drop upload with progress",
+    icon: "fa-cloud-upload-alt",
+    url: "/templates/file-upload.html",
+  },
+  {
+    title: "Notification Center Template",
+    desc: "Dropdown notification list",
+    icon: "fa-bell",
+    url: "/templates/notification-center.html",
+  },
+  {
+    title: "Search Results Template",
+    desc: "Result cards with filters",
+    icon: "fa-search",
+    url: "/templates/search-results.html",
+  },
+  {
+    title: "Empty State Template",
+    desc: "Illustrative no-data pages",
+    icon: "fa-inbox",
+    url: "/templates/empty-state.html",
+  },
+  // Media & Gallery Templates
+  {
+    title: "Image Gallery Template",
+    desc: "Masonry grid with lightbox",
+    icon: "fa-th",
+    url: "/templates/image-gallery.html",
+  },
+  {
+    title: "Video Player Template",
+    desc: "Custom player with controls",
+    icon: "fa-play-circle",
+    url: "/templates/video-player.html",
+  },
+  {
+    title: "Carousel Template",
+    desc: "Auto-play image slider",
+    icon: "fa-images",
+    url: "/templates/carousel.html",
+  },
+  {
+    title: "Before/After Template",
+    desc: "Comparison slider for images",
+    icon: "fa-columns",
+    url: "/templates/before-after.html",
+  },
+  // New Template Categories
+  {
+    title: "Utility Templates",
+    desc: "File upload, notifications, search, empty states",
+    icon: "fa-tools",
+    url: "/template.html#utility",
+  },
+  {
+    title: "Media Templates",
+    desc: "Galleries, video players, carousels, comparisons",
+    icon: "fa-images",
+    url: "/template.html#media",
   },
 ];
 

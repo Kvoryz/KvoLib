@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib Search Results Template" />
+    <title>Search Results - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/search-results.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#utility">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Search Results</span>
+        </div>
+        <h1 class="page-title">Search Results</h1>
+        <p class="page-description">
+          Search result cards with filters and pagination.
+        </p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Search Styles</h4>
+              <ul>
+                <li><a href="#header">Search Header</a></li>
+                <li><a href="#results">Result Cards</a></li>
+                <li><a href="#filters">Filter Chips</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="header" class="docs-section" data-aos="fade-up">
+              <h2>Search Header</h2>
+              <p>Search bar with result count.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="search-header">
+                    <div class="search-bar">
+                      <i class="fas fa-search"></i>
+                      <input
+                        type="text"
+                        placeholder="Search..."
+                        value="design templates"
+                      />
+                      <button class="search-clear">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                    <p class="search-count">
+                      Found <strong>24</strong> results for "design templates"
+                    </p>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="search-header">
+                    <div class="search-bar">
+                      <i class="fas fa-search"></i>
+                      <input
+                        type="text"
+                        placeholder="Search..."
+                        value="design templates"
+                      />
+                      <button class="search-clear">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                    <p class="search-count">
+                      Found <strong>24</strong> results
+                    </p>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .search-header {
+                    margin-bottom: 24px;
+                  }
+
+                  .search-bar {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 12px 20px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 12px;
+                    margin-bottom: 12px;
+                  }
+
+                  .search-bar i {
+                    color: rgba(255, 255, 255, 0.4);
+                  }
+
+                  .search-bar input {
+                    flex: 1;
+                    background: none;
+                    border: none;
+                    color: #fff;
+                    font-size: 1rem;
+                    outline: none;
+                  }
+
+                  .search-clear {
+                    background: none;
+                    border: none;
+                    color: rgba(255, 255, 255, 0.3);
+                    cursor: pointer;
+                  }
+
+                  .search-count {
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 0.875rem;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="results" class="docs-section" data-aos="fade-up">
+              <h2>Result Cards</h2>
+              <p>Search result items with metadata.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    width: 100%;
+                  "
+                >
+                  <div class="result-card">
+                    <div class="result-image">
+                      <img
+                        src="https://picsum.photos/120/90?random=1"
+                        alt="Result"
+                      />
+                    </div>
+                    <div class="result-content">
+                      <h3 class="result-title">
+                        Modern Dashboard <mark>Design</mark> System
+                      </h3>
+                      <p class="result-desc">
+                        A comprehensive dashboard template with charts, tables,
+                        and widgets for analytics applications.
+                      </p>
+                      <div class="result-meta">
+                        <span><i class="fas fa-calendar"></i> Jan 2, 2026</span>
+                        <span><i class="fas fa-tag"></i> Templates</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="result-card">
+                    <div class="result-image">
+                      <img
+                        src="https://picsum.photos/120/90?random=2"
+                        alt="Result"
+                      />
+                    </div>
+                    <div class="result-content">
+                      <h3 class="result-title">
+                        E-commerce <mark>Design</mark> Kit
+                      </h3>
+                      <p class="result-desc">
+                        Complete e-commerce UI kit with product cards, cart, and
+                        checkout components.
+                      </p>
+                      <div class="result-meta">
+                        <span
+                          ><i class="fas fa-calendar"></i> Dec 28, 2025</span
+                        >
+                        <span><i class="fas fa-tag"></i> UI Kit</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="result-card">
+                    <div class="result-image">
+                      <img src="thumbnail.jpg" alt="Result" />
+                    </div>
+                    <div class="result-content">
+                      <h3 class="result-title">
+                        Dashboard <mark>Design</mark>
+                      </h3>
+                      <p class="result-desc">Description text...</p>
+                      <div class="result-meta">
+                        <span><i class="fas fa-calendar"></i> Date</span>
+                        <span><i class="fas fa-tag"></i> Category</span>
+                      </div>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .result-card {
+                    display: flex;
+                    gap: 20px;
+                    padding: 20px;
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border-radius: 12px;
+                    transition: all 0.2s ease;
+                  }
+
+                  .result-card:hover {
+                    background: rgba(255, 255, 255, 0.05);
+                    border-color: rgba(255, 255, 255, 0.15);
+                  }
+
+                  .result-image img {
+                    width: 120px;
+                    height: 90px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                  }
+
+                  .result-content {
+                    flex: 1;
+                  }
+
+                  .result-title {
+                    font-size: 1.1rem;
+                    margin: 0 0 8px 0;
+                  }
+
+                  .result-title mark {
+                    background: rgba(102, 126, 234, 0.3);
+                    color: #fff;
+                    padding: 0 4px;
+                    border-radius: 2px;
+                  }
+
+                  .result-desc {
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: 0.9rem;
+                    margin: 0 0 12px 0;
+                    line-height: 1.5;
+                  }
+
+                  .result-meta {
+                    display: flex;
+                    gap: 16px;
+                    font-size: 0.8rem;
+                    color: rgba(255, 255, 255, 0.4);
+                  }
+
+                  .result-meta i {
+                    margin-right: 4px;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="filters" class="docs-section" data-aos="fade-up">
+              <h2>Filter Chips</h2>
+              <p>Clickable filter tags for refining results.</p>
+              <div class="component-viewer">
+                <div
+                  slot="preview"
+                  style="display: flex; gap: 8px; flex-wrap: wrap"
+                >
+                  <button class="filter-chip active">All</button>
+                  <button class="filter-chip">Components</button>
+                  <button class="filter-chip">Templates</button>
+                  <button class="filter-chip">Documentation</button>
+                  <button class="filter-chip">Blog</button>
+                </div>
+                <script type="text/html" slot="html">
+                  <button class="filter-chip active">All</button>
+                  <button class="filter-chip">Components</button>
+                  <button class="filter-chip">Templates</button>
+                </script>
+                <script type="text/css" slot="css">
+                  .filter-chip {
+                    padding: 8px 16px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 9999px;
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 0.875rem;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                  }
+
+                  .filter-chip:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                    color: #fff;
+                  }
+
+                  .filter-chip.active {
+                    background: #667eea;
+                    border-color: #667eea;
+                    color: #fff;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

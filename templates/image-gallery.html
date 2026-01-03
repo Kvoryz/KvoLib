@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib Image Gallery Template" />
+    <title>Image Gallery - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/image-gallery.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#media">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Image Gallery</span>
+        </div>
+        <h1 class="page-title">Image Gallery</h1>
+        <p class="page-description">
+          Masonry grid gallery with lightbox modal.
+        </p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Gallery Styles</h4>
+              <ul>
+                <li><a href="#grid">Grid Gallery</a></li>
+                <li><a href="#masonry">Masonry Layout</a></li>
+                <li><a href="#lightbox">Lightbox Modal</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="grid" class="docs-section" data-aos="fade-up">
+              <h2>Grid Gallery</h2>
+              <p>Equal-sized image grid.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="gallery-grid">
+                    <div class="gallery-item">
+                      <img
+                        src="https://picsum.photos/300/200?random=10"
+                        alt="Gallery"
+                      />
+                      <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://picsum.photos/300/200?random=11"
+                        alt="Gallery"
+                      />
+                      <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://picsum.photos/300/200?random=12"
+                        alt="Gallery"
+                      />
+                      <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <img
+                        src="https://picsum.photos/300/200?random=13"
+                        alt="Gallery"
+                      />
+                      <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="gallery-grid">
+                    <div class="gallery-item">
+                      <img src="image.jpg" alt="Gallery" />
+                      <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                      </div>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .gallery-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                    gap: 16px;
+                  }
+
+                  .gallery-item {
+                    position: relative;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    cursor: pointer;
+                  }
+
+                  .gallery-item img {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                    display: block;
+                    transition: transform 0.3s ease;
+                  }
+
+                  .gallery-item:hover img {
+                    transform: scale(1.05);
+                  }
+
+                  .gallery-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                  }
+
+                  .gallery-item:hover .gallery-overlay {
+                    opacity: 1;
+                  }
+
+                  .gallery-overlay i {
+                    color: #fff;
+                    font-size: 1.5rem;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="masonry" class="docs-section" data-aos="fade-up">
+              <h2>Masonry Layout</h2>
+              <p>Pinterest-style varied heights.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="gallery-masonry">
+                    <div class="masonry-item" style="--span: 2">
+                      <img
+                        src="https://picsum.photos/300/400?random=20"
+                        alt="Gallery"
+                      />
+                    </div>
+                    <div class="masonry-item">
+                      <img
+                        src="https://picsum.photos/300/200?random=21"
+                        alt="Gallery"
+                      />
+                    </div>
+                    <div class="masonry-item">
+                      <img
+                        src="https://picsum.photos/300/250?random=22"
+                        alt="Gallery"
+                      />
+                    </div>
+                    <div class="masonry-item" style="--span: 2">
+                      <img
+                        src="https://picsum.photos/300/350?random=23"
+                        alt="Gallery"
+                      />
+                    </div>
+                    <div class="masonry-item">
+                      <img
+                        src="https://picsum.photos/300/180?random=24"
+                        alt="Gallery"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="gallery-masonry">
+                    <div class="masonry-item" style="--span: 2;">
+                      <img src="tall-image.jpg" alt="Gallery" />
+                    </div>
+                    <div class="masonry-item">
+                      <img src="image.jpg" alt="Gallery" />
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .gallery-masonry {
+                    columns: 3;
+                    column-gap: 16px;
+                  }
+
+                  .masonry-item {
+                    break-inside: avoid;
+                    margin-bottom: 16px;
+                    border-radius: 12px;
+                    overflow: hidden;
+                  }
+
+                  .masonry-item img {
+                    width: 100%;
+                    display: block;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="lightbox" class="docs-section" data-aos="fade-up">
+              <h2>Lightbox Modal</h2>
+              <p>Full-screen image viewer.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="lightbox-demo">
+                    <img
+                      src="https://picsum.photos/600/400?random=30"
+                      alt="Lightbox Demo"
+                    />
+                    <div class="lightbox-controls">
+                      <button class="lightbox-nav">
+                        <i class="fas fa-chevron-left"></i>
+                      </button>
+                      <span class="lightbox-counter">1 / 5</span>
+                      <button class="lightbox-nav">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <button class="lightbox-close">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="lightbox">
+                    <img src="image.jpg" alt="Full Size" />
+                    <div class="lightbox-controls">
+                      <button class="lightbox-nav">
+                        <i class="fas fa-chevron-left"></i>
+                      </button>
+                      <span class="lightbox-counter">1 / 5</span>
+                      <button class="lightbox-nav">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <button class="lightbox-close">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .lightbox {
+                    position: fixed;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.95);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1000;
+                  }
+
+                  .lightbox img {
+                    max-width: 90%;
+                    max-height: 85vh;
+                    object-fit: contain;
+                  }
+
+                  .lightbox-controls {
+                    position: absolute;
+                    bottom: 24px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+                  }
+
+                  .lightbox-nav {
+                    background: rgba(255, 255, 255, 0.1);
+                    border: none;
+                    color: #fff;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                  }
+
+                  .lightbox-counter {
+                    color: rgba(255, 255, 255, 0.6);
+                  }
+
+                  .lightbox-close {
+                    position: absolute;
+                    top: 24px;
+                    right: 24px;
+                    background: none;
+                    border: none;
+                    color: #fff;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

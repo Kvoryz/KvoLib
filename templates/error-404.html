@@ -93,6 +93,20 @@
                     justify-content: center;
                     text-align: center;
                     background: #0a0a0a;
+                    padding: 40px 20px;
+                  }
+
+                  .error-content h1 {
+                    font-size: 2rem;
+                    color: #fff;
+                    margin-bottom: 12px;
+                  }
+
+                  .error-content p {
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: 1rem;
+                    max-width: 400px;
+                    margin: 0 auto;
                   }
 
                   .error-code {
@@ -103,6 +117,9 @@
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
                     text-shadow: 0 0 80px rgba(0, 212, 255, 0.3);
+                    line-height: 1;
+                    display: block;
+                    margin-bottom: 16px;
                   }
 
                   .error-actions {
@@ -110,6 +127,41 @@
                     gap: 16px;
                     justify-content: center;
                     margin-top: 32px;
+                  }
+
+                  .tpl-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    padding: 14px 28px;
+                    border-radius: 12px;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    border: none;
+                  }
+
+                  .tpl-btn-primary {
+                    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+                    color: #fff;
+                  }
+
+                  .tpl-btn-primary:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+                  }
+
+                  .tpl-btn-ghost {
+                    background: transparent;
+                    color: rgba(255, 255, 255, 0.7);
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+                  }
+
+                  .tpl-btn-ghost:hover {
+                    background: rgba(255, 255, 255, 0.05);
+                    border-color: rgba(255, 255, 255, 0.3);
                   }
                 </script>
               </div>

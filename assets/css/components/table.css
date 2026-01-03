@@ -1,0 +1,54 @@
+/* Table Component Styles */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.table th,
+.table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table th {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.table td {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Striped Table */
+.table-striped th {
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: none;
+}
+
+.table-striped td {
+  border-bottom: none;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.table-striped tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Hover Table */
+.table-hover tbody tr {
+  transition: background 0.15s ease;
+  cursor: pointer;
+}
+
+.table-hover tbody tr:hover {
+  background: rgba(255, 255, 255, 0.08);
+}

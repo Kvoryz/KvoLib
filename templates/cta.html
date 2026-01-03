@@ -109,10 +109,66 @@
                     pointer-events: none;
                   }
 
+                  .cta-content {
+                    position: relative;
+                    z-index: 1;
+                  }
+
+                  .cta-content h2 {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom: 16px;
+                  }
+
+                  .cta-content p {
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 1.1rem;
+                    margin-bottom: 32px;
+                    max-width: 500px;
+                    margin-left: auto;
+                    margin-right: auto;
+                  }
+
                   .cta-actions {
                     display: flex;
                     gap: 16px;
                     justify-content: center;
+                  }
+
+                  .tpl-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    padding: 14px 28px;
+                    border-radius: 12px;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    border: none;
+                  }
+
+                  .tpl-btn-primary {
+                    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+                    color: #fff;
+                  }
+
+                  .tpl-btn-primary:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+                  }
+
+                  .tpl-btn-ghost {
+                    background: transparent;
+                    color: rgba(255, 255, 255, 0.7);
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+                  }
+
+                  .tpl-btn-ghost:hover {
+                    background: rgba(255, 255, 255, 0.05);
+                    border-color: rgba(255, 255, 255, 0.3);
                   }
                 </script>
               </div>

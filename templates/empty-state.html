@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib Empty State Template" />
+    <title>Empty State - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/empty-state.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#utility">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Empty State</span>
+        </div>
+        <h1 class="page-title">Empty State</h1>
+        <p class="page-description">Illustrative empty/no-data pages.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Empty States</h4>
+              <ul>
+                <li><a href="#basic">Basic Empty</a></li>
+                <li><a href="#no-results">No Results</a></li>
+                <li><a href="#error">Error State</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="basic" class="docs-section" data-aos="fade-up">
+              <h2>Basic Empty</h2>
+              <p>Simple empty state with icon and message.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="empty-state">
+                    <div class="empty-icon">
+                      <i class="fas fa-inbox"></i>
+                    </div>
+                    <h3>No items yet</h3>
+                    <p>Get started by creating your first item.</p>
+                    <button class="empty-action">
+                      <i class="fas fa-plus"></i> Create New
+                    </button>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="empty-state">
+                    <div class="empty-icon">
+                      <i class="fas fa-inbox"></i>
+                    </div>
+                    <h3>No items yet</h3>
+                    <p>Get started by creating your first item.</p>
+                    <button class="empty-action">
+                      <i class="fas fa-plus"></i> Create New
+                    </button>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .empty-state {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 60px 40px;
+                    text-align: center;
+                    background: rgba(255, 255, 255, 0.02);
+                    border: 1px dashed rgba(255, 255, 255, 0.1);
+                    border-radius: 16px;
+                  }
+
+                  .empty-icon {
+                    width: 80px;
+                    height: 80px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(102, 126, 234, 0.1);
+                    border-radius: 50%;
+                    margin-bottom: 24px;
+                  }
+
+                  .empty-icon i {
+                    font-size: 2rem;
+                    color: #667eea;
+                  }
+
+                  .empty-state h3 {
+                    font-size: 1.25rem;
+                    margin: 0 0 8px 0;
+                  }
+
+                  .empty-state p {
+                    color: rgba(255, 255, 255, 0.5);
+                    margin: 0 0 24px 0;
+                  }
+
+                  .empty-action {
+                    padding: 12px 24px;
+                    background: linear-gradient(135deg, #667eea, #764ba2);
+                    border: none;
+                    border-radius: 8px;
+                    color: #fff;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: transform 0.2s ease;
+                  }
+
+                  .empty-action:hover {
+                    transform: translateY(-2px);
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="no-results" class="docs-section" data-aos="fade-up">
+              <h2>No Results</h2>
+              <p>When search returns no matches.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="empty-state empty-light">
+                    <div class="empty-illustration">
+                      <i class="fas fa-search fa-3x"></i>
+                      <i class="fas fa-times-circle empty-x"></i>
+                    </div>
+                    <h3>No results found</h3>
+                    <p>
+                      We couldn't find anything matching "your search".<br />Try
+                      different keywords or remove filters.
+                    </p>
+                    <button class="empty-action-outline">Clear Filters</button>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="empty-state empty-light">
+                    <div class="empty-illustration">
+                      <i class="fas fa-search fa-3x"></i>
+                      <i class="fas fa-times-circle empty-x"></i>
+                    </div>
+                    <h3>No results found</h3>
+                    <p>Try different keywords or remove filters.</p>
+                    <button class="empty-action-outline">Clear Filters</button>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .empty-light {
+                    background: linear-gradient(180deg, rgba(102, 126, 234, 0.05) 0%, transparent 100%);
+                    border: none;
+                  }
+
+                  .empty-illustration {
+                    position: relative;
+                    color: rgba(255, 255, 255, 0.2);
+                    margin-bottom: 24px;
+                  }
+
+                  .empty-x {
+                    position: absolute;
+                    bottom: -5px;
+                    right: -10px;
+                    font-size: 1rem !important;
+                    color: #f87171;
+                  }
+
+                  .empty-action-outline {
+                    padding: 10px 20px;
+                    background: transparent;
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    border-radius: 8px;
+                    color: rgba(255, 255, 255, 0.8);
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                  }
+
+                  .empty-action-outline:hover {
+                    background: rgba(255, 255, 255, 0.05);
+                    border-color: rgba(255, 255, 255, 0.3);
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="error" class="docs-section" data-aos="fade-up">
+              <h2>Error State</h2>
+              <p>When something goes wrong.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="empty-state empty-error">
+                    <div class="empty-icon empty-icon-error">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Something went wrong</h3>
+                    <p>
+                      We encountered an error while loading the data.<br />Please
+                      try again or contact support.
+                    </p>
+                    <div class="empty-actions">
+                      <button class="empty-action">Try Again</button>
+                      <button class="empty-action-outline">
+                        Contact Support
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="empty-state empty-error">
+                    <div class="empty-icon empty-icon-error">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Something went wrong</h3>
+                    <p>We encountered an error. Please try again.</p>
+                    <div class="empty-actions">
+                      <button class="empty-action">Try Again</button>
+                      <button class="empty-action-outline">
+                        Contact Support
+                      </button>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .empty-error {
+                    background: rgba(248, 113, 113, 0.05);
+                    border-color: rgba(248, 113, 113, 0.2);
+                  }
+
+                  .empty-icon-error {
+                    background: rgba(248, 113, 113, 0.1);
+                  }
+
+                  .empty-icon-error i {
+                    color: #f87171;
+                  }
+
+                  .empty-actions {
+                    display: flex;
+                    gap: 12px;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

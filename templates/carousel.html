@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="description" content="KvoLib Carousel Template" />
+    <title>Carousel - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/carousel.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#media">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Carousel</span>
+        </div>
+        <h1 class="page-title">Carousel</h1>
+        <p class="page-description">Auto-play image slider with navigation.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Carousel Styles</h4>
+              <ul>
+                <li><a href="#basic">Basic Carousel</a></li>
+                <li><a href="#dots">With Dots</a></li>
+                <li><a href="#cards">Card Carousel</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="basic" class="docs-section" data-aos="fade-up">
+              <h2>Basic Carousel</h2>
+              <p>Simple image slider with arrows.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="carousel">
+                    <div class="carousel-track">
+                      <div class="carousel-slide active">
+                        <img
+                          src="https://picsum.photos/800/400?random=50"
+                          alt="Slide 1"
+                        />
+                      </div>
+                    </div>
+                    <button class="carousel-arrow carousel-prev">
+                      <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-arrow carousel-next">
+                      <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="carousel">
+                    <div class="carousel-track">
+                      <div class="carousel-slide active">
+                        <img src="slide1.jpg" alt="Slide 1" />
+                      </div>
+                      <div class="carousel-slide">
+                        <img src="slide2.jpg" alt="Slide 2" />
+                      </div>
+                    </div>
+                    <button class="carousel-arrow carousel-prev">
+                      <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-arrow carousel-next">
+                      <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .carousel {
+                    position: relative;
+                    border-radius: 16px;
+                    overflow: hidden;
+                  }
+
+                  .carousel-track {
+                    display: flex;
+                  }
+
+                  .carousel-slide {
+                    flex: 0 0 100%;
+                  }
+
+                  .carousel-slide img {
+                    width: 100%;
+                    display: block;
+                  }
+
+                  .carousel-arrow {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 48px;
+                    height: 48px;
+                    background: rgba(0, 0, 0, 0.5);
+                    border: none;
+                    border-radius: 50%;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: background 0.2s ease;
+                  }
+
+                  .carousel-arrow:hover {
+                    background: rgba(0, 0, 0, 0.8);
+                  }
+
+                  .carousel-prev { left: 16px; }
+                  .carousel-next { right: 16px; }
+                </script>
+              </div>
+            </section>
+
+            <section id="dots" class="docs-section" data-aos="fade-up">
+              <h2>With Dots</h2>
+              <p>Carousel with dot indicators.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="carousel">
+                    <div class="carousel-track">
+                      <div class="carousel-slide active">
+                        <img
+                          src="https://picsum.photos/800/400?random=51"
+                          alt="Slide"
+                        />
+                      </div>
+                    </div>
+                    <div class="carousel-dots">
+                      <button class="carousel-dot active"></button>
+                      <button class="carousel-dot"></button>
+                      <button class="carousel-dot"></button>
+                      <button class="carousel-dot"></button>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="carousel">
+                    <div class="carousel-track">
+                      <div class="carousel-slide active">
+                        <img src="slide.jpg" alt="Slide" />
+                      </div>
+                    </div>
+                    <div class="carousel-dots">
+                      <button class="carousel-dot active"></button>
+                      <button class="carousel-dot"></button>
+                      <button class="carousel-dot"></button>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .carousel-dots {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: flex;
+                    gap: 8px;
+                  }
+
+                  .carousel-dot {
+                    width: 10px;
+                    height: 10px;
+                    background: rgba(255, 255, 255, 0.4);
+                    border: none;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                  }
+
+                  .carousel-dot:hover {
+                    background: rgba(255, 255, 255, 0.7);
+                  }
+
+                  .carousel-dot.active {
+                    background: #fff;
+                    width: 24px;
+                    border-radius: 5px;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="cards" class="docs-section" data-aos="fade-up">
+              <h2>Card Carousel</h2>
+              <p>Multiple visible items carousel.</p>
+              <div class="component-viewer">
+                <div slot="preview" style="width: 100%">
+                  <div class="card-carousel">
+                    <div class="card-carousel-track">
+                      <div class="carousel-card">
+                        <img
+                          src="https://picsum.photos/300/200?random=60"
+                          alt="Card"
+                        />
+                        <h4>Card Title 1</h4>
+                      </div>
+                      <div class="carousel-card">
+                        <img
+                          src="https://picsum.photos/300/200?random=61"
+                          alt="Card"
+                        />
+                        <h4>Card Title 2</h4>
+                      </div>
+                      <div class="carousel-card">
+                        <img
+                          src="https://picsum.photos/300/200?random=62"
+                          alt="Card"
+                        />
+                        <h4>Card Title 3</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="card-carousel">
+                    <div class="card-carousel-track">
+                      <div class="carousel-card">
+                        <img src="card.jpg" alt="Card" />
+                        <h4>Card Title</h4>
+                      </div>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .card-carousel {
+                    overflow: hidden;
+                  }
+
+                  .card-carousel-track {
+                    display: flex;
+                    gap: 20px;
+                  }
+
+                  .carousel-card {
+                    flex: 0 0 calc(33.333% - 14px);
+                    background: rgba(255, 255, 255, 0.03);
+                    border-radius: 12px;
+                    overflow: hidden;
+                  }
+
+                  .carousel-card img {
+                    width: 100%;
+                    display: block;
+                  }
+
+                  .carousel-card h4 {
+                    padding: 16px;
+                    margin: 0;
+                    font-size: 1rem;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>
