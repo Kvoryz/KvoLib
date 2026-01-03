@@ -214,7 +214,11 @@ class ComponentViewer {
       const section = container.closest("[id]");
       const anchor = section ? section.id : "";
 
-      window.location.href = `/playground.html?html=${htmlEncoded}&css=${cssEncoded}&from=${componentName}&anchor=${anchor}`;
+      // Detect if we're in templates or components folder
+      const isTemplate = window.location.pathname.includes("/templates/");
+      const type = isTemplate ? "templates" : "components";
+
+      window.location.href = `/playground.html?html=${htmlEncoded}&css=${cssEncoded}&from=${componentName}&anchor=${anchor}&type=${type}`;
     });
   }
 }

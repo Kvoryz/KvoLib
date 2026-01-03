@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio Template - KvoLib" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="view-transition" content="same-origin" />
+    <title>Portfolio Template - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/portfolio.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#content">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Portfolio</span>
+        </div>
+        <h1 class="page-title">Portfolio Template</h1>
+        <p class="page-description">Project showcase grid.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Styles</h4>
+              <ul>
+                <li><a href="#grid">Project Grid</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="grid" class="docs-section" data-aos="fade-up">
+              <h2>Project Grid</h2>
+              <p>Portfolio cards with image overlay and tag.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="portfolio-grid" style="max-width: 800px">
+                    <div class="portfolio-card">
+                      <div
+                        class="portfolio-image"
+                        style="
+                          background: linear-gradient(135deg, #667eea, #764ba2);
+                        "
+                      ></div>
+                      <div class="portfolio-overlay">
+                        <span class="portfolio-tag">Web App</span>
+                        <h3>E-Commerce Platform</h3>
+                        <p>Modern shopping experience</p>
+                        <div class="portfolio-links">
+                          <a href="#"
+                            ><i class="fas fa-external-link-alt"></i
+                          ></a>
+                          <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="portfolio-card">
+                      <div
+                        class="portfolio-image"
+                        style="
+                          background: linear-gradient(135deg, #f093fb, #f5576c);
+                        "
+                      ></div>
+                      <div class="portfolio-overlay">
+                        <span class="portfolio-tag">Mobile</span>
+                        <h3>Fitness Tracker</h3>
+                        <p>Health monitoring app</p>
+                        <div class="portfolio-links">
+                          <a href="#"
+                            ><i class="fas fa-external-link-alt"></i
+                          ></a>
+                          <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                      <div class="portfolio-image"></div>
+                      <div class="portfolio-overlay">
+                        <span class="portfolio-tag">Web App</span>
+                        <h3>E-Commerce Platform</h3>
+                        <p>Modern shopping experience</p>
+                        <div class="portfolio-links">
+                          <a href="#"
+                            ><i class="fas fa-external-link-alt"></i
+                          ></a>
+                          <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .portfolio-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 24px;
+                  }
+
+                  .portfolio-card {
+                    position: relative;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    height: 280px;
+                  }
+
+                  .portfolio-image {
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                  }
+
+                  .portfolio-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+                    padding: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                  }
+
+                  .portfolio-tag {
+                    background: rgba(0, 212, 255, 0.2);
+                    color: #00d4ff;
+                    padding: 4px 12px;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    width: fit-content;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="/assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

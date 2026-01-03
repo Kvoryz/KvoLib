@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Profile Template - KvoLib" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="view-transition" content="same-origin" />
+    <title>Profile Template - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/profile.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#dashboard">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Profile</span>
+        </div>
+        <h1 class="page-title">Profile Template</h1>
+        <p class="page-description">User profile card with stats.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Styles</h4>
+              <ul>
+                <li><a href="#card">Profile Card</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="card" class="docs-section" data-aos="fade-up">
+              <h2>Profile Card</h2>
+              <p>User card with banner, avatar, and stats.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="profile-card" style="max-width: 500px">
+                    <div
+                      class="profile-banner"
+                      style="
+                        background: linear-gradient(135deg, #667eea, #764ba2);
+                      "
+                    ></div>
+                    <div class="profile-avatar">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-info">
+                      <h2>John Developer</h2>
+                      <p class="profile-bio">
+                        Frontend Developer | Open Source Enthusiast
+                      </p>
+                      <div class="profile-meta">
+                        <span
+                          ><i class="fas fa-map-marker-alt"></i> San
+                          Francisco</span
+                        >
+                        <span><i class="fas fa-link"></i> portfolio.dev</span>
+                      </div>
+                    </div>
+                    <div class="profile-stats">
+                      <div class="stat">
+                        <span class="stat-value">142</span
+                        ><span class="stat-label">Posts</span>
+                      </div>
+                      <div class="stat">
+                        <span class="stat-value">2.5K</span
+                        ><span class="stat-label">Followers</span>
+                      </div>
+                      <div class="stat">
+                        <span class="stat-value">180</span
+                        ><span class="stat-label">Following</span>
+                      </div>
+                    </div>
+                    <div class="profile-actions">
+                      <button class="tpl-btn tpl-btn-primary">Follow</button>
+                      <button class="tpl-btn tpl-btn-ghost">
+                        <i class="fas fa-envelope"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="profile-card">
+                    <div class="profile-banner"></div>
+                    <div class="profile-avatar">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-info">
+                      <h2>John Developer</h2>
+                      <p class="profile-bio">Frontend Developer</p>
+                      <div class="profile-meta">
+                        <span
+                          ><i class="fas fa-map-marker-alt"></i> San
+                          Francisco</span
+                        >
+                      </div>
+                    </div>
+                    <div class="profile-stats">
+                      <div class="stat">
+                        <span class="stat-value">142</span>
+                        <span class="stat-label">Posts</span>
+                      </div>
+                    </div>
+                    <div class="profile-actions">
+                      <button class="tpl-btn tpl-btn-primary">Follow</button>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .profile-card {
+                    background: rgba(255, 255, 255, 0.02);
+                    border: 1px solid rgba(255, 255, 255, 0.06);
+                    border-radius: 20px;
+                    overflow: hidden;
+                    text-align: center;
+                  }
+
+                  .profile-banner {
+                    height: 120px;
+                    background-size: cover;
+                  }
+
+                  .profile-avatar {
+                    width: 100px;
+                    height: 100px;
+                    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+                    border-radius: 50%;
+                    border: 4px solid #0a0a0a;
+                    margin: -50px auto 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 2.5rem;
+                  }
+
+                  .profile-stats {
+                    display: flex;
+                    justify-content: center;
+                    gap: 40px;
+                    padding: 20px;
+                    border-top: 1px solid rgba(255, 255, 255, 0.06);
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="/assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

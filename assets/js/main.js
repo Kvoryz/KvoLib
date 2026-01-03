@@ -172,18 +172,24 @@ const searchData = [
     icon: "fa-compass",
     url: "/components.html#navigation",
   },
-  // Docs
+  // Templates
   {
-    title: "Documentation",
-    desc: "Getting started guide",
-    icon: "fa-book",
-    url: "/docs.html",
+    title: "Templates",
+    desc: "Ready-to-use page templates",
+    icon: "fa-copy",
+    url: "/template.html",
   },
   {
-    title: "Installation",
-    desc: "CDN and download setup",
-    icon: "fa-download",
-    url: "/docs.html#installation",
+    title: "Login Template",
+    desc: "Login form with floating labels",
+    icon: "fa-sign-in-alt",
+    url: "/templates/login.html",
+  },
+  {
+    title: "Register Template",
+    desc: "Registration form with validation",
+    icon: "fa-user-plus",
+    url: "/templates/register.html",
   },
 ];
 

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Login Template - KvoLib" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="view-transition" content="same-origin" />
+    <title>Login Template - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/login.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#auth">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Login</span>
+        </div>
+        <h1 class="page-title">Login Template</h1>
+        <p class="page-description">
+          A clean login form with floating labels and social login options.
+        </p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Login Styles</h4>
+              <ul>
+                <li><a href="#basic">Basic</a></li>
+                <li><a href="#social">With Social</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="basic" class="docs-section" data-aos="fade-up">
+              <h2>Basic Login</h2>
+              <p>Simple login form with email and password fields.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="login-card" style="max-width: 400px">
+                    <div class="login-header">
+                      <h2>Welcome back</h2>
+                      <p>Sign in to your account</p>
+                    </div>
+                    <form>
+                      <div class="tpl-input-group">
+                        <input type="email" class="tpl-input" placeholder=" " />
+                        <label>Email address</label>
+                      </div>
+                      <div class="tpl-input-group">
+                        <input
+                          type="password"
+                          class="tpl-input"
+                          placeholder=" "
+                        />
+                        <label>Password</label>
+                      </div>
+                      <div class="form-extras">
+                        <label class="remember-me">
+                          <input type="checkbox" /> Remember me
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                      </div>
+                      <button
+                        type="submit"
+                        class="tpl-btn tpl-btn-primary tpl-btn-full"
+                      >
+                        Sign In
+                      </button>
+                    </form>
+                    <p class="login-footer">
+                      Don't have an account? <a href="#">Sign up</a>
+                    </p>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="login-card">
+                    <div class="login-header">
+                      <h2>Welcome back</h2>
+                      <p>Sign in to your account</p>
+                    </div>
+                    <form>
+                      <div class="tpl-input-group">
+                        <input type="email" class="tpl-input" placeholder=" " />
+                        <label>Email address</label>
+                      </div>
+                      <div class="tpl-input-group">
+                        <input
+                          type="password"
+                          class="tpl-input"
+                          placeholder=" "
+                        />
+                        <label>Password</label>
+                      </div>
+                      <div class="form-extras">
+                        <label class="remember-me">
+                          <input type="checkbox" /> Remember me
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                      </div>
+                      <button
+                        type="submit"
+                        class="tpl-btn tpl-btn-primary tpl-btn-full"
+                      >
+                        Sign In
+                      </button>
+                    </form>
+                    <p class="login-footer">
+                      Don't have an account? <a href="#">Sign up</a>
+                    </p>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .login-card {
+                    background: rgba(255, 255, 255, 0.03);
+                    padding: 40px;
+                    border-radius: 20px;
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                  }
+
+                  .login-header {
+                    text-align: center;
+                    margin-bottom: 32px;
+                  }
+
+                  .tpl-input-group {
+                    position: relative;
+                    margin-bottom: 20px;
+                  }
+
+                  .tpl-input {
+                    width: 100%;
+                    padding: 16px 14px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 12px;
+                    color: #fff;
+                  }
+
+                  .tpl-btn-primary {
+                    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+                    padding: 14px;
+                    border-radius: 12px;
+                    width: 100%;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="social" class="docs-section" data-aos="fade-up">
+              <h2>With Social Login</h2>
+              <p>Login form with social authentication buttons.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="login-card" style="max-width: 400px">
+                    <div class="login-header">
+                      <h2>Welcome back</h2>
+                      <p>Sign in to your account</p>
+                    </div>
+                    <div class="social-login">
+                      <button class="social-btn">
+                        <i class="fab fa-google"></i> Continue with Google
+                      </button>
+                      <button class="social-btn">
+                        <i class="fab fa-github"></i> Continue with GitHub
+                      </button>
+                    </div>
+                    <div class="divider"><span>or</span></div>
+                    <form>
+                      <div class="tpl-input-group">
+                        <input type="email" class="tpl-input" placeholder=" " />
+                        <label>Email address</label>
+                      </div>
+                      <div class="tpl-input-group">
+                        <input
+                          type="password"
+                          class="tpl-input"
+                          placeholder=" "
+                        />
+                        <label>Password</label>
+                      </div>
+                      <button
+                        type="submit"
+                        class="tpl-btn tpl-btn-primary tpl-btn-full"
+                      >
+                        Sign In
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="login-card">
+                    <div class="login-header">
+                      <h2>Welcome back</h2>
+                      <p>Sign in to your account</p>
+                    </div>
+                    <div class="social-login">
+                      <button class="social-btn">
+                        <i class="fab fa-google"></i> Continue with Google
+                      </button>
+                      <button class="social-btn">
+                        <i class="fab fa-github"></i> Continue with GitHub
+                      </button>
+                    </div>
+                    <div class="divider"><span>or</span></div>
+                    <form>
+                      <div class="tpl-input-group">
+                        <input type="email" class="tpl-input" placeholder=" " />
+                        <label>Email address</label>
+                      </div>
+                      <div class="tpl-input-group">
+                        <input
+                          type="password"
+                          class="tpl-input"
+                          placeholder=" "
+                        />
+                        <label>Password</label>
+                      </div>
+                      <button
+                        type="submit"
+                        class="tpl-btn tpl-btn-primary tpl-btn-full"
+                      >
+                        Sign In
+                      </button>
+                    </form>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .social-login {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    margin-bottom: 24px;
+                  }
+
+                  .social-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 12px;
+                    padding: 14px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 12px;
+                    color: #fff;
+                    cursor: pointer;
+                  }
+
+                  .divider {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    margin: 24px 0;
+                  }
+
+                  .divider::before,
+                  .divider::after {
+                    content: "";
+                    flex: 1;
+                    height: 1px;
+                    background: rgba(255, 255, 255, 0.1);
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="/assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

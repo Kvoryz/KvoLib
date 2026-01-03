@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pricing Template - KvoLib" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="view-transition" content="same-origin" />
+    <title>Pricing Template - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/pricing.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#landing">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Pricing</span>
+        </div>
+        <h1 class="page-title">Pricing Template</h1>
+        <p class="page-description">Pricing cards with popular highlight.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Pricing Styles</h4>
+              <ul>
+                <li><a href="#cards">Pricing Cards</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="cards" class="docs-section" data-aos="fade-up">
+              <h2>Pricing Cards</h2>
+              <p>Three-tier pricing with highlighted popular option.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="pricing-grid" style="max-width: 900px">
+                    <div class="pricing-card">
+                      <h3 class="plan-name">Starter</h3>
+                      <p class="plan-description">For individuals</p>
+                      <div class="plan-price">
+                        <span class="price-amount">$9</span
+                        ><span class="price-period">/month</span>
+                      </div>
+                      <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 5 Projects</li>
+                        <li><i class="fas fa-check"></i> 10GB Storage</li>
+                        <li><i class="fas fa-check"></i> Basic Support</li>
+                      </ul>
+                      <button class="tpl-btn tpl-btn-ghost tpl-btn-full">
+                        Get Started
+                      </button>
+                    </div>
+                    <div class="pricing-card popular">
+                      <span class="popular-badge">Most Popular</span>
+                      <h3 class="plan-name">Pro</h3>
+                      <p class="plan-description">For teams</p>
+                      <div class="plan-price">
+                        <span class="price-amount">$29</span
+                        ><span class="price-period">/month</span>
+                      </div>
+                      <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Unlimited Projects</li>
+                        <li><i class="fas fa-check"></i> 100GB Storage</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                      </ul>
+                      <button class="tpl-btn tpl-btn-primary tpl-btn-full">
+                        Get Started
+                      </button>
+                    </div>
+                    <div class="pricing-card">
+                      <h3 class="plan-name">Enterprise</h3>
+                      <p class="plan-description">For large organizations</p>
+                      <div class="plan-price">
+                        <span class="price-amount">$99</span
+                        ><span class="price-period">/month</span>
+                      </div>
+                      <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Everything in Pro</li>
+                        <li><i class="fas fa-check"></i> Unlimited Storage</li>
+                        <li><i class="fas fa-check"></i> Dedicated Support</li>
+                      </ul>
+                      <button class="tpl-btn tpl-btn-ghost tpl-btn-full">
+                        Contact Sales
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="pricing-grid">
+                    <div class="pricing-card">
+                      <h3 class="plan-name">Starter</h3>
+                      <p class="plan-description">For individuals</p>
+                      <div class="plan-price">
+                        <span class="price-amount">$9</span
+                        ><span class="price-period">/month</span>
+                      </div>
+                      <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 5 Projects</li>
+                        <li><i class="fas fa-check"></i> 10GB Storage</li>
+                      </ul>
+                      <button class="tpl-btn tpl-btn-ghost tpl-btn-full">
+                        Get Started
+                      </button>
+                    </div>
+                    <div class="pricing-card popular">
+                      <span class="popular-badge">Most Popular</span>
+                      <h3 class="plan-name">Pro</h3>
+                      <!-- Pro plan content -->
+                    </div>
+                    <div class="pricing-card">
+                      <h3 class="plan-name">Enterprise</h3>
+                      <!-- Enterprise plan content -->
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .pricing-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 24px;
+                  }
+
+                  .pricing-card {
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border-radius: 20px;
+                    padding: 32px;
+                  }
+
+                  .pricing-card.popular {
+                    border-color: #00d4ff;
+                    position: relative;
+                    background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(124, 58, 237, 0.05));
+                  }
+
+                  .popular-badge {
+                    position: absolute;
+                    top: -12px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+                    padding: 6px 20px;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="/assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

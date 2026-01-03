@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Template - KvoLib" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="view-transition" content="same-origin" />
+    <title>Contact Template - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/contact.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#content">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Contact</span>
+        </div>
+        <h1 class="page-title">Contact Template</h1>
+        <p class="page-description">Contact form section.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Styles</h4>
+              <ul>
+                <li><a href="#split">Split Layout</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="split" class="docs-section" data-aos="fade-up">
+              <h2>Split Layout Contact</h2>
+              <p>Contact info on the left, form on the right.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="contact-grid" style="max-width: 800px">
+                    <div class="contact-info">
+                      <h2>Get in Touch</h2>
+                      <p>Have a question? We'd love to hear from you.</p>
+                      <div class="info-list">
+                        <div class="info-item">
+                          <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                          </div>
+                          <div>
+                            <span class="info-label">Email</span
+                            ><span class="info-value">hello@example.com</span>
+                          </div>
+                        </div>
+                        <div class="info-item">
+                          <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                          </div>
+                          <div>
+                            <span class="info-label">Phone</span
+                            ><span class="info-value">+1 234 567 890</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contact-form-card">
+                      <form class="contact-form">
+                        <div class="tpl-input-group">
+                          <input
+                            type="text"
+                            class="tpl-input"
+                            placeholder=" "
+                          />
+                          <label>Name</label>
+                        </div>
+                        <div class="tpl-input-group">
+                          <input
+                            type="email"
+                            class="tpl-input"
+                            placeholder=" "
+                          />
+                          <label>Email</label>
+                        </div>
+                        <textarea
+                          class="contact-textarea"
+                          placeholder="Your message"
+                        ></textarea>
+                        <button
+                          type="submit"
+                          class="tpl-btn tpl-btn-primary tpl-btn-full"
+                        >
+                          Send Message
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="contact-grid">
+                    <div class="contact-info">
+                      <h2>Get in Touch</h2>
+                      <p>Have a question? We'd love to hear from you.</p>
+                      <div class="info-list">
+                        <div class="info-item">
+                          <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                          </div>
+                          <div>
+                            <span class="info-label">Email</span>
+                            <span class="info-value">hello@example.com</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contact-form-card">
+                      <form class="contact-form">
+                        <div class="tpl-input-group">
+                          <input
+                            type="text"
+                            class="tpl-input"
+                            placeholder=" "
+                          />
+                          <label>Name</label>
+                        </div>
+                        <textarea
+                          class="contact-textarea"
+                          placeholder="Your message"
+                        ></textarea>
+                        <button type="submit" class="tpl-btn tpl-btn-primary">
+                          Send Message
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .contact-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
+                  }
+
+                  .contact-form-card {
+                    background: rgba(255, 255, 255, 0.03);
+                    padding: 32px;
+                    border-radius: 16px;
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                  }
+
+                  .contact-textarea {
+                    width: 100%;
+                    min-height: 120px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 12px;
+                    padding: 14px;
+                    color: #fff;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="/assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

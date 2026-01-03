@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hero Template - KvoLib" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="view-transition" content="same-origin" />
+    <title>Hero Template - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/hero.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#landing">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Hero Section</span>
+        </div>
+        <h1 class="page-title">Hero Template</h1>
+        <p class="page-description">Eye-catching hero section with gradient.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Hero Styles</h4>
+              <ul>
+                <li><a href="#centered">Centered</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="centered" class="docs-section" data-aos="fade-up">
+              <h2>Centered Hero</h2>
+              <p>Hero section with centered content and gradient background.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    class="hero-section"
+                    style="min-height: auto; padding: 60px 20px"
+                  >
+                    <div class="hero-glow"></div>
+                    <div class="hero-content">
+                      <span class="hero-badge"
+                        ><i class="fas fa-sparkles"></i> Now Available</span
+                      >
+                      <h1 class="hero-title">
+                        Build Something
+                        <span class="gradient-text">Amazing</span>
+                      </h1>
+                      <p class="hero-description">
+                        Create stunning websites with our modern UI components.
+                        Fast, beautiful, and easy to use.
+                      </p>
+                      <div class="hero-actions">
+                        <button class="tpl-btn tpl-btn-primary">
+                          Get Started
+                        </button>
+                        <button class="tpl-btn tpl-btn-ghost">
+                          Learn More
+                        </button>
+                      </div>
+                      <div class="hero-stats">
+                        <div class="stat-item">
+                          <span class="stat-value">10K+</span
+                          ><span class="stat-label">Users</span>
+                        </div>
+                        <div class="stat-item">
+                          <span class="stat-value">50+</span
+                          ><span class="stat-label">Components</span>
+                        </div>
+                        <div class="stat-item">
+                          <span class="stat-value">99%</span
+                          ><span class="stat-label">Satisfaction</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <section class="hero-section">
+                    <div class="hero-glow"></div>
+                    <div class="hero-content">
+                      <span class="hero-badge"
+                        ><i class="fas fa-sparkles"></i> Now Available</span
+                      >
+                      <h1 class="hero-title">
+                        Build Something
+                        <span class="gradient-text">Amazing</span>
+                      </h1>
+                      <p class="hero-description">
+                        Create stunning websites with our modern UI components.
+                      </p>
+                      <div class="hero-actions">
+                        <button class="tpl-btn tpl-btn-primary">
+                          Get Started
+                        </button>
+                        <button class="tpl-btn tpl-btn-ghost">
+                          Learn More
+                        </button>
+                      </div>
+                      <div class="hero-stats">
+                        <div class="stat-item">
+                          <span class="stat-value">10K+</span
+                          ><span class="stat-label">Users</span>
+                        </div>
+                        <div class="stat-item">
+                          <span class="stat-value">50+</span
+                          ><span class="stat-label">Components</span>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </script>
+                <script type="text/css" slot="css">
+                  .hero-section {
+                    min-height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    position: relative;
+                    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
+                  }
+
+                  .hero-glow {
+                    position: absolute;
+                    top: 20%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 600px;
+                    height: 600px;
+                    background: radial-gradient(circle, rgba(0, 212, 255, 0.2) 0%, transparent 70%);
+                    pointer-events: none;
+                  }
+
+                  .gradient-text {
+                    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+
+                  .hero-stats {
+                    display: flex;
+                    gap: 48px;
+                    justify-content: center;
+                    margin-top: 40px;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="/assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

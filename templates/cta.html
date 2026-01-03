@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CTA Template - KvoLib" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="view-transition" content="same-origin" />
+    <title>CTA Template - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/cta.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#landing">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>CTA Section</span>
+        </div>
+        <h1 class="page-title">CTA Template</h1>
+        <p class="page-description">Call-to-action with gradient background.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Styles</h4>
+              <ul>
+                <li><a href="#gradient">Gradient CTA</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="gradient" class="docs-section" data-aos="fade-up">
+              <h2>Gradient CTA</h2>
+              <p>Call-to-action section with gradient card and glow effect.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    class="cta-card"
+                    style="max-width: 700px; padding: 60px 40px"
+                  >
+                    <div class="cta-glow"></div>
+                    <div class="cta-content">
+                      <h2>Ready to get started?</h2>
+                      <p>
+                        Join thousands of developers building amazing products
+                        with KvoLib.
+                      </p>
+                      <div class="cta-actions">
+                        <button class="tpl-btn tpl-btn-primary">
+                          Get Started Free
+                        </button>
+                        <button class="tpl-btn tpl-btn-ghost">
+                          Contact Sales
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <section class="cta-section">
+                    <div class="cta-card">
+                      <div class="cta-glow"></div>
+                      <div class="cta-content">
+                        <h2>Ready to get started?</h2>
+                        <p>
+                          Join thousands of developers building amazing
+                          products.
+                        </p>
+                        <div class="cta-actions">
+                          <button class="tpl-btn tpl-btn-primary">
+                            Get Started Free
+                          </button>
+                          <button class="tpl-btn tpl-btn-ghost">
+                            Contact Sales
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </script>
+                <script type="text/css" slot="css">
+                  .cta-card {
+                    background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(124, 58, 237, 0.15));
+                    border: 1px solid rgba(0, 212, 255, 0.2);
+                    border-radius: 24px;
+                    padding: 80px 40px;
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+                  }
+
+                  .cta-glow {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 500px;
+                    height: 250px;
+                    background: radial-gradient(ellipse, rgba(0, 212, 255, 0.3) 0%, transparent 70%);
+                    pointer-events: none;
+                  }
+
+                  .cta-actions {
+                    display: flex;
+                    gap: 16px;
+                    justify-content: center;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="/assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Features Template - KvoLib" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="view-transition" content="same-origin" />
+    <title>Features Template - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/features.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#landing">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Features</span>
+        </div>
+        <h1 class="page-title">Features Template</h1>
+        <p class="page-description">Feature grid with icons.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Feature Styles</h4>
+              <ul>
+                <li><a href="#grid">Feature Grid</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="grid" class="docs-section" data-aos="fade-up">
+              <h2>Feature Grid</h2>
+              <p>Feature cards with icons arranged in a grid.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="features-section" style="padding: 40px 20px">
+                    <div class="features-header">
+                      <span class="features-badge">Features</span>
+                      <h2>Everything you need</h2>
+                      <p>
+                        Powerful features to help you build better products.
+                      </p>
+                    </div>
+                    <div
+                      class="features-grid"
+                      style="max-width: 700px; margin: 0 auto"
+                    >
+                      <div class="feature-card">
+                        <div class="feature-icon">
+                          <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Lightning Fast</h4>
+                        <p>Optimized for speed and performance.</p>
+                      </div>
+                      <div class="feature-card">
+                        <div class="feature-icon">
+                          <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Secure</h4>
+                        <p>Enterprise-grade security built-in.</p>
+                      </div>
+                      <div class="feature-card">
+                        <div class="feature-icon">
+                          <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Developer First</h4>
+                        <p>Clean, well-documented code.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <section class="features-section">
+                    <div class="features-header">
+                      <span class="features-badge">Features</span>
+                      <h2>Everything you need</h2>
+                      <p>
+                        Powerful features to help you build better products.
+                      </p>
+                    </div>
+                    <div class="features-grid">
+                      <div class="feature-card">
+                        <div class="feature-icon">
+                          <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Lightning Fast</h4>
+                        <p>Optimized for speed and performance.</p>
+                      </div>
+                      <!-- More feature cards... -->
+                    </div>
+                  </section>
+                </script>
+                <script type="text/css" slot="css">
+                  .features-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 24px;
+                  }
+
+                  .feature-card {
+                    background: rgba(255, 255, 255, 0.03);
+                    padding: 32px;
+                    border-radius: 16px;
+                    border: 1px solid rgba(255, 255, 255, 0.06);
+                  }
+
+                  .feature-icon {
+                    width: 48px;
+                    height: 48px;
+                    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 16px;
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="/assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Settings Template - KvoLib" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="view-transition" content="same-origin" />
+    <title>Settings Template - KvoLib</title>
+    <script src="/assets/js/head-loader.js"></script>
+    <link rel="stylesheet" href="/assets/css/templates/settings.css" />
+  </head>
+  <body>
+    <script src="/assets/js/navbar-loader.js"></script>
+
+    <section class="page-header" data-aos="fade-down">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/template.html#dashboard">Templates</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Settings</span>
+        </div>
+        <h1 class="page-title">Settings Template</h1>
+        <p class="page-description">User settings page with sections.</p>
+      </div>
+    </section>
+
+    <section class="component-docs">
+      <div class="container">
+        <div class="docs-grid">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav">
+              <h4>Styles</h4>
+              <ul>
+                <li><a href="#sections">Settings Sections</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="docs-content">
+            <section id="sections" class="docs-section" data-aos="fade-up">
+              <h2>Settings Sections</h2>
+              <p>Grouped settings with toggle switches.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="settings-page" style="max-width: 600px">
+                    <div class="settings-section">
+                      <h3 class="section-title">Account</h3>
+                      <div class="setting-item">
+                        <div class="setting-info">
+                          <span class="setting-label">Email Notifications</span>
+                          <span class="setting-desc"
+                            >Receive emails about your activity</span
+                          >
+                        </div>
+                        <label class="toggle"
+                          ><input type="checkbox" checked /><span
+                            class="slider"
+                          ></span
+                        ></label>
+                      </div>
+                      <div class="setting-item">
+                        <div class="setting-info">
+                          <span class="setting-label">Two-Factor Auth</span>
+                          <span class="setting-desc"
+                            >Add extra security to your account</span
+                          >
+                        </div>
+                        <label class="toggle"
+                          ><input type="checkbox" /><span class="slider"></span
+                        ></label>
+                      </div>
+                    </div>
+                    <div class="settings-section">
+                      <h3 class="section-title">Appearance</h3>
+                      <div class="setting-item">
+                        <div class="setting-info">
+                          <span class="setting-label">Dark Mode</span>
+                          <span class="setting-desc">Use dark theme</span>
+                        </div>
+                        <label class="toggle"
+                          ><input type="checkbox" checked /><span
+                            class="slider"
+                          ></span
+                        ></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="settings-page">
+                    <div class="settings-section">
+                      <h3 class="section-title">Account</h3>
+                      <div class="setting-item">
+                        <div class="setting-info">
+                          <span class="setting-label">Email Notifications</span>
+                          <span class="setting-desc"
+                            >Receive emails about your activity</span
+                          >
+                        </div>
+                        <label class="toggle">
+                          <input type="checkbox" checked />
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .settings-section {
+                    background: rgba(255, 255, 255, 0.02);
+                    border: 1px solid rgba(255, 255, 255, 0.06);
+                    border-radius: 16px;
+                    padding: 24px;
+                    margin-bottom: 20px;
+                  }
+
+                  .setting-item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 16px 0;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+                  }
+
+                  .toggle {
+                    position: relative;
+                    width: 44px;
+                    height: 24px;
+                  }
+
+                  .toggle input { display: none; }
+
+                  .slider {
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 24px;
+                    transition: 0.3s;
+                  }
+
+                  .slider::before {
+                    content: "";
+                    position: absolute;
+                    width: 18px; height: 18px;
+                    left: 3px; top: 3px;
+                    background: #fff;
+                    border-radius: 50%;
+                    transition: 0.3s;
+                  }
+
+                  input:checked + .slider {
+                    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+                  }
+
+                  input:checked + .slider::before {
+                    transform: translateX(20px);
+                  }
+                </script>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="/assets/layout/footer.html"></div>
+    <script src="/assets/js/scripts-loader.js"></script>
+  </body>
+</html>

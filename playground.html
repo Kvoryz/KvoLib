@@ -545,9 +545,12 @@
             document.getElementById("templates-bar").style.display = "none";
             if (fromParam) {
               const anchorParam = params.get("anchor");
+              const typeParam = params.get("type") || "components";
               const breadcrumbLink = document.getElementById("breadcrumb-link");
               const anchorHash = anchorParam ? `#${anchorParam}` : "";
-              breadcrumbLink.href = `/components/${fromParam.toLowerCase()}.html${anchorHash}`;
+              const basePath =
+                typeParam === "templates" ? "/templates" : "/components";
+              breadcrumbLink.href = `${basePath}/${fromParam.toLowerCase()}.html${anchorHash}`;
               breadcrumbLink.textContent = fromParam;
             }
 
