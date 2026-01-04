@@ -482,13 +482,21 @@
 
         if (htmlParam || cssParam) {
           try {
+            // URL-safe base64 decoding
+            const fromUrlSafeBase64 = (str) => {
+              // Add padding back
+              let padded = str.replace(/-/g, "+").replace(/_/g, "/");
+              while (padded.length % 4) padded += "=";
+              return decodeURIComponent(atob(padded));
+            };
+
             if (htmlParam) {
-              const decoded = decodeURIComponent(atob(htmlParam));
+              const decoded = fromUrlSafeBase64(htmlParam);
               htmlEditor.value = decoded;
               originalHtml = decoded;
             }
             if (cssParam) {
-              const decoded = decodeURIComponent(atob(cssParam));
+              const decoded = fromUrlSafeBase64(cssParam);
               cssEditor.value = decoded;
               originalCss = decoded;
             }
@@ -507,6 +515,8 @@
             return true;
           } catch (e) {
             console.error("Failed to decode URL params:", e);
+            // Still return true to stay on playground, just with empty content
+            return true;
           }
         }
         return false;

@@ -202,8 +202,15 @@ class ComponentViewer {
       const html = container.dataset.htmlCode || "";
       const css = container.dataset.cssCode || "";
 
-      const htmlEncoded = btoa(encodeURIComponent(html));
-      const cssEncoded = btoa(encodeURIComponent(css));
+      const toUrlSafeBase64 = (str) => {
+        return btoa(encodeURIComponent(str))
+          .replace(/\+/g, "-")
+          .replace(/\//g, "_")
+          .replace(/=+$/, "");
+      };
+
+      const htmlEncoded = toUrlSafeBase64(html);
+      const cssEncoded = toUrlSafeBase64(css);
 
       const pathParts = window.location.pathname.split("/");
       const page = pathParts[pathParts.length - 1].replace(".html", "");
@@ -212,7 +219,6 @@ class ComponentViewer {
       const section = container.closest("[id]");
       const anchor = section ? section.id : "";
 
-      // Detect if we're in templates or components folder
       const isTemplate = window.location.pathname.includes("/templates/");
       const type = isTemplate ? "templates" : "components";
 

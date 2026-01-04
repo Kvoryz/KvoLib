@@ -34,11 +34,14 @@
               <h4>Form Styles</h4>
               <ul>
                 <li><a href="#cyber">Cyber Corner</a></li>
-                <li><a href="#glass">Glassmorphism</a></li>
+                <li><a href="#glass">Center Expand</a></li>
                 <li><a href="#float">Floating Label</a></li>
                 <li><a href="#underline">Underline</a></li>
                 <li><a href="#glow">Glow Focus</a></li>
-                <li><a href="#gradient">Gradient Border</a></li>
+                <li><a href="#gradient">Wave Label</a></li>
+                <li><a href="#rating">Star Rating</a></li>
+                <li><a href="#terminal">Terminal Input</a></li>
+                <li><a href="#slider">Volume Slider</a></li>
                 <li><a href="#search">Search</a></li>
                 <li><a href="#select">Select</a></li>
                 <li><a href="#textarea">Textarea</a></li>
@@ -129,72 +132,119 @@
             </section>
 
             <section id="glass" class="docs-section" data-aos="fade-up">
-              <h2>Glassmorphism</h2>
-              <p>Input dengan efek glass blur modern.</p>
+              <h2>Center Expand</h2>
+              <p>Input dengan bar yang expand dari tengah saat focus.</p>
               <div class="component-viewer">
                 <div slot="preview">
                   <div
-                    class="input-glass-group"
+                    class="input-group"
                     style="width: 100%; max-width: 300px"
                   >
-                    <i class="fas fa-user input-glass-icon"></i>
-                    <input
-                      type="text"
-                      class="input-glass has-icon"
-                      placeholder="Username"
-                    />
+                    <input required type="text" class="input-expand" />
+                    <span class="input-highlight"></span>
+                    <span class="input-bar"></span>
+                    <label>Username</label>
                   </div>
                 </div>
                 <script type="text/html" slot="html">
-                  <div class="input-glass-group">
-                    <i class="fas fa-user input-glass-icon"></i>
-                    <input
-                      type="text"
-                      class="input-glass has-icon"
-                      placeholder="Username"
-                    />
+                  <div class="input-group">
+                    <input required type="text" class="input-expand" />
+                    <span class="input-highlight"></span>
+                    <span class="input-bar"></span>
+                    <label>Username</label>
                   </div>
                 </script>
                 <script type="text/css" slot="css">
-                  .input-glass-group {
+                  .input-group {
                     position: relative;
-                    width: 100%;
+                    margin-bottom: 16px;
                   }
 
-                  .input-glass {
+                  .input-expand {
+                    font-size: 16px;
+                    padding: 10px 10px 10px 5px;
+                    display: block;
                     width: 100%;
-                    padding: 16px 20px;
-                    font-size: 0.9rem;
+                    border: none;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                    background: transparent;
                     color: #fff;
-                    background: rgba(255,255,255,0.05);
-                    backdrop-filter: blur(10px);
-                    border: 1px solid rgba(255,255,255,0.1);
-                    border-radius: 12px;
-                    transition: all 0.3s;
                   }
 
-                  .input-glass:focus {
+                  .input-expand:focus {
                     outline: none;
-                    background: rgba(255,255,255,0.1);
-                    border-color: rgba(255,255,255,0.3);
-                    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
                   }
 
-                  .input-glass-icon {
+                  .input-group label {
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 18px;
+                    font-weight: normal;
                     position: absolute;
-                    left: 16px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    color: rgba(255,255,255,0.4);
-                    transition: color 0.3s;
+                    pointer-events: none;
+                    left: 5px;
+                    top: 10px;
+                    transition: 0.2s ease all;
                   }
 
-                  .input-glass-group:focus-within .input-glass-icon {
+                  .input-expand:focus ~ label,
+                  .input-expand:valid ~ label {
+                    top: -20px;
+                    font-size: 14px;
                     color: #00d4ff;
                   }
 
-                  .input-glass.has-icon {
-                    padding-left: 48px;
+                  .input-bar {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                  }
+
+                  .input-bar:before,
+                  .input-bar:after {
+                    content: '';
+                    height: 2px;
+                    width: 0;
+                    bottom: 1px;
+                    position: absolute;
+                    background: #00d4ff;
+                    transition: 0.2s ease all;
+                  }
+
+                  .input-bar:before {
+                    left: 50%;
+                  }
+
+                  .input-bar:after {
+                    right: 50%;
+                  }
+
+                  .input-expand:focus ~ .input-bar:before,
+                  .input-expand:focus ~ .input-bar:after {
+                    width: 50%;
+                  }
+
+                  .input-highlight {
+                    position: absolute;
+                    height: 60%;
+                    width: 100px;
+                    top: 25%;
+                    left: 0;
+                    pointer-events: none;
+                    opacity: 0.5;
+                  }
+
+                  .input-expand:focus ~ .input-highlight {
+                    animation: inputHighlighter 0.3s ease;
+                  }
+
+                  @keyframes inputHighlighter {
+                    from {
+                      background: #00d4ff;
+                    }
+                    to {
+                      width: 0;
+                      background: transparent;
+                    }
                   }
                 </script>
               </div>
@@ -422,56 +472,408 @@
             </section>
 
             <section id="gradient" class="docs-section" data-aos="fade-up">
-              <h2>Gradient Border</h2>
-              <p>Input dengan animated gradient border.</p>
+              <h2>Wave Label</h2>
+              <p>Input dengan label yang bergelombang saat focus.</p>
               <div class="component-viewer">
                 <div slot="preview">
-                  <div
-                    class="input-gradient-border-group"
-                    style="width: 100%; max-width: 300px"
-                  >
-                    <input
-                      type="text"
-                      class="input-gradient-border"
-                      placeholder="Gradient border"
-                    />
+                  <div class="wave-group" style="width: 100%; max-width: 300px">
+                    <input required type="text" class="wave-input" />
+                    <span class="wave-bar"></span>
+                    <label class="wave-label">
+                      <span class="label-char" style="--index: 0">U</span>
+                      <span class="label-char" style="--index: 1">s</span>
+                      <span class="label-char" style="--index: 2">e</span>
+                      <span class="label-char" style="--index: 3">r</span>
+                      <span class="label-char" style="--index: 4">n</span>
+                      <span class="label-char" style="--index: 5">a</span>
+                      <span class="label-char" style="--index: 6">m</span>
+                      <span class="label-char" style="--index: 7">e</span>
+                    </label>
                   </div>
                 </div>
                 <script type="text/html" slot="html">
-                  <div class="input-gradient-border-group">
-                    <input
-                      type="text"
-                      class="input-gradient-border"
-                      placeholder="Gradient border"
-                    />
+                  <div class="wave-group">
+                    <input required type="text" class="wave-input" />
+                    <span class="wave-bar"></span>
+                    <label class="wave-label">
+                      <span class="label-char" style="--index: 0">N</span>
+                      <span class="label-char" style="--index: 1">a</span>
+                      <span class="label-char" style="--index: 2">m</span>
+                      <span class="label-char" style="--index: 3">e</span>
+                    </label>
                   </div>
                 </script>
                 <script type="text/css" slot="css">
-                  .input-gradient-border-group {
+                  .wave-group {
                     position: relative;
-                    width: 100%;
-                    padding: 2px;
-                    background: linear-gradient(90deg, #00d4ff, #7928ca, #ff0080);
-                    border-radius: 10px;
-                    transition: all 0.3s;
+                    margin-bottom: 16px;
                   }
 
-                  .input-gradient-border-group:focus-within {
-                    box-shadow: 0 0 20px rgba(121, 40, 202, 0.4);
-                  }
-
-                  .input-gradient-border {
+                  .wave-input {
+                    font-size: 16px;
+                    padding: 10px 10px 10px 5px;
+                    display: block;
                     width: 100%;
-                    padding: 16px 20px;
-                    font-size: 0.9rem;
-                    color: #fff;
-                    background: #000;
                     border: none;
-                    border-radius: 8px;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                    background: transparent;
+                    color: #fff;
                   }
 
-                  .input-gradient-border:focus {
+                  .wave-input:focus {
                     outline: none;
+                  }
+
+                  .wave-label {
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 18px;
+                    font-weight: normal;
+                    position: absolute;
+                    pointer-events: none;
+                    left: 5px;
+                    top: 10px;
+                    display: flex;
+                  }
+
+                  .label-char {
+                    transition: 0.2s ease all;
+                    transition-delay: calc(var(--index) * .05s);
+                  }
+
+                  .wave-input:focus ~ .wave-label .label-char,
+                  .wave-input:valid ~ .wave-label .label-char {
+                    transform: translateY(-20px);
+                    font-size: 14px;
+                    color: #00d4ff;
+                  }
+
+                  .wave-bar {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                  }
+
+                  .wave-bar:before,
+                  .wave-bar:after {
+                    content: '';
+                    height: 2px;
+                    width: 0;
+                    bottom: 1px;
+                    position: absolute;
+                    background: #00d4ff;
+                    transition: 0.2s ease all;
+                  }
+
+                  .wave-bar:before {
+                    left: 50%;
+                  }
+
+                  .wave-bar:after {
+                    right: 50%;
+                  }
+
+                  .wave-input:focus ~ .wave-bar:before,
+                  .wave-input:focus ~ .wave-bar:after {
+                    width: 50%;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="rating" class="docs-section" data-aos="fade-up">
+              <h2>Star Rating</h2>
+              <p>Rating bintang dengan hover effect.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .star-rating {
+                    display: inline-block;
+                  }
+
+                  .star-rating input {
+                    display: none;
+                  }
+
+                  .star-rating label {
+                    float: right;
+                    cursor: pointer;
+                    color: rgba(255, 255, 255, 0.3);
+                    transition: color 0.3s;
+                  }
+
+                  .star-rating label:before {
+                    content: "\2605";
+                    font-size: 30px;
+                  }
+
+                  .star-rating input:checked ~ label,
+                  .star-rating label:hover,
+                  .star-rating label:hover ~ label {
+                    color: #ffd700;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="terminal" class="docs-section" data-aos="fade-up">
+              <h2>Terminal Input</h2>
+              <p>Password input dengan tampilan terminal.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <div
+                    class="terminal-card"
+                    style="width: 100%; max-width: 400px"
+                  >
+                    <div class="terminal-wrapper">
+                      <div class="terminal-header">
+                        <span class="terminal-title">
+                          <svg
+                            class="terminal-icon"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <path d="M4 17l6-6-6-6M12 19h8"></path>
+                          </svg>
+                          Terminal
+                        </span>
+                      </div>
+                      <div class="terminal-body">
+                        <div class="command-line">
+                          <span class="prompt">password:</span>
+                          <div class="input-wrapper">
+                            <input
+                              type="password"
+                              class="terminal-input"
+                              placeholder="Enter password"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/html" slot="html">
+                  <div class="terminal-card">
+                    <div class="terminal-wrapper">
+                      <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                      </div>
+                      <div class="terminal-body">
+                        <div class="command-line">
+                          <span class="prompt">password:</span>
+                          <div class="input-wrapper">
+                            <input
+                              type="password"
+                              class="terminal-input"
+                              placeholder="Enter password"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </script>
+                <script type="text/css" slot="css">
+                  .terminal-card {
+                    background: rgba(217, 217, 217, 0.1);
+                    backdrop-filter: blur(8px);
+                    border-radius: 12px;
+                    overflow: hidden;
+                  }
+
+                  .terminal-header {
+                    background: #202425;
+                    padding: 10px 15px;
+                    display: flex;
+                    align-items: center;
+                  }
+
+                  .terminal-title {
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                  }
+
+                  .terminal-icon {
+                    color: #00d4ff;
+                  }
+
+                  .terminal-body {
+                    background: #202425;
+                    color: #fff;
+                    padding: 15px;
+                    font-family: "Courier New", monospace;
+                  }
+
+                  .command-line {
+                    display: flex;
+                    align-items: center;
+                  }
+
+                  .prompt {
+                    color: #fff;
+                    margin-right: 10px;
+                  }
+
+                  .input-wrapper {
+                    position: relative;
+                    flex-grow: 1;
+                  }
+
+                  .terminal-input {
+                    background: transparent;
+                    border: none;
+                    color: #00d4ff;
+                    font-family: inherit;
+                    font-size: 14px;
+                    outline: none;
+                    width: 100%;
+                  }
+
+                  .terminal-input::placeholder {
+                    color: rgba(255, 255, 255, 0.5);
+                  }
+
+                  .input-wrapper::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 8px;
+                    height: 15px;
+                    background: #fff;
+                    animation: blink 1s step-end infinite;
+                  }
+
+                  @keyframes blink {
+                    0%, 100% { opacity: 1; }
+                    50% { opacity: 0; }
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="slider" class="docs-section" data-aos="fade-up">
+              <h2>Volume Slider</h2>
+              <p>Slider dengan efek volume yang smooth.</p>
+              <div class="component-viewer">
+                <div slot="preview">
+                  <label class="volume-slider">
+                    <input type="range" class="volume-level" value="50" />
+                    <svg
+                      class="volume-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M18.36 19.36a1 1 0 0 1-.705-1.71C19.167 16.148 20 14.142 20 12s-.833-4.148-2.345-5.65a1 1 0 1 1 1.41-1.419C20.958 6.812 22 9.322 22 12s-1.042 5.188-2.935 7.069a.997.997 0 0 1-.705.291z"
+                        fill="currentColor"
+                      ></path>
+                      <path
+                        d="M15.53 16.53a.999.999 0 0 1-.703-1.711C15.572 14.082 16 13.054 16 12s-.428-2.082-1.173-2.819a1 1 0 1 1 1.406-1.422A6 6 0 0 1 18 12a6 6 0 0 1-1.767 4.241.996.996 0 0 1-.703.289zM12 22a1 1 0 0 1-.707-.293L6.586 17H4c-1.103 0-2-.897-2-2V9c0-1.103.897-2 2-2h2.586l4.707-4.707A.998.998 0 0 1 13 3v18a1 1 0 0 1-1 1z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+                <script type="text/html" slot="html">
+                  <label class="volume-slider">
+                    <input type="range" class="volume-level" />
+                    <svg class="volume-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M18.36 19.36a1 1 0 0 1-.705-1.71..."
+                        fill="currentColor"
+                      ></path>
+                      <path
+                        d="M12 22a1 1 0 0 1-.707-.293L6.586 17H4..."
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </label>
+                </script>
+                <script type="text/css" slot="css">
+                  .volume-slider {
+                    --slider-width: 150px;
+                    --slider-height: 50px;
+                    --slider-bg: rgba(255, 255, 255, 0.1);
+                    --level-color: #00d4ff;
+                    --icon-color: #00d4ff;
+                    --icon-size: 25px;
+                    position: relative;
+                    cursor: pointer;
+                    display: inline-flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                  }
+
+                  .volume-icon {
+                    display: inline-block;
+                    margin-right: 15px;
+                    color: var(--icon-color);
+                    width: var(--icon-size);
+                    height: auto;
+                    position: absolute;
+                    left: 0;
+                    pointer-events: none;
+                  }
+
+                  .volume-level {
+                    appearance: none;
+                    width: var(--slider-width);
+                    height: var(--slider-height);
+                    background: var(--slider-bg);
+                    overflow: hidden;
+                    border-radius: 9px;
+                    cursor: inherit;
+                  }
+
+                  .volume-level::-webkit-slider-thumb {
+                    appearance: none;
+                    width: 0;
+                    height: 0;
+                    box-shadow: -200px 0 0 200px var(--level-color);
+                  }
+
+                  .volume-level::-moz-range-thumb {
+                    width: 0;
+                    height: 0;
+                    border: none;
+                    box-shadow: -200px 0 0 200px var(--level-color);
                   }
                 </script>
               </div>

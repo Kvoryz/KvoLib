@@ -454,7 +454,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (typeof AOS !== "undefined") {
     AOS.init({
-      duration: 600,
+      duration: 300,
       easing: "ease-out",
       once: true,
       offset: 100,
@@ -730,3 +730,29 @@ function showNotification(message, type = "info") {
 window.KvoLib = {
   showNotification,
 };
+
+(function () {
+  const progressBar = document.createElement("div");
+  progressBar.className = "page-progress";
+  document.body.insertBefore(progressBar, document.body.firstChild);
+
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (
+      link &&
+      link.href &&
+      link.href.startsWith(window.location.origin) &&
+      !link.href.includes("#")
+    ) {
+      progressBar.classList.add("active");
+    }
+  });
+
+  window.addEventListener("load", () => {
+    progressBar.classList.remove("active");
+  });
+
+  window.addEventListener("beforeunload", () => {
+    progressBar.classList.add("active");
+  });
+})();
