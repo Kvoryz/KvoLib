@@ -1,4 +1,26 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/vercel.json",
+      "destination": "/404",
+      "statusCode": 404
+    },
+    {
+      "source": "/.gitignore",
+      "destination": "/404",
+      "statusCode": 404
+    },
+    {
+      "source": "/.git/:path*",
+      "destination": "/404",
+      "statusCode": 404
+    },
+    {
+      "source": "/README.md",
+      "destination": "/404",
+      "statusCode": 404
+    }
+  ]
 }

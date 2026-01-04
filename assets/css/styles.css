@@ -28,7 +28,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 80px;
   overflow-y: scroll;
   color-scheme: dark;
 }
@@ -787,27 +787,6 @@ body {
   position: sticky;
   top: 100px;
   height: fit-content;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-}
-
-/* Scrollbar styling untuk sidebar */
-.docs-sidebar::-webkit-scrollbar {
-  width: 6px;
-}
-
-.docs-sidebar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 3px;
-}
-
-.docs-sidebar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 3px;
-}
-
-.docs-sidebar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
 }
 
 .docs-nav h4 {
@@ -843,7 +822,6 @@ body {
 
 .docs-section {
   margin-bottom: 64px;
-  scroll-margin-top: 120px;
 }
 
 .docs-section:last-child {

@@ -224,43 +224,6 @@
         min-width: 30px;
       }
 
-      /* Templates */
-      .templates-bar {
-        padding: 16px;
-        background: rgba(0, 0, 0, 0.15);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .templates-bar h4 {
-        font-size: 0.75rem;
-        color: var(--gray-500);
-        margin-bottom: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-
-      .template-btns {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-      }
-
-      .template-btn {
-        padding: 8px 14px;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 6px;
-        color: var(--gray-400);
-        font-size: 0.8rem;
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-
-      .template-btn:hover {
-        background: rgba(255, 255, 255, 0.1);
-        color: white;
-      }
-
       @media (max-width: 768px) {
         .editors-row {
           grid-template-columns: 1fr;
@@ -287,16 +250,6 @@
 
     <section class="playground-page">
       <div class="container">
-        <div class="templates-bar" id="templates-bar">
-          <h4>Quick Start Templates</h4>
-          <div class="template-btns">
-            <button class="template-btn" data-template="button">Button</button>
-            <button class="template-btn" data-template="card">Card</button>
-            <button class="template-btn" data-template="badge">Badge</button>
-            <button class="template-btn" data-template="input">Input</button>
-          </div>
-        </div>
-
         <div class="playground-wrapper">
           <!-- Editors Row -->
           <div class="editors-row">
@@ -488,17 +441,6 @@
       htmlEditor.addEventListener("input", updatePreview);
       cssEditor.addEventListener("input", updatePreview);
 
-      document.querySelectorAll(".template-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const template = templates[btn.dataset.template];
-          if (template) {
-            htmlEditor.value = template.html;
-            cssEditor.value = template.css;
-            updatePreview();
-          }
-        });
-      });
-
       document
         .getElementById("copy-html-btn")
         .addEventListener("click", async () => {
@@ -551,7 +493,6 @@
               originalCss = decoded;
             }
 
-            document.getElementById("templates-bar").style.display = "none";
             if (fromParam) {
               const anchorParam = params.get("anchor");
               const typeParam = params.get("type") || "components";
@@ -572,8 +513,11 @@
       }
 
       if (!loadFromUrl()) {
+        // Redirect to components page if no URL params
+        window.location.href = "/components.html";
+      } else {
+        updatePreview();
       }
-      updatePreview();
     </script>
   </body>
 </html>
